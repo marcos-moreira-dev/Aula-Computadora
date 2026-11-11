@@ -28,6 +28,18 @@ public final class BoardRoutingSmoke {
         require(BoardRouting.signalColor(Net.MID, 0, 0, null).equals(
                 BoardRouting.signalColor(Net.MID, 1, 1, Signal.ONE)),
                 "MID no tiene nivel computado"); checks++;
+        require(BoardRouting.level(Net.VDD, 0, 0, null) == Signal.ONE,
+                "VDD es nivel alto ideal"); checks++;
+        require(BoardRouting.level(Net.GND, 1, 1, null) == Signal.ZERO,
+                "GND es nivel bajo ideal"); checks++;
+        require(BoardRouting.level(Net.MID, 1, 1, Signal.ZERO) == null,
+                "MID no debe recibir nivel inventado"); checks++;
+        require(BoardRouting.closestNet(.55, .21, .014) == Net.VDD,
+                "Sonda VDD"); checks++;
+        require(BoardRouting.closestNet(.50, .69, .014) == Net.MID,
+                "Sonda MID"); checks++;
+        require(BoardRouting.closestNet(.81, .50, .014) == null,
+                "Cruce de redes no conectado"); checks++;
         System.out.println("OK: " + checks + " controles de rutas/tintas (sin JavaFX)");
     }
 

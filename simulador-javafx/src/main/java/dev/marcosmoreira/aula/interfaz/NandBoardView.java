@@ -6,6 +6,7 @@ import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.Cursor;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseButton;
@@ -25,21 +26,26 @@ final class NandBoardView extends Canvas {
     private final Nand2Lesson lesson;
     private final Supplier<MosType> activePiece;
     private final Consumer<Slot> select;
+    private final Consumer<Net> selectNet;
     private final BiConsumer<Slot, MosType> drop;
     private final Consumer<Slot> inspect;
     private final Consumer<Slot> remove;
     private final CanvasNavigation navigation;
     private Slot selected;
     private Slot hover;
+    private Net selectedNet;
+    private Net hoverNet;
     private int inputA;
     private int inputB;
 
     NandBoardView(Nand2Lesson lesson, Supplier<MosType> activePiece,
                   Consumer<Slot> select, BiConsumer<Slot, MosType> drop,
-                  Consumer<Slot> inspect, Consumer<Slot> remove) {
+                  Consumer<Slot> inspect, Consumer<Slot> remove,
+                  Consumer<Net> selectNet) {
         this.lesson = lesson;
         this.activePiece = activePiece;
         this.select = select;
+        this.selectNet = selectNet;
         this.drop = drop;
         this.inspect = inspect;
         this.remove = remove;
@@ -48,14 +54,24 @@ final class NandBoardView extends Canvas {
         heightProperty().addListener((o, oldValue, newValue) -> render());
         setOnMouseMoved(e -> {
             Slot next = at(e.getX(), e.getY());
-            if (next != hover) { hover = next; render(); }
+            Net nextNet = next == null ? netAt(e.getX(), e.getY()) : null;
+            setCursor(next != null || nextNet != null ? Cursor.HAND : Cursor.DEFAULT);
+            if (next != hover || nextNet != hoverNet) {
+                hover = next;
+                hoverNet = nextNet;
+                render();
+            }
         });
-        setOnMouseExited(e -> { hover = null; render(); });
+        setOnMouseExited(e -> { hover = null; hoverNet = null; render(); });
         setOnMouseClicked(e -> {
             if (navigation.suppressClick() || e.isShiftDown()) return;
             if (e.getButton() != MouseButton.PRIMARY) return;
             Slot slot = at(e.getX(), e.getY());
-            if (slot == null) return;
+            if (slot == null) {
+                Net net = netAt(e.getX(), e.getY());
+                if (net != null) selectNet.accept(net);
+                return;
+            }
             select.accept(slot);
             if (e.getClickCount() == 2) {
                 inspect.accept(slot);
@@ -65,7 +81,11 @@ final class NandBoardView extends Canvas {
         });
         setOnContextMenuRequested(e -> {
             Slot slot = at(e.getX(), e.getY());
-            if (slot == null) return;
+            if (slot == null) {
+                Net net = netAt(e.getX(), e.getY());
+                if (net != null) { selectNet.accept(net); e.consume(); }
+                return;
+            }
             select.accept(slot);
             MenuItem detail = new MenuItem("Abrir detalle · " + slot);
             detail.setOnAction(action -> inspect.accept(slot));
@@ -107,6 +127,7 @@ final class NandBoardView extends Canvas {
     }
 
     void setSelected(Slot slot) { selected = slot; }
+    void setSelectedNet(Net net) { selectedNet = net; }
 
     void setPreview(int a, int b) {
         inputA = a;
@@ -130,6 +151,14 @@ final class NandBoardView extends Canvas {
             if (Math.abs(p[0] - x) <= halfWidth && Math.abs(p[1] - y) <= 43) return slot;
         }
         return null;
+    }
+
+    private Net netAt(double sx, double sy) {
+        double w = getWidth(), h = getHeight();
+        if (w <= 0 || h <= 0) return null;
+        double x = (navigation.worldX(sx) - w * .075) / (w * .85);
+        double y = (navigation.worldY(sy) - h * .11) / (h * .79);
+        return BoardRouting.closestNet(x, y, .017);
     }
 
     void render() {
@@ -186,7 +215,7 @@ final class NandBoardView extends Canvas {
         g.fillText("VDD / A / B / Y / MID / GND · redes compartidas con el modelo", x0 + 25, y0 + bh - 21);
         g.restore();
         g.setFill(Color.web("#4f615c"));
-        g.fillText("Rueda: zoom  ·  Shift + arrastrar o botón central: paneo  ·  Doble clic: detalle", 20, h - 17);
+        g.fillText("Clic en pista: sonda  ·  Rueda: zoom  ·  Botón central/Shift: paneo", 20, h - 17);
     }
 
     void zoomBy(double factor) { navigation.zoomBy(factor); }
@@ -201,6 +230,8 @@ final class NandBoardView extends Canvas {
         Nand2Lesson.Signal output = lesson.readyToTest()
                 ? lesson.observe(inputA, inputB) : null;
         for (BoardRouting.Segment segment : BoardRouting.SEGMENTS) {
+            g.setLineWidth(segment.net() == selectedNet ? 6.0
+                    : segment.net() == hoverNet ? 5.0 : 3.5);
             g.setStroke(Color.web(BoardRouting.signalColor(segment.net(), inputA, inputB, output)));
             double x1 = x + w * segment.a().x(), y1 = y + h * segment.a().y();
             double x2 = x + w * segment.b().x(), y2 = y + h * segment.b().y();

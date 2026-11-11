@@ -49,6 +49,12 @@ MOS activos. MID permanece neutral, sin inferir su nivel. El script de
 verificación sin JavaFX comprueba también las rutas y tintas dinámicas;
 preservar esta separación entre cálculo lógico y representación.
 
+**R0.7:** sonda de red por clic en pistas 2D/3D, Inspector conectado al
+modelo de valores digitales y selección de red compartida entre vistas.
+El hit-test 2D de `BoardRouting.closestNet` rechaza intersecciones ambiguas;
+cruzar geométricamente dos trazos no prueba una unión. No inferir tensión
+de MID a partir del color ni añadir pinout de silicio real.
+
 **Actualización 9-nov-2026 C28-T:** global con 26 capítulos, maestro
 Word/PDF **C28-G de 248 páginas**, suplemento secuencial C28-H y atlas
 histórico C28-O. La última retroalimentación Windows confirmó **24/24**

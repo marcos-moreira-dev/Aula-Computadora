@@ -55,6 +55,51 @@ final class BoardRouting {
         };
     }
 
+    /** Nivel lógico conocido; null es no calculado, nunca un Z inventado. */
+    static Signal level(Net net, int a, int b, Signal output) {
+        if ((a != 0 && a != 1) || (b != 0 && b != 1)) {
+            throw new IllegalArgumentException("Las entradas deben ser binarias");
+        }
+        return switch (net) {
+            case VDD -> Signal.ONE;
+            case GND -> Signal.ZERO;
+            case A -> a == 0 ? Signal.ZERO : Signal.ONE;
+            case B -> b == 0 ? Signal.ZERO : Signal.ONE;
+            case Y -> output;
+            case MID -> null;
+        };
+    }
+
+    /** Detecta una pista sin atribuir unión eléctrica a cruces geométricos. */
+    static Net closestNet(double x, double y, double tolerance) {
+        if (!Double.isFinite(x) || !Double.isFinite(y)
+                || !Double.isFinite(tolerance) || tolerance <= 0) {
+            throw new IllegalArgumentException("Coordenadas o tolerancia inválidas");
+        }
+        double best = tolerance * tolerance;
+        Net winner = null;
+        boolean ambiguous = false;
+        for (Segment segment : SEGMENTS) {
+            double dx = segment.b().x() - segment.a().x();
+            double dy = segment.b().y() - segment.a().y();
+            double projected = ((x - segment.a().x()) * dx
+                    + (y - segment.a().y()) * dy) / (dx * dx + dy * dy);
+            double t = Math.max(0, Math.min(1, projected));
+            double px = segment.a().x() + t * dx;
+            double py = segment.a().y() + t * dy;
+            double d2 = (x - px) * (x - px) + (y - py) * (y - py);
+            if (d2 < best - 1e-10) {
+                best = d2;
+                winner = segment.net();
+                ambiguous = false;
+            } else if (winner != null && winner != segment.net()
+                    && Math.abs(d2 - best) <= 1e-10) {
+                ambiguous = true;
+            }
+        }
+        return ambiguous ? null : winner;
+    }
+
     private static Segment line(Net net, double x1, double y1, double x2, double y2) {
         return new Segment(net, new Point(x1, y1), new Point(x2, y2));
     }

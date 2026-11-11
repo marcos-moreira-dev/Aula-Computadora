@@ -2,6 +2,7 @@ package dev.marcosmoreira.aula.interfaz;
 
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
 import javafx.application.Application;
 import javafx.application.ConditionalFeature;
@@ -54,6 +55,7 @@ public final class AulaApplication extends Application {
     private final Preferences preferences = Preferences.userNodeForPackage(AulaApplication.class);
     private MosType activePiece;
     private Slot selectedSlot;
+    private Net selectedNet;
     private String saveState = "sin cambios";
     private NandBoardView board;
     private NandLogicView logic;
@@ -95,14 +97,14 @@ public final class AulaApplication extends Application {
         root.setTop(new VBox(buildMenu(stage), buildToolbar(stage)));
 
         board = new NandBoardView(lesson, () -> activePiece, this::select,
-                this::place, this::inspect, this::remove);
+                this::place, this::inspect, this::remove, this::selectNet);
         logic = new NandLogicView(lesson);
         workspaceTabs = new TabPane();
         assemblyTab = new Tab("Montaje 2D", wrapCanvas(board));
         detailTab = new Tab("Interior NAND (2 entradas)", wrapCanvas(logic));
         if (Platform.isSupported(ConditionalFeature.SCENE3D)) {
             board3d = new NandBoard3DView(lesson, () -> activePiece,
-                    this::select, this::place, this::inspect, this::remove);
+                    this::select, this::place, this::inspect, this::remove, this::selectNet);
             threeDTab = new Tab("Placa 3D", board3d);
         } else {
             threeDTab = new Tab("Placa 3D (no disponible)");
@@ -183,6 +185,7 @@ public final class AulaApplication extends Application {
                 "Controles de montaje", "Cómo usar el primer taller",
                 "Selecciona PMOS o NMOS y pulsa un hueco, o arrastra la pieza desde el kit. "
                         + "Clic: seleccionar. Doble clic: inspeccionar. "
+                        + "Clic sobre una pista: consultar su red en el Inspector. "
                         + "Las piezas incorrectas se admiten para aprender del resultado. "
                         + "Solo se prueba un montaje de cuatro piezas.").showAndWait());
         ayuda.getItems().add(controles);
@@ -363,12 +366,20 @@ public final class AulaApplication extends Application {
 
     private void select(Slot slot) {
         selectedSlot = slot;
+        selectedNet = null;
+        refresh();
+    }
+
+    private void selectNet(Net net) {
+        selectedNet = Objects.requireNonNull(net);
+        selectedSlot = null;
         refresh();
     }
 
     private void inspect(Slot slot) {
         if (slot == null) return;
         selectedSlot = slot;
+        selectedNet = null;
         workspaceTabs.getSelectionModel().select(detailTab);
         refresh();
     }
@@ -378,6 +389,7 @@ public final class AulaApplication extends Application {
         if (lesson.place(slot, type)) {
             undoStack.push(before);
             selectedSlot = slot;
+            selectedNet = null;
             activePiece = lesson.remaining(type) == 0 ? null : activePiece;
             closeStaleResults();
             saveProgress();
@@ -395,6 +407,7 @@ public final class AulaApplication extends Application {
         if (lesson.remove(slot)) {
             undoStack.push(before);
             selectedSlot = slot;
+            selectedNet = null;
             closeStaleResults();
             saveProgress();
         }
@@ -419,6 +432,7 @@ public final class AulaApplication extends Application {
                 lesson.restore(Map.of());
                 activePiece = null;
                 selectedSlot = null;
+                selectedNet = null;
                 closeStaleResults();
                 saveProgress();
                 refresh();
@@ -489,22 +503,11 @@ public final class AulaApplication extends Application {
         undoMenuItem.setDisable(undoStack.isEmpty());
         removeMenuItem.setDisable(selectedSlot == null || lesson.pieceAt(selectedSlot) == null);
         detailsButton.setDisable(selectedSlot == null);
-        if (selectedSlot != null) {
-            MosType actual = lesson.pieceAt(selectedSlot);
-            inspectorTitle.setText(selectedSlot.name() + "  ·  "
-                    + (actual == null ? "hueco" : actual.toString()));
-            inspectorContent.setText("Esperado: " + selectedSlot.expected() + "\n"
-                    + "Puerta: " + selectedSlot.gate() + "\n"
-                    + "Red conceptual: " + selectedSlot.nets() + "\n"
-                    + "Montado: " + (actual == null ? "no" : "sí"));
-        } else {
-            inspectorTitle.setText("Módulo NAND2");
-            inspectorContent.setText("Cuatro posiciones. El molde empieza vacío. "
-                    + "Selecciona un componente para ver sus datos.");
-        }
         if (board != null) board.setSelected(selectedSlot);
+        if (board != null) board.setSelectedNet(selectedNet);
         if (logic != null) logic.setSelected(selectedSlot);
         if (board3d != null) board3d.setSelected(selectedSlot);
+        if (board3d != null) board3d.setSelectedNet(selectedNet);
         // Cada vista se redibuja una sola vez con selección y bits ya actualizados.
         refreshLiveOutput();
         refreshStatus();
@@ -529,6 +532,44 @@ public final class AulaApplication extends Application {
         if (logic != null) logic.setPreview(inputA, inputB, lesson.readyToTest());
         if (board != null) board.setPreview(inputA, inputB);
         if (board3d != null) board3d.setPreview(inputA, inputB);
+        refreshInspector();
+    }
+
+    private void refreshInspector() {
+        if (selectedSlot != null) {
+            MosType actual = lesson.pieceAt(selectedSlot);
+            inspectorTitle.setText(selectedSlot.name() + "  ·  "
+                    + (actual == null ? "hueco" : actual.toString()));
+            inspectorContent.setText("Esperado: " + selectedSlot.expected() + "\n"
+                    + "Puerta: " + selectedSlot.gate() + "\n"
+                    + "Red conceptual: " + selectedSlot.nets() + "\n"
+                    + "Montado: " + (actual == null ? "no" : "sí"));
+            return;
+        }
+        if (selectedNet != null) {
+            Nand2Lesson.Signal y = lesson.readyToTest() ? lesson.observe(inputA, inputB) : null;
+            Nand2Lesson.Signal level = BoardRouting.level(selectedNet, inputA, inputB, y);
+            String value = level == null ? "—" : switch (level) {
+                case ZERO -> "0";
+                case ONE -> "1";
+                case X -> "X · contención ideal";
+                case Z -> "Z · salida flotante ideal";
+            };
+            inspectorTitle.setText("Red " + selectedNet);
+            String meaning = switch (selectedNet) {
+                case A, B -> "Entrada digital seleccionada.";
+                case VDD -> "Referencia de alimentación ideal.";
+                case GND -> "Referencia de tierra ideal.";
+                case Y -> level == null ? "Completa las cuatro piezas para evaluar Y."
+                        : "Salida calculada del NAND montado.";
+                case MID -> "Nodo intermedio: nivel no calculado por este modelo.";
+            };
+            inspectorContent.setText("Nivel: " + value + "\n" + meaning);
+            return;
+        }
+        inspectorTitle.setText("Módulo NAND2");
+        inspectorContent.setText("Selecciona un transistor o una pista de la placa "
+                + "para examinar sus conexiones.");
     }
 
     private void refreshStatus() {

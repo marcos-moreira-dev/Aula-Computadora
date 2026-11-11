@@ -1,6 +1,6 @@
 # Simulador JavaFX — taller de Aula-8 y Aula-16
 
-**Estado 11-nov-2026, R0.6:** existe un corte de código JavaFX para la etapa
+**Estado 11-nov-2026, R0.7:** existe un corte de código JavaFX para la etapa
 NAND2 CMOS de cuatro piezas, con modelo Java independiente, montaje 2D,
 **placa 3D conceptual**, interior del chip, redes visibles y tests. **No hay CPU, PCB,
 ISA aprobada ni simulador de máquina completa.**
@@ -25,6 +25,12 @@ de las posiciones MOS distingue conducción ideal, sin convertirlo en
 animación de corriente real. La red MID conserva color neutro porque el
 modelo aún no determina su nivel lógico. El smoke test sin Maven suma
 controles automáticos para las rutas 2D/3D y sus colores.
+
+**R0.7:** clic sobre una pista de la placa 2D o 3D abre la **sonda lógica**
+en el Inspector. Muestra el nivel digital de A, B, VDD, GND e Y cuando
+el modelo lo conoce, distingue `X` de `Z` y deja MID como no calculada.
+Los cruces de dos pistas sin nodo no se consideran conexiones; una sonda
+2D no elige arbitrariamente una red en el punto exacto del cruce.
 
 **[Ejecutar y probar el primer taller](docs/PRIMER_TALLER_EJECUCION.md)**:
 `EJECUTAR_Y_CAPTURAR.cmd` en Windows (prueba + app + F12 + ZIP) o

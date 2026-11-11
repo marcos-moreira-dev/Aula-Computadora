@@ -54,4 +54,29 @@ class BoardRoutingTest {
         assertThrows(IllegalArgumentException.class,
                 () -> BoardRouting.signalColor(Net.A, 2, 0, Signal.ONE));
     }
+
+    @Test
+    void probeUsesKnownLevelsWithoutInventingTheMiddleVoltage() {
+        assertEquals(Signal.ONE, BoardRouting.level(Net.VDD, 0, 0, null));
+        assertEquals(Signal.ZERO, BoardRouting.level(Net.GND, 1, 1, null));
+        assertEquals(Signal.ONE, BoardRouting.level(Net.A, 1, 0, null));
+        assertEquals(Signal.ZERO, BoardRouting.level(Net.B, 1, 0, null));
+        assertNull(BoardRouting.level(Net.Y, 0, 0, null));
+        assertEquals(Signal.X, BoardRouting.level(Net.Y, 0, 0, Signal.X));
+        assertNull(BoardRouting.level(Net.MID, 1, 1, Signal.ZERO));
+    }
+
+    @Test
+    void probePicksTracesButNotTheirUnconnectedCrossings() {
+        assertEquals(Net.VDD, BoardRouting.closestNet(.55, .21, .014));
+        assertEquals(Net.GND, BoardRouting.closestNet(.52, .90, .014));
+        assertEquals(Net.A, BoardRouting.closestNet(.12, .36, .014));
+        assertEquals(Net.B, BoardRouting.closestNet(.88, .36, .014));
+        assertEquals(Net.Y, BoardRouting.closestNet(.52, .50, .014));
+        assertEquals(Net.MID, BoardRouting.closestNet(.50, .69, .014));
+        assertNull(BoardRouting.closestNet(.92, .62, .014));
+        assertNull(BoardRouting.closestNet(.81, .50, .014));
+        assertThrows(IllegalArgumentException.class,
+                () -> BoardRouting.closestNet(Double.NaN, .2, .02));
+    }
 }

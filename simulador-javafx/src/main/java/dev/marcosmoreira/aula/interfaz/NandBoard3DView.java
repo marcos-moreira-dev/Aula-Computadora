@@ -2,6 +2,7 @@ package dev.marcosmoreira.aula.interfaz;
 
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
 import javafx.geometry.Pos;
 import javafx.scene.AmbientLight;
@@ -38,6 +39,7 @@ final class NandBoard3DView extends StackPane {
     private final Nand2Lesson lesson;
     private final Supplier<MosType> activePiece;
     private final Consumer<Slot> select;
+    private final Consumer<Net> selectNet;
     private final BiConsumer<Slot, MosType> drop;
     private final Consumer<Slot> inspect;
     private final Consumer<Slot> remove;
@@ -48,6 +50,7 @@ final class NandBoard3DView extends StackPane {
     private final Rotate yaw = new Rotate(-22, Rotate.Y_AXIS);
     private final Label liveSignals = new Label();
     private Slot selected;
+    private Net selectedNet;
     private int inputA;
     private int inputB;
     private double distance = 970;
@@ -57,10 +60,12 @@ final class NandBoard3DView extends StackPane {
 
     NandBoard3DView(Nand2Lesson lesson, Supplier<MosType> activePiece,
                     Consumer<Slot> select, BiConsumer<Slot, MosType> drop,
-                    Consumer<Slot> inspect, Consumer<Slot> remove) {
+                    Consumer<Slot> inspect, Consumer<Slot> remove,
+                    Consumer<Net> selectNet) {
         this.lesson = lesson;
         this.activePiece = activePiece;
         this.select = select;
+        this.selectNet = selectNet;
         this.drop = drop;
         this.inspect = inspect;
         this.remove = remove;
@@ -88,7 +93,7 @@ final class NandBoard3DView extends StackPane {
         title.getStyleClass().add("view-3d-title");
         title.setMouseTransparent(true);
         StackPane.setAlignment(title, Pos.TOP_LEFT);
-        Label help = new Label("Arrastrar el fondo: orbitar  ·  Shift + arrastrar: paneo  ·  Rueda: zoom");
+        Label help = new Label("Clic en pista: sonda  ·  Arrastrar fondo: orbitar  ·  Shift: paneo  ·  Rueda: zoom");
         help.getStyleClass().add("view-3d-help");
         help.setMouseTransparent(true);
         StackPane.setAlignment(help, Pos.BOTTOM_LEFT);
@@ -102,8 +107,10 @@ final class NandBoard3DView extends StackPane {
             mouseY = e.getSceneY();
             gestureMoved = false;
             Slot hit = pickedSlot(e.getPickResult().getIntersectedNode());
+            Net hitNet = pickedNet(e.getPickResult().getIntersectedNode());
             panning = e.getButton() == MouseButton.MIDDLE || e.isShiftDown();
-            orbiting = e.getButton() == MouseButton.PRIMARY && hit == null && !panning;
+            orbiting = e.getButton() == MouseButton.PRIMARY && hit == null
+                    && hitNet == null && !panning;
         });
         subscene.setOnMouseDragged(e -> {
             double dx = e.getSceneX() - mouseX;
@@ -146,7 +153,11 @@ final class NandBoard3DView extends StackPane {
         });
         subscene.setOnContextMenuRequested(e -> {
             Slot slot = pickedSlot(e.getPickResult().getIntersectedNode());
-            if (slot == null) return;
+            if (slot == null) {
+                Net net = pickedNet(e.getPickResult().getIntersectedNode());
+                if (net != null) { selectNet.accept(net); e.consume(); }
+                return;
+            }
             select.accept(slot);
             MenuItem detail = new MenuItem("Abrir interior · " + slot);
             detail.setOnAction(action -> inspect.accept(slot));
@@ -166,6 +177,11 @@ final class NandBoard3DView extends StackPane {
         return slot;
     }
 
+    private static Net pickedNet(Node node) {
+        if (node == null || !(node.getUserData() instanceof Net net)) return null;
+        return net;
+    }
+
     private void handleClick(Slot slot, int count) {
         if (gestureMoved) { gestureMoved = false; return; }
         select.accept(slot);
@@ -175,6 +191,7 @@ final class NandBoard3DView extends StackPane {
     }
 
     void setSelected(Slot slot) { selected = slot; }
+    void setSelectedNet(Net net) { selectedNet = net; }
 
     void setPreview(int a, int b) {
         inputA = a;
@@ -230,6 +247,16 @@ final class NandBoard3DView extends StackPane {
             trace.setTranslateZ((z1 + z2) / 2);
             trace.setMaterial(material(BoardRouting.signalColor(
                     segment.net(), inputA, inputB, output)));
+            if (segment.net() == selectedNet) {
+                trace.setMaterial(material("#ffd37c"));
+            }
+            trace.setUserData(segment.net());
+            trace.setOnMouseClicked(e -> {
+                if (e.getButton() == MouseButton.PRIMARY && !gestureMoved) {
+                    selectNet.accept(segment.net());
+                }
+                e.consume();
+            });
             boardGroup.getChildren().add(trace);
         }
 
