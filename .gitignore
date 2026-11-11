@@ -1,0 +1,15 @@
+target/
+build/
+out/
+.gradle/
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+*.class
+*.log
+.DS_Store
+Thumbs.db
+Retroalimentacion_*.zip
+*.tmp
+*.bak
