@@ -11,5 +11,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Retroalimentacion_*.zip
+simulador-javafx/capturas/
 *.tmp
 *.bak

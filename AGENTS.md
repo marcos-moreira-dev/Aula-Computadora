@@ -2,6 +2,47 @@
 
 Instrucciones para futuros asistentes y colaboradores que trabajen en este repositorio.
 
+**Actualización 11-nov-2026 — primer taller ejecutable:** Marcos autorizó
+expresamente comenzar código a pesar de la secuencia histórica «libro,
+después app». Se creó el primer corte Java 21/JavaFX/Maven de la etapa
+NAND2, con montaje 2D interactivo, inspección conceptual y modelo digital
+independiente. Ejecutar y evaluar en Windows según
+`simulador-javafx/docs/PRIMER_TALLER_EJECUCION.md`. Este inicio **no
+autoriza** alterar ISA, ABI, buses, mapa de memoria, ROM, capítulos ni
+declarar CPU/hardware/3D construidos; los límites siguen vigentes. El
+contrato visual rector es UX V5 con botones/paneles de radio cero.
+
+**Retroalimentación Windows / R0.2 (11-nov-2026):** Marcos aportó dos
+capturas de R0.1 y observó iconos improvisados, franjitas en los paneles,
+esquema de chip separado de su carcasa y ausencia de zoom/paneo/3D.
+Se programaron vistas/captura revisadas; **la ejecución y apariencia real
+de R0.2 todavía deben probarse en Windows**. Conservar el circuito lógico
+compartido y no usar más iteraciones artísticas IA como prueba funcional.
+
+**Retroalimentación R0.3:** en cuatro capturas reales de R0.2, Marcos validó
+la interacción de zoom/paneo y el potencial de la vista 3D, pero pidió redes
+visibles en placa, corregir la triangulación en 3D, símbolos más sobrios,
+diálogos completos, paneles laterales plegables y organización de documentos.
+R0.3 solo representa **las redes monobit del NAND2**; no añadir buses de una
+CPU inexistente. Preservar el histórico de documentación; mover únicamente
+archivos cuyo conjunto de enlaces se pueda actualizar de forma segura.
+
+**Retroalimentación R0.4:** un ZIP de Windows confirma 8/8 pruebas JUnit y
+ejecución JavaFX R0.3 sin fallos. La nueva captura muestra etiquetas MOS
+reflejadas sobre los bloques 3D y patillas casi invisibles. La revisión R0.4
+gira la cara del texto y agrega tres terminales metálicos salientes por MOS
+en 2D y 3D. Son componentes discretos, **no DIP-8 ni buses de ocho bits**.
+La forma exacta del encapsulado sigue conceptual hasta elegir componentes
+y verificar sus hojas de datos.
+
+**R0.5 (11-nov-2026):** por petición de Marcos, publicar cambios en el
+repositorio de GitHub y reducir las pruebas manuales recurrentes. GitHub
+Actions ejecuta automáticamente Java 21/JUnit y el smoke test del circuito.
+El Inspector permite explorar A/B→Y y el interior colorea la conducción
+ideal de MOS instalados desde el único modelo `Nand2Lesson`; no es prueba
+eléctrica real. Las comprobaciones visuales de JavaFX siguen pendientes de
+captura real cuando hay cambios relevantes.
+
 **Actualización 9-nov-2026 C28-T:** global con 26 capítulos, maestro
 Word/PDF **C28-G de 248 páginas**, suplemento secuencial C28-H y atlas
 histórico C28-O. La última retroalimentación Windows confirmó **24/24**

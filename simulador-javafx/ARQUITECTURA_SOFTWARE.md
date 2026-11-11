@@ -1,5 +1,10 @@
 # Arquitectura de software prevista
 
+**Nota 11-nov-2026:** la estructura R0 descrita abajo fue inicialmente
+prospectiva. Ahora existe un `pom.xml` real y el corte acotado
+`circuitos/Nand2Lesson.java` + `interfaz/` + `src/test/`, exclusivamente
+para la etapa NAND2. El resto de paquetes continúa siendo una meta futura.
+
 ## Stack
 
 - Java **21**.
@@ -14,7 +19,7 @@
 
 ~~~text
 simulador-javafx/
-  pom.xml                 # futuro
+  pom.xml                 # creado para el primer taller
   src/main/java/.../
     dominio/
     circuitos/
@@ -33,7 +38,9 @@ simulador-javafx/
   src/test/java/.../
 ~~~
 
-La carpeta anterior describe estructura futura: **no se crearán código ni POM ficticios en R0**.
+El listado completo sigue siendo la arquitectura futura: **no se han
+creado los paquetes de CPU, firmware, ensamblador o MiniC**, y el POM
+actual solo incorpora las dependencias del primer taller JavaFX.
 
 ## Capas
 

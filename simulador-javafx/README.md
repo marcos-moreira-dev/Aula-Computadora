@@ -1,6 +1,39 @@
 # Simulador JavaFX — taller de Aula-8 y Aula-16
 
-**Estado R0:** solo especificación de un producto futuro. No existe aún aplicación, POM funcional ni ejecutables.
+**Estado 11-nov-2026, R0.5:** existe un corte de código JavaFX para la etapa
+NAND2 CMOS de cuatro piezas, con modelo Java independiente, montaje 2D,
+**placa 3D conceptual**, interior del chip, redes visibles y tests. **No hay CPU, PCB,
+ISA aprobada ni simulador de máquina completa.**
+
+**R0.4:** se corrigió la orientación del texto 3D y se representan tres
+contactos metálicos salientes por cada transistor discreto, también en 2D.
+No son integrados digitales de 8/14 pines. La forma y orientación de las
+patas son didácticas, no una hoja de datos ni un footprint comercial.
+
+**R0.5:** en el Inspector aparecen los conmutadores binarios `A` y `B`.
+Una vez montadas las cuatro piezas, la salida `Y` se actualiza al instante
+(`0`, `1`, `X` o `Z`), y el interior del chip distingue MOS conductores
+de no conductores. El modelo de simulación es único para la prueba en vivo
+y la tabla de los cuatro vectores. La acción de GitHub **Java 21 · NAND2**
+compila y prueba el código automáticamente en cada cambio del simulador.
+No comprueba la apariencia de la interfaz Windows ni el comportamiento
+eléctrico o físico real.
+
+**[Ejecutar y probar el primer taller](docs/PRIMER_TALLER_EJECUCION.md)**:
+`EJECUTAR_Y_CAPTURAR.cmd` en Windows (prueba + app + F12 + ZIP) o
+`mvn test` / `mvn javafx:run` con Maven.
+
+Estructura del corte ejecutable:
+
+- `src/main/java/.../circuitos`: modelo NAND2 y definición de redes.
+- `src/main/java/.../interfaz`: vistas 2D/3D, trazos, controles y navegación.
+- `src/test`: pruebas del modelo, independientes del dibujo.
+- `docs/`: instrucciones y decisiones nuevas de la experiencia ejecutable.
+- Archivos `.cmd`/`.ps1` de la raíz: puntos de entrada para Windows.
+
+La documentación de investigación anterior se mantiene por ahora en sus rutas
+históricas; se migrará por familias con auditoría de enlaces, sin mezclarla
+con clases Java ni eliminar referencias existentes.
 
 ## Propósito
 
