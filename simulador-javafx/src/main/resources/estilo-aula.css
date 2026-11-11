@@ -115,6 +115,15 @@
     -fx-font-weight: bold;
     -fx-text-fill: #304c60;
 }
+.view-3d-signals {
+    -fx-background-color: #e3ece8;
+    -fx-border-color: #9eb5ad;
+    -fx-border-width: 0 0 1 1;
+    -fx-padding: 8 13 8 13;
+    -fx-text-fill: #285940;
+    -fx-font-family: "Consolas", "Segoe UI", monospace;
+    -fx-font-weight: bold;
+}
 .view-3d-help {
     -fx-background-color: #edf2f4;
     -fx-text-fill: #5b6d78;

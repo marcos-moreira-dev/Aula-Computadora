@@ -46,7 +46,10 @@ final class NandBoard3DView extends StackPane {
     private final PerspectiveCamera camera = new PerspectiveCamera(true);
     private final Rotate pitch = new Rotate(-43, Rotate.X_AXIS);
     private final Rotate yaw = new Rotate(-22, Rotate.Y_AXIS);
+    private final Label liveSignals = new Label();
     private Slot selected;
+    private int inputA;
+    private int inputB;
     private double distance = 970;
     private double mouseX, mouseY;
     private boolean orbiting, panning;
@@ -89,7 +92,10 @@ final class NandBoard3DView extends StackPane {
         help.getStyleClass().add("view-3d-help");
         help.setMouseTransparent(true);
         StackPane.setAlignment(help, Pos.BOTTOM_LEFT);
-        getChildren().addAll(title, help);
+        liveSignals.getStyleClass().add("view-3d-signals");
+        liveSignals.setMouseTransparent(true);
+        StackPane.setAlignment(liveSignals, Pos.TOP_RIGHT);
+        getChildren().addAll(title, help, liveSignals);
 
         subscene.setOnMousePressed(e -> {
             mouseX = e.getSceneX();
@@ -168,7 +174,13 @@ final class NandBoard3DView extends StackPane {
             drop.accept(slot, activePiece.get());
     }
 
-    void setSelected(Slot slot) { selected = slot; render(); }
+    void setSelected(Slot slot) { selected = slot; }
+
+    void setPreview(int a, int b) {
+        inputA = a;
+        inputB = b;
+        render();
+    }
 
     void zoomBy(double factor) {
         distance = Math.max(470, Math.min(1800, distance / factor));
@@ -187,6 +199,15 @@ final class NandBoard3DView extends StackPane {
     }
 
     void render() {
+        Nand2Lesson.Signal output = lesson.readyToTest()
+                ? lesson.observe(inputA, inputB) : null;
+        String outputText = output == null ? "—" : switch (output) {
+            case ZERO -> "0";
+            case ONE -> "1";
+            case X -> "X";
+            case Z -> "Z";
+        };
+        liveSignals.setText("A = " + inputA + "    B = " + inputB + "    Y = " + outputText);
         boardGroup.getChildren().clear();
         Box plate = new Box(720, 16, 410);
         plate.setMaterial(material("#1c5447"));
@@ -207,7 +228,8 @@ final class NandBoard3DView extends StackPane {
             trace.setTranslateX((x1 + x2) / 2);
             trace.setTranslateY(-10);
             trace.setTranslateZ((z1 + z2) / 2);
-            trace.setMaterial(material(BoardRouting.color(segment.net())));
+            trace.setMaterial(material(BoardRouting.signalColor(
+                    segment.net(), inputA, inputB, output)));
             boardGroup.getChildren().add(trace);
         }
 
@@ -228,8 +250,9 @@ final class NandBoard3DView extends StackPane {
             double z = (pos.y() - .5) * 410;
             MosType actual = lesson.pieceAt(slot);
 
-            outline(boardGroup, 130, 80, x, -10.9, z,
-                    selected == slot ? "#f3c16b" : "#91bbaf", slot);
+            String edge = selected == slot ? "#f3c16b"
+                    : actualActive(slot) ? "#9de7bf" : "#91bbaf";
+            outline(boardGroup, 130, 80, x, -10.9, z, edge, slot);
 
             Box body = new Box(119, 30, 61);
             body.setTranslateX(x);
@@ -283,6 +306,11 @@ final class NandBoard3DView extends StackPane {
             configurePieceClick(label, slot);
             boardGroup.getChildren().add(label);
         }
+    }
+
+    private boolean actualActive(Slot slot) {
+        return lesson.pieceAt(slot) == slot.expected()
+                && lesson.isConducting(slot, inputA, inputB);
     }
 
     private void addLead(Slot slot, double x, double y, double z,

@@ -1,6 +1,7 @@
 package dev.marcosmoreira.aula.interfaz;
 
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Signal;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
 
 import java.util.List;
@@ -33,6 +34,24 @@ final class BoardRouting {
             case MID -> "#c1afe0";
             case A -> "#91bdd7";
             case B -> "#9dd2c4";
+        };
+    }
+
+    /** Tinta didáctica de una red; MID no recibe un nivel inventado. */
+    static String signalColor(Net net, int a, int b, Signal output) {
+        if ((a != 0 && a != 1) || (b != 0 && b != 1)) {
+            throw new IllegalArgumentException("Las entradas deben ser binarias");
+        }
+        return switch (net) {
+            case A -> a == 1 ? "#a8e5f5" : "#688c9f";
+            case B -> b == 1 ? "#a5e9cf" : "#638f82";
+            case Y -> output == null ? "#a5b4b3" : switch (output) {
+                case ONE -> "#f4dd76";
+                case ZERO -> "#839995";
+                case X -> "#e69a62";
+                case Z -> "#b5b9c1";
+            };
+            case VDD, GND, MID -> color(net);
         };
     }
 

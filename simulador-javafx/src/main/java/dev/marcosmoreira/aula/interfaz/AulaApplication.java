@@ -502,9 +502,10 @@ public final class AulaApplication extends Application {
             inspectorContent.setText("Cuatro posiciones. El molde empieza vacío. "
                     + "Selecciona un componente para ver sus datos.");
         }
-        if (board != null) { board.setSelected(selectedSlot); board.render(); }
-        if (logic != null) { logic.setSelected(selectedSlot); logic.render(); }
+        if (board != null) board.setSelected(selectedSlot);
+        if (logic != null) logic.setSelected(selectedSlot);
         if (board3d != null) board3d.setSelected(selectedSlot);
+        // Cada vista se redibuja una sola vez con selección y bits ya actualizados.
         refreshLiveOutput();
         refreshStatus();
     }
@@ -526,6 +527,8 @@ public final class AulaApplication extends Application {
             liveOutput.setText("Y = — · monta las cuatro piezas");
         }
         if (logic != null) logic.setPreview(inputA, inputB, lesson.readyToTest());
+        if (board != null) board.setPreview(inputA, inputB);
+        if (board3d != null) board3d.setPreview(inputA, inputB);
     }
 
     private void refreshStatus() {

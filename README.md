@@ -1,9 +1,9 @@
 # Aula-Computadora
 
-> **Primer taller JavaFX R0.5 (11-nov-2026):** montaje NAND2 de cuatro MOS
+> **Primer taller JavaFX R0.6 (11-nov-2026):** montaje NAND2 de cuatro MOS
 > en 2D y 3D conceptual, inspección de la lógica dentro de una cucarachita,
 > trazos de red, transistores de tres patas, paneles plegables, zoom/paneo,
-> **prueba de entradas A/B en vivo** y captura F12. Pruebas automáticas de Java
+> **prueba de entradas A/B en vivo, señales visibles en ambas placas** y captura F12. Pruebas automáticas de Java
 > 21 en GitHub Actions; la GUI aún necesita observación visual ocasional.
 > No es CPU ejecutable ni PCB validada.
 > [Descomprimir, probar, ejecutar y recopilar capturas](simulador-javafx/docs/PRIMER_TALLER_EJECUCION.md).

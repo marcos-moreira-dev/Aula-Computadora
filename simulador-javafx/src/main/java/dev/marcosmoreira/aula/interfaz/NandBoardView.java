@@ -31,6 +31,8 @@ final class NandBoardView extends Canvas {
     private final CanvasNavigation navigation;
     private Slot selected;
     private Slot hover;
+    private int inputA;
+    private int inputB;
 
     NandBoardView(Nand2Lesson lesson, Supplier<MosType> activePiece,
                   Consumer<Slot> select, BiConsumer<Slot, MosType> drop,
@@ -104,7 +106,13 @@ final class NandBoardView extends Canvas {
         return "PMOS".equals(text) || "NMOS".equals(text);
     }
 
-    void setSelected(Slot slot) { selected = slot; render(); }
+    void setSelected(Slot slot) { selected = slot; }
+
+    void setPreview(int a, int b) {
+        inputA = a;
+        inputB = b;
+        render();
+    }
 
     private double[] point(Slot slot) {
         double w = getWidth(), h = getHeight();
@@ -161,6 +169,16 @@ final class NandBoardView extends Canvas {
         g.setFont(Font.font("Segoe UI", 12));
         g.setFill(Color.web("#b7d5cb"));
         g.fillText("Redes de un bit · trazado conceptual, no PCB fabricable", x0 + 25, y0 + 59);
+        g.setFill(Color.web("#e3f0e7"));
+        g.setFont(Font.font("Consolas", FontWeight.BOLD, 13));
+        String outputText = lesson.readyToTest() ? switch (lesson.observe(inputA, inputB)) {
+            case ZERO -> "0";
+            case ONE -> "1";
+            case X -> "X";
+            case Z -> "Z";
+        } : "—";
+        g.fillText("A=" + inputA + "   B=" + inputB + "   Y=" + outputText,
+                x0 + bw - 193, y0 + 83);
 
         for (Slot slot : Slot.values()) drawSocket(g, slot, w);
         g.setFill(Color.web("#dbece5"));
@@ -180,8 +198,10 @@ final class NandBoardView extends Canvas {
     /** Trazos definidos una sola vez para las proyecciones 2D y 3D. */
     private void drawRouting(GraphicsContext g, double x, double y, double w, double h) {
         g.setLineWidth(3.5);
+        Nand2Lesson.Signal output = lesson.readyToTest()
+                ? lesson.observe(inputA, inputB) : null;
         for (BoardRouting.Segment segment : BoardRouting.SEGMENTS) {
-            g.setStroke(Color.web(BoardRouting.color(segment.net())));
+            g.setStroke(Color.web(BoardRouting.signalColor(segment.net(), inputA, inputB, output)));
             double x1 = x + w * segment.a().x(), y1 = y + h * segment.a().y();
             double x2 = x + w * segment.b().x(), y2 = y + h * segment.b().y();
             g.strokeLine(x1, y1, x2, y2);
@@ -230,7 +250,9 @@ final class NandBoardView extends Canvas {
             g.setFill(Color.web("#26323a"));
             g.fillRect(x, y, 2 * hw, 74);
             g.setStroke(active ? Color.web("#ffd37c")
-                    : (installed == slot.expected() ? Color.web("#c9dbd6") : Color.web("#d4a454")));
+                    : installed != slot.expected() ? Color.web("#d4a454")
+                    : lesson.isConducting(slot, inputA, inputB)
+                    ? Color.web("#a1e4c5") : Color.web("#c9dbd6"));
             g.strokeRect(x, y, 2 * hw, 74);
         }
         g.setFont(Font.font("Consolas", FontWeight.BOLD, 19));

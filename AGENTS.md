@@ -43,6 +43,12 @@ ideal de MOS instalados desde el único modelo `Nand2Lesson`; no es prueba
 eléctrica real. Las comprobaciones visuales de JavaFX siguen pendientes de
 captura real cuando hay cambios relevantes.
 
+**R0.6:** ambas vistas de montaje reciben los mismos bits A/B y Y calculada
+en `Nand2Lesson`, colorean las redes definidas por `BoardRouting` y resaltan
+MOS activos. MID permanece neutral, sin inferir su nivel. El script de
+verificación sin JavaFX comprueba también las rutas y tintas dinámicas;
+preservar esta separación entre cálculo lógico y representación.
+
 **Actualización 9-nov-2026 C28-T:** global con 26 capítulos, maestro
 Word/PDF **C28-G de 248 páginas**, suplemento secuencial C28-H y atlas
 histórico C28-O. La última retroalimentación Windows confirmó **24/24**

@@ -32,7 +32,7 @@ final class NandLogicView extends Canvas {
         heightProperty().addListener((o, oldValue, newValue) -> render());
     }
 
-    void setSelected(Slot slot) { selected = slot; render(); }
+    void setSelected(Slot slot) { selected = slot; }
     void setPreview(int a, int b, boolean enabled) {
         inputA = a;
         inputB = b;

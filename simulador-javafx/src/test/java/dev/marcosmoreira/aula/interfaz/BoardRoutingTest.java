@@ -1,6 +1,7 @@
 package dev.marcosmoreira.aula.interfaz;
 
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Signal;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
 import org.junit.jupiter.api.Test;
 
@@ -34,5 +35,23 @@ class BoardRoutingTest {
         assertEquals(BoardRouting.slot(Slot.P2).x(), BoardRouting.slot(Slot.N2).x());
         assertTrue(BoardRouting.slot(Slot.P1).y() < BoardRouting.slot(Slot.N1).y());
         for (Net net : Net.values()) assertNotNull(BoardRouting.color(net));
+    }
+
+    @Test
+    void liveSignalColorsOnlyFollowKnownDigitalLevels() {
+        assertNotEquals(BoardRouting.signalColor(Net.A, 0, 0, Signal.ONE),
+                BoardRouting.signalColor(Net.A, 1, 0, Signal.ONE));
+        assertNotEquals(BoardRouting.signalColor(Net.B, 0, 0, Signal.ONE),
+                BoardRouting.signalColor(Net.B, 0, 1, Signal.ONE));
+        assertNotEquals(BoardRouting.signalColor(Net.Y, 0, 0, Signal.ONE),
+                BoardRouting.signalColor(Net.Y, 0, 0, Signal.ZERO));
+        assertNotEquals(BoardRouting.signalColor(Net.Y, 0, 0, Signal.X),
+                BoardRouting.signalColor(Net.Y, 0, 0, Signal.Z));
+        assertEquals(BoardRouting.color(Net.MID),
+                BoardRouting.signalColor(Net.MID, 1, 1, Signal.ZERO));
+        assertEquals(BoardRouting.signalColor(Net.Y, 0, 0, null),
+                BoardRouting.signalColor(Net.Y, 1, 1, null));
+        assertThrows(IllegalArgumentException.class,
+                () -> BoardRouting.signalColor(Net.A, 2, 0, Signal.ONE));
     }
 }

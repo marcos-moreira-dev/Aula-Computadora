@@ -17,5 +17,8 @@ fi
 
 "${compiler[@]}" "${compatibility[@]}" -d "$build_dir" \
   "$repo_dir/simulador-javafx/src/main/java/dev/marcosmoreira/aula/circuitos/Nand2Lesson.java" \
-  "$repo_dir/simulador-javafx/src/test/java/dev/marcosmoreira/aula/circuitos/Nand2LessonSmoke.java"
+  "$repo_dir/simulador-javafx/src/test/java/dev/marcosmoreira/aula/circuitos/Nand2LessonSmoke.java" \
+  "$repo_dir/simulador-javafx/src/main/java/dev/marcosmoreira/aula/interfaz/BoardRouting.java" \
+  "$repo_dir/simulador-javafx/src/test/java/dev/marcosmoreira/aula/interfaz/BoardRoutingSmoke.java"
 java -cp "$build_dir" dev.marcosmoreira.aula.circuitos.Nand2LessonSmoke
+java -cp "$build_dir" dev.marcosmoreira.aula.interfaz.BoardRoutingSmoke

@@ -1,6 +1,6 @@
 # Primera aplicación Aula Computadora — taller NAND2 ejecutable
 
-**Estado (11-nov-2026, R0.5):** implementación JavaFX revisada con
+**Estado (11-nov-2026, R0.6):** implementación JavaFX revisada con
 retroalimentación visual de Windows. No es una CPU ni una simulación eléctrica.
 Hay placa 2D y **primera placa 3D conceptual**, ninguna es una PCB fabricable.
 Las imágenes IA son referencias; **el estado real se dibuja desde Java**.
@@ -34,6 +34,11 @@ Las imágenes IA son referencias; **el estado real se dibuja desde Java**.
    observar la salida `Y` en vivo. Con cuatro piezas instaladas, el interior
    resalta en verde los MOS que conducen idealmente y en gris los que no.
    Antes de completar el molde, `Y` permanece sin evaluar.
+10. Las vistas Montaje 2D y Placa 3D reflejan las mismas entradas y salida
+    en el propio objeto: se colorean las pistas A, B e Y según la señal
+    digital. VDD y GND mantienen sus colores de red; MID es neutra porque
+    no existe un cálculo eléctrico de su tensión. Los bordes de los MOS
+    correctos activos se iluminan de forma conceptual.
 
 La topología es la NAND2 CMOS de C28-AC: dos ramas PMOS paralelas entre
 `VDD` y `Y`; dos NMOS en serie entre `Y` y `GND`. Cada pieza discreta se

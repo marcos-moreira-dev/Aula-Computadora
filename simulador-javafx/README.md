@@ -1,6 +1,6 @@
 # Simulador JavaFX — taller de Aula-8 y Aula-16
 
-**Estado 11-nov-2026, R0.5:** existe un corte de código JavaFX para la etapa
+**Estado 11-nov-2026, R0.6:** existe un corte de código JavaFX para la etapa
 NAND2 CMOS de cuatro piezas, con modelo Java independiente, montaje 2D,
 **placa 3D conceptual**, interior del chip, redes visibles y tests. **No hay CPU, PCB,
 ISA aprobada ni simulador de máquina completa.**
@@ -18,6 +18,13 @@ y la tabla de los cuatro vectores. La acción de GitHub **Java 21 · NAND2**
 compila y prueba el código automáticamente en cada cambio del simulador.
 No comprueba la apariencia de la interfaz Windows ni el comportamiento
 eléctrico o físico real.
+
+**R0.6:** las placas 2D y 3D muestran los valores de A, B e Y del mismo
+modelo y actualizan el color de sus trazos al conmutar las entradas. El borde
+de las posiciones MOS distingue conducción ideal, sin convertirlo en
+animación de corriente real. La red MID conserva color neutro porque el
+modelo aún no determina su nivel lógico. El smoke test sin Maven suma
+controles automáticos para las rutas 2D/3D y sus colores.
 
 **[Ejecutar y probar el primer taller](docs/PRIMER_TALLER_EJECUCION.md)**:
 `EJECUTAR_Y_CAPTURAR.cmd` en Windows (prueba + app + F12 + ZIP) o
