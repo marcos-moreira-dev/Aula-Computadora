@@ -4,6 +4,8 @@ import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Terminal;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.TerminalRef;
 import javafx.geometry.Pos;
 import javafx.scene.AmbientLight;
 import javafx.scene.Group;
@@ -40,6 +42,7 @@ final class NandBoard3DView extends StackPane {
     private final Supplier<MosType> activePiece;
     private final Consumer<Slot> select;
     private final Consumer<Net> selectNet;
+    private final Consumer<TerminalRef> selectTerminal;
     private final BiConsumer<Slot, MosType> drop;
     private final Consumer<Slot> inspect;
     private final Consumer<Slot> remove;
@@ -51,6 +54,7 @@ final class NandBoard3DView extends StackPane {
     private final Label liveSignals = new Label();
     private Slot selected;
     private Net selectedNet;
+    private TerminalRef selectedTerminal;
     private int inputA;
     private int inputB;
     private double distance = 970;
@@ -61,11 +65,13 @@ final class NandBoard3DView extends StackPane {
     NandBoard3DView(Nand2Lesson lesson, Supplier<MosType> activePiece,
                     Consumer<Slot> select, BiConsumer<Slot, MosType> drop,
                     Consumer<Slot> inspect, Consumer<Slot> remove,
-                    Consumer<Net> selectNet) {
+                    Consumer<Net> selectNet,
+                    Consumer<TerminalRef> selectTerminal) {
         this.lesson = lesson;
         this.activePiece = activePiece;
         this.select = select;
         this.selectNet = selectNet;
+        this.selectTerminal = selectTerminal;
         this.drop = drop;
         this.inspect = inspect;
         this.remove = remove;
@@ -108,9 +114,10 @@ final class NandBoard3DView extends StackPane {
             gestureMoved = false;
             Slot hit = pickedSlot(e.getPickResult().getIntersectedNode());
             Net hitNet = pickedNet(e.getPickResult().getIntersectedNode());
+            TerminalRef hitTerminal = pickedTerminal(e.getPickResult().getIntersectedNode());
             panning = e.getButton() == MouseButton.MIDDLE || e.isShiftDown();
             orbiting = e.getButton() == MouseButton.PRIMARY && hit == null
-                    && hitNet == null && !panning;
+                    && hitNet == null && hitTerminal == null && !panning;
         });
         subscene.setOnMouseDragged(e -> {
             double dx = e.getSceneX() - mouseX;
@@ -152,6 +159,8 @@ final class NandBoard3DView extends StackPane {
             e.consume();
         });
         subscene.setOnContextMenuRequested(e -> {
+            TerminalRef terminal = pickedTerminal(e.getPickResult().getIntersectedNode());
+            if (terminal != null) { selectTerminal.accept(terminal); e.consume(); return; }
             Slot slot = pickedSlot(e.getPickResult().getIntersectedNode());
             if (slot == null) {
                 Net net = pickedNet(e.getPickResult().getIntersectedNode());
@@ -177,6 +186,11 @@ final class NandBoard3DView extends StackPane {
         return slot;
     }
 
+    private static TerminalRef pickedTerminal(Node node) {
+        return node != null && node.getUserData() instanceof TerminalRef terminal
+                ? terminal : null;
+    }
+
     private static Net pickedNet(Node node) {
         if (node == null || !(node.getUserData() instanceof Net net)) return null;
         return net;
@@ -192,6 +206,7 @@ final class NandBoard3DView extends StackPane {
 
     void setSelected(Slot slot) { selected = slot; }
     void setSelectedNet(Net net) { selectedNet = net; }
+    void setSelectedTerminal(TerminalRef ref) { selectedTerminal = ref; }
 
     void setPreview(int a, int b) {
         inputA = a;
@@ -298,11 +313,12 @@ final class NandBoard3DView extends StackPane {
             // estas patas parecía una caja sin función electrónica.
             double sign = slot == Slot.P2 || slot == Slot.N2 ? 1 : -1;
             for (int end : new int[]{-1, 1}) {
-                addLead(slot, x, -10.4, z + end * 44, 11, 2.8, 26);
-                addLead(slot, x, -19.1, z + end * 32, 11, 15, 5);
+                Terminal terminal = end < 0 ? Terminal.UPPER : Terminal.LOWER;
+                addLead(slot, terminal, x, -10.4, z + end * 44, 11, 2.8, 26);
+                addLead(slot, terminal, x, -19.1, z + end * 32, 11, 15, 5);
             }
-            addLead(slot, x + sign * 71, -10.4, z, 31, 2.8, 11);
-            addLead(slot, x + sign * 61, -19.1, z, 5, 15, 11);
+            addLead(slot, Terminal.GATE, x + sign * 71, -10.4, z, 31, 2.8, 11);
+            addLead(slot, Terminal.GATE, x + sign * 61, -19.1, z, 5, 15, 11);
 
             if (actual != null) {
                 Box topSurface = new Box(109, 1.4, 54);
@@ -340,15 +356,20 @@ final class NandBoard3DView extends StackPane {
                 && lesson.isConducting(slot, inputA, inputB);
     }
 
-    private void addLead(Slot slot, double x, double y, double z,
+    private void addLead(Slot slot, Terminal contact, double x, double y, double z,
                          double width, double height, double depth) {
+        TerminalRef ref = new TerminalRef(slot, contact);
         Box metal = new Box(width, height, depth);
         metal.setTranslateX(x);
         metal.setTranslateY(y);
         metal.setTranslateZ(z);
-        metal.setMaterial(material("#bac9d1"));
-        metal.setUserData(slot);
-        configurePieceClick(metal, slot);
+        metal.setMaterial(material(ref.equals(selectedTerminal) ? "#ffcd69" : "#bac9d1"));
+        metal.setUserData(ref);
+        metal.setOnMouseClicked(e -> {
+            if (e.getButton() == MouseButton.PRIMARY && !gestureMoved)
+                selectTerminal.accept(ref);
+            e.consume();
+        });
         boardGroup.getChildren().add(metal);
     }
 

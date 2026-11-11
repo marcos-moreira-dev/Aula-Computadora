@@ -125,7 +125,7 @@ Convenciones: **CONFIRMADO** por el usuario, **DISEÑO BASE** adoptado en la pla
 | D-110 | DISEÑO BASE | **R0.6, respuesta visual compartida:** los cambios A/B se muestran sobre las redes normalizadas de las placas 2D y 3D, y la salida Y se colorea desde `Nand2Lesson.observe`. MID queda neutra: sin modelo de tensiones intermedias no se le asigna un cero o uno ficticio. Los MOS que conducen se resaltan sin confundirlo con corriente medida. Incluir pruebas de tintas y rutas en JUnit y en un smoke test ejecutable sin Maven/JavaFX. |
 | D-111 | DISEÑO BASE | **R0.7, sonda interactiva:** la selección de pistas en 2D y 3D muestra en Inspector la red y su nivel digital calculable. A/B y referencias idealizadas VDD/GND tienen 0/1, Y depende del montaje y conserva X/Z cuando corresponde; MID se marca sin modelar. El detector geométrico 2D rechaza las intersecciones ambiguas entre redes sin uniones; el 3D recoge la identidad de cada segmento desde `BoardRouting`. La sonda no es medición electrónica ni validación de conectividad física. |
 
-## Procedimiento para cambiar algo
+| D-112 | DISEÑO BASE | **R0.8:** selección de los tres contactos conceptuales de cada MOS sobre placa 2D/3D, datos eléctricos de red compartidos desde `TerminalRef`, y marcado visual en la representación interna. UPPER/LOWER representan posición, no el pinout source/drain de un componente comercial. Pruebas de los doce vínculos. |\n\n## Procedimiento para cambiar algo
 
 1. Explicar qué requisito o evidencia motiva el cambio.
 2. Identificar capítulos, pruebas, programa y esquema afectados.

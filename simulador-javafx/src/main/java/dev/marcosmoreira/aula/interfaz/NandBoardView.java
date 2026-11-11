@@ -4,6 +4,8 @@ import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Terminal;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.TerminalRef;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.Cursor;
@@ -27,6 +29,7 @@ final class NandBoardView extends Canvas {
     private final Supplier<MosType> activePiece;
     private final Consumer<Slot> select;
     private final Consumer<Net> selectNet;
+    private final Consumer<TerminalRef> selectTerminal;
     private final BiConsumer<Slot, MosType> drop;
     private final Consumer<Slot> inspect;
     private final Consumer<Slot> remove;
@@ -35,17 +38,20 @@ final class NandBoardView extends Canvas {
     private Slot hover;
     private Net selectedNet;
     private Net hoverNet;
+    private TerminalRef selectedTerminal;
+    private TerminalRef hoverTerminal;
     private int inputA;
     private int inputB;
 
     NandBoardView(Nand2Lesson lesson, Supplier<MosType> activePiece,
                   Consumer<Slot> select, BiConsumer<Slot, MosType> drop,
                   Consumer<Slot> inspect, Consumer<Slot> remove,
-                  Consumer<Net> selectNet) {
+                  Consumer<Net> selectNet, Consumer<TerminalRef> selectTerminal) {
         this.lesson = lesson;
         this.activePiece = activePiece;
         this.select = select;
         this.selectNet = selectNet;
+        this.selectTerminal = selectTerminal;
         this.drop = drop;
         this.inspect = inspect;
         this.remove = remove;
@@ -53,19 +59,28 @@ final class NandBoardView extends Canvas {
         widthProperty().addListener((o, oldValue, newValue) -> render());
         heightProperty().addListener((o, oldValue, newValue) -> render());
         setOnMouseMoved(e -> {
-            Slot next = at(e.getX(), e.getY());
-            Net nextNet = next == null ? netAt(e.getX(), e.getY()) : null;
-            setCursor(next != null || nextNet != null ? Cursor.HAND : Cursor.DEFAULT);
-            if (next != hover || nextNet != hoverNet) {
+            TerminalRef nextTerminal = terminalAt(e.getX(), e.getY());
+            Slot next = nextTerminal == null ? at(e.getX(), e.getY()) : null;
+            Net nextNet = next == null && nextTerminal == null
+                    ? netAt(e.getX(), e.getY()) : null;
+            setCursor(next != null || nextNet != null || nextTerminal != null
+                    ? Cursor.HAND : Cursor.DEFAULT);
+            if (next != hover || nextNet != hoverNet
+                    || !java.util.Objects.equals(nextTerminal, hoverTerminal)) {
                 hover = next;
                 hoverNet = nextNet;
+                hoverTerminal = nextTerminal;
                 render();
             }
         });
-        setOnMouseExited(e -> { hover = null; hoverNet = null; render(); });
+        setOnMouseExited(e -> {
+            hover = null; hoverNet = null; hoverTerminal = null; render();
+        });
         setOnMouseClicked(e -> {
             if (navigation.suppressClick() || e.isShiftDown()) return;
             if (e.getButton() != MouseButton.PRIMARY) return;
+            TerminalRef terminal = terminalAt(e.getX(), e.getY());
+            if (terminal != null) { selectTerminal.accept(terminal); return; }
             Slot slot = at(e.getX(), e.getY());
             if (slot == null) {
                 Net net = netAt(e.getX(), e.getY());
@@ -80,6 +95,12 @@ final class NandBoardView extends Canvas {
             }
         });
         setOnContextMenuRequested(e -> {
+            TerminalRef terminal = terminalAt(e.getX(), e.getY());
+            if (terminal != null) {
+                selectTerminal.accept(terminal);
+                e.consume();
+                return;
+            }
             Slot slot = at(e.getX(), e.getY());
             if (slot == null) {
                 Net net = netAt(e.getX(), e.getY());
@@ -128,6 +149,7 @@ final class NandBoardView extends Canvas {
 
     void setSelected(Slot slot) { selected = slot; }
     void setSelectedNet(Net net) { selectedNet = net; }
+    void setSelectedTerminal(TerminalRef ref) { selectedTerminal = ref; }
 
     void setPreview(int a, int b) {
         inputA = a;
@@ -140,6 +162,23 @@ final class NandBoardView extends Canvas {
         BoardRouting.Point point = BoardRouting.slot(slot);
         return new double[]{w * (.075 + .85 * point.x()),
                 h * (.11 + .79 * point.y())};
+    }
+
+    private TerminalRef terminalAt(double sx, double sy) {
+        double x = navigation.worldX(sx), y = navigation.worldY(sy);
+        double halfWidth = Math.min(67, getWidth() * .105);
+        for (Slot slot : Slot.values()) {
+            double[] p = point(slot);
+            if (Math.abs(x - p[0]) <= 10 && Math.abs(y - (p[1] - 48)) <= 10)
+                return new TerminalRef(slot, Terminal.UPPER);
+            if (Math.abs(x - p[0]) <= 10 && Math.abs(y - (p[1] + 48)) <= 10)
+                return new TerminalRef(slot, Terminal.LOWER);
+            double side = slot == Slot.P2 || slot == Slot.N2 ? 1 : -1;
+            if (Math.abs(x - (p[0] + side * (halfWidth + 13))) <= 11
+                    && Math.abs(y - p[1]) <= 10)
+                return new TerminalRef(slot, Terminal.GATE);
+        }
+        return null;
     }
 
     private Slot at(double x, double y) {
@@ -256,6 +295,13 @@ final class NandBoardView extends Canvas {
         }
     }
 
+    private Color leadColor(Slot slot, Terminal terminal, MosType installed) {
+        TerminalRef candidate = new TerminalRef(slot, terminal);
+        if (candidate.equals(selectedTerminal)) return Color.web("#ffcd69");
+        if (candidate.equals(hoverTerminal)) return Color.web("#e5eeb3");
+        return installed == null ? Color.web("#95bbae") : Color.web("#b9c8cf");
+    }
+
     private void drawSocket(GraphicsContext g, Slot slot, double width) {
         double[] p = point(slot);
         double hw = Math.min(67, width * .105), x = p[0] - hw, y = p[1] - 37;
@@ -264,10 +310,12 @@ final class NandBoardView extends Canvas {
         // Contactos metálicos visibles alrededor del cuerpo. El taller usa
         // tres terminales eléctricos por MOS, no un DIP inventado de 8 pines.
         double sign = slot == Slot.P2 || slot == Slot.N2 ? 1 : -1;
-        g.setFill(installed == null ? Color.web("#95bbae") : Color.web("#b9c8cf"));
+        g.setFill(leadColor(slot, Terminal.UPPER, installed));
         g.fillRect(p[0] - 6, y - 19, 12, 28);
+        g.setFill(leadColor(slot, Terminal.LOWER, installed));
         g.fillRect(p[0] - 6, y + 65, 12, 28);
         double gateX = sign < 0 ? x - 22 : x + 2 * hw - 7;
+        g.setFill(leadColor(slot, Terminal.GATE, installed));
         g.fillRect(gateX, p[1] - 7, 29, 14);
         g.setLineWidth(active ? 3 : 1.5);
         if (installed == null) {

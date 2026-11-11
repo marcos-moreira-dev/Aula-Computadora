@@ -4,6 +4,7 @@ import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Net;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.TerminalRef;
 import javafx.application.Application;
 import javafx.application.ConditionalFeature;
 import javafx.application.Platform;
@@ -56,6 +57,7 @@ public final class AulaApplication extends Application {
     private MosType activePiece;
     private Slot selectedSlot;
     private Net selectedNet;
+    private TerminalRef selectedTerminal;
     private String saveState = "sin cambios";
     private NandBoardView board;
     private NandLogicView logic;
@@ -97,14 +99,16 @@ public final class AulaApplication extends Application {
         root.setTop(new VBox(buildMenu(stage), buildToolbar(stage)));
 
         board = new NandBoardView(lesson, () -> activePiece, this::select,
-                this::place, this::inspect, this::remove, this::selectNet);
+                this::place, this::inspect, this::remove,
+                this::selectNet, this::selectTerminal);
         logic = new NandLogicView(lesson);
         workspaceTabs = new TabPane();
         assemblyTab = new Tab("Montaje 2D", wrapCanvas(board));
         detailTab = new Tab("Interior NAND (2 entradas)", wrapCanvas(logic));
         if (Platform.isSupported(ConditionalFeature.SCENE3D)) {
             board3d = new NandBoard3DView(lesson, () -> activePiece,
-                    this::select, this::place, this::inspect, this::remove, this::selectNet);
+                    this::select, this::place, this::inspect, this::remove,
+                    this::selectNet, this::selectTerminal);
             threeDTab = new Tab("Placa 3D", board3d);
         } else {
             threeDTab = new Tab("Placa 3D (no disponible)");
@@ -367,19 +371,31 @@ public final class AulaApplication extends Application {
     private void select(Slot slot) {
         selectedSlot = slot;
         selectedNet = null;
+        selectedTerminal = null;
         refresh();
     }
 
     private void selectNet(Net net) {
         selectedNet = Objects.requireNonNull(net);
         selectedSlot = null;
+        selectedTerminal = null;
+        refresh();
+    }
+
+    private void selectTerminal(TerminalRef terminal) {
+        selectedTerminal = Objects.requireNonNull(terminal);
+        selectedSlot = terminal.slot();
+        selectedNet = terminal.net();
         refresh();
     }
 
     private void inspect(Slot slot) {
         if (slot == null) return;
         selectedSlot = slot;
-        selectedNet = null;
+        if (selectedTerminal == null || selectedTerminal.slot() != slot) {
+            selectedTerminal = null;
+            selectedNet = null;
+        }
         workspaceTabs.getSelectionModel().select(detailTab);
         refresh();
     }
@@ -390,6 +406,7 @@ public final class AulaApplication extends Application {
             undoStack.push(before);
             selectedSlot = slot;
             selectedNet = null;
+            selectedTerminal = null;
             activePiece = lesson.remaining(type) == 0 ? null : activePiece;
             closeStaleResults();
             saveProgress();
@@ -408,6 +425,7 @@ public final class AulaApplication extends Application {
             undoStack.push(before);
             selectedSlot = slot;
             selectedNet = null;
+            selectedTerminal = null;
             closeStaleResults();
             saveProgress();
         }
@@ -433,6 +451,7 @@ public final class AulaApplication extends Application {
                 activePiece = null;
                 selectedSlot = null;
                 selectedNet = null;
+                selectedTerminal = null;
                 closeStaleResults();
                 saveProgress();
                 refresh();
@@ -505,9 +524,12 @@ public final class AulaApplication extends Application {
         detailsButton.setDisable(selectedSlot == null);
         if (board != null) board.setSelected(selectedSlot);
         if (board != null) board.setSelectedNet(selectedNet);
+        if (board != null) board.setSelectedTerminal(selectedTerminal);
         if (logic != null) logic.setSelected(selectedSlot);
+        if (logic != null) logic.setSelectedTerminal(selectedTerminal);
         if (board3d != null) board3d.setSelected(selectedSlot);
         if (board3d != null) board3d.setSelectedNet(selectedNet);
+        if (board3d != null) board3d.setSelectedTerminal(selectedTerminal);
         // Cada vista se redibuja una sola vez con selección y bits ya actualizados.
         refreshLiveOutput();
         refreshStatus();
@@ -536,6 +558,30 @@ public final class AulaApplication extends Application {
     }
 
     private void refreshInspector() {
+        if (selectedTerminal != null) {
+            Net net = selectedTerminal.net();
+            Nand2Lesson.Signal output = lesson.readyToTest()
+                    ? lesson.observe(inputA, inputB) : null;
+            Nand2Lesson.Signal level = BoardRouting.level(net, inputA, inputB, output);
+            String value = level == null ? "no calculado" : switch (level) {
+                case ZERO -> "0";
+                case ONE -> "1";
+                case X -> "X (contención ideal)";
+                case Z -> "Z (flotante ideal)";
+            };
+            String terminalName = switch (selectedTerminal.terminal()) {
+                case GATE -> "compuerta";
+                case UPPER -> "superior";
+                case LOWER -> "inferior";
+            };
+            Slot slot = selectedTerminal.slot();
+            MosType actual = lesson.pieceAt(slot);
+            inspectorTitle.setText(slot.name() + " · " + terminalName);
+            inspectorContent.setText("Red: " + net + "\nNivel lógico: " + value
+                    + "\nPieza: " + (actual == null ? "hueco vacío" : actual)
+                    + "\nContacto conceptual; no es un pinout físico.");
+            return;
+        }
         if (selectedSlot != null) {
             MosType actual = lesson.pieceAt(selectedSlot);
             inspectorTitle.setText(selectedSlot.name() + "  ·  "

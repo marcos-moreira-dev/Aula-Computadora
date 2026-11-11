@@ -1,6 +1,6 @@
 # Primera aplicación Aula Computadora — taller NAND2 ejecutable
 
-**Estado (11-nov-2026, R0.7):** implementación JavaFX revisada con
+**Estado (11-nov-2026, R0.8):** implementación JavaFX revisada con
 retroalimentación visual de Windows. No es una CPU ni una simulación eléctrica.
 Hay placa 2D y **primera placa 3D conceptual**, ninguna es una PCB fabricable.
 Las imágenes IA son referencias; **el estado real se dibuja desde Java**.
@@ -39,7 +39,7 @@ Las imágenes IA son referencias; **el estado real se dibuja desde Java**.
     digital. VDD y GND mantienen sus colores de red; MID es neutra porque
     no existe un cálculo eléctrico de su tensión. Los bordes de los MOS
     correctos activos se iluminan de forma conceptual.
-11. Haz clic en cualquier pista de la placa para seleccionar su **red**.
+11. Haz clic en una patita (compuerta, contacto superior o inferior) para consultar su red. El Inspector indica el contacto y la señal; en el interior del chip se destaca su ubicación. No es un patillaje comercial.\n12. Haz clic en cualquier pista de la placa para seleccionar su **red**.
     El Inspector se convierte en sonda lógica: presenta 0/1 o los estados
     ideales X/Z cuando corresponda. Si Y está incompleta o MID carece de
     cálculo, se indica expresamente. Los cruces sin punto eléctrico de unión

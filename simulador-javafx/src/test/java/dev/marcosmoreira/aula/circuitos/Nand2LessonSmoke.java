@@ -48,6 +48,17 @@ public final class Nand2LessonSmoke {
         lesson.place(N1, PMOS); lesson.place(N2, NMOS);
         require(lesson.testTruthTable().get(1).observed() == Nand2Lesson.Signal.X,
                 "Detectar contención ideal"); checks++;
+        for (var slot : Nand2Lesson.Slot.values()) {
+            for (var terminal : Nand2Lesson.Terminal.values()) {
+                var ref = new Nand2Lesson.TerminalRef(slot, terminal);
+                require(ref.net() == slot.netFor(terminal), "Terminal fuera de topología " + ref);
+                checks++;
+            }
+        }
+        require(new Nand2Lesson.TerminalRef(P1, Nand2Lesson.Terminal.GATE).net()
+                == Nand2Lesson.Net.A, "Compuerta P1"); checks++;
+        require(new Nand2Lesson.TerminalRef(N2, Nand2Lesson.Terminal.LOWER).net()
+                == Nand2Lesson.Net.GND, "Contacto N2"); checks++;
         System.out.println("OK: " + checks + " controles de lógica y montaje NAND2 (solo anfitrión)");
     }
 

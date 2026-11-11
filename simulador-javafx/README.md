@@ -1,6 +1,6 @@
 # Simulador JavaFX — taller de Aula-8 y Aula-16
 
-**Estado 11-nov-2026, R0.7:** existe un corte de código JavaFX para la etapa
+**Estado 11-nov-2026, R0.8:** existe un corte de código JavaFX para la etapa
 NAND2 CMOS de cuatro piezas, con modelo Java independiente, montaje 2D,
 **placa 3D conceptual**, interior del chip, redes visibles y tests. **No hay CPU, PCB,
 ISA aprobada ni simulador de máquina completa.**
@@ -32,7 +32,7 @@ el modelo lo conoce, distingue `X` de `Z` y deja MID como no calculada.
 Los cruces de dos pistas sin nodo no se consideran conexiones; una sonda
 2D no elige arbitrariamente una red en el punto exacto del cruce.
 
-**[Ejecutar y probar el primer taller](docs/PRIMER_TALLER_EJECUCION.md)**:
+**R0.8:** cada una de las tres patitas conceptuales (compuerta, contacto superior e inferior) se puede seleccionar en 2D/3D. El Inspector indica la red desde el mismo `Nand2Lesson.TerminalRef` que usa el circuito; el interior del chip destaca el contacto seleccionado. Los nombres superior/inferior no son un pinout comercial.\n\n**[Ejecutar y probar el primer taller](docs/PRIMER_TALLER_EJECUCION.md)**:
 `EJECUTAR_Y_CAPTURAR.cmd` en Windows (prueba + app + F12 + ZIP) o
 `mvn test` / `mvn javafx:run` con Maven.
 

@@ -3,6 +3,8 @@ package dev.marcosmoreira.aula.interfaz;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.MosType;
 import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Slot;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.Terminal;
+import dev.marcosmoreira.aula.circuitos.Nand2Lesson.TerminalRef;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -21,6 +23,7 @@ final class NandLogicView extends Canvas {
     private final Nand2Lesson lesson;
     private final CanvasNavigation navigation;
     private Slot selected;
+    private TerminalRef selectedTerminal;
     private int inputA;
     private int inputB;
     private boolean previewEnabled;
@@ -33,6 +36,7 @@ final class NandLogicView extends Canvas {
     }
 
     void setSelected(Slot slot) { selected = slot; }
+    void setSelectedTerminal(TerminalRef ref) { selectedTerminal = ref; }
     void setPreview(int a, int b, boolean enabled) {
         inputA = a;
         inputB = b;
@@ -206,6 +210,17 @@ final class NandLogicView extends Canvas {
         // Identificador breve de cada transistor, no una leyenda dentro del símbolo.
         label(g, slot.toString(), x + (gateFromRight ? -27 : 16), y - 6,
                 Color.web("#385565"), 10, true);
+        if (selectedTerminal != null && selectedTerminal.slot() == slot) {
+            double px = selectedTerminal.terminal() == Terminal.GATE
+                    ? x + sign * 31 : x;
+            double py = switch (selectedTerminal.terminal()) {
+                case GATE -> y;
+                case UPPER -> y - 22;
+                case LOWER -> y + 22;
+            };
+            g.setFill(Color.web("#e1a13c"));
+            g.fillOval(px - 5, py - 5, 10, 10);
+        }
     }
 
     private static void wire(GraphicsContext g, Color color,

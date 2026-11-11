@@ -18,6 +18,17 @@ public final class Nand2Lesson {
     /** Redes del único módulo NAND2 ideal, compartidas por vistas y modelo. */
     public enum Net { VDD, A, B, Y, MID, GND }
 
+    /** Contactos geométricos del molde, sin patillaje comercial. */
+    public enum Terminal { GATE, UPPER, LOWER }
+
+    public record TerminalRef(Slot slot, Terminal terminal) {
+        public TerminalRef {
+            Objects.requireNonNull(slot);
+            Objects.requireNonNull(terminal);
+        }
+        public Net net() { return slot.netFor(terminal); }
+    }
+
     public enum Slot {
         P1(MosType.PMOS, 'A', Net.VDD, Net.Y),
         P2(MosType.PMOS, 'B', Net.VDD, Net.Y),
@@ -41,6 +52,15 @@ public final class Nand2Lesson {
         public Net sourceNet() { return sourceNet; }
         public Net drainNet() { return drainNet; }
         public String nets() { return sourceNet + "-" + drainNet; }
+        /** UPPER/LOWER son contactos en la vista, no pines físicos. */
+        public Net netFor(Terminal terminal) {
+            Objects.requireNonNull(terminal);
+            return switch (terminal) {
+                case GATE -> gate == 'A' ? Net.A : Net.B;
+                case UPPER -> sourceNet;
+                case LOWER -> drainNet;
+            };
+        }
     }
 
     public enum Signal { ZERO, ONE, X, Z }

@@ -113,6 +113,30 @@ class Nand2LessonTest {
         assertThrows(IllegalArgumentException.class, () -> lesson.isConducting(P1, 1, 3));
     }
 
+    @Test
+    void allTwelveTerminalLinksUseTheSameFourSlotTopology() {
+        var terminals = Nand2Lesson.Terminal.values();
+        assertEquals(3, terminals.length);
+        assertEquals(Nand2Lesson.Net.A, P1.netFor(Nand2Lesson.Terminal.GATE));
+        assertEquals(Nand2Lesson.Net.B, P2.netFor(Nand2Lesson.Terminal.GATE));
+        assertEquals(Nand2Lesson.Net.A, N1.netFor(Nand2Lesson.Terminal.GATE));
+        assertEquals(Nand2Lesson.Net.B, N2.netFor(Nand2Lesson.Terminal.GATE));
+        assertEquals(Nand2Lesson.Net.VDD, P1.netFor(Nand2Lesson.Terminal.UPPER));
+        assertEquals(Nand2Lesson.Net.VDD, P2.netFor(Nand2Lesson.Terminal.UPPER));
+        assertEquals(Nand2Lesson.Net.Y, P1.netFor(Nand2Lesson.Terminal.LOWER));
+        assertEquals(Nand2Lesson.Net.Y, P2.netFor(Nand2Lesson.Terminal.LOWER));
+        assertEquals(Nand2Lesson.Net.Y, N1.netFor(Nand2Lesson.Terminal.UPPER));
+        assertEquals(Nand2Lesson.Net.MID, N1.netFor(Nand2Lesson.Terminal.LOWER));
+        assertEquals(Nand2Lesson.Net.MID, N2.netFor(Nand2Lesson.Terminal.UPPER));
+        assertEquals(Nand2Lesson.Net.GND, N2.netFor(Nand2Lesson.Terminal.LOWER));
+        for (var slot : Nand2Lesson.Slot.values())
+            for (var terminal : terminals)
+                assertEquals(slot.netFor(terminal),
+                        new Nand2Lesson.TerminalRef(slot, terminal).net());
+        assertThrows(NullPointerException.class,
+                () -> new Nand2Lesson.TerminalRef(null, Nand2Lesson.Terminal.GATE));
+    }
+
     static Nand2Lesson correctCircuit() {
         Nand2Lesson lesson = new Nand2Lesson();
         lesson.place(P1, PMOS);
