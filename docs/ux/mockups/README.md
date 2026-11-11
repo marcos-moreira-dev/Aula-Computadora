@@ -1,6 +1,6 @@
 # Aula-Computadora — maquetas representativas de UX/UI
 
-**Estado:** diseño de interfaz **propuesto**, 11 de noviembre de 2026.
+**Estado:** diseño de interfaz **propuesto**, tercera revisión semántica V3.
 Estas imágenes **no** son capturas de una aplicación JavaFX implementada,
 una PCB fabricable, una simulación SPICE ni una CPU ya ejecutable.
 
@@ -42,6 +42,46 @@ Para cada `IM-XX` hay dos archivos `IM-XX_AULA_UX_V2.svg` y
 `IM-XX_AULA_UX_V2.png`. La lámina
 `AULA_UX_DIEZ_VISTAS_CONTACTO_V2.png` permite revisar las diez de un vistazo.
 
+## Tercera tanda: dieciséis situaciones V3
+
+La V3 incorpora la auditoría semántica de las diez escenas anteriores y
+seis situaciones adicionales de interacción. **Es la referencia visual
+preferente para discutir UX/UI**; V1 y V2 permanecen para conservar el
+historial de decisiones. Todos los archivos `IM-XX_AULA_UX_V3.svg` tienen
+su correspondiente PNG. El código fuente está en
+`scripts/generar_mockups_ux_v3.py`.
+
+| ID | Situación de la V3 | Contrato semántico ilustrado |
+| --- | --- | --- |
+| IM-01 | Inicio. | Recorridos finitos y progreso independiente, sin proyectos arbitrarios. |
+| IM-02 | Placa de Aula-8. | Construcción guiada con puntos de colocación; montaje aún no probado. |
+| IM-03 | Construcción NAND2. | NAND2 es **objetivo**, mientras que el kit ofrece 2 PMOS y 2 NMOS; todavía no es un módulo listo para usar. |
+| IM-04 | Falla en prueba. | Distingue resultado esperado y observado; evita adivinar la causa. |
+| IM-05 | Editor y pantalla. | Separa editor **anfitrión** de pantalla **de la CPU**, sin atribuir al firmware un editor que no tiene. |
+| IM-06 | Aula-16 2D. | Banco par/impar, palabra little-endian y dirección de 16 bits. |
+| IM-07 | Arquitectura Aula-8. | R0–R3 de 8 bits, PC/SP/X de 16 bits; mapa de módulos, **no** netlist. |
+| IM-08 | Registro R0. | Inspección del mismo objeto entre símbolo, detalle y estado lógico. |
+| IM-09 | Preferencias. | Diálogo independiente del inspector contextual. |
+| IM-10 | Menú Ver. | Visibilidad de sidebar, inspector, dock y modo concentración. |
+| IM-11 | Arrastre activo de transistor. | Fantasma de colocación, región admisible, acción cancelar y pista contextual. |
+| IM-12 | Compuerta aprobada. | Tabla de verdad comprobada → promover NAND2 a módulo reutilizable; ejemplo ilustrativo. |
+| IM-13 | CPU Aula-8 pausada. | Inspección de buses, señales, bits, registro y pulso único; instantánea hipotética. |
+| IM-14 | Panel manual. | Depositar un byte en RAM con CPU detenida y bus exclusivo; herramientas anfitrionas separadas. |
+| IM-15 | Finalización Aula-8. | Recorrido finito, progreso conservado y acceso posterior a Aula-16. |
+| IM-16 | Vídeo gráfico. | **Una sola pantalla** con modo gráfico alternativo exclusivo, 256 × 128, 2 bpp y cuatro colores. |
+
+`AULA_UX_DIECISEIS_VISTAS_CONTACTO_V3.png` permite auditar el conjunto
+en una lámina; `AULA_UX_NUEVAS_ESCENAS_CONTACTO_V3.png` agrupa IM-11 a
+IM-16. Las barras de herramientas contextuales poseen iconos vectoriales
+y etiquetas; los controles son **maquetas estáticas**.
+
+La V3 deja expresamente **sin resolver** el circuito físico completo de
+los registros, los encapsulados definitivos, el repertorio de instrucciones
+y el aspecto final de una aplicación JavaFX real. La verificación y los
+estados representados en IM-12 a IM-16 son **hipotéticos** y no un registro
+de pruebas del motor. El diseño de información se conserva independiente
+del motor de simulación y de sus posibles representaciones 2D/3D.
+
 En esta tanda las vistas y los valores son **escenas de diseño**, no una
 prueba de funcionamiento de la CPU. Por ejemplo, la pantalla IM-07 usa
 un bus de bits ilustrativo; IM-08 no inventa la topología interna de
@@ -76,6 +116,7 @@ Con Python y `svgwrite`:
 ```bash
 python scripts/generar_mockups_ux_im01_im06.py
 python scripts/generar_mockups_ux_v2.py
+python scripts/generar_mockups_ux_v3.py
 ```
 
 El generador conserva el archivo histórico IM-02 V1, cuyo SVG y script
