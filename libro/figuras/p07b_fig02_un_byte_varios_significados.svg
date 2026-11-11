@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Tres interpretaciones de un byte</title><rect width="1000" height="500" fill="#ffffff"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="40" y="44" class="label">Los bits se conservan; cambia la regla que los lee</text>
+<text x="40" y="74" class="small">El patrón central no incluye una etiqueta de tipo.</text>
+<rect x="315" y="111" width="371" height="91" rx="14" fill="#fff0da" stroke="#28465b" stroke-width="2"/><text x="500.5" y="163.5" class="label" text-anchor="middle">01000001</text>
+<path class="wire" d="M500,202 V238 H168 V275 M500,238 V275 M500,238 H827 V275"/>
+<circle class="node" cx="500" cy="238" r="5"/>
+<rect x="47" y="275" width="245" height="106" rx="14" fill="#e8f2ff" stroke="#28465b" stroke-width="2"/><text x="169.5" y="335.0" class="small" text-anchor="middle">Número: 65</text><rect x="374" y="275" width="251" height="106" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="2"/><text x="499.5" y="335.0" class="small" text-anchor="middle">ASCII: A</text><rect x="707" y="275" width="245" height="106" rx="14" fill="#e8f2ff" stroke="#28465b" stroke-width="2"/><text x="829.5" y="335.0" class="small" text-anchor="middle">Máscara: b6 y b0</text>
+<rect x="77" y="419" width="844" height="48" rx="10" fill="#f5f7f9"/>
+<text x="500" y="448" class="small" text-anchor="middle">¿Instrucción? Solo una ISA definida puede responder.</text>
+</svg>

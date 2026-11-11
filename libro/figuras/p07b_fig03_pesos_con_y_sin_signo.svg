@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Pesos de 11111111 según la convención</title><rect width="1000" height="500" fill="#ffffff"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="36" y="43" class="label">Un byte de unos, dos resultados numéricos distintos</text>
+<text x="36" y="75" class="small">En complemento a dos de ocho bits, b7 pesa -128; sin signo pesa +128.</text>
+<text x="46" y="153" class="small">Bits</text>
+<rect x="175" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="214" y="151" class="label" text-anchor="middle">1</text><text x="214" y="190" class="tiny" text-anchor="middle">b7</text><rect x="269" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="308" y="151" class="label" text-anchor="middle">1</text><text x="308" y="190" class="tiny" text-anchor="middle">b6</text><rect x="363" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="402" y="151" class="label" text-anchor="middle">1</text><text x="402" y="190" class="tiny" text-anchor="middle">b5</text><rect x="457" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="496" y="151" class="label" text-anchor="middle">1</text><text x="496" y="190" class="tiny" text-anchor="middle">b4</text><rect x="551" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="590" y="151" class="label" text-anchor="middle">1</text><text x="590" y="190" class="tiny" text-anchor="middle">b3</text><rect x="645" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="684" y="151" class="label" text-anchor="middle">1</text><text x="684" y="190" class="tiny" text-anchor="middle">b2</text><rect x="739" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="778" y="151" class="label" text-anchor="middle">1</text><text x="778" y="190" class="tiny" text-anchor="middle">b1</text><rect x="833" y="113" width="79" height="63" rx="9" fill="#fff0d8" stroke="#b68c42" stroke-width="2"/><text x="872" y="151" class="label" text-anchor="middle">1</text><text x="872" y="190" class="tiny" text-anchor="middle">b0</text>
+<text x="44" y="261" class="small">Sin signo</text>
+<text x="214" y="261" class="small" text-anchor="middle">128</text><text x="308" y="261" class="small" text-anchor="middle">64</text><text x="402" y="261" class="small" text-anchor="middle">32</text><text x="496" y="261" class="small" text-anchor="middle">16</text><text x="590" y="261" class="small" text-anchor="middle">8</text><text x="684" y="261" class="small" text-anchor="middle">4</text><text x="778" y="261" class="small" text-anchor="middle">2</text><text x="872" y="261" class="small" text-anchor="middle">1</text>
+<text x="44" y="330" class="small">Con signo</text>
+<text x="214" y="330" class="small" text-anchor="middle">-128</text><text x="308" y="330" class="small" text-anchor="middle">64</text><text x="402" y="330" class="small" text-anchor="middle">32</text><text x="496" y="330" class="small" text-anchor="middle">16</text><text x="590" y="330" class="small" text-anchor="middle">8</text><text x="684" y="330" class="small" text-anchor="middle">4</text><text x="778" y="330" class="small" text-anchor="middle">2</text><text x="872" y="330" class="small" text-anchor="middle">1</text>
+<path class="wire" d="M160,278 H937"/>
+<rect x="60" y="385" width="425" height="66" rx="14" fill="#e8f2ff"/>
+<text x="273" y="426" class="label" text-anchor="middle">Sin signo = 255</text>
+<rect x="515" y="385" width="425" height="66" rx="14" fill="#e2f3e8"/>
+<text x="728" y="426" class="label" text-anchor="middle">Con signo = -1</text>
+</svg>

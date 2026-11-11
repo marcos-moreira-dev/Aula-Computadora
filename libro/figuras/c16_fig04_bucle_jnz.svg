@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Contador de tres: dos saltos y una salida</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Contador de tres: dos saltos y una salida</text><text x="35" y="76" class="small">La propuesta de DEC actualiza Z; JNZ consulta Z sin modificarla.</text><rect x="26" y="147" width="289" height="244" rx="14" fill="#e6f2fc" stroke="#36556b" stroke-width="2.5"/><text x="171" y="191" class="label" text-anchor="middle">VUELTA 1</text><text x="171" y="249" class="label" text-anchor="middle">DEC: 3 → 2</text><text x="171" y="317" class="small" text-anchor="middle">Z=0 · salta</text><rect x="356" y="147" width="289" height="244" rx="14" fill="#eaf4e6" stroke="#36556b" stroke-width="2.5"/><text x="501" y="191" class="label" text-anchor="middle">VUELTA 2</text><text x="501" y="249" class="label" text-anchor="middle">DEC: 2 → 1</text><text x="501" y="317" class="small" text-anchor="middle">Z=0 · salta</text><rect x="686" y="147" width="289" height="244" rx="14" fill="#fff0dc" stroke="#36556b" stroke-width="2.5"/><text x="831" y="191" class="label" text-anchor="middle">VUELTA 3</text><text x="831" y="249" class="label" text-anchor="middle">DEC: 1 → 0</text><text x="831" y="317" class="small" text-anchor="middle">Z=1 · sigue HALT</text><text x="500" y="461" class="small" text-anchor="middle">Cada JNZ lee siempre los dos bytes de su destino.</text></svg>

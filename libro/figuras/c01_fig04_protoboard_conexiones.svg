@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="490" viewBox="0 0 1000 490">
+<title>Protoboard didáctica: resistor, LED y conexión interna de hileras</title><rect width="1000" height="490" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="35" y="38" class="label">El mismo circuito, ahora en las conexiones de una protoboard</text>
+<rect x="80" y="65" width="840" height="348" rx="17" fill="#f7f9fa" stroke="#aabac3" stroke-width="2"/>
+<text x="110" y="111" class="small" fill="#b64a30">+ 5 V</text>
+<rect x="208" y="92" width="635" height="34" rx="10" fill="#fce5dd"/>
+<path d="M240,110 H819" stroke="#b64a30" stroke-width="5"/>
+<text x="112" y="383" class="small">− GND</text>
+<rect x="208" y="360" width="635" height="36" rx="10" fill="#e7f1fb"/>
+<path d="M240,379 H819" stroke="#296a9b" stroke-width="5"/>
+<text x="171" y="229" class="small">fila 3</text>
+<text x="171" y="305" class="small">fila 8</text>
+<rect x="252" y="201" width="244" height="42" rx="9" fill="#e1f1e6" stroke="#9ac7a9"/>
+<rect x="252" y="278" width="244" height="42" rx="9" fill="#e1f1e6" stroke="#9ac7a9"/>
+<g fill="white" stroke="#495a66" stroke-width="2">
+<circle cx="271" cy="222" r="8"/><circle cx="321" cy="222" r="8"/>
+<circle cx="371" cy="222" r="8"/><circle cx="421" cy="222" r="8"/>
+<circle cx="471" cy="222" r="8"/>
+<circle cx="271" cy="299" r="8"/><circle cx="321" cy="299" r="8"/>
+<circle cx="371" cy="299" r="8"/><circle cx="421" cy="299" r="8"/>
+<circle cx="471" cy="299" r="8"/>
+</g>
+<path d="M371,110 V149 M371,193 V222" class="wire"/>
+<rect x="354" y="149" width="34" height="44" rx="6" fill="#f1d0a6" stroke="#77583a" stroke-width="2"/>
+<text x="408" y="171" class="tiny">330 Ω</text>
+<path d="M421,222 V246 M421,282 V299" class="wire"/>
+<rect x="404" y="246" width="34" height="36" rx="9" fill="#ffdda0" stroke="#ad7200" stroke-width="2"/>
+<text x="506" y="263" class="tiny">LED</text>
+<text x="506" y="283" class="tiny">A (+)</text>
+<text x="548" y="331" class="tiny">K (−)</text>
+<path d="M471,299 H521 V379" class="wire"/>
+<text x="635" y="208" class="small">Los cinco orificios de</text>
+<text x="635" y="233" class="small">una fila se conectan</text>
+<text x="635" y="258" class="small">por dentro de la placa.</text>
+<text x="635" y="300" class="tiny">Fila 3 ≠ fila 8.</text>
+<text x="635" y="329" class="tiny">Los rieles son independientes.</text>
+<rect x="75" y="424" width="850" height="47" rx="9" fill="#ecf5fb"/>
+<text x="500" y="452" class="tiny" text-anchor="middle">Vista didáctica: comprobar la continuidad real de rieles y grupos en cada protoboard.</text>
+</svg>

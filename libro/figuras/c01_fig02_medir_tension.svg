@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="490" viewBox="0 0 1000 490">
+<title>Voltímetro conectado en paralelo a los extremos del LED</title><rect width="1000" height="490" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="37" y="39" class="label">Para medir tensión, conectar el voltímetro en paralelo</text>
+<path class="wire" d="M110,111 V87 H278 M390,87 H570 V173 M570,257 V341 H110 V239"/>
+<rect class="block" x="49" y="111" width="122" height="128" rx="12"/>
+<text x="110" y="145" class="label" text-anchor="middle">5 V</text>
+<text x="110" y="174" class="small" text-anchor="middle">CC</text>
+<text x="110" y="201" class="tiny" text-anchor="middle">regulada</text>
+<text x="91" y="90" class="label" text-anchor="middle">+</text>
+<text x="91" y="262" class="label" text-anchor="middle">−</text>
+<rect class="block" x="278" y="65" width="112" height="44" rx="7"/>
+<text x="334" y="94" class="label" text-anchor="middle">330 Ω</text>
+<rect x="516" y="173" width="108" height="84" rx="14" class="light"/>
+<text x="570" y="217.0" class="label" text-anchor="middle">LED</text>
+<text x="570" y="244.0" class="tiny" text-anchor="middle">rojo</text>
+<text x="493" y="180" class="tiny">A (+)</text>
+<text x="493" y="274" class="tiny">K (−)</text>
+<path class="red" d="M 631,194.0 l 22,-22 m -8,0 l 8,0 l 0,8 M 640,212.0 l 22,-22 m -8,0 l 8,0 l 0,8"/>
+<path class="wire" d="M570,156 V128 H772 V181 M772,237 V289 H570 V257"/>
+<circle class="block" cx="772" cy="209" r="30"/>
+<text x="772" y="217" class="label" text-anchor="middle">V</text>
+<circle class="node" cx="570" cy="156" r="6"/>
+<circle class="node" cx="570" cy="289" r="6"/>
+<text x="830" y="202" class="small">Multímetro</text>
+<text x="830" y="224" class="tiny">modo V CC</text>
+<text x="686" y="113" class="tiny">Punta roja</text>
+<text x="686" y="315" class="tiny">Punta negra</text>
+<rect x="64" y="394" width="872" height="68" rx="10" fill="#ecf5fb"/>
+<text x="500" y="422" class="small" text-anchor="middle">El medidor compara la tensión entre dos nodos del LED.</text>
+<text x="500" y="449" class="tiny" text-anchor="middle">Conexión conceptual; antes de usar el instrumento, verificar bornes y rango.</text>
+</svg>

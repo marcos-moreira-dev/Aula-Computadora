@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Patillaje del transistor onsemi 2N3904 en encapsulado TO-92</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="45" y="42" class="label">Tres terminales, tres funciones eléctricas</text>
+<text x="250" y="91" class="small" text-anchor="middle">Vista del encapsulado TO-92</text>
+<path d="M 171,203 Q 171,110 250,110 Q 329,110 329,203 L329,260 H171 Z" fill="#eaf2f7" stroke="#283c50" stroke-width="4"/>
+<text x="250" y="196" class="label" text-anchor="middle">2N3904</text>
+<path class="wire" d="M199,260 V342 M250,260 V342 M301,260 V342"/>
+<text x="199" y="369" class="label" text-anchor="middle">1 E</text>
+<text x="250" y="369" class="label" text-anchor="middle">2 B</text>
+<text x="301" y="369" class="label" text-anchor="middle">3 C</text>
+<text x="250" y="395" class="tiny" text-anchor="middle">onsemi 2N3904, según su hoja de datos</text>
+<rect x="510" y="108" width="402" height="261" fill="#f3f7fa" rx="16"/>
+<text x="710" y="145" class="label" text-anchor="middle">Función de cada terminal</text>
+<text x="553" y="195" class="small">C  ·  Colector: rama de la carga</text>
+<text x="553" y="249" class="small">B  ·  Base: recibe la señal</text>
+<text x="553" y="303" class="small">E  ·  Emisor: retorno común</text>
+<rect x="80" y="423" width="840" height="55" fill="#fff1dc" rx="9"/>
+<text x="500" y="456" class="small" text-anchor="middle">No aplicar este orden de patas a cualquier NPN: comprobar fabricante y vista.</text>
+</svg>

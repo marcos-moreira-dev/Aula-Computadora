@@ -1,0 +1,80 @@
+{
+  "release": "R0.13",
+  "status": "propuesta_no_aprobada",
+  "architecture": "Aula-8",
+  "aula8_external_data_bus_bits": 8,
+  "aula16_external_data_bus_bits": 16,
+  "format": {
+    "magic": "AEX1",
+    "version": 1,
+    "header_bytes": 32,
+    "sector_bytes": 256,
+    "target_cpu_code": 8,
+    "maximum_blocks": 32,
+    "byte_order": "little",
+    "crc_variant": "CRC-16/CCITT-FALSE",
+    "crc_polynomial": "1021",
+    "crc_initial": "FFFF",
+    "crc_reflect_input": false,
+    "crc_reflect_output": false,
+    "crc_xorout": "0000",
+    "header_crc_scope": "bytes_00_to_11_hex_inclusive",
+    "payload_crc_scope": "payload_only",
+    "padding_must_be_zero": true,
+    "reserved_bytes_must_be_zero": true
+  },
+  "header_fields": [
+    {"offset_hex": "00", "size": 4, "field": "magic", "value": "AEX1"},
+    {"offset_hex": "04", "size": 1, "field": "version", "value_hex": "01"},
+    {"offset_hex": "05", "size": 1, "field": "cpu_id", "value_hex": "08"},
+    {"offset_hex": "06", "size": 1, "field": "kind", "allowed_hex": ["01", "02"]},
+    {"offset_hex": "07", "size": 1, "field": "flags_reserved", "value_hex": "00"},
+    {"offset_hex": "08", "size": 2, "field": "load_origin_u16_le"},
+    {"offset_hex": "0A", "size": 2, "field": "entry_u16_le"},
+    {"offset_hex": "0C", "size": 2, "field": "payload_size_u16_le"},
+    {"offset_hex": "0E", "size": 2, "field": "payload_crc16_u16_le"},
+    {"offset_hex": "10", "size": 2, "field": "container_block_count_u16_le"},
+    {"offset_hex": "12", "size": 2, "field": "header_crc16_u16_le"},
+    {"offset_hex": "14", "size": 12, "field": "reserved_zero"}
+  ],
+  "kind_to_window": {
+    "01": ["6000", "6FFF"],
+    "02": ["1000", "2FFF"]
+  },
+  "kind_names": {
+    "01": "practica",
+    "02": "herramienta_overlay"
+  },
+  "constraints": {
+    "origin_alignment_bytes": 256,
+    "entry_inside_payload": true,
+    "size_nonzero": true,
+    "practice_max_payload_bytes_at_start_of_window": 4064,
+    "tool_max_payload_bytes_at_start_of_window": 8160,
+    "blocks_formula": "ceil((32 + payload_size) / 256)",
+    "first_block_contains_header_plus_224_payload_bytes": true,
+    "overlay_execution_requires_separate_supervised_entry": true,
+    "multi_block_read_all_before_any_ram_write": true,
+    "no_auto_run": true
+  },
+  "raw_storage_compatibility": {
+    "controller_r012_unchanged": true,
+    "raw_load_command_remains": "LOAD bloque_hex4 destino_hex4 cantidad_hex2",
+    "candidate_executable_command": "LOADX bloque_hex4",
+    "loadx_implemented_in_firmware": false,
+    "container_saved_in_raw_consecutive_blocks": true,
+    "filesystem_or_directory_defined": false
+  },
+  "host_reference_tests_only": true,
+  "cpu_executed": false,
+  "native_loader_implemented": false,
+  "firmware_implemented": false,
+  "assembler_implemented": false,
+  "filesystem_implemented": false,
+  "cryptographic_authenticity": false,
+  "electrical_validation": false,
+  "documentation": "simulador-javafx/EJECUTABLE_AEX1_AULA8_R0_13_BORRADOR.md",
+  "host_model": "scripts/modelo_ejecutable_aula8_r0_13.py",
+  "host_packager_cli": "scripts/empaquetar_aex_aula8_r0_13.py",
+  "host_verifier": "scripts/verificar_ejecutable_aula8_r0_13_borrador.py"
+}

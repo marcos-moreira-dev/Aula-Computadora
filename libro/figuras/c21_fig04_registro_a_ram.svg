@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Guardar 1234 sobre RAM direccionada por bytes</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Guardar 1234 sobre RAM direccionada por bytes</text><text x="35" y="76" class="small">El orden little-endian separa el byte bajo del alto.</text><rect x="305" y="127" width="390" height="116" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="500.0" y="175" class="label" text-anchor="middle">REGISTRO DE 16 BITS</text><text x="500.0" y="221" class="small" text-anchor="middle">1234 hexadecimal</text><rect x="85" y="324" width="353" height="112" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="261.5" y="372" class="label" text-anchor="middle">DIRECCIÓN 2000</text><text x="261.5" y="418" class="small" text-anchor="middle">byte bajo 34</text><rect x="562" y="324" width="353" height="112" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="738.5" y="372" class="label" text-anchor="middle">DIRECCIÓN 2001</text><text x="738.5" y="418" class="small" text-anchor="middle">byte alto 12</text><path d="M398,243 L270,324" fill="none" stroke="#244d68" stroke-width="4"/><path d="M270,324 L279.5526639498,307.304293621946 L289.1779466303862,322.5146168702799 Z" fill="#244d68"/><path d="M604,243 L739,324" fill="none" stroke="#244d68" stroke-width="4"/><path d="M739,324 L719.7921584640391,322.97100848914494 L729.0530820617345,307.53613582631914 Z" fill="#244d68"/><text x="500" y="474" class="tiny" text-anchor="middle">Little-endian: dos direcciones de BYTE, una palabra alineada.</text></svg>

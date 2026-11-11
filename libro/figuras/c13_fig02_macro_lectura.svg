@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Leer un opcode exige varias dependencias</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Leer un opcode exige varias dependencias</text><text x="35" y="76" class="small">READ_PC_TO_IR es una macro lógica, no cuatro ciclos de reloj.</text><rect x="28" y="171" width="213" height="142" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="276" y="171" width="210" height="142" rx="14" fill="#edf4e8" stroke="#36556b" stroke-width="2.5"/><rect x="519" y="171" width="210" height="142" rx="14" fill="#f9f0d8" stroke="#36556b" stroke-width="2.5"/><rect x="762" y="171" width="210" height="142" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><text x="134" y="208" class="label" text-anchor="middle">1. Preparar</text><text x="134" y="250" class="small" text-anchor="middle">MAR recibe PC</text><text x="381" y="208" class="label" text-anchor="middle">2. Pedir lectura</text><text x="381" y="250" class="small" text-anchor="middle">RD y dato válido</text><text x="624" y="208" class="label" text-anchor="middle">3. Retener</text><text x="624" y="250" class="small" text-anchor="middle">MDR guarda byte</text><text x="866" y="208" class="label" text-anchor="middle">4. Usar</text><text x="866" y="250" class="small" text-anchor="middle">IR recibe byte</text><text x="866" y="278" class="small" text-anchor="middle">PC avanza</text><path class="wire" d="M241,240 H276 M486,240 H519 M729,240 H762"/><text x="500" y="369" class="small" text-anchor="middle">La memoria debe entregar datos estables antes de capturarlos.</text><text x="500" y="418" class="small" text-anchor="middle">No se asignaron flancos, retardo, READY ni frecuencia.</text><text x="500" y="466" class="tiny" text-anchor="middle">La CPU no conduce datos externos mientras la memoria responde a RD.</text></svg>

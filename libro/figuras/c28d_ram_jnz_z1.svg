@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1350" viewBox="0 0 1480 1350">
+<rect width="100%" height="100%" fill="#fcfdfd"/>
+<text x="80" y="78" fill="#18344a" font-size="42" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">La RAM es la misma; el PC elige otro camino · Z=1</text>
+<text x="80" y="134" fill="#4d6373" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">13 direcciones de byte consecutivas · ISA Aula-8 candidata</text>
+<rect x="75" y="185" width="1335" height="960" rx="22" fill="#f2f6f8"/>
+<text x="122" y="234" fill="#18344a" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Dirección</text>
+<text x="395" y="234" fill="#18344a" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Byte</text>
+<text x="555" y="234" fill="#18344a" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Función de ese byte</text>
+<text x="1110" y="234" fill="#18344a" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Recorrido del PC</text>
+<rect x="102" y="262" width="906" height="62" rx="7" fill="#dff2eb"/>
+<rect x="96" y="262" width="7" height="62" fill="#15846b"/>
+<text x="130" y="305" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6000</text>
+<text x="398" y="305" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">32</text>
+<text x="548" y="305" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">JNZ · opcode</text>
+<circle cx="1037" cy="292" r="10" fill="#16836a"/>
+<rect x="102" y="328" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="371" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6001</text>
+<text x="398" y="371" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">09</text>
+<text x="548" y="371" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">destino bajo</text>
+<rect x="102" y="394" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="437" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6002</text>
+<text x="398" y="437" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">60</text>
+<text x="548" y="437" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">destino alto</text>
+<rect x="102" y="460" width="906" height="62" rx="7" fill="#dff2eb"/>
+<rect x="96" y="460" width="7" height="62" fill="#15846b"/>
+<text x="130" y="503" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6003</text>
+<text x="398" y="503" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">11</text>
+<text x="548" y="503" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">LDI R1,7 · opcode</text>
+<circle cx="1037" cy="490" r="10" fill="#16836a"/>
+<rect x="102" y="526" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="569" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6004</text>
+<text x="398" y="569" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">01</text>
+<text x="548" y="569" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">registro R1</text>
+<rect x="102" y="592" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="635" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6005</text>
+<text x="398" y="635" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">07</text>
+<text x="548" y="635" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">inmediato 7</text>
+<rect x="102" y="658" width="906" height="62" rx="7" fill="#dff2eb"/>
+<rect x="96" y="658" width="7" height="62" fill="#15846b"/>
+<text x="130" y="701" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6006</text>
+<text x="398" y="701" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">30</text>
+<text x="548" y="701" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">JMP · opcode</text>
+<circle cx="1037" cy="688" r="10" fill="#16836a"/>
+<rect x="102" y="724" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="767" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6007</text>
+<text x="398" y="767" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0C</text>
+<text x="548" y="767" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">destino bajo</text>
+<rect x="102" y="790" width="906" height="62" rx="7" fill="#dff2eb"/>
+<text x="130" y="833" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6008</text>
+<text x="398" y="833" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">60</text>
+<text x="548" y="833" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">destino alto</text>
+<rect x="102" y="856" width="906" height="62" rx="7" fill="#e6eaf0"/>
+<text x="130" y="899" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6009</text>
+<text x="398" y="899" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">11</text>
+<text x="548" y="899" fill="#71818d" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">LDI R1,9 · opcode</text>
+<rect x="102" y="922" width="906" height="62" rx="7" fill="#f9fafb"/>
+<text x="130" y="965" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x600A</text>
+<text x="398" y="965" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">01</text>
+<text x="548" y="965" fill="#71818d" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">registro R1</text>
+<rect x="102" y="988" width="906" height="62" rx="7" fill="#e6eaf0"/>
+<text x="130" y="1031" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x600B</text>
+<text x="398" y="1031" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">09</text>
+<text x="548" y="1031" fill="#71818d" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">inmediato 9</text>
+<rect x="102" y="1054" width="906" height="62" rx="7" fill="#dff2eb"/>
+<rect x="96" y="1054" width="7" height="62" fill="#15846b"/>
+<text x="130" y="1097" fill="#1d455c" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x600C</text>
+<text x="398" y="1097" fill="#18344a" font-size="30" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">01</text>
+<text x="548" y="1097" fill="#273e4c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">HALT · opcode</text>
+<circle cx="1037" cy="1084" r="10" fill="#16836a"/>
+<path d="M1047 292 H1150 V490 H1049" fill="none" stroke="#136d85" stroke-width="5" stroke-linecap="round"/>
+<path d="M1051 481 L1034 490 L1051 499 Z" fill="#136d85"/>
+<text x="1184" y="400" fill="#136d85" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">JNZ no</text>
+<path d="M1047 490 H1150 V688 H1049" fill="none" stroke="#136d85" stroke-width="5" stroke-linecap="round"/>
+<path d="M1051 679 L1034 688 L1051 697 Z" fill="#136d85"/>
+<text x="1184" y="598" fill="#136d85" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">siguiente</text>
+<path d="M1047 688 H1150 V1084 H1049" fill="none" stroke="#136d85" stroke-width="5" stroke-linecap="round"/>
+<path d="M1051 1075 L1034 1084 L1051 1093 Z" fill="#136d85"/>
+<text x="1184" y="895" fill="#136d85" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">JMP</text>
+<rect x="80" y="1167" width="1320" height="152" rx="13" fill="#e5eef3"/>
+<text x="115" y="1215" fill="#18344a" font-size="29" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Resultado hipotético: R1=0x07; PC al leer HALT termina en 0x600D.</text>
+<text x="115" y="1263" fill="#18344a" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Las filas grises siguen almacenadas: saltar NO borra ni mueve bytes.</text>
+<text x="115" y="1300" fill="#536778" font-size="21" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Flecha = cambio de PC; los conductores eléctricos se representan aparte.</text>
+</svg>

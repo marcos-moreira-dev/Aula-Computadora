@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>RUN y PUTC: hay dos niveles de retorno</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">RUN y PUTC: hay dos niveles de retorno</text><text x="35" y="76" class="small">HALT no equivale a RET ni provoca un prompt por sí solo.</text><rect x="30" y="166" width="221" height="192" rx="14" fill="#e8f1fa" stroke="#36556b" stroke-width="2.5"/><rect x="271" y="166" width="221" height="192" rx="14" fill="#f8efdc" stroke="#36556b" stroke-width="2.5"/><rect x="511" y="166" width="221" height="192" rx="14" fill="#e9f5e8" stroke="#36556b" stroke-width="2.5"/><rect x="751" y="166" width="221" height="192" rx="14" fill="#e8f1fa" stroke="#36556b" stroke-width="2.5"/><text x="140" y="211" class="label" text-anchor="middle">MONITOR</text><text x="140" y="275" class="small" text-anchor="middle">CALL 6000</text><text x="381" y="211" class="label" text-anchor="middle">PROGRAMA</text><text x="381" y="271" class="small" text-anchor="middle">CALL FF00</text><text x="622" y="211" class="label" text-anchor="middle">SERVICIO ROM</text><text x="622" y="275" class="small" text-anchor="middle">RET → 6006</text><text x="862" y="211" class="label" text-anchor="middle">PROGRAMA</text><text x="862" y="271" class="small" text-anchor="middle">RET → monitor</text><path class="wire" d="M251,258 H271 M492,258 H511 M732,258 H751"/><text x="500" y="426" class="small" text-anchor="middle">Si el programa termina en HALT, no retorna al monitor.</text></svg>

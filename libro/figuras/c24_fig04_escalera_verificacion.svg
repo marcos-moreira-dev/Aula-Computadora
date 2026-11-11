@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>La evidencia crece junto con la máquina</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">La evidencia crece junto con la máquina</text><text x="35" y="76" class="small">La primera etapa usa modelos anfitriones; las demás requieren nuevos artefactos.</text><rect x="19" y="162" width="226" height="184" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="132.0" y="210" class="label" text-anchor="middle">1. SEMÁNTICA</text><text x="132.0" y="256" class="small" text-anchor="middle">ejemplos exactos</text><path d="M245,249 L266,249" fill="none" stroke="#244d68" stroke-width="4"/><path d="M266,249 L249.0,258.0 L249.0,240.0 Z" fill="#244d68"/><rect x="266" y="162" width="226" height="184" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="379.0" y="210" class="label" text-anchor="middle">2. HERRAMIENTAS</text><text x="379.0" y="256" class="small" text-anchor="middle">assembler / test</text><path d="M492,249 L513,249" fill="none" stroke="#244d68" stroke-width="4"/><path d="M513,249 L496.0,258.0 L496.0,240.0 Z" fill="#244d68"/><rect x="513" y="162" width="226" height="184" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="626.0" y="210" class="label" text-anchor="middle">3. SIMULACIÓN</text><text x="626.0" y="256" class="small" text-anchor="middle">ciclos y buses</text><path d="M739,249 L760,249" fill="none" stroke="#244d68" stroke-width="4"/><path d="M760,249 L743.0,258.0 L743.0,240.0 Z" fill="#244d68"/><rect x="760" y="162" width="226" height="184" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="873.0" y="210" class="label" text-anchor="middle">4. PROTOTIPO</text><text x="873.0" y="256" class="small" text-anchor="middle">medición real</text><text x="500" y="432" class="small" text-anchor="middle">Cada etapa añade pruebas; ninguna puede omitirse por confianza.</text></svg>

@@ -1,0 +1,33 @@
+{
+  "release": "R0.14",
+  "status": "propuesta_no_aprobada",
+  "architecture": "Aula-8",
+  "first_pass": "verify_entire_package_incremental_crc",
+  "second_pass": "copy_payload_incremental_crc",
+  "staging_block_bytes": 256,
+  "aula8_ram_reference_bytes": 32768,
+  "aula8_staging_provisional_bytes": 3584,
+  "aex1_max_tool_payload_bytes": 8160,
+  "preflight_read_count": "header_once_plus_all_sectors_once",
+  "copy_read_count": "all_sectors_once",
+  "safety": {
+    "no_ram_writes_on_preflight_error": true,
+    "no_supervised_execution_on_second_pass_error": true,
+    "partial_ram_writes_possible_on_second_pass_error": true,
+    "read_twice_does_not_guarantee_unchanged_source": true,
+    "crc16_is_not_cryptographic_integrity": true,
+    "fully_atomic_ram_commit": false,
+    "power_failure_recovery_implemented": false,
+    "code_validity_or_entry_boundary_verified": false,
+    "rom_running_caller_required_for_tool_overlay": true,
+    "read_consistency_or_storage_lock_implemented": false
+  },
+  "fully_atomic_ram_commit": false,
+  "cpu_executed": false,
+  "firmware_implemented": false,
+  "native_loader_implemented": false,
+  "aula16_external_data_bus_bits": 16,
+  "documentation": "simulador-javafx/LOADX_DOS_PASADAS_AULA8_R0_14_BORRADOR.md",
+  "host_model": "scripts/modelo_loadx_aula8_r0_14.py",
+  "host_verifier": "scripts/verificar_loadx_aula8_r0_14_borrador.py"
+}

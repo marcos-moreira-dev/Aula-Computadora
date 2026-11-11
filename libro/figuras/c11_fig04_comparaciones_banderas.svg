@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Un patrón, dos interpretaciones</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Un patrón, dos interpretaciones</text><text x="35" y="76" class="small">La resta interna es FF - 01 = FE. Banderas: C préstamo=0, Z=0, N=1, V=0.</text><rect x="40" y="125" width="442" height="275" rx="14" fill="#eaf4fa" stroke="#36556b" stroke-width="2.5"/><rect x="518" y="125" width="442" height="275" rx="14" fill="#eef7eb" stroke="#36556b" stroke-width="2.5"/><text x="261" y="171" class="label" text-anchor="middle">SIN SIGNO</text><text x="261" y="222" class="label" text-anchor="middle">0xFF = 255</text><text x="261" y="262" class="label" text-anchor="middle">0x01 = 1</text><text x="261" y="305" class="small" text-anchor="middle">C=0 y Z=0</text><text x="261" y="356" class="label" text-anchor="middle">255 &gt; 1</text><text x="739" y="171" class="label" text-anchor="middle">CON SIGNO</text><text x="739" y="222" class="label" text-anchor="middle">0xFF = -1</text><text x="739" y="262" class="label" text-anchor="middle">0x01 = +1</text><text x="739" y="305" class="small" text-anchor="middle">N XOR V = 1</text><text x="739" y="356" class="label" text-anchor="middle">-1 &lt; +1</text><text x="500" y="451" class="small" text-anchor="middle">Las entradas, el circuito y las banderas no cambiaron.</text><text x="500" y="479" class="small" text-anchor="middle">Solo cambia la regla con la que el programa compara los patrones.</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Dos bancos para una memoria byte a byte</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Dos bancos para una memoria byte a byte</text><text x="35" y="76" class="small">Ejemplo con bus de datos externo de 16 bits, separado en dos carriles de 8.</text><rect x="26" y="194" width="225" height="230" rx="14" fill="#f0f4fb" stroke="#36556b" stroke-width="2.5"/><text x="138.5" y="242" class="label" text-anchor="middle">CPU AULA-16</text><text x="138.5" y="288" class="small" text-anchor="middle">A15..A0 / RD / WR</text><rect x="369" y="106" width="252" height="112" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="495.0" y="154" class="label" text-anchor="middle">DECODIFICADOR</text><text x="495.0" y="200" class="small" text-anchor="middle">A15 y A0 / ancho</text><rect x="715" y="190" width="252" height="123" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="841.0" y="238" class="label" text-anchor="middle">BANCO BAJO</text><text x="841.0" y="284" class="small" text-anchor="middle">0x2000 contiene 34</text><rect x="715" y="336" width="252" height="123" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="841.0" y="384" class="label" text-anchor="middle">BANCO ALTO</text><text x="841.0" y="430" class="small" text-anchor="middle">0x2001 contiene 12</text><path d="M213,194 V163 H369" stroke="#244d68" stroke-width="4" fill="none"/><text x="294" y="147" class="tiny" text-anchor="middle">A[15:0]</text><path d="M251,269 H715" stroke="#388a63" stroke-width="9" fill="none"/><path d="M251,414 H715" stroke="#4380ab" stroke-width="9" fill="none"/><text x="488" y="250" class="small" text-anchor="middle">D7..D0  (8 hilos)</text><text x="488" y="395" class="small" text-anchor="middle">D15..D8  (8 hilos)</text><text x="486" y="305" class="tiny" text-anchor="middle">A14..A1: 14 bits de fila dentro de cada banco RAM.</text><text x="486" y="332" class="tiny" text-anchor="middle">A0 y el ancho de acceso habilitan uno o ambos.</text><text x="500" y="483" class="tiny" text-anchor="middle">Palabra par: 34 en carril bajo + 12 en carril alto = 0x1234 (little-endian).</text></svg>

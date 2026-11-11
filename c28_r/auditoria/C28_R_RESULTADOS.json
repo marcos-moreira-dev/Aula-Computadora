@@ -1,0 +1,96 @@
+{
+  "etapa": "C28-R / 8 bits ADD-SUB desde netlist NAND serializado",
+  "gates_NAND": 134,
+  "vectores_ADD": 65536,
+  "vectores_SUB": 65536,
+  "resultados": {
+    "ADD_9_13": {
+      "resultado": "16",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 0
+    },
+    "ADD_13_9": {
+      "resultado": "16",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 0
+    },
+    "ADD_127_1": {
+      "resultado": "80",
+      "C": 0,
+      "V": 1,
+      "Z": 0,
+      "N": 1
+    },
+    "ADD_128_1": {
+      "resultado": "81",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 1
+    },
+    "ADD_250_10": {
+      "resultado": "04",
+      "C": 1,
+      "V": 0,
+      "Z": 0,
+      "N": 0
+    },
+    "SUB_9_13": {
+      "resultado": "FC",
+      "C": 1,
+      "V": 0,
+      "Z": 0,
+      "N": 1
+    },
+    "SUB_13_9": {
+      "resultado": "04",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 0
+    },
+    "SUB_127_1": {
+      "resultado": "7E",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 0
+    },
+    "SUB_128_1": {
+      "resultado": "7F",
+      "C": 0,
+      "V": 1,
+      "Z": 0,
+      "N": 0
+    },
+    "SUB_250_10": {
+      "resultado": "F0",
+      "C": 0,
+      "V": 0,
+      "Z": 0,
+      "N": 1
+    }
+  },
+  "cuentas_flags_activadas": {
+    "ADD_C": 32640,
+    "SUB_prestamo": 32640,
+    "ADD_V": 16384,
+    "SUB_V": 16384
+  },
+  "cotejo_editorial": {
+    "figuras_funcionales_cotejadas_por_rotulos": 4,
+    "capitulos_con_ecuaciones_cotejadas": 2
+  },
+  "hdl_icarus": "PENDIENTE_WINDOWS",
+  "limites": [
+    "134 NAND sin retardos ni cargas eléctricas",
+    "solo ADD/SUB, no multiplexor completo de ALU",
+    "no política de flags para AND/OR/XOR/NOT",
+    "no reloj, registros, microcódigo ni CPU",
+    "SVG cotejados solo a nivel de rotulos, no rutas electricas"
+  ]
+}

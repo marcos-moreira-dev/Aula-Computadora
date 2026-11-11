@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Suma manual con acarreos 13 más 9</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">13 + 9: leer los acarreos de derecha a izquierda</text>
+<text x="38" y="81" class="small">Cada columna usa su A, B y el acarreo que llegó desde la columna de menor peso.</text>
+<rect x="60" y="115" width="889" height="309" rx="16" fill="#f5f8fa" stroke="#c1d3de"/>
+<text x="90" y="205" class="small">Cin</text>
+<text x="90" y="266" class="small">A = 13</text>
+<text x="90" y="322" class="small">B = 9</text>
+<text x="90" y="378" class="small accent">S = 22</text>
+<path class="wire" d="M242,337 H920"/>
+<text x="301" y="157" class="tiny" text-anchor="middle">i=7</text><text x="301" y="205" class="label" text-anchor="middle">0</text><text x="301" y="266" class="label" text-anchor="middle">0</text><text x="301" y="322" class="label" text-anchor="middle">0</text><text x="301" y="378" class="label" text-anchor="middle">0</text><text x="380" y="157" class="tiny" text-anchor="middle">i=6</text><text x="380" y="205" class="label" text-anchor="middle">0</text><text x="380" y="266" class="label" text-anchor="middle">0</text><text x="380" y="322" class="label" text-anchor="middle">0</text><text x="380" y="378" class="label" text-anchor="middle">0</text><text x="459" y="157" class="tiny" text-anchor="middle">i=5</text><text x="459" y="205" class="label" text-anchor="middle">0</text><text x="459" y="266" class="label" text-anchor="middle">0</text><text x="459" y="322" class="label" text-anchor="middle">0</text><text x="459" y="378" class="label" text-anchor="middle">0</text><text x="538" y="157" class="tiny" text-anchor="middle">i=4</text><rect x="514" y="177" width="48" height="38" rx="9" fill="#ffe6ad"/><rect x="514" y="350" width="48" height="38" rx="9" fill="#dbf2df"/><text x="538" y="205" class="label" text-anchor="middle">1</text><text x="538" y="266" class="label" text-anchor="middle">0</text><text x="538" y="322" class="label" text-anchor="middle">0</text><text x="538" y="378" class="label" text-anchor="middle">1</text><text x="617" y="157" class="tiny" text-anchor="middle">i=3</text><text x="617" y="205" class="label" text-anchor="middle">0</text><text x="617" y="266" class="label" text-anchor="middle">1</text><text x="617" y="322" class="label" text-anchor="middle">1</text><text x="617" y="378" class="label" text-anchor="middle">0</text><text x="696" y="157" class="tiny" text-anchor="middle">i=2</text><rect x="672" y="350" width="48" height="38" rx="9" fill="#dbf2df"/><text x="696" y="205" class="label" text-anchor="middle">0</text><text x="696" y="266" class="label" text-anchor="middle">1</text><text x="696" y="322" class="label" text-anchor="middle">0</text><text x="696" y="378" class="label" text-anchor="middle">1</text><text x="775" y="157" class="tiny" text-anchor="middle">i=1</text><rect x="751" y="177" width="48" height="38" rx="9" fill="#ffe6ad"/><rect x="751" y="350" width="48" height="38" rx="9" fill="#dbf2df"/><text x="775" y="205" class="label" text-anchor="middle">1</text><text x="775" y="266" class="label" text-anchor="middle">0</text><text x="775" y="322" class="label" text-anchor="middle">0</text><text x="775" y="378" class="label" text-anchor="middle">1</text><text x="854" y="157" class="tiny" text-anchor="middle">i=0</text><text x="854" y="205" class="label" text-anchor="middle">0</text><text x="854" y="266" class="label" text-anchor="middle">1</text><text x="854" y="322" class="label" text-anchor="middle">1</text><text x="854" y="378" class="label" text-anchor="middle">0</text>
+<text x="500" y="453" class="small" text-anchor="middle">C1 = 1 y C4 = 1; los demás acarreos de entrada valen cero.</text>
+<text x="500" y="483" class="tiny" text-anchor="middle">S = 00010110₂ = 16 + 4 + 2 = 22₁₀. Las columnas se rotulan i=7…0.</text>
+</svg>

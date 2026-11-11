@@ -1,0 +1,46 @@
+{
+  "edicion": "C28-O",
+  "fuentes": {
+    "H01_ALTAIR_8800": {
+      "archivo": "H01_altair_8800_panel.jpg",
+      "sha256": "9229607f9cf721315d4b0d2db9cee658528ddec734df01e10facfad8bfc7d71c",
+      "bytes": 235601,
+      "autor": "Cromemco",
+      "licencia": "CC BY-SA 4.0",
+      "fuente": "https://commons.wikimedia.org/wiki/File:MITS_Altair_8800_Front_Panel.jpg"
+    },
+    "H02_APPLE_II_PLACA": {
+      "archivo": "H02_apple_ii_placa.jpg",
+      "sha256": "3faebd5e6c09cc937fd00008cf9a29a70194c801d3d07be3429abb3fbd7f963f",
+      "bytes": 2135480,
+      "autor": "Steve Jurvetson",
+      "licencia": "CC BY 2.0",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Apple_II_motherboard_(53171103722).jpg"
+    },
+    "H03_DEC_VT100": {
+      "archivo": "H03_dec_vt100_terminal.jpg",
+      "sha256": "91ee016277711567684ec5f4024d3fb0e149127c6da17118788eb32ac32c7a3c",
+      "bytes": 487100,
+      "autor": "Jason Scott",
+      "licencia": "CC BY 2.0",
+      "fuente": "https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg"
+    },
+    "H04_INTEL_8086": {
+      "archivo": "H04_intel_8086_chip.jpg",
+      "sha256": "e7c596d1b0c63a17c5b60822ac4eb160d526211e8565dc80b75b6b056c07efeb",
+      "bytes": 181109,
+      "autor": "Thomas Nguyen (Stelo.xyz / Pttn)",
+      "licencia": "CC BY-SA 4.0",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Intel_P8086.jpg"
+    },
+    "H05_IBM_PC_5150": {
+      "archivo": "H05_ibm_pc_5150.jpg",
+      "sha256": "273c4be9592d9068fb951fbd470c816c85df00c74e38af4b4b3b1af9bc5e07a6",
+      "bytes": 446669,
+      "autor": "Ruben de Rijcke",
+      "licencia": "CC BY-SA 3.0",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Ibm_pc_5150.jpg"
+    }
+  },
+  "limite": "Fotografias contextuales, no esquemas ni pruebas HDL"
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Selección de bancos por anchura y paridad</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Selección de bancos por anchura y paridad</text><text x="35" y="76" class="small">La palabra impar se rechaza sin intentar un acceso dividido.</text><rect x="27" y="142" width="448" height="145" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="251" y="191" class="label" text-anchor="middle">BYTE PAR</text><text x="251" y="247" class="small" text-anchor="middle">Solo D7..D0</text><rect x="525" y="142" width="448" height="145" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="749" y="191" class="label" text-anchor="middle">BYTE IMPAR</text><text x="749" y="247" class="small" text-anchor="middle">Solo D15..D8</text><rect x="27" y="320" width="448" height="145" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="251" y="369" class="label" text-anchor="middle">PALABRA PAR</text><text x="251" y="425" class="small" text-anchor="middle">Ambos carriles</text><rect x="525" y="320" width="448" height="145" rx="14" fill="#fce8e8" stroke="#36556b" stroke-width="2.5"/><text x="749" y="369" class="label" text-anchor="middle">PALABRA IMPAR</text><text x="749" y="425" class="small" text-anchor="middle">Error de V1</text><text x="500" y="487" class="tiny" text-anchor="middle">Lectura y escritura usan la misma selección lógica de carril.</text></svg>

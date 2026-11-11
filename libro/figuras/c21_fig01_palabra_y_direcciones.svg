@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>El dato se ensancha; el espacio direccionable no</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">El dato se ensancha; el espacio direccionable no</text><text x="35" y="76" class="small">No confundir ancho de bus de datos y ancho de direcciones.</text><rect x="38" y="160" width="418" height="221" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="247.0" y="208" class="label" text-anchor="middle">AULA-8</text><text x="247.0" y="254" class="small" text-anchor="middle">R0 = 8 bits  |  ALU = 8 bits</text><rect x="544" y="160" width="418" height="221" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="753.0" y="208" class="label" text-anchor="middle">AULA-16</text><text x="753.0" y="254" class="small" text-anchor="middle">R0 = 16 bits  |  ALU = 16 bits</text><text x="245" y="331" class="small" text-anchor="middle">Bus externo: 8 bits</text><text x="756" y="331" class="small" text-anchor="middle">Bus externo: 16 bits</text><text x="500" y="425" class="label" text-anchor="middle">LAS DOS: 16 bits de dirección → 65536 direcciones de bytes.</text></svg>

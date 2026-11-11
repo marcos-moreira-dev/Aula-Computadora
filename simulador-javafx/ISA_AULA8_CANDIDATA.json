@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "architecture": "Aula-8",
+  "status": "propuesta_no_aprobada",
+  "proposal": "R0.3",
+  "encoding": {
+    "opcode_bits": 8,
+    "address_bits": 16,
+    "external_data_bus_bits": 8,
+    "immediate_word_byte_order": "little_endian",
+    "reg_selector": "byte 0..3; upper six bits zero",
+    "reg_pair_selector": "byte = (destino << 2) | fuente; upper four bits zero",
+    "memory_selector": "byte = (modo << 2) | registro; modo 0=absoluto16, 1=X+disp8, 2=SP+disp8, modo 3 reservado",
+    "displacement8": "complemento_a_dos_con_signo",
+    "illegal_opcode": "fault_halt_propuesta",
+    "cpu_reset": "vector_de_rom_0xFFFC"
+  },
+  "formats": {
+    "none": {"bytes": 1},
+    "reg": {"bytes": 2},
+    "regpair": {"bytes": 2},
+    "reg_imm8": {"bytes": 3},
+    "imm16": {"bytes": 3},
+    "disp8": {"bytes": 2},
+    "memory": {"bytes_by_mode": {"0": 4, "1": 3, "2": 3}}
+  },
+  "instructions": [
+    {"mnemonic": "NOP", "opcode": "00", "format": "none", "flags": "preserva"},
+    {"mnemonic": "HALT", "opcode": "01", "format": "none", "flags": "preserva"},
+    {"mnemonic": "RET", "opcode": "02", "format": "none", "flags": "preserva"},
+
+    {"mnemonic": "MOV", "opcode": "10", "format": "regpair", "flags": "preserva"},
+    {"mnemonic": "LDI", "opcode": "11", "format": "reg_imm8", "flags": "preserva"},
+    {"mnemonic": "LD", "opcode": "12", "format": "memory", "flags": "preserva"},
+    {"mnemonic": "ST", "opcode": "13", "format": "memory", "flags": "preserva"},
+    {"mnemonic": "SETX", "opcode": "14", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "LEAX", "opcode": "15", "format": "disp8", "flags": "preserva"},
+    {"mnemonic": "ADDXW", "opcode": "16", "format": "none", "flags": "preserva"},
+    {"mnemonic": "SETSP", "opcode": "17", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "ADJSP", "opcode": "18", "format": "disp8", "flags": "preserva"},
+    {"mnemonic": "XFROMSP", "opcode": "19", "format": "none", "flags": "preserva"},
+    {"mnemonic": "PUSH", "opcode": "1A", "format": "reg", "flags": "preserva"},
+    {"mnemonic": "POP", "opcode": "1B", "format": "reg", "flags": "preserva"},
+    {"mnemonic": "PUSHX", "opcode": "1C", "format": "none", "flags": "preserva"},
+    {"mnemonic": "POPX", "opcode": "1D", "format": "none", "flags": "preserva"},
+
+    {"mnemonic": "ADD", "opcode": "20", "format": "regpair", "flags": "aritmetica_suma"},
+    {"mnemonic": "ADC", "opcode": "21", "format": "regpair", "flags": "aritmetica_suma"},
+    {"mnemonic": "SUB", "opcode": "22", "format": "regpair", "flags": "aritmetica_resta"},
+    {"mnemonic": "SBC", "opcode": "23", "format": "regpair", "flags": "aritmetica_resta"},
+    {"mnemonic": "CMP", "opcode": "24", "format": "regpair", "flags": "aritmetica_resta"},
+    {"mnemonic": "AND", "opcode": "25", "format": "regpair", "flags": "logica"},
+    {"mnemonic": "OR", "opcode": "26", "format": "regpair", "flags": "logica"},
+    {"mnemonic": "XOR", "opcode": "27", "format": "regpair", "flags": "logica"},
+    {"mnemonic": "NOT", "opcode": "28", "format": "reg", "flags": "logica"},
+    {"mnemonic": "INC", "opcode": "29", "format": "reg", "flags": "incremento"},
+    {"mnemonic": "DEC", "opcode": "2A", "format": "reg", "flags": "decremento"},
+    {"mnemonic": "SHL", "opcode": "2B", "format": "reg", "flags": "shift"},
+    {"mnemonic": "SHR", "opcode": "2C", "format": "reg", "flags": "shift"},
+
+    {"mnemonic": "JMP", "opcode": "30", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "JZ", "opcode": "31", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "JNZ", "opcode": "32", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "JC", "opcode": "33", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "JNC", "opcode": "34", "format": "imm16", "flags": "preserva"},
+    {"mnemonic": "CALL", "opcode": "35", "format": "imm16", "flags": "preserva"}
+  ],
+  "examples": [
+    {
+      "name": "depositar_42",
+      "origin": 24576,
+      "bytes_hex": "11 00 2A 13 00 00 6F 01",
+      "expected_decode": [
+        {"pc": 24576, "mnemonic": "LDI", "size": 3},
+        {"pc": 24579, "mnemonic": "ST", "size": 4},
+        {"pc": 24583, "mnemonic": "HALT", "size": 1}
+      ],
+      "expected_ram_write": {"address": 28416, "value": 42}
+    },
+    {
+      "name": "sumar_13_y_9",
+      "origin": 24576,
+      "bytes_hex": "11 00 0D 11 01 09 20 01 13 00 00 6F 01",
+      "expected_decode": [
+        {"pc": 24576, "mnemonic": "LDI", "size": 3},
+        {"pc": 24579, "mnemonic": "LDI", "size": 3},
+        {"pc": 24582, "mnemonic": "ADD", "size": 2},
+        {"pc": 24584, "mnemonic": "ST", "size": 4},
+        {"pc": 24588, "mnemonic": "HALT", "size": 1}
+      ],
+      "expected_ram_write": {"address": 28416, "value": 22}
+    },
+    {
+      "name": "bucle_de_tres",
+      "origin": 24576,
+      "bytes_hex": "11 00 03 2A 00 32 03 60 01",
+      "expected_decode": [
+        {"pc": 24576, "mnemonic": "LDI", "size": 3},
+        {"pc": 24579, "mnemonic": "DEC", "size": 2},
+        {"pc": 24581, "mnemonic": "JNZ", "size": 3},
+        {"pc": 24584, "mnemonic": "HALT", "size": 1}
+      ],
+      "expected_register_after_halt": {"R0": 0}
+    }
+  ]
+}

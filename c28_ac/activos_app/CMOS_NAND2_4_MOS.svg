@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="1010" viewBox="0 0 1140 1010">
+<rect width="1140" height="1010" fill="white"/>
+<style>text{font-family:DejaVu Sans,sans-serif;fill:#173149}.title{font-size:32px;font-weight:700}.sub{font-size:20px;fill:#567}.label{font-size:25px;font-weight:700}.tiny{font-size:17px} .wire{stroke:#183d58;stroke-width:4;fill:none}.gate{stroke:#b46925;stroke-width:5;fill:none}</style>
+<text x="50" y="65" class="title">NAND2 CMOS estático · cuatro transistores</text>
+<text x="50" y="100" class="sub">Una compuerta de las 359 de Aula-8; símbolos eléctricos, no huella física de encapsulado.</text>
+<text x="523" y="170" class="label">VDD</text>
+<path class="wire" d="M570,178 L570,220"/>
+<path class="wire" d="M280,220 L830,220"/>
+<path class="wire" d="M330,220 L330,278"/>
+<path class="wire" d="M330,278 L330,318"/>
+<path class="wire" d="M330,318 L330,388"/>
+<path class="gate" d="M323,280 L323,339"/>
+<path class="gate" d="M295,309 L317,309"/>
+<circle cx="285" cy="309" r="9" fill="white" stroke="#b46925" stroke-width="4"/>
+<path class="wire" d="M276,309 L205,309"/>
+<text x="242" y="289" class="label">A</text>
+<text x="255" y="371" class="tiny">P1 · PMOS</text>
+<path class="wire" d="M330,388 L330,423"/>
+<path class="wire" d="M790,220 L790,278"/>
+<path class="wire" d="M790,278 L790,318"/>
+<path class="wire" d="M790,318 L790,388"/>
+<path class="gate" d="M783,280 L783,339"/>
+<path class="gate" d="M755,309 L777,309"/>
+<circle cx="745" cy="309" r="9" fill="white" stroke="#b46925" stroke-width="4"/>
+<path class="wire" d="M736,309 L665,309"/>
+<text x="702" y="289" class="label">B</text>
+<text x="715" y="371" class="tiny">P2 · PMOS</text>
+<path class="wire" d="M790,388 L790,423"/>
+<path class="wire" d="M330,423 L790,423"/>
+<circle cx="570" cy="423" r="6" fill="#173149"/>
+<path class="wire" d="M570,423 L960,423"/>
+<text x="973" y="432" class="label">Y = ¬(A · B)</text>
+<path class="wire" d="M570,423 L570,492"/>
+<path class="wire" d="M570,492 L570,548"/>
+<path class="gate" d="M560,493 L560,547"/>
+<path class="gate" d="M470,520 L552,520"/>
+<text x="435" y="508" class="label">A</text>
+<text x="630" y="528" class="tiny">N1 · NMOS</text>
+<path class="wire" d="M570,667 L570,723"/>
+<path class="gate" d="M560,668 L560,722"/>
+<path class="gate" d="M470,695 L552,695"/>
+<text x="435" y="683" class="label">B</text>
+<text x="630" y="703" class="tiny">N2 · NMOS</text>
+<path class="wire" d="M570,548 L570,667"/>
+<path class="wire" d="M570,723 L570,797"/>
+<path class="wire" d="M535,797 L605,797"/>
+<path class="wire" d="M546,810 L594,810"/>
+<path class="wire" d="M558,823 L582,823"/>
+<text x="615" y="817" class="label">GND</text>
+<rect x="60" y="863" width="1020" height="103" rx="14" fill="#e8f1f8" stroke="#b7cad9" stroke-width="2"/>
+<text x="86" y="903" class="tiny">PMOS en paralelo: Y sube si A=0 o B=0.</text>
+<text x="86" y="935" class="tiny">NMOS en serie: Y baja solo cuando A=1 y B=1.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Recorrido de tres palabras alineadas</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Recorrido de tres palabras alineadas</text><text x="35" y="76" class="small">El puntero sube de dos en dos; suma matemática 511+1+2=514.</text><rect x="25" y="136" width="300" height="171" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="175.0" y="184" class="label" text-anchor="middle">RAM 2200</text><text x="175.0" y="230" class="small" text-anchor="middle">FF 01</text><text x="175" y="279" class="small" text-anchor="middle">Valor 01FF</text><path d="M325,215 L350,215" fill="none" stroke="#244d68" stroke-width="4"/><path d="M350,215 L333.0,224.0 L333.0,206.0 Z" fill="#244d68"/><rect x="350" y="136" width="300" height="171" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="500.0" y="184" class="label" text-anchor="middle">RAM 2202</text><text x="500.0" y="230" class="small" text-anchor="middle">01 00</text><text x="500" y="279" class="small" text-anchor="middle">Valor 0001</text><path d="M650,215 L675,215" fill="none" stroke="#244d68" stroke-width="4"/><path d="M675,215 L658.0,224.0 L658.0,206.0 Z" fill="#244d68"/><rect x="675" y="136" width="300" height="171" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="825.0" y="184" class="label" text-anchor="middle">RAM 2204</text><text x="825.0" y="230" class="small" text-anchor="middle">02 00</text><text x="825" y="279" class="small" text-anchor="middle">Valor 0002</text><rect x="291" y="361" width="420" height="110" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="501.0" y="409" class="label" text-anchor="middle">RESULTADO EN 2210</text><text x="501.0" y="455" class="small" text-anchor="middle">02 02  =  0x0202</text></svg>

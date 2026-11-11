@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="490" viewBox="0 0 1000 490">
+<title>Amperímetro instalado en serie; advertencia contra cortocircuito</title><rect width="1000" height="490" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="37" y="39" class="label">Para medir corriente, intercalar el amperímetro en serie</text>
+<path class="wire" d="M110,111 V87 H263 M375,87 H478 M544,87 H674 V173 M674,257 V341 H110 V239"/>
+<rect class="block" x="49" y="111" width="122" height="128" rx="12"/>
+<text x="110" y="145" class="label" text-anchor="middle">5 V</text>
+<text x="110" y="174" class="small" text-anchor="middle">CC</text>
+<text x="110" y="201" class="tiny" text-anchor="middle">regulada</text>
+<text x="91" y="90" class="label" text-anchor="middle">+</text>
+<text x="91" y="262" class="label" text-anchor="middle">−</text>
+<rect class="block" x="263" y="65" width="112" height="44" rx="7"/>
+<text x="319" y="94" class="label" text-anchor="middle">330 Ω</text>
+<circle class="block" cx="511" cy="87" r="33"/>
+<text x="511" y="96" class="label" text-anchor="middle">A</text>
+<rect x="620" y="173" width="108" height="84" rx="14" class="light"/>
+<text x="674" y="217.0" class="label" text-anchor="middle">LED</text>
+<text x="674" y="244.0" class="tiny" text-anchor="middle">rojo</text>
+<text x="597" y="180" class="tiny">A (+)</text>
+<text x="597" y="274" class="tiny">K (−)</text>
+<path class="red" d="M 735,194.0 l 22,-22 m -8,0 l 8,0 l 0,8 M 744,212.0 l 22,-22 m -8,0 l 8,0 l 0,8"/>
+<text x="511" y="144" class="tiny" text-anchor="middle">Multímetro en A CC</text>
+<text x="511" y="165" class="tiny" text-anchor="middle">(borne mA/A según rango)</text>
+<rect x="64" y="392" width="872" height="71" rx="10" fill="#fff2e8"/>
+<text x="500" y="418" class="small" text-anchor="middle">No unir los bornes del amperímetro entre +5 V y GND:</text>
+<text x="500" y="445" class="small" text-anchor="middle">se produciría un cortocircuito potencialmente peligroso.</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Símbolos lógicos y tablas OR y NOR con salidas complementarias</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="46" y="43" class="label">OR frente a NOR: el círculo niega la salida</text>
+<text x="46" y="79" class="small">OR = al menos una entrada; NOR = ninguna entrada.</text>
+<path d="M139,146 C187,150 214,173 244,202
+ C214,232 186,255 139,258
+ C165,228 165,176 139,146 Z" fill="#e7f3fa" stroke="#273746" stroke-width="4"/>
+<path class="wire" d="M86,182 H152 M86,226 H152 M246,202 H290"/><path d="M139,306 C187,310 214,333 244,362
+ C214,392 186,415 139,418
+ C165,388 165,336 139,306 Z" fill="#e7f3fa" stroke="#273746" stroke-width="4"/>
+<path class="wire" d="M86,342 H152 M86,386 H152 M270,362 H314"/><circle cx="257" cy="362" r="13" fill="white" stroke="#273746" stroke-width="4"/>
+<text x="49" y="179" class="small">A</text><text x="49" y="222" class="small">B</text>
+<text x="49" y="339" class="small">A</text><text x="49" y="382" class="small">B</text>
+<text x="301" y="207" class="label accent">OR</text>
+<text x="324" y="367" class="label accent">NOR</text>
+<rect x="477" y="112" width="477" height="340" rx="15" fill="#f3f8fb"/>
+<text x="716" y="151" text-anchor="middle" class="label">Tabla de verdad</text>
+<path class="wire" d="M505,173 H926 M505,222 H926 M505,272 H926 M505,322 H926 M505,372 H926"/>
+<text x="541" y="207" class="label">A</text><text x="634" y="207" class="label">B</text>
+<text x="730" y="207" class="label accent">OR</text>
+<text x="848" y="207" class="label accent">NOR</text>
+<text x="542" y="257" class="small">0</text><text x="636" y="257" class="small">0</text><text x="735" y="257" class="small">0</text><text x="855" y="257" class="small">1</text>
+<text x="542" y="307" class="small">0</text><text x="636" y="307" class="small">1</text><text x="735" y="307" class="small">1</text><text x="855" y="307" class="small">0</text>
+<text x="542" y="357" class="small">1</text><text x="636" y="357" class="small">0</text><text x="735" y="357" class="small">1</text><text x="855" y="357" class="small">0</text>
+<text x="542" y="407" class="small">1</text><text x="636" y="407" class="small">1</text><text x="735" y="407" class="small">1</text><text x="855" y="407" class="small">0</text>
+<text x="716" y="439" text-anchor="middle" class="tiny">NOR = ¬OR en las cuatro combinaciones.</text>
+</svg>

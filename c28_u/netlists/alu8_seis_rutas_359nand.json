@@ -1,0 +1,2942 @@
+{
+  "name": "C28U_AULA8_6_RUTAS_NAND_ONE_HOT",
+  "status": "candidato_combinacional_educativo_sin_ISA_ni_cpu",
+  "inputs": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "SEL_ADD",
+    "SEL_SUB",
+    "SEL_AND",
+    "SEL_OR",
+    "SEL_XOR",
+    "SEL_NOTA"
+  ],
+  "selectors": [
+    "SEL_ADD",
+    "SEL_SUB",
+    "SEL_AND",
+    "SEL_OR",
+    "SEL_XOR",
+    "SEL_NOTA"
+  ],
+  "requires": "exactamente_un_selector_a_uno",
+  "gate_budget": {
+    "aritmetica_C28R": 134,
+    "logica_4_operaciones": 64,
+    "mux_de_6_rutas": 136,
+    "Z_elegido": 22,
+    "CV_valid": 3,
+    "total": 359
+  },
+  "gates": [
+    {
+      "name": "arith_bx0_1",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx0_2",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "arith_bx0_1"
+      ]
+    },
+    {
+      "name": "arith_bx0_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx0_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod0",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx0_2",
+        "arith_bx0_3"
+      ]
+    },
+    {
+      "name": "arith_an0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "arith_Bmod0"
+      ]
+    },
+    {
+      "name": "arith_au0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "arith_an0"
+      ]
+    },
+    {
+      "name": "arith_av0",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod0",
+        "arith_an0"
+      ]
+    },
+    {
+      "name": "arith_P0",
+      "op": "NAND",
+      "inputs": [
+        "arith_au0",
+        "arith_av0"
+      ]
+    },
+    {
+      "name": "arith_cn0",
+      "op": "NAND",
+      "inputs": [
+        "arith_P0",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_su0",
+      "op": "NAND",
+      "inputs": [
+        "arith_P0",
+        "arith_cn0"
+      ]
+    },
+    {
+      "name": "arith_sv0",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_cn0"
+      ]
+    },
+    {
+      "name": "arith_S0",
+      "op": "NAND",
+      "inputs": [
+        "arith_su0",
+        "arith_sv0"
+      ]
+    },
+    {
+      "name": "arith_C1",
+      "op": "NAND",
+      "inputs": [
+        "arith_an0",
+        "arith_cn0"
+      ]
+    },
+    {
+      "name": "arith_bx1_1",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx1_2",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "arith_bx1_1"
+      ]
+    },
+    {
+      "name": "arith_bx1_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx1_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod1",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx1_2",
+        "arith_bx1_3"
+      ]
+    },
+    {
+      "name": "arith_an1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "arith_Bmod1"
+      ]
+    },
+    {
+      "name": "arith_au1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "arith_an1"
+      ]
+    },
+    {
+      "name": "arith_av1",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod1",
+        "arith_an1"
+      ]
+    },
+    {
+      "name": "arith_P1",
+      "op": "NAND",
+      "inputs": [
+        "arith_au1",
+        "arith_av1"
+      ]
+    },
+    {
+      "name": "arith_cn1",
+      "op": "NAND",
+      "inputs": [
+        "arith_P1",
+        "arith_C1"
+      ]
+    },
+    {
+      "name": "arith_su1",
+      "op": "NAND",
+      "inputs": [
+        "arith_P1",
+        "arith_cn1"
+      ]
+    },
+    {
+      "name": "arith_sv1",
+      "op": "NAND",
+      "inputs": [
+        "arith_C1",
+        "arith_cn1"
+      ]
+    },
+    {
+      "name": "arith_S1",
+      "op": "NAND",
+      "inputs": [
+        "arith_su1",
+        "arith_sv1"
+      ]
+    },
+    {
+      "name": "arith_C2",
+      "op": "NAND",
+      "inputs": [
+        "arith_an1",
+        "arith_cn1"
+      ]
+    },
+    {
+      "name": "arith_bx2_1",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx2_2",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "arith_bx2_1"
+      ]
+    },
+    {
+      "name": "arith_bx2_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx2_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod2",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx2_2",
+        "arith_bx2_3"
+      ]
+    },
+    {
+      "name": "arith_an2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "arith_Bmod2"
+      ]
+    },
+    {
+      "name": "arith_au2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "arith_an2"
+      ]
+    },
+    {
+      "name": "arith_av2",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod2",
+        "arith_an2"
+      ]
+    },
+    {
+      "name": "arith_P2",
+      "op": "NAND",
+      "inputs": [
+        "arith_au2",
+        "arith_av2"
+      ]
+    },
+    {
+      "name": "arith_cn2",
+      "op": "NAND",
+      "inputs": [
+        "arith_P2",
+        "arith_C2"
+      ]
+    },
+    {
+      "name": "arith_su2",
+      "op": "NAND",
+      "inputs": [
+        "arith_P2",
+        "arith_cn2"
+      ]
+    },
+    {
+      "name": "arith_sv2",
+      "op": "NAND",
+      "inputs": [
+        "arith_C2",
+        "arith_cn2"
+      ]
+    },
+    {
+      "name": "arith_S2",
+      "op": "NAND",
+      "inputs": [
+        "arith_su2",
+        "arith_sv2"
+      ]
+    },
+    {
+      "name": "arith_C3",
+      "op": "NAND",
+      "inputs": [
+        "arith_an2",
+        "arith_cn2"
+      ]
+    },
+    {
+      "name": "arith_bx3_1",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx3_2",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "arith_bx3_1"
+      ]
+    },
+    {
+      "name": "arith_bx3_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx3_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod3",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx3_2",
+        "arith_bx3_3"
+      ]
+    },
+    {
+      "name": "arith_an3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "arith_Bmod3"
+      ]
+    },
+    {
+      "name": "arith_au3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "arith_an3"
+      ]
+    },
+    {
+      "name": "arith_av3",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod3",
+        "arith_an3"
+      ]
+    },
+    {
+      "name": "arith_P3",
+      "op": "NAND",
+      "inputs": [
+        "arith_au3",
+        "arith_av3"
+      ]
+    },
+    {
+      "name": "arith_cn3",
+      "op": "NAND",
+      "inputs": [
+        "arith_P3",
+        "arith_C3"
+      ]
+    },
+    {
+      "name": "arith_su3",
+      "op": "NAND",
+      "inputs": [
+        "arith_P3",
+        "arith_cn3"
+      ]
+    },
+    {
+      "name": "arith_sv3",
+      "op": "NAND",
+      "inputs": [
+        "arith_C3",
+        "arith_cn3"
+      ]
+    },
+    {
+      "name": "arith_S3",
+      "op": "NAND",
+      "inputs": [
+        "arith_su3",
+        "arith_sv3"
+      ]
+    },
+    {
+      "name": "arith_C4",
+      "op": "NAND",
+      "inputs": [
+        "arith_an3",
+        "arith_cn3"
+      ]
+    },
+    {
+      "name": "arith_bx4_1",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx4_2",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "arith_bx4_1"
+      ]
+    },
+    {
+      "name": "arith_bx4_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx4_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod4",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx4_2",
+        "arith_bx4_3"
+      ]
+    },
+    {
+      "name": "arith_an4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "arith_Bmod4"
+      ]
+    },
+    {
+      "name": "arith_au4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "arith_an4"
+      ]
+    },
+    {
+      "name": "arith_av4",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod4",
+        "arith_an4"
+      ]
+    },
+    {
+      "name": "arith_P4",
+      "op": "NAND",
+      "inputs": [
+        "arith_au4",
+        "arith_av4"
+      ]
+    },
+    {
+      "name": "arith_cn4",
+      "op": "NAND",
+      "inputs": [
+        "arith_P4",
+        "arith_C4"
+      ]
+    },
+    {
+      "name": "arith_su4",
+      "op": "NAND",
+      "inputs": [
+        "arith_P4",
+        "arith_cn4"
+      ]
+    },
+    {
+      "name": "arith_sv4",
+      "op": "NAND",
+      "inputs": [
+        "arith_C4",
+        "arith_cn4"
+      ]
+    },
+    {
+      "name": "arith_S4",
+      "op": "NAND",
+      "inputs": [
+        "arith_su4",
+        "arith_sv4"
+      ]
+    },
+    {
+      "name": "arith_C5",
+      "op": "NAND",
+      "inputs": [
+        "arith_an4",
+        "arith_cn4"
+      ]
+    },
+    {
+      "name": "arith_bx5_1",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx5_2",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "arith_bx5_1"
+      ]
+    },
+    {
+      "name": "arith_bx5_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx5_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod5",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx5_2",
+        "arith_bx5_3"
+      ]
+    },
+    {
+      "name": "arith_an5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "arith_Bmod5"
+      ]
+    },
+    {
+      "name": "arith_au5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "arith_an5"
+      ]
+    },
+    {
+      "name": "arith_av5",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod5",
+        "arith_an5"
+      ]
+    },
+    {
+      "name": "arith_P5",
+      "op": "NAND",
+      "inputs": [
+        "arith_au5",
+        "arith_av5"
+      ]
+    },
+    {
+      "name": "arith_cn5",
+      "op": "NAND",
+      "inputs": [
+        "arith_P5",
+        "arith_C5"
+      ]
+    },
+    {
+      "name": "arith_su5",
+      "op": "NAND",
+      "inputs": [
+        "arith_P5",
+        "arith_cn5"
+      ]
+    },
+    {
+      "name": "arith_sv5",
+      "op": "NAND",
+      "inputs": [
+        "arith_C5",
+        "arith_cn5"
+      ]
+    },
+    {
+      "name": "arith_S5",
+      "op": "NAND",
+      "inputs": [
+        "arith_su5",
+        "arith_sv5"
+      ]
+    },
+    {
+      "name": "arith_C6",
+      "op": "NAND",
+      "inputs": [
+        "arith_an5",
+        "arith_cn5"
+      ]
+    },
+    {
+      "name": "arith_bx6_1",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx6_2",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "arith_bx6_1"
+      ]
+    },
+    {
+      "name": "arith_bx6_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx6_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod6",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx6_2",
+        "arith_bx6_3"
+      ]
+    },
+    {
+      "name": "arith_an6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "arith_Bmod6"
+      ]
+    },
+    {
+      "name": "arith_au6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "arith_an6"
+      ]
+    },
+    {
+      "name": "arith_av6",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod6",
+        "arith_an6"
+      ]
+    },
+    {
+      "name": "arith_P6",
+      "op": "NAND",
+      "inputs": [
+        "arith_au6",
+        "arith_av6"
+      ]
+    },
+    {
+      "name": "arith_cn6",
+      "op": "NAND",
+      "inputs": [
+        "arith_P6",
+        "arith_C6"
+      ]
+    },
+    {
+      "name": "arith_su6",
+      "op": "NAND",
+      "inputs": [
+        "arith_P6",
+        "arith_cn6"
+      ]
+    },
+    {
+      "name": "arith_sv6",
+      "op": "NAND",
+      "inputs": [
+        "arith_C6",
+        "arith_cn6"
+      ]
+    },
+    {
+      "name": "arith_S6",
+      "op": "NAND",
+      "inputs": [
+        "arith_su6",
+        "arith_sv6"
+      ]
+    },
+    {
+      "name": "arith_C7",
+      "op": "NAND",
+      "inputs": [
+        "arith_an6",
+        "arith_cn6"
+      ]
+    },
+    {
+      "name": "arith_bx7_1",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_bx7_2",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "arith_bx7_1"
+      ]
+    },
+    {
+      "name": "arith_bx7_3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_bx7_1"
+      ]
+    },
+    {
+      "name": "arith_Bmod7",
+      "op": "NAND",
+      "inputs": [
+        "arith_bx7_2",
+        "arith_bx7_3"
+      ]
+    },
+    {
+      "name": "arith_an7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "arith_Bmod7"
+      ]
+    },
+    {
+      "name": "arith_au7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "arith_an7"
+      ]
+    },
+    {
+      "name": "arith_av7",
+      "op": "NAND",
+      "inputs": [
+        "arith_Bmod7",
+        "arith_an7"
+      ]
+    },
+    {
+      "name": "arith_P7",
+      "op": "NAND",
+      "inputs": [
+        "arith_au7",
+        "arith_av7"
+      ]
+    },
+    {
+      "name": "arith_cn7",
+      "op": "NAND",
+      "inputs": [
+        "arith_P7",
+        "arith_C7"
+      ]
+    },
+    {
+      "name": "arith_su7",
+      "op": "NAND",
+      "inputs": [
+        "arith_P7",
+        "arith_cn7"
+      ]
+    },
+    {
+      "name": "arith_sv7",
+      "op": "NAND",
+      "inputs": [
+        "arith_C7",
+        "arith_cn7"
+      ]
+    },
+    {
+      "name": "arith_S7",
+      "op": "NAND",
+      "inputs": [
+        "arith_su7",
+        "arith_sv7"
+      ]
+    },
+    {
+      "name": "arith_C8",
+      "op": "NAND",
+      "inputs": [
+        "arith_an7",
+        "arith_cn7"
+      ]
+    },
+    {
+      "name": "arith_cf1",
+      "op": "NAND",
+      "inputs": [
+        "arith_C8",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "arith_cf2",
+      "op": "NAND",
+      "inputs": [
+        "arith_C8",
+        "arith_cf1"
+      ]
+    },
+    {
+      "name": "arith_cf3",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "arith_cf1"
+      ]
+    },
+    {
+      "name": "arith_Cflag",
+      "op": "NAND",
+      "inputs": [
+        "arith_cf2",
+        "arith_cf3"
+      ]
+    },
+    {
+      "name": "arith_vf1",
+      "op": "NAND",
+      "inputs": [
+        "arith_C7",
+        "arith_C8"
+      ]
+    },
+    {
+      "name": "arith_vf2",
+      "op": "NAND",
+      "inputs": [
+        "arith_C7",
+        "arith_vf1"
+      ]
+    },
+    {
+      "name": "arith_vf3",
+      "op": "NAND",
+      "inputs": [
+        "arith_C8",
+        "arith_vf1"
+      ]
+    },
+    {
+      "name": "arith_V",
+      "op": "NAND",
+      "inputs": [
+        "arith_vf2",
+        "arith_vf3"
+      ]
+    },
+    {
+      "name": "arith_notS0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S0",
+        "arith_S0"
+      ]
+    },
+    {
+      "name": "arith_notS1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S1",
+        "arith_S1"
+      ]
+    },
+    {
+      "name": "arith_notS2",
+      "op": "NAND",
+      "inputs": [
+        "arith_S2",
+        "arith_S2"
+      ]
+    },
+    {
+      "name": "arith_notS3",
+      "op": "NAND",
+      "inputs": [
+        "arith_S3",
+        "arith_S3"
+      ]
+    },
+    {
+      "name": "arith_notS4",
+      "op": "NAND",
+      "inputs": [
+        "arith_S4",
+        "arith_S4"
+      ]
+    },
+    {
+      "name": "arith_notS5",
+      "op": "NAND",
+      "inputs": [
+        "arith_S5",
+        "arith_S5"
+      ]
+    },
+    {
+      "name": "arith_notS6",
+      "op": "NAND",
+      "inputs": [
+        "arith_S6",
+        "arith_S6"
+      ]
+    },
+    {
+      "name": "arith_notS7",
+      "op": "NAND",
+      "inputs": [
+        "arith_S7",
+        "arith_S7"
+      ]
+    },
+    {
+      "name": "arith_z_0_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_notS0",
+        "arith_notS1"
+      ]
+    },
+    {
+      "name": "arith_z_0_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_0_neg",
+        "arith_z_0_0_neg"
+      ]
+    },
+    {
+      "name": "arith_z_0_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_notS2",
+        "arith_notS3"
+      ]
+    },
+    {
+      "name": "arith_z_0_2",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_2_neg",
+        "arith_z_0_2_neg"
+      ]
+    },
+    {
+      "name": "arith_z_0_4_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_notS4",
+        "arith_notS5"
+      ]
+    },
+    {
+      "name": "arith_z_0_4",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_4_neg",
+        "arith_z_0_4_neg"
+      ]
+    },
+    {
+      "name": "arith_z_0_6_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_notS6",
+        "arith_notS7"
+      ]
+    },
+    {
+      "name": "arith_z_0_6",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_6_neg",
+        "arith_z_0_6_neg"
+      ]
+    },
+    {
+      "name": "arith_z_1_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_0",
+        "arith_z_0_2"
+      ]
+    },
+    {
+      "name": "arith_z_1_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_1_0_neg",
+        "arith_z_1_0_neg"
+      ]
+    },
+    {
+      "name": "arith_z_1_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_0_4",
+        "arith_z_0_6"
+      ]
+    },
+    {
+      "name": "arith_z_1_2",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_1_2_neg",
+        "arith_z_1_2_neg"
+      ]
+    },
+    {
+      "name": "arith_z_2_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_1_0",
+        "arith_z_1_2"
+      ]
+    },
+    {
+      "name": "arith_z_2_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_z_2_0_neg",
+        "arith_z_2_0_neg"
+      ]
+    },
+    {
+      "name": "logic_nand0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "B0"
+      ]
+    },
+    {
+      "name": "logic_nota0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "A0"
+      ]
+    },
+    {
+      "name": "logic_notb0",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "B0"
+      ]
+    },
+    {
+      "name": "logic_and0",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand0",
+        "logic_nand0"
+      ]
+    },
+    {
+      "name": "logic_or0",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota0",
+        "logic_notb0"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "logic_nand0"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_0",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "logic_nand0"
+      ]
+    },
+    {
+      "name": "logic_xor0",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_0",
+        "logic_xor_b2_0"
+      ]
+    },
+    {
+      "name": "mux_m0_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S0",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m0_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S0",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m0_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and0",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m0_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or0",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m0_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor0",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m0_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota0",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p0_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m0_0",
+        "mux_m0_1"
+      ]
+    },
+    {
+      "name": "mux_p0_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p0_0_neg",
+        "mux_p0_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p0_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m0_2",
+        "mux_m0_3"
+      ]
+    },
+    {
+      "name": "mux_p0_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p0_1_neg",
+        "mux_p0_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p0_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m0_4",
+        "mux_m0_5"
+      ]
+    },
+    {
+      "name": "mux_p0_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p0_2_neg",
+        "mux_p0_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p0_0",
+        "mux_p0_1"
+      ]
+    },
+    {
+      "name": "mux_g0",
+      "op": "NAND",
+      "inputs": [
+        "mux_g0_neg",
+        "mux_g0_neg"
+      ]
+    },
+    {
+      "name": "mux_all0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g0",
+        "mux_p0_2"
+      ]
+    },
+    {
+      "name": "mux_all0",
+      "op": "NAND",
+      "inputs": [
+        "mux_all0_neg",
+        "mux_all0_neg"
+      ]
+    },
+    {
+      "name": "OUT0",
+      "op": "NAND",
+      "inputs": [
+        "mux_all0",
+        "mux_all0"
+      ]
+    },
+    {
+      "name": "logic_nand1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "B1"
+      ]
+    },
+    {
+      "name": "logic_nota1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "A1"
+      ]
+    },
+    {
+      "name": "logic_notb1",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "B1"
+      ]
+    },
+    {
+      "name": "logic_and1",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand1",
+        "logic_nand1"
+      ]
+    },
+    {
+      "name": "logic_or1",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota1",
+        "logic_notb1"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "logic_nand1"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_1",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "logic_nand1"
+      ]
+    },
+    {
+      "name": "logic_xor1",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_1",
+        "logic_xor_b2_1"
+      ]
+    },
+    {
+      "name": "mux_m1_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S1",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m1_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S1",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m1_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and1",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m1_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or1",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m1_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor1",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m1_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota1",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p1_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m1_0",
+        "mux_m1_1"
+      ]
+    },
+    {
+      "name": "mux_p1_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p1_0_neg",
+        "mux_p1_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p1_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m1_2",
+        "mux_m1_3"
+      ]
+    },
+    {
+      "name": "mux_p1_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p1_1_neg",
+        "mux_p1_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p1_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m1_4",
+        "mux_m1_5"
+      ]
+    },
+    {
+      "name": "mux_p1_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p1_2_neg",
+        "mux_p1_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p1_0",
+        "mux_p1_1"
+      ]
+    },
+    {
+      "name": "mux_g1",
+      "op": "NAND",
+      "inputs": [
+        "mux_g1_neg",
+        "mux_g1_neg"
+      ]
+    },
+    {
+      "name": "mux_all1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g1",
+        "mux_p1_2"
+      ]
+    },
+    {
+      "name": "mux_all1",
+      "op": "NAND",
+      "inputs": [
+        "mux_all1_neg",
+        "mux_all1_neg"
+      ]
+    },
+    {
+      "name": "OUT1",
+      "op": "NAND",
+      "inputs": [
+        "mux_all1",
+        "mux_all1"
+      ]
+    },
+    {
+      "name": "logic_nand2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "B2"
+      ]
+    },
+    {
+      "name": "logic_nota2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "A2"
+      ]
+    },
+    {
+      "name": "logic_notb2",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "B2"
+      ]
+    },
+    {
+      "name": "logic_and2",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand2",
+        "logic_nand2"
+      ]
+    },
+    {
+      "name": "logic_or2",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota2",
+        "logic_notb2"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "logic_nand2"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_2",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "logic_nand2"
+      ]
+    },
+    {
+      "name": "logic_xor2",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_2",
+        "logic_xor_b2_2"
+      ]
+    },
+    {
+      "name": "mux_m2_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S2",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m2_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S2",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m2_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and2",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m2_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or2",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m2_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor2",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m2_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota2",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p2_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m2_0",
+        "mux_m2_1"
+      ]
+    },
+    {
+      "name": "mux_p2_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p2_0_neg",
+        "mux_p2_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p2_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m2_2",
+        "mux_m2_3"
+      ]
+    },
+    {
+      "name": "mux_p2_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p2_1_neg",
+        "mux_p2_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p2_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m2_4",
+        "mux_m2_5"
+      ]
+    },
+    {
+      "name": "mux_p2_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p2_2_neg",
+        "mux_p2_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p2_0",
+        "mux_p2_1"
+      ]
+    },
+    {
+      "name": "mux_g2",
+      "op": "NAND",
+      "inputs": [
+        "mux_g2_neg",
+        "mux_g2_neg"
+      ]
+    },
+    {
+      "name": "mux_all2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g2",
+        "mux_p2_2"
+      ]
+    },
+    {
+      "name": "mux_all2",
+      "op": "NAND",
+      "inputs": [
+        "mux_all2_neg",
+        "mux_all2_neg"
+      ]
+    },
+    {
+      "name": "OUT2",
+      "op": "NAND",
+      "inputs": [
+        "mux_all2",
+        "mux_all2"
+      ]
+    },
+    {
+      "name": "logic_nand3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "B3"
+      ]
+    },
+    {
+      "name": "logic_nota3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "A3"
+      ]
+    },
+    {
+      "name": "logic_notb3",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "B3"
+      ]
+    },
+    {
+      "name": "logic_and3",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand3",
+        "logic_nand3"
+      ]
+    },
+    {
+      "name": "logic_or3",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota3",
+        "logic_notb3"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "logic_nand3"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_3",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "logic_nand3"
+      ]
+    },
+    {
+      "name": "logic_xor3",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_3",
+        "logic_xor_b2_3"
+      ]
+    },
+    {
+      "name": "mux_m3_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S3",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m3_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S3",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m3_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and3",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m3_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or3",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m3_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor3",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m3_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota3",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p3_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m3_0",
+        "mux_m3_1"
+      ]
+    },
+    {
+      "name": "mux_p3_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p3_0_neg",
+        "mux_p3_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p3_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m3_2",
+        "mux_m3_3"
+      ]
+    },
+    {
+      "name": "mux_p3_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p3_1_neg",
+        "mux_p3_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p3_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m3_4",
+        "mux_m3_5"
+      ]
+    },
+    {
+      "name": "mux_p3_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p3_2_neg",
+        "mux_p3_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g3_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p3_0",
+        "mux_p3_1"
+      ]
+    },
+    {
+      "name": "mux_g3",
+      "op": "NAND",
+      "inputs": [
+        "mux_g3_neg",
+        "mux_g3_neg"
+      ]
+    },
+    {
+      "name": "mux_all3_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g3",
+        "mux_p3_2"
+      ]
+    },
+    {
+      "name": "mux_all3",
+      "op": "NAND",
+      "inputs": [
+        "mux_all3_neg",
+        "mux_all3_neg"
+      ]
+    },
+    {
+      "name": "OUT3",
+      "op": "NAND",
+      "inputs": [
+        "mux_all3",
+        "mux_all3"
+      ]
+    },
+    {
+      "name": "logic_nand4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "B4"
+      ]
+    },
+    {
+      "name": "logic_nota4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "A4"
+      ]
+    },
+    {
+      "name": "logic_notb4",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "B4"
+      ]
+    },
+    {
+      "name": "logic_and4",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand4",
+        "logic_nand4"
+      ]
+    },
+    {
+      "name": "logic_or4",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota4",
+        "logic_notb4"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "logic_nand4"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_4",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "logic_nand4"
+      ]
+    },
+    {
+      "name": "logic_xor4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_4",
+        "logic_xor_b2_4"
+      ]
+    },
+    {
+      "name": "mux_m4_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S4",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m4_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S4",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m4_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and4",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m4_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or4",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m4_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor4",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m4_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota4",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p4_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m4_0",
+        "mux_m4_1"
+      ]
+    },
+    {
+      "name": "mux_p4_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p4_0_neg",
+        "mux_p4_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p4_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m4_2",
+        "mux_m4_3"
+      ]
+    },
+    {
+      "name": "mux_p4_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p4_1_neg",
+        "mux_p4_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p4_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m4_4",
+        "mux_m4_5"
+      ]
+    },
+    {
+      "name": "mux_p4_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p4_2_neg",
+        "mux_p4_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g4_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p4_0",
+        "mux_p4_1"
+      ]
+    },
+    {
+      "name": "mux_g4",
+      "op": "NAND",
+      "inputs": [
+        "mux_g4_neg",
+        "mux_g4_neg"
+      ]
+    },
+    {
+      "name": "mux_all4_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g4",
+        "mux_p4_2"
+      ]
+    },
+    {
+      "name": "mux_all4",
+      "op": "NAND",
+      "inputs": [
+        "mux_all4_neg",
+        "mux_all4_neg"
+      ]
+    },
+    {
+      "name": "OUT4",
+      "op": "NAND",
+      "inputs": [
+        "mux_all4",
+        "mux_all4"
+      ]
+    },
+    {
+      "name": "logic_nand5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "B5"
+      ]
+    },
+    {
+      "name": "logic_nota5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "A5"
+      ]
+    },
+    {
+      "name": "logic_notb5",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "B5"
+      ]
+    },
+    {
+      "name": "logic_and5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand5",
+        "logic_nand5"
+      ]
+    },
+    {
+      "name": "logic_or5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota5",
+        "logic_notb5"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "logic_nand5"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_5",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "logic_nand5"
+      ]
+    },
+    {
+      "name": "logic_xor5",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_5",
+        "logic_xor_b2_5"
+      ]
+    },
+    {
+      "name": "mux_m5_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S5",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m5_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S5",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m5_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and5",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m5_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or5",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m5_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor5",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m5_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota5",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p5_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m5_0",
+        "mux_m5_1"
+      ]
+    },
+    {
+      "name": "mux_p5_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p5_0_neg",
+        "mux_p5_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p5_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m5_2",
+        "mux_m5_3"
+      ]
+    },
+    {
+      "name": "mux_p5_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p5_1_neg",
+        "mux_p5_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p5_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m5_4",
+        "mux_m5_5"
+      ]
+    },
+    {
+      "name": "mux_p5_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p5_2_neg",
+        "mux_p5_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g5_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p5_0",
+        "mux_p5_1"
+      ]
+    },
+    {
+      "name": "mux_g5",
+      "op": "NAND",
+      "inputs": [
+        "mux_g5_neg",
+        "mux_g5_neg"
+      ]
+    },
+    {
+      "name": "mux_all5_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g5",
+        "mux_p5_2"
+      ]
+    },
+    {
+      "name": "mux_all5",
+      "op": "NAND",
+      "inputs": [
+        "mux_all5_neg",
+        "mux_all5_neg"
+      ]
+    },
+    {
+      "name": "OUT5",
+      "op": "NAND",
+      "inputs": [
+        "mux_all5",
+        "mux_all5"
+      ]
+    },
+    {
+      "name": "logic_nand6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "B6"
+      ]
+    },
+    {
+      "name": "logic_nota6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "A6"
+      ]
+    },
+    {
+      "name": "logic_notb6",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "B6"
+      ]
+    },
+    {
+      "name": "logic_and6",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand6",
+        "logic_nand6"
+      ]
+    },
+    {
+      "name": "logic_or6",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota6",
+        "logic_notb6"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "logic_nand6"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_6",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "logic_nand6"
+      ]
+    },
+    {
+      "name": "logic_xor6",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_6",
+        "logic_xor_b2_6"
+      ]
+    },
+    {
+      "name": "mux_m6_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S6",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m6_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S6",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m6_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and6",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m6_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or6",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m6_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor6",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m6_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota6",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p6_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m6_0",
+        "mux_m6_1"
+      ]
+    },
+    {
+      "name": "mux_p6_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p6_0_neg",
+        "mux_p6_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p6_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m6_2",
+        "mux_m6_3"
+      ]
+    },
+    {
+      "name": "mux_p6_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p6_1_neg",
+        "mux_p6_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p6_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m6_4",
+        "mux_m6_5"
+      ]
+    },
+    {
+      "name": "mux_p6_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p6_2_neg",
+        "mux_p6_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g6_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p6_0",
+        "mux_p6_1"
+      ]
+    },
+    {
+      "name": "mux_g6",
+      "op": "NAND",
+      "inputs": [
+        "mux_g6_neg",
+        "mux_g6_neg"
+      ]
+    },
+    {
+      "name": "mux_all6_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g6",
+        "mux_p6_2"
+      ]
+    },
+    {
+      "name": "mux_all6",
+      "op": "NAND",
+      "inputs": [
+        "mux_all6_neg",
+        "mux_all6_neg"
+      ]
+    },
+    {
+      "name": "OUT6",
+      "op": "NAND",
+      "inputs": [
+        "mux_all6",
+        "mux_all6"
+      ]
+    },
+    {
+      "name": "logic_nand7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "B7"
+      ]
+    },
+    {
+      "name": "logic_nota7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "A7"
+      ]
+    },
+    {
+      "name": "logic_notb7",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "B7"
+      ]
+    },
+    {
+      "name": "logic_and7",
+      "op": "NAND",
+      "inputs": [
+        "logic_nand7",
+        "logic_nand7"
+      ]
+    },
+    {
+      "name": "logic_or7",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota7",
+        "logic_notb7"
+      ]
+    },
+    {
+      "name": "logic_xor_b1_7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "logic_nand7"
+      ]
+    },
+    {
+      "name": "logic_xor_b2_7",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "logic_nand7"
+      ]
+    },
+    {
+      "name": "logic_xor7",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor_b1_7",
+        "logic_xor_b2_7"
+      ]
+    },
+    {
+      "name": "mux_m7_0",
+      "op": "NAND",
+      "inputs": [
+        "arith_S7",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "mux_m7_1",
+      "op": "NAND",
+      "inputs": [
+        "arith_S7",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "mux_m7_2",
+      "op": "NAND",
+      "inputs": [
+        "logic_and7",
+        "SEL_AND"
+      ]
+    },
+    {
+      "name": "mux_m7_3",
+      "op": "NAND",
+      "inputs": [
+        "logic_or7",
+        "SEL_OR"
+      ]
+    },
+    {
+      "name": "mux_m7_4",
+      "op": "NAND",
+      "inputs": [
+        "logic_xor7",
+        "SEL_XOR"
+      ]
+    },
+    {
+      "name": "mux_m7_5",
+      "op": "NAND",
+      "inputs": [
+        "logic_nota7",
+        "SEL_NOTA"
+      ]
+    },
+    {
+      "name": "mux_p7_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m7_0",
+        "mux_m7_1"
+      ]
+    },
+    {
+      "name": "mux_p7_0",
+      "op": "NAND",
+      "inputs": [
+        "mux_p7_0_neg",
+        "mux_p7_0_neg"
+      ]
+    },
+    {
+      "name": "mux_p7_1_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m7_2",
+        "mux_m7_3"
+      ]
+    },
+    {
+      "name": "mux_p7_1",
+      "op": "NAND",
+      "inputs": [
+        "mux_p7_1_neg",
+        "mux_p7_1_neg"
+      ]
+    },
+    {
+      "name": "mux_p7_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_m7_4",
+        "mux_m7_5"
+      ]
+    },
+    {
+      "name": "mux_p7_2",
+      "op": "NAND",
+      "inputs": [
+        "mux_p7_2_neg",
+        "mux_p7_2_neg"
+      ]
+    },
+    {
+      "name": "mux_g7_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_p7_0",
+        "mux_p7_1"
+      ]
+    },
+    {
+      "name": "mux_g7",
+      "op": "NAND",
+      "inputs": [
+        "mux_g7_neg",
+        "mux_g7_neg"
+      ]
+    },
+    {
+      "name": "mux_all7_neg",
+      "op": "NAND",
+      "inputs": [
+        "mux_g7",
+        "mux_p7_2"
+      ]
+    },
+    {
+      "name": "mux_all7",
+      "op": "NAND",
+      "inputs": [
+        "mux_all7_neg",
+        "mux_all7_neg"
+      ]
+    },
+    {
+      "name": "OUT7",
+      "op": "NAND",
+      "inputs": [
+        "mux_all7",
+        "mux_all7"
+      ]
+    },
+    {
+      "name": "z_not0",
+      "op": "NAND",
+      "inputs": [
+        "OUT0",
+        "OUT0"
+      ]
+    },
+    {
+      "name": "z_not1",
+      "op": "NAND",
+      "inputs": [
+        "OUT1",
+        "OUT1"
+      ]
+    },
+    {
+      "name": "z_not2",
+      "op": "NAND",
+      "inputs": [
+        "OUT2",
+        "OUT2"
+      ]
+    },
+    {
+      "name": "z_not3",
+      "op": "NAND",
+      "inputs": [
+        "OUT3",
+        "OUT3"
+      ]
+    },
+    {
+      "name": "z_not4",
+      "op": "NAND",
+      "inputs": [
+        "OUT4",
+        "OUT4"
+      ]
+    },
+    {
+      "name": "z_not5",
+      "op": "NAND",
+      "inputs": [
+        "OUT5",
+        "OUT5"
+      ]
+    },
+    {
+      "name": "z_not6",
+      "op": "NAND",
+      "inputs": [
+        "OUT6",
+        "OUT6"
+      ]
+    },
+    {
+      "name": "z_not7",
+      "op": "NAND",
+      "inputs": [
+        "OUT7",
+        "OUT7"
+      ]
+    },
+    {
+      "name": "z_and_0_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_not0",
+        "z_not1"
+      ]
+    },
+    {
+      "name": "z_and_0_0",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_0_neg",
+        "z_and_0_0_neg"
+      ]
+    },
+    {
+      "name": "z_and_0_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_not2",
+        "z_not3"
+      ]
+    },
+    {
+      "name": "z_and_0_2",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_2_neg",
+        "z_and_0_2_neg"
+      ]
+    },
+    {
+      "name": "z_and_0_4_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_not4",
+        "z_not5"
+      ]
+    },
+    {
+      "name": "z_and_0_4",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_4_neg",
+        "z_and_0_4_neg"
+      ]
+    },
+    {
+      "name": "z_and_0_6_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_not6",
+        "z_not7"
+      ]
+    },
+    {
+      "name": "z_and_0_6",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_6_neg",
+        "z_and_0_6_neg"
+      ]
+    },
+    {
+      "name": "z_and_1_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_0",
+        "z_and_0_2"
+      ]
+    },
+    {
+      "name": "z_and_1_0",
+      "op": "NAND",
+      "inputs": [
+        "z_and_1_0_neg",
+        "z_and_1_0_neg"
+      ]
+    },
+    {
+      "name": "z_and_1_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_and_0_4",
+        "z_and_0_6"
+      ]
+    },
+    {
+      "name": "z_and_1_2",
+      "op": "NAND",
+      "inputs": [
+        "z_and_1_2_neg",
+        "z_and_1_2_neg"
+      ]
+    },
+    {
+      "name": "z_and_2_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_and_1_0",
+        "z_and_1_2"
+      ]
+    },
+    {
+      "name": "z_and_2_0",
+      "op": "NAND",
+      "inputs": [
+        "z_and_2_0_neg",
+        "z_and_2_0_neg"
+      ]
+    },
+    {
+      "name": "valid_not_add",
+      "op": "NAND",
+      "inputs": [
+        "SEL_ADD",
+        "SEL_ADD"
+      ]
+    },
+    {
+      "name": "valid_not_sub",
+      "op": "NAND",
+      "inputs": [
+        "SEL_SUB",
+        "SEL_SUB"
+      ]
+    },
+    {
+      "name": "valid_mux",
+      "op": "NAND",
+      "inputs": [
+        "valid_not_add",
+        "valid_not_sub"
+      ]
+    }
+  ],
+  "outputs": {
+    "S": [
+      "OUT0",
+      "OUT1",
+      "OUT2",
+      "OUT3",
+      "OUT4",
+      "OUT5",
+      "OUT6",
+      "OUT7"
+    ],
+    "N": "OUT7",
+    "Z": "z_and_2_0",
+    "C_arith": "arith_Cflag",
+    "V_arith": "arith_V",
+    "CV_valid": "valid_mux"
+  },
+  "limits": [
+    "seleccion ONE-HOT funcional, sin decodificador de ISA ni codigos opcode",
+    "C_arith/V_arith son invalidos en operaciones logicas; no se define su politica ISA",
+    "solo NAND ideal, sin tiempos, ventilacion electrica, encapsulados ni placa",
+    "sin registros, secuenciacion, memoria, firmware ni CPU integrada"
+  ]
+}

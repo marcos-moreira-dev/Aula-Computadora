@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Conexiones cruzadas sin cortocircuitos del latch SR</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="45" y="45" class="label">Latch SR: dos NAND unidas por realimentación</text>
+<text x="45" y="78" class="small">S_n y R_n se activan con 0. Q_n complementa Q solo en estados válidos.</text>
+<rect x="330" y="150" width="176" height="96" rx="15" fill="#e7f3fa" stroke="#283a4b" stroke-width="3"/>
+<text x="418" y="193" text-anchor="middle" class="label">NAND 1</text>
+<text x="418" y="220" text-anchor="middle" class="small">NAND</text><rect x="670" y="280" width="176" height="96" rx="15" fill="#e7f3fa" stroke="#283a4b" stroke-width="3"/>
+<text x="758" y="323" text-anchor="middle" class="label">NAND 2</text>
+<text x="758" y="350" text-anchor="middle" class="small">NAND</text>
+<path class="wire" d="M140,185 H330"/>
+<text x="72" y="192" class="label accent">S_n</text>
+<text x="193" y="172" class="tiny">SET</text>
+<path class="wire" d="M506,205 H617 V316 H670"/>
+<circle cx="588" cy="205" r="5" class="node"/>
+<path class="wire" d="M506,205 H888"/>
+<text x="897" y="210" class="label accent">Q</text>
+<path class="wire" d="M532,353 H670"/>
+<text x="462" y="361" class="label accent">R_n</text>
+<text x="536" y="339" class="tiny">RESET</text>
+<path class="wire" d="M846,329 H943"/>
+<text x="948" y="336" class="label accent">Q_n</text>
+<path d="M903,329 V456 H234 V230 H330" fill="none" stroke="#28805a" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="903" cy="329" r="6" fill="#28805a"/>
+<text x="490" y="440" text-anchor="middle" class="small" style="fill:#28805a">Realimentación de Q_n hacia NAND 1</text>
+<text x="591" y="291" text-anchor="middle" class="tiny accent">Q hacia NAND 2</text>
+<text x="303" y="217" class="tiny">Q_n</text>
+</svg>

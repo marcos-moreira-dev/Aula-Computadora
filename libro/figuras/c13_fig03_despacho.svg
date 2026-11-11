@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>El despacho no equivale a ejecutar una instrucción</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">El despacho no equivale a ejecutar una instrucción</text><text x="35" y="76" class="small">IR selecciona una ruta; solo tres rutas están descritas en el borrador.</text><rect x="30" y="149" width="228" height="100" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="336" y="149" width="318" height="100" rx="14" fill="#f9f0d8" stroke="#36556b" stroke-width="2.5"/><text x="144" y="189" class="label" text-anchor="middle">FETCH_OPCODE</text><text x="144" y="225" class="small" text-anchor="middle">leer y conservar IR</text><text x="495" y="189" class="label" text-anchor="middle">DECODE</text><text x="495" y="225" class="small" text-anchor="middle">seleccionar microsecuencia</text><path class="wire" d="M258,197 H336"/><rect x="702" y="122" width="273" height="66" rx="14" fill="#e8f4e9" stroke="#36556b" stroke-width="2.5"/><rect x="702" y="209" width="273" height="66" rx="14" fill="#e8f4e9" stroke="#36556b" stroke-width="2.5"/><rect x="702" y="296" width="273" height="66" rx="14" fill="#e8f4e9" stroke="#36556b" stroke-width="2.5"/><text x="837" y="162" class="small" text-anchor="middle">11 → LDI_SELECTOR</text><text x="837" y="249" class="small" text-anchor="middle">13 → ST_SELECTOR</text><text x="837" y="336" class="small" text-anchor="middle">01 → HALT_ENTER</text><path class="wire" d="M654,198 H680 V155 H702 M680,241 H702 M680,329 H702"/><rect x="45" y="311" width="285" height="101" rx="14" fill="#fdebe8" stroke="#36556b" stroke-width="2.5"/><rect x="366" y="311" width="287" height="101" rx="14" fill="#f4f1dc" stroke="#36556b" stroke-width="2.5"/><text x="187" y="354" class="label" text-anchor="middle">FAULT</text><text x="187" y="385" class="small" text-anchor="middle">opcode inexistente</text><text x="510" y="354" class="label" text-anchor="middle">PENDING_ROUTE</text><text x="510" y="385" class="small" text-anchor="middle">conocido sin ruta escrita</text><text x="501" y="473" class="tiny" text-anchor="middle">Ni el número de estados ni sus direcciones internas están fijados.</text></svg>

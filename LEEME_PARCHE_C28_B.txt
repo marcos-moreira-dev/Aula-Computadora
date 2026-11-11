@@ -1,0 +1,33 @@
+AULA COMPUTADORA — PARCHE C28-B
+=================================
+
+Este parche SE APLICA sobre Aula_Computadora_C27_GLOBAL.zip.
+Contiene la portada aprobada, dos tablas visuales del registro R0,
+dos capítulos revisados, el nuevo constructor y el indice paginado.
+No borra ni sobrescribe los maestros C27.
+
+INTEGRACION CON POWERSHELL (Windows)
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath .\Aula_C28B_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath .\Aula_C28B_COMPLETO -Force
+  Set-Location .\Aula_C28B_COMPLETO\Aula-Computadora
+  py -m pip install python-docx
+  py .\scripts\generar_libro_maestro_c28b.py --pages-json .\libro\ediciones\C28_B\INDICE_C28_B.json
+
+El Word resultante aparece en:
+  libro\ediciones\C28_B\Aula_Computadora_C28_B_MAESTRO.docx
+
+Para PDF, abrir ese Word en LibreOffice y Exportar a PDF; se necesita
+que las fuentes Liberation Serif y Liberation Sans esten instaladas.
+
+El PDF y Word ya renderizados, si se entregan por separado, permiten
+consultar esta edición sin ejecutar ningun script.
+
+REGISTRO R0
+La validacion automatica de 509268 comparaciones procede del piloto
+C28-A (entregado aparte), no de un circuito construido ni de Verilog
+ejecutado. En C28-B se insertan dos laminas didacticas derivadas de
+ese mismo contrato.
+
+Consulta INFORME_C28_B.md para cambios, riesgos y pasos siguientes.

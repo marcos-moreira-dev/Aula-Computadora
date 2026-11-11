@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Memoria: el dato cambia de conductor</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Memoria: el dato cambia de conductor</text><text x="35" y="76" class="small">MAR mantiene 0x6F00 en ambos casos; RD y WR son solicitudes mutuamente excluyentes.</text><rect x="39" y="119" width="438" height="288" rx="14" fill="#e8f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="523" y="119" width="438" height="288" rx="14" fill="#eaf5ea" stroke="#36556b" stroke-width="2.5"/><text x="258" y="162" class="label" text-anchor="middle">LECTURA (RD)</text><text x="258" y="209" class="small" text-anchor="middle">RAM entrega byte</text><text x="258" y="249" class="label" text-anchor="middle">RAM  →  D0..D7  →  MDR</text><text x="258" y="300" class="small" text-anchor="middle">CPU NO conduce los datos</text><text x="258" y="350" class="small" text-anchor="middle">MAR = 0x6F00</text><text x="742" y="162" class="label" text-anchor="middle">ESCRITURA (WR)</text><text x="742" y="209" class="small" text-anchor="middle">CPU entrega byte</text><text x="742" y="249" class="label" text-anchor="middle">MDR  →  D0..D7  →  RAM</text><text x="742" y="300" class="small" text-anchor="middle">RAM NO conduce los datos</text><text x="742" y="350" class="small" text-anchor="middle">MAR = 0x6F00; MDR = 0x2A</text><text x="500" y="456" class="small" text-anchor="middle">Nunca dos fuentes incompatibles sobre el mismo bus.</text><text x="500" y="481" class="tiny" text-anchor="middle">Acciones funcionales; sin polaridad ni tiempos de acceso fijados.</text></svg>

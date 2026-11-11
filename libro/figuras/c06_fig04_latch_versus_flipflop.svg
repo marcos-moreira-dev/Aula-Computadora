@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Comparación entre latch y flip-flop</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="41" y="46" class="label">Dos memorias de un bit que aceptan datos de forma diferente</text>
+<text x="41" y="82" class="small">El circuito y el nombre de la señal determinan cuándo puede cambiar Q.</text>
+<rect x="39" y="115" width="447" height="311" rx="16" fill="#eff6fb" stroke="#9bbbd0" stroke-width="2"/>
+<text x="263" y="164" text-anchor="middle" class="label">Latch D</text>
+<text x="263" y="199" text-anchor="middle" class="small">LE = 1 abre una ventana</text>
+<rect x="85" y="225" width="355" height="82" rx="12" fill="#dbeef7"/>
+<text x="263" y="259" text-anchor="middle" class="label">D: 0 → 1 → 0</text>
+<text x="263" y="288" text-anchor="middle" class="small">Q sigue 0 → 1 → 0</text>
+<text x="263" y="349" text-anchor="middle" class="small">Sigue D durante todo el nivel alto</text>
+<text x="263" y="384" text-anchor="middle" class="tiny">Al cerrar LE, conserva el último valor válido.</text>
+<rect x="514" y="115" width="447" height="311" rx="16" fill="#eef7f0" stroke="#9bbcaa" stroke-width="2"/>
+<text x="738" y="164" text-anchor="middle" class="label">Flip-flop D</text>
+<text x="738" y="199" text-anchor="middle" class="small">CLK ↑ marca una captura</text>
+<rect x="560" y="225" width="355" height="82" rx="12" fill="#dff0e3"/>
+<text x="738" y="259" text-anchor="middle" class="label">D cambia con CLK alto</text>
+<text x="738" y="288" text-anchor="middle" class="small">Q conserva el dato capturado</text>
+<text x="738" y="349" text-anchor="middle" class="small">Necesita otro flanco ascendente</text>
+<text x="738" y="384" text-anchor="middle" class="tiny">Reset asíncrono es una excepción explícita.</text>
+<text x="500" y="466" text-anchor="middle" class="tiny">Comparación de contratos lógicos, no una medición de señales eléctricas.</text>
+</svg>

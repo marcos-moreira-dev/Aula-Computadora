@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Depositar un byte: el bus tiene dueño</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Depositar un byte: el bus tiene dueño</text><text x="35" y="76" class="small">Panel manual posible, solo con la CPU detenida y aislada.</text><rect x="30" y="165" width="214" height="155" rx="14" fill="#fcece9" stroke="#36556b" stroke-width="2.5"/><rect x="274" y="165" width="214" height="155" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="518" y="165" width="214" height="155" rx="14" fill="#f9f0d8" stroke="#36556b" stroke-width="2.5"/><rect x="762" y="165" width="208" height="155" rx="14" fill="#eaf4e9" stroke="#36556b" stroke-width="2.5"/><text x="137" y="211" class="label" text-anchor="middle">1. PARAR</text><text x="137" y="251" class="small" text-anchor="middle">CPU no conduce</text><text x="137" y="282" class="small" text-anchor="middle">bus concedido</text><text x="381" y="211" class="label" text-anchor="middle">2. ELEGIR</text><text x="381" y="251" class="small" text-anchor="middle">dirección: 16 bits</text><text x="381" y="282" class="small" text-anchor="middle">dato: 8 bits</text><text x="625" y="211" class="label" text-anchor="middle">3. DEPOSIT</text><text x="625" y="251" class="small" text-anchor="middle">escribir RAM</text><text x="625" y="282" class="small" text-anchor="middle">EXAMINE y verificar</text><text x="866" y="211" class="label" text-anchor="middle">4. SOLTAR</text><text x="866" y="251" class="small" text-anchor="middle">liberar bus</text><text x="866" y="282" class="small" text-anchor="middle">arranque explícito</text><path class="wire" d="M244,242 H274 M488,242 H518 M732,242 H762"/><text x="500" y="381" class="small" text-anchor="middle">RESET no coloca automáticamente PC en 6000.</text><text x="500" y="447" class="small" text-anchor="middle">Faltan arbitraje, temporización, controles y esquema eléctrico real.</text></svg>

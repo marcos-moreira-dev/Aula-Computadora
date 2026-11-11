@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Un mismo sumador hace ADD o SUB</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Un mismo sumador hace ADD o SUB</text><text x="35" y="76" class="small">SUB=0: sumar A+B.  SUB=1: sumar A+NOT(B)+1.</text><rect x="54" y="185" width="170" height="116" rx="14" fill="#f2f7fa" stroke="#36556b" stroke-width="2.5"/><rect x="310" y="185" width="190" height="116" rx="14" fill="#e6f2ed" stroke="#36556b" stroke-width="2.5"/><rect x="594" y="185" width="187" height="116" rx="14" fill="#e6f2ed" stroke="#36556b" stroke-width="2.5"/><rect x="823" y="187" width="144" height="113" rx="14" fill="#fff1d9" stroke="#36556b" stroke-width="2.5"/><text x="139" y="223" class="label" text-anchor="middle">B [7:0]</text><text x="139" y="258" class="small" text-anchor="middle">8 señales</text><text x="405" y="222" class="label" text-anchor="middle">XOR</text><text x="405" y="258" class="small" text-anchor="middle">B o NOT B</text><text x="688" y="222" class="label" text-anchor="middle">Sumador</text><text x="688" y="260" class="small" text-anchor="middle">A + B' + Cin</text><text x="894" y="224" class="label" text-anchor="middle">S [7:0]</text><text x="894" y="258" class="small" text-anchor="middle">resultado</text><path class="wire" d="M224,244 H310 M500,244 H594 M781,244 H823"/><path class="wire" d="M688,122 V185"/><text x="702" y="143" class="small">A [7:0]</text><path class="wire" d="M405,391 V301 M592,391 V301"/><text x="405" y="420" class="small" text-anchor="middle">SUB a XOR</text><text x="605" y="420" class="small" text-anchor="middle">Cin=SUB</text><path class="wire" d="M688,301 V348 H888 V375"/><text x="879" y="405" class="small" text-anchor="middle">Cout interno</text><text x="500" y="478" class="small" text-anchor="middle">En SUB: bandera C de préstamo = 1 - Cout interno.</text></svg>

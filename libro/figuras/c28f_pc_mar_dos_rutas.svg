@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1080" viewBox="0 0 1760 1080">
+<rect width="100%" height="100%" fill="#fdfdfb"/>
+<text x="72" y="82" fill="#173b4d" font-size="40" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">MAR mira la dirección anterior; PC puede avanzar</text>
+<text x="72" y="131" fill="#59717c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Dos registros ideales capturan a la vez; lo siguiente no equivale a ciclos de CPU.</text>
+<rect x="70" y="179" width="1620" height="780" rx="12" fill="#edf4f8"/>
+<text x="105" y="239" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Evento</text>
+<text x="310" y="239" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC antes</text>
+<text x="560" y="239" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">MAR después</text>
+<text x="860" y="239" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC después</text>
+<text x="1190" y="239" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Lectura o decisión</text>
+<rect x="91" y="268" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="310" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=0 · FETCH</text>
+<text x="327" y="310" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6000</text>
+<text x="576" y="310" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6000</text>
+<text x="867" y="310" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6001</text>
+<text x="1190" y="310" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="342" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="384" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=0 · FETCH</text>
+<text x="327" y="384" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6001</text>
+<text x="576" y="384" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6001</text>
+<text x="867" y="384" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6002</text>
+<text x="1190" y="384" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="416" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="458" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=0 · FETCH</text>
+<text x="327" y="458" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6002</text>
+<text x="576" y="458" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6002</text>
+<text x="867" y="458" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6003</text>
+<text x="1190" y="458" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="490" width="1575" height="65" rx="12" fill="#fff2de"/>
+<text x="115" y="532" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=0 · JNZ</text>
+<text x="327" y="532" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6003</text>
+<text x="576" y="532" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">HOLD</text>
+<text x="867" y="532" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6009</text>
+<text x="1190" y="532" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">JNZ según Z</text>
+<rect x="91" y="564" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="606" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=1 · FETCH</text>
+<text x="327" y="606" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6000</text>
+<text x="576" y="606" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6000</text>
+<text x="867" y="606" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6001</text>
+<text x="1190" y="606" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="638" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="680" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=1 · FETCH</text>
+<text x="327" y="680" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6001</text>
+<text x="576" y="680" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6001</text>
+<text x="867" y="680" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6002</text>
+<text x="1190" y="680" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="712" width="1575" height="65" rx="12" fill="#dff2e9"/>
+<text x="115" y="754" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=1 · FETCH</text>
+<text x="327" y="754" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6002</text>
+<text x="576" y="754" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6002</text>
+<text x="867" y="754" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6003</text>
+<text x="1190" y="754" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">leer byte</text>
+<rect x="91" y="786" width="1575" height="65" rx="12" fill="#fff2de"/>
+<text x="115" y="828" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=1 · JNZ</text>
+<text x="327" y="828" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6003</text>
+<text x="576" y="828" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">HOLD</text>
+<text x="867" y="828" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x6003</text>
+<text x="1190" y="828" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">JNZ según Z</text>
+<rect x="91" y="860" width="1575" height="65" rx="12" fill="#fff2de"/>
+<text x="115" y="902" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Z=1 · JMP</text>
+<text x="327" y="902" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">0x6009</text>
+<text x="576" y="902" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">HOLD</text>
+<text x="867" y="902" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0x600C</text>
+<text x="1190" y="902" fill="#173b4d" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">JMP absoluto</text>
+<text x="101" y="1012" fill="#173b4d" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">FETCH: MAR ← PC_Q anterior; PC_Q ← PC_Q+1, en un mismo flanco ideal.</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Del estado del hardware al programa</title><rect width="1000" height="500" fill="#ffffff"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="38" y="43" class="label">Cada interpretación necesita una regla conocida</text>
+<text x="38" y="72" class="small">Es un recorrido conceptual; no son componentes físicos obligatorios.</text>
+<rect x="45" y="122" width="265" height="95" rx="14" fill="#e8f2ff" stroke="#28465b" stroke-width="2"/><text x="177.5" y="176.5" class="small" text-anchor="middle">Señal lógica</text><rect x="369" y="122" width="265" height="95" rx="14" fill="#e8f2ff" stroke="#28465b" stroke-width="2"/><text x="501.5" y="176.5" class="small" text-anchor="middle">Patrón de bits</text><rect x="693" y="122" width="265" height="95" rx="14" fill="#fff0d8" stroke="#28465b" stroke-width="2"/><text x="825.5" y="176.5" class="small" text-anchor="middle">Valor codificado</text>
+<path class="wire" d="M310,169 H367 M634,169 H691"/>
+<path class="wire" d="M356,160 l11,9 -11,9 M680,160 l11,9 -11,9"/>
+<path class="wire" d="M826,217 V268"/>
+<path class="wire" d="M817,257 l9,11 9,-11"/>
+<rect x="693" y="270" width="265" height="96" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="2"/><text x="825.5" y="325.0" class="small" text-anchor="middle">Tipo y estructura</text><rect x="369" y="270" width="265" height="96" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="2"/><text x="501.5" y="325.0" class="small" text-anchor="middle">Operación de programa</text><rect x="45" y="270" width="265" height="96" rx="14" fill="#fff0d8" stroke="#28465b" stroke-width="2"/><text x="177.5" y="325.0" class="small" text-anchor="middle">Significado humano</text>
+<path class="wire" d="M693,318 H636 M369,318 H312"/>
+<path class="wire" d="M646,309 l-10,9 10,9 M322,309 l-10,9 10,9"/>
+<rect x="55" y="405" width="887" height="59" rx="12" fill="#f3f6f8"/>
+<text x="498" y="431" class="small" text-anchor="middle">POO: una opción posterior para agrupar estado y comportamiento.</text>
+<text x="498" y="453" class="tiny" text-anchor="middle">No corresponde a un circuito ni es requisito de MiniC-Aula.</text>
+</svg>

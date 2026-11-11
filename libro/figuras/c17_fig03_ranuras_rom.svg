@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Una dirección pública no revela la rutina interna</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Una dirección pública no revela la rutina interna</text><text x="35" y="76" class="small">Las direcciones E100 y FF00 son ejemplos aún sin firmware ejecutable.</text><rect x="27" y="163" width="279" height="200" rx="14" fill="#e6f1f9" stroke="#36556b" stroke-width="2.5"/><rect x="361" y="163" width="279" height="200" rx="14" fill="#f8f0dc" stroke="#36556b" stroke-width="2.5"/><rect x="695" y="163" width="279" height="200" rx="14" fill="#e8f5e8" stroke="#36556b" stroke-width="2.5"/><text x="166" y="203" class="label" text-anchor="middle">PROGRAMA</text><text x="166" y="264" class="label" text-anchor="middle">CALL FF00</text><text x="500" y="203" class="label" text-anchor="middle">RANURA FF00</text><text x="500" y="253" class="label" text-anchor="middle">30 00 E1 00</text><text x="500" y="305" class="small" text-anchor="middle">JMP E100</text><text x="834" y="203" class="label" text-anchor="middle">RUTINA FICTICIA</text><text x="834" y="260" class="label" text-anchor="middle">E100 → RET</text><path class="wire" d="M306,260 H361 M640,260 H695"/><text x="500" y="434" class="small" text-anchor="middle">RET recuperaría el retorno que guardó CALL.</text></svg>

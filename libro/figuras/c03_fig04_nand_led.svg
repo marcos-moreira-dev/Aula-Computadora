@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Circuito didáctico NAND 74HCT00 con salida LED activa en bajo</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="47" y="41" class="label">Una NAND real, un LED activo en nivel bajo</text>
+<text x="47" y="72" class="small">Conectar IN A y IN B a +5 V o GND mediante selectores externos.</text>
+<path class="wire" d="M130,94 H875"/>
+<text x="130" y="115" class="label accent">+5 V CC</text>
+<rect x="365" y="186" width="221" height="202" rx="15" fill="#eaf2f7" stroke="#273746" stroke-width="4"/>
+<text x="475" y="220" text-anchor="middle" class="label">SN74HCT00</text>
+<text x="475" y="253" text-anchor="middle" class="small">Primera NAND</text>
+<text x="475" y="291" text-anchor="middle" class="label">Y = ¬(A ∧ B)</text>
+<path class="wire" d="M475,94 V186 M475,388 V429 H875"/>
+<text x="489" y="160" class="tiny">pin 14 VCC</text>
+<text x="490" y="413" class="tiny">pin 7 GND</text>
+<text x="877" y="440" text-anchor="end" class="small">GND / 0 V</text>
+<path class="wire" d="M133,272 H365 M133,338 H365 M586,338 H726 V282"/>
+<text x="133" y="255" class="label accent">IN A</text>
+<text x="133" y="323" class="label accent">IN B</text>
+<text x="317" y="265" class="tiny">pin 1</text>
+<text x="317" y="330" class="tiny">pin 2</text>
+<text x="601" y="322" class="tiny">1Y / pin 3</text>
+<path class="wire" d="M726,94 V122 M726,167 V200 M726,279 V282"/>
+<rect class="block" x="679" y="122" width="94" height="45" rx="8"/>
+<text x="726" y="150" text-anchor="middle" class="label">1 kΩ</text>
+<rect x="681" y="200" width="90" height="79" rx="13" fill="#fbe2aa" stroke="#ad7200" stroke-width="3"/>
+<text x="726" y="228" text-anchor="middle" class="label">LED</text>
+<text x="726" y="254" text-anchor="middle" class="tiny">rojo</text>
+<text x="781" y="204" class="tiny">A +</text>
+<text x="781" y="279" class="tiny">K −</text>
+<path class="wire" d="M875,94 V183 M875,211 V429"/>
+<path d="M848,183 H902 M848,211 H902" stroke="#283c50" stroke-width="4"/>
+<text x="914" y="202" class="tiny">100 nF</text>
+<rect x="91" y="449" width="818" height="41" rx="10" fill="#edf6fa"/>
+<text x="500" y="475" text-anchor="middle" class="tiny">Y = 0 → LED encendido; Y = 1 → LED apagado. Otras entradas del chip a nivel definido.</text>
+</svg>

@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "project_release": "R0.9",
+  "architecture": "Aula-8",
+  "status": "propuesta_no_aprobada",
+  "granularity": "acciones_logicas_no_ciclos_de_reloj",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "shared_fetch_reference": "MICROSECUENCIAS_AULA8_BORRADOR.json",
+  "cpu_executed": false,
+  "microcode_compiled": false,
+  "electrical_validation": false,
+  "clock_cycles_known": false,
+  "datapath_bits": 8,
+  "address_bits": 16,
+  "external_data_bus_bits": 8,
+  "word_byte_order": "little_endian",
+  "private_address_carry": true,
+  "visible_flags_preserved": ["Z", "N", "C", "V"],
+  "arithmetic_modulus": 65536,
+  "signed_disp8_range": [-128, 127],
+  "register_pair_for_addxw": {"low": "R0", "high": "R1"},
+  "stack_valid_ram_interval_candidate": ["7000", "7FFF"],
+  "initial_stack_pointer_sentinel": "8000",
+  "stack_overflow_hardware_detection": false,
+  "abi_final": false,
+  "routes": {
+    "LEAX": {
+      "opcode": "15",
+      "format": "disp8",
+      "states": [
+        {"id":"LEAX_DISP","action":"READ_PC_TO_DISP8","bus":"read","pc_advance":true,"flags_write":false,"next":"LEAX_SIGN"},
+        {"id":"LEAX_SIGN","action":"SIGN_EXTEND_DISP8","bus":"none","pc_advance":false,"flags_write":false,"next":"LEAX_SOURCE"},
+        {"id":"LEAX_SOURCE","action":"LATCH_X_AND_SIGNED_DISP16","bus":"none","pc_advance":false,"flags_write":false,"next":"LEAX_LOW"},
+        {"id":"LEAX_LOW","action":"ALU8_LOW_TO_TMP_AND_PRIVATE_CARRY","bus":"none","pc_advance":false,"flags_write":false,"next":"LEAX_HIGH"},
+        {"id":"LEAX_HIGH","action":"ALU8_HIGH_WITH_PRIVATE_CARRY_TO_TMP","bus":"none","pc_advance":false,"flags_write":false,"next":"LEAX_COMMIT"},
+        {"id":"LEAX_COMMIT","action":"COMMIT_TMP16_TO_X","bus":"none","pc_advance":false,"flags_write":false,"next":"LEAX_END"},
+        {"id":"LEAX_END","action":"END_TO_FETCH","bus":"none","pc_advance":false,"flags_write":false,"next":"FETCH_OPCODE"}
+      ]
+    },
+    "ADJSP": {
+      "opcode": "18",
+      "format": "disp8",
+      "states": [
+        {"id":"ADJ_DISP","action":"READ_PC_TO_DISP8","bus":"read","pc_advance":true,"flags_write":false,"next":"ADJ_SIGN"},
+        {"id":"ADJ_SIGN","action":"SIGN_EXTEND_DISP8","bus":"none","pc_advance":false,"flags_write":false,"next":"ADJ_SOURCE"},
+        {"id":"ADJ_SOURCE","action":"LATCH_SP_AND_SIGNED_DISP16","bus":"none","pc_advance":false,"flags_write":false,"next":"ADJ_LOW"},
+        {"id":"ADJ_LOW","action":"ALU8_LOW_TO_TMP_AND_PRIVATE_CARRY","bus":"none","pc_advance":false,"flags_write":false,"next":"ADJ_HIGH"},
+        {"id":"ADJ_HIGH","action":"ALU8_HIGH_WITH_PRIVATE_CARRY_TO_TMP","bus":"none","pc_advance":false,"flags_write":false,"next":"ADJ_COMMIT"},
+        {"id":"ADJ_COMMIT","action":"COMMIT_TMP16_TO_SP","bus":"none","pc_advance":false,"flags_write":false,"next":"ADJ_END"},
+        {"id":"ADJ_END","action":"END_TO_FETCH","bus":"none","pc_advance":false,"flags_write":false,"next":"FETCH_OPCODE"}
+      ]
+    },
+    "ADDXW": {
+      "opcode": "16",
+      "format": "none",
+      "states": [
+        {"id":"ADDX_SOURCE","action":"LATCH_X_AND_R1_R0_WORD","bus":"none","pc_advance":false,"flags_write":false,"next":"ADDX_LOW"},
+        {"id":"ADDX_LOW","action":"ALU8_LOW_TO_TMP_AND_PRIVATE_CARRY","bus":"none","pc_advance":false,"flags_write":false,"next":"ADDX_HIGH"},
+        {"id":"ADDX_HIGH","action":"ALU8_HIGH_WITH_PRIVATE_CARRY_TO_TMP","bus":"none","pc_advance":false,"flags_write":false,"next":"ADDX_COMMIT"},
+        {"id":"ADDX_COMMIT","action":"COMMIT_TMP16_TO_X","bus":"none","pc_advance":false,"flags_write":false,"next":"ADDX_END"},
+        {"id":"ADDX_END","action":"END_TO_FETCH","bus":"none","pc_advance":false,"flags_write":false,"next":"FETCH_OPCODE"}
+      ]
+    },
+    "SETSP": {
+      "opcode": "17",
+      "format": "imm16",
+      "states": [
+        {"id":"SETSP_LOW","action":"READ_PC_TO_TMP_LOW","bus":"read","pc_advance":true,"flags_write":false,"next":"SETSP_HIGH"},
+        {"id":"SETSP_HIGH","action":"READ_PC_TO_TMP_HIGH","bus":"read","pc_advance":true,"flags_write":false,"next":"SETSP_COMMIT"},
+        {"id":"SETSP_COMMIT","action":"COMMIT_TMP16_TO_SP","bus":"none","pc_advance":false,"flags_write":false,"next":"SETSP_END"},
+        {"id":"SETSP_END","action":"END_TO_FETCH","bus":"none","pc_advance":false,"flags_write":false,"next":"FETCH_OPCODE"}
+      ]
+    },
+    "XFROMSP": {
+      "opcode": "19",
+      "format": "none",
+      "states": [
+        {"id":"XFROM_SOURCE","action":"LATCH_SP16_TO_TMP","bus":"none","pc_advance":false,"flags_write":false,"next":"XFROM_COMMIT"},
+        {"id":"XFROM_COMMIT","action":"COMMIT_TMP16_TO_X","bus":"none","pc_advance":false,"flags_write":false,"next":"XFROM_END"},
+        {"id":"XFROM_END","action":"END_TO_FETCH","bus":"none","pc_advance":false,"flags_write":false,"next":"FETCH_OPCODE"}
+      ]
+    }
+  },
+  "boundary_vectors": {
+    "signed_disp": [
+      {"base": "12FF", "raw_disp": "02", "result": "1301"},
+      {"base": "1200", "raw_disp": "FF", "result": "11FF"},
+      {"base": "FFFF", "raw_disp": "01", "result": "0000"},
+      {"base": "0000", "raw_disp": "80", "result": "FF80"},
+      {"base": "8000", "raw_disp": "FF", "result": "7FFF"}
+    ],
+    "word_add": [
+      {"base": "12FF", "r1": "01", "r0": "02", "result": "1401"},
+      {"base": "FFFF", "r1": "00", "r0": "01", "result": "0000"},
+      {"base": "0000", "r1": "FF", "r0": "FF", "result": "FFFF"},
+      {"base": "FFFE", "r1": "FF", "r0": "FF", "result": "FFFD"}
+    ]
+  },
+  "reference_program": {
+    "name": "funcion_con_local_y_marco",
+    "origin": "6000",
+    "bytes_hex": "17 00 80 35 07 60 01 1C 19 18 FF 11 00 2A 13 08 00 12 09 00 18 01 1D 02",
+    "initial": {"x": "6F00", "sp": "8000", "flags": "preserved_unknown"},
+    "expected_trace": [
+      {"op":"read","addr":"6000","value":"17"},
+      {"op":"read","addr":"6001","value":"00"},
+      {"op":"read","addr":"6002","value":"80"},
+      {"op":"read","addr":"6003","value":"35"},
+      {"op":"read","addr":"6004","value":"07"},
+      {"op":"read","addr":"6005","value":"60"},
+      {"op":"write","addr":"7FFE","value":"06"},
+      {"op":"write","addr":"7FFF","value":"60"},
+      {"op":"read","addr":"6007","value":"1C"},
+      {"op":"write","addr":"7FFC","value":"00"},
+      {"op":"write","addr":"7FFD","value":"6F"},
+      {"op":"read","addr":"6008","value":"19"},
+      {"op":"read","addr":"6009","value":"18"},
+      {"op":"read","addr":"600A","value":"FF"},
+      {"op":"read","addr":"600B","value":"11"},
+      {"op":"read","addr":"600C","value":"00"},
+      {"op":"read","addr":"600D","value":"2A"},
+      {"op":"read","addr":"600E","value":"13"},
+      {"op":"read","addr":"600F","value":"08"},
+      {"op":"read","addr":"6010","value":"00"},
+      {"op":"write","addr":"7FFB","value":"2A"},
+      {"op":"read","addr":"6011","value":"12"},
+      {"op":"read","addr":"6012","value":"09"},
+      {"op":"read","addr":"6013","value":"00"},
+      {"op":"read","addr":"7FFB","value":"2A"},
+      {"op":"read","addr":"6014","value":"18"},
+      {"op":"read","addr":"6015","value":"01"},
+      {"op":"read","addr":"6016","value":"1D"},
+      {"op":"read","addr":"7FFC","value":"00"},
+      {"op":"read","addr":"7FFD","value":"6F"},
+      {"op":"read","addr":"6017","value":"02"},
+      {"op":"read","addr":"7FFE","value":"06"},
+      {"op":"read","addr":"7FFF","value":"60"},
+      {"op":"read","addr":"6006","value":"01"}
+    ],
+    "expected_final": {
+      "pc": "6007",
+      "sp": "8000",
+      "x": "6F00",
+      "r0": "2A",
+      "r1": "2A",
+      "flags": "preserved_unknown",
+      "halted": true,
+      "memory_residue": {
+        "7FFB": "2A",
+        "7FFC": "00",
+        "7FFD": "6F",
+        "7FFE": "06",
+        "7FFF": "60"
+      }
+    },
+    "external_reads_expected": 29,
+    "external_writes_expected": 5,
+    "cpu_executed": false
+  },
+  "future_work": ["abi_parameters_and_saved_registers", "actual_micro_rom_encoding",
+                  "electrical_bus_control", "physical_stack_protection", "measured_cycles"]
+}

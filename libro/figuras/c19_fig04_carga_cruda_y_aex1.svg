@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Guardar bytes no equivale a cargar un ejecutable</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Guardar bytes no equivale a cargar un ejecutable</text><text x="35" y="76" class="small">Ambos comandos son propuestas: ninguno funciona aún en ROM.</text><rect x="27" y="155" width="448" height="188" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="251.0" y="203" class="label" text-anchor="middle">LOAD crudo (futuro)</text><text x="251.0" y="249" class="small" text-anchor="middle">256 bytes de bloque</text><rect x="526" y="155" width="448" height="188" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="750.0" y="203" class="label" text-anchor="middle">LOADX AEX1 (futuro)</text><text x="750.0" y="249" class="small" text-anchor="middle">32 cab. + 7 código + 217 relleno</text><rect x="52" y="364" width="396" height="85" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="250" y="398" class="label" text-anchor="middle">RAM: 256 bytes</text><text x="250" y="429" class="tiny" text-anchor="middle">incluye 249 bytes extra</text><rect x="552" y="364" width="396" height="85" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="750" y="398" class="label" text-anchor="middle">RAM: solo 7 útiles</text><text x="750" y="429" class="tiny" text-anchor="middle">sin copiar la cabecera</text><path d="M251,343 L251,364" fill="none" stroke="#244d68" stroke-width="4"/><path d="M251,364 L242.0,347.0 L260.0,347.0 Z" fill="#244d68"/><path d="M750,343 L750,364" fill="none" stroke="#244d68" stroke-width="4"/><path d="M750,364 L741.0,347.0 L759.0,347.0 Z" fill="#244d68"/></svg>

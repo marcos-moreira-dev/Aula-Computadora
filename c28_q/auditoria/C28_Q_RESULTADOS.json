@@ -1,0 +1,40 @@
+{
+  "etapa": "C28-Q / auditoria de netlists serializados y trazabilidad",
+  "fundamentos": {
+    "xor_vectores": 4,
+    "latch_estados_ideales": 13,
+    "rutas_svg_identificadas": 3,
+    "pines_latch_cotejados": 8,
+    "netlists_basicas": 2
+  },
+  "selector_C28D": {
+    "NAND": 51,
+    "comparaciones": 8336,
+    "tipo": "combinacional"
+  },
+  "pc_mar_C28F": {
+    "NAND": 177,
+    "comparaciones": 32768,
+    "tipo": "combinacional; no controla el reloj ni el bus fisico"
+  },
+  "fuentes_hdl": {
+    "registro8_estructura": "coherente_con_contrato",
+    "pc16_fuentes": "presentes",
+    "simulacion_icarus": "PENDIENTE_EN_WINDOWS_NUEVA_SUITE"
+  },
+  "controles_nuevos_previstos": [
+    "LIBRO_C28Q_NETLIST_Y_FIGURAS",
+    "HDL_C28_A_REGISTRO8_COMPILACION",
+    "HDL_C28_A_REGISTRO8_SIMULACION",
+    "HDL_C28_E_PC16_COMPILACION",
+    "HDL_C28_E_PC16_SIMULACION"
+  ],
+  "limitaciones": [
+    "Un netlist digital correcto no equivale a un esquema electrico fabricable",
+    "Las rutas SVG comprobadas son recorridos identificados, no EDA",
+    "El latch invalido no tiene estado final garantizado al liberar entradas",
+    "RTL de registro8/PC16 aun debe pasar nuevas pruebas en Windows",
+    "No se ha implementado CPU, firmware ni arbitraje fisico del bus",
+    "El maestro Word/PDF continua siendo C28-G"
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Dos llamadas: dos retornos, uno encima del otro</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Dos llamadas: dos retornos, uno encima del otro</text><text x="35" y="76" class="small">CALL exterior retorna a 6003; CALL interior retorna a 6013.</text><rect x="78" y="129" width="844" height="67" rx="14" fill="#e8f2fc" stroke="#36556b" stroke-width="2.5"/><text x="174" y="171" class="label" text-anchor="middle">7FFF</text><text x="328" y="171" class="label" text-anchor="middle">60</text><text x="640" y="171" class="small" text-anchor="middle">retorno exterior ALTO</text><rect x="78" y="207" width="844" height="67" rx="14" fill="#e8f2fc" stroke="#36556b" stroke-width="2.5"/><text x="174" y="249" class="label" text-anchor="middle">7FFE</text><text x="328" y="249" class="label" text-anchor="middle">03</text><text x="640" y="249" class="small" text-anchor="middle">retorno exterior BAJO</text><rect x="78" y="285" width="844" height="67" rx="14" fill="#eaf5e7" stroke="#36556b" stroke-width="2.5"/><text x="174" y="327" class="label" text-anchor="middle">7FFD</text><text x="328" y="327" class="label" text-anchor="middle">60</text><text x="640" y="327" class="small" text-anchor="middle">retorno interior ALTO</text><rect x="78" y="363" width="844" height="67" rx="14" fill="#eaf5e7" stroke="#36556b" stroke-width="2.5"/><text x="174" y="405" class="label" text-anchor="middle">7FFC</text><text x="328" y="405" class="label" text-anchor="middle">13</text><text x="640" y="405" class="small" text-anchor="middle">retorno interior BAJO ← SP</text><text x="500" y="474" class="small" text-anchor="middle">SP: 8000 → 7FFE → 7FFC → 7FFE → 8000.</text></svg>

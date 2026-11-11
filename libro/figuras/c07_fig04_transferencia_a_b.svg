@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Transferencia A hacia B con bus</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="42" y="44" class="label">Copiar 0x3C: el registro A no pierde su valor</text>
+<text x="42" y="76" class="small">Primero se conduce el bus; luego B captura el dato en un flanco.</text>
+<rect x="60" y="122" width="210" height="136" rx="12" fill="#e6f3fa" stroke="#28465b" stroke-width="3"/><text x="165.0" y="197.0" text-anchor="middle" class="label">A: 0x3C</text><rect x="404" y="131" width="189" height="120" rx="12" fill="#fff3dc" stroke="#28465b" stroke-width="3"/><text x="498.5" y="198.0" text-anchor="middle" class="small">BUS: 0x3C</text><rect x="732" y="122" width="210" height="136" rx="12" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/><text x="837.0" y="197.0" text-anchor="middle" class="small">B: 0xA5 → 0x3C</text>
+<path class="wire" d="M270,190 H404 M593,190 H732"/>
+<path d="M392,181 l12,9 -12,9 M720,181 l12,9 -12,9" fill="none" stroke="#273746" stroke-width="3"/>
+<text x="303" y="173" class="small accent">A_OUT</text>
+<text x="625" y="172" class="small accent">B_LOAD ↑</text>
+<rect x="53" y="310" width="894" height="127" rx="15" fill="#f0f6fb"/>
+<text x="100" y="344" class="small">1. A_OUT = 1, B_OUT = 0 → A conduce 0x3C.</text>
+<text x="100" y="379" class="small">2. B_LOAD = 1 y CLK ↑ → B captura 0x3C.</text>
+<text x="100" y="413" class="small">3. Se deshabilita A antes de habilitar B_OUT.</text>
+<text x="500" y="471" text-anchor="middle" class="tiny">El cambio de origen debe evitar dos salidas activas simultáneamente.</text>
+</svg>

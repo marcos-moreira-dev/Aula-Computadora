@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Sumador completo con dos medios sumadores y OR</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">El sumador completo recibe también el acarreo anterior</text>
+<text x="38" y="81" class="small">Dos medios sumadores más una OR: P es la suma parcial; G y H son acarreos parciales.</text>
+<rect x="184" y="157" width="228" height="111" rx="14" fill="#e3f1e7" stroke="#28465b" stroke-width="3"/><rect x="534" y="157" width="228" height="111" rx="14" fill="#e3f1e7" stroke="#28465b" stroke-width="3"/><rect x="534" y="352" width="228" height="83" rx="14" fill="#fff2d9" stroke="#28465b" stroke-width="3"/>
+<text x="297" y="205" class="label" text-anchor="middle">Medio sumador 1</text>
+<text x="297" y="237" class="small" text-anchor="middle">P = A XOR B</text>
+<text x="647" y="205" class="label" text-anchor="middle">Medio sumador 2</text>
+<text x="647" y="237" class="small" text-anchor="middle">S = P XOR Cin</text>
+<text x="647" y="401" class="label" text-anchor="middle">OR de G y H</text>
+<path class="wire" d="M76,190 H184 M76,238 H184"/>
+<text x="61" y="195" class="label accent">A</text>
+<text x="61" y="243" class="label accent">B</text>
+<path class="wire" d="M412,190 H534"/>
+<text x="470" y="177" class="label accent" text-anchor="middle">P</text>
+<path class="wire" d="M647,107 V157"/>
+<text x="666" y="128" class="label accent">Cin</text>
+<path class="wire" d="M762,193 H892"/>
+<text x="904" y="201" class="label accent">S</text>
+<path class="wire" d="M296,268 V393 H534"/>
+<text x="317" y="329" class="label accent">G</text>
+<path class="wire" d="M650,268 V352"/>
+<text x="669" y="324" class="label accent">H</text>
+<path class="wire" d="M762,394 H864"/>
+<text x="875" y="401" class="label accent">Cout</text>
+<text x="500" y="479" class="tiny" text-anchor="middle">Cout = (A AND B) OR (Cin AND (A XOR B)); el dibujo es funcional.</text>
+</svg>

@@ -1,0 +1,30 @@
+AULA-COMPUTADORA — PARCHE INCREMENTAL C28-D
+===========================================
+
+Orden de integración: base C27 GLOBAL + parches C28-B + C28-C + C28-D.
+Cada versión se mantiene; ningún archivo de C27/B/C debe borrarse.
+
+En Windows PowerShell (ZIP en Descargas):
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath .\Aula_C28D_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath .\Aula_C28D_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_C_PARCHE.zip -DestinationPath .\Aula_C28D_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_D_PARCHE.zip -DestinationPath .\Aula_C28D_COMPLETO -Force
+  Set-Location .\Aula_C28D_COMPLETO\Aula-Computadora
+  py -m pip install python-docx
+  py .\scripts\c28d_salto_y_selector_pc.py
+  py .\scripts\c28_verificar_piloto.py
+  py .\scripts\generar_libro_maestro_c28d.py --pages-json .\libro\ediciones\C28_D\INDICE_C28_D.json
+
+Los PNG están incluidos en el parche. Si no tienes Inkscape, el generador
+de C28-D conserva los PNG existentes, aunque puede regenerar los SVG y JSON.
+
+Para PDF: abrir el Word C28-D en LibreOffice y Exportar como PDF. Se
+recomiendan las fuentes Liberation Serif, Sans y Mono. El PDF final ya se
+entrega por separado para leerlo sin reconstruirlo.
+
+La verificación de NAND y recorridos se ejecuta EN PYTHON, en el PC. No
+equivale a simular un chip Verilog ni un circuito físico con retardos.
+
+Ver el informe INFORME_C28_D.md para resultados y trabajo pendiente.

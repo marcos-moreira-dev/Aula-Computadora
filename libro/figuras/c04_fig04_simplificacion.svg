@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Simplificación booleana de dos ramas con variable complementaria</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="44" y="43" class="label">Simplificar sin cambiar la tabla de verdad</text>
+<text x="44" y="79" class="small">La variable B no cambia la salida si se consideran sus dos posibilidades.</text>
+<rect x="62" y="131" width="441" height="232" rx="17" fill="#f2f7fb" stroke="#273746" stroke-width="3"/>
+<text x="282" y="174" text-anchor="middle" class="label">Función inicial</text>
+<rect x="100" y="215" width="165" height="66" rx="10" fill="#e5edf6" stroke="#273746" stroke-width="2"/>
+<text x="183" y="255" text-anchor="middle" class="label">A ∧ B</text>
+<rect x="303" y="215" width="165" height="66" rx="10" fill="#e5edf6" stroke="#273746" stroke-width="2"/>
+<text x="385" y="255" text-anchor="middle" class="label">A ∧ ¬B</text>
+<path class="wire" d="M183,281 V300 H282 M385,281 V300 H282 V320"/>
+<text x="282" y="347" text-anchor="middle" class="small">OR entre ambas ramas</text>
+<text x="540" y="255" text-anchor="middle" class="label accent">=</text>
+<rect x="572" y="131" width="366" height="232" rx="17" fill="#e8f5e9" stroke="#336d4c" stroke-width="3"/>
+<text x="755" y="174" text-anchor="middle" class="label">Función simplificada</text>
+<text x="755" y="264" text-anchor="middle" style="font-size:76px;font-weight:bold;fill:#096b91">A</text>
+<rect x="107" y="389" width="785" height="75" rx="10" fill="#fff1dc"/>
+<text x="500" y="419" text-anchor="middle" class="small">F = (A ∧ B) ∨ (A ∧ ¬B) = A</text>
+<text x="500" y="445" text-anchor="middle" class="small">Para AB = 00, 01, 10, 11 ambas producen: 0, 0, 1, 1.</text>
+</svg>

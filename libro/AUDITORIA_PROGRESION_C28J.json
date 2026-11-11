@@ -1,0 +1,539 @@
+{
+  "version": "C28-J / diagnóstico de progresión del LIBRO",
+  "capitulos": 26,
+  "secciones_construimos_explicitas": 20,
+  "capitulos_sin_ese_encabezado": [
+    "01",
+    "02",
+    "04",
+    "07b",
+    "23",
+    "24"
+  ],
+  "referencias_figuras": 115,
+  "svg_suplementarios_sin_referencia": [
+    "c28c_aula16_dieciséis_carriles",
+    "c28d_ram_jnz_z0",
+    "c28d_ram_jnz_z1",
+    "c28d_selector_pc_nand",
+    "c28e_pc16_flancos",
+    "c28e_pc16_red_y_dff",
+    "c28f_incremento_pc",
+    "c28f_pc_mar_dos_rutas",
+    "c28g_lectura_con_espera"
+  ],
+  "problemas_estructurales": 0,
+  "faltantes_en_matriz": [],
+  "limites": [
+    "No evalúa calidad didáctica o redacción completa",
+    "Una tabla o figura correcta en formato puede ser conceptualmente incorrecta",
+    "No ejecuta testbenches ni pruebas eléctricas"
+  ],
+  "detalle": [
+    {
+      "id": "01",
+      "id_editorial": "01",
+      "archivo": "01_la_corriente_y_sus_caminos.md",
+      "titulo": "Capítulo 1. La corriente y sus caminos",
+      "aporte_educativo": "corriente, resistencia y alimentación de una práctica",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c01_fig01_lazo_serie",
+        "c01_fig04_protoboard_conexiones",
+        "c01_fig02_medir_tension",
+        "c01_fig03_medir_corriente"
+      ],
+      "formulas": 13,
+      "tablas_aproximadas": 2,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "02",
+      "id_editorial": "02",
+      "archivo": "02_el_transistor_como_interruptor.md",
+      "titulo": "Capítulo 2. El transistor como interruptor",
+      "aporte_educativo": "transistor usado como interruptor controlado",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 3,
+      "identificadores_figuras": [
+        "c02_fig01_bce_pinout",
+        "c02_fig02_npn_encendido",
+        "c02_fig03_npn_apagado"
+      ],
+      "formulas": 13,
+      "tablas_aproximadas": 3,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "03",
+      "id_editorial": "03",
+      "archivo": "03_de_interruptores_a_logica.md",
+      "titulo": "Capítulo 3. De interruptores a lógica",
+      "aporte_educativo": "tabla de verdad, NAND y señal de habilitación",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c03_fig01_serie_ideal",
+        "c03_fig02_nand_simbolo",
+        "c03_fig03_pines_74hct00",
+        "c03_fig04_nand_led"
+      ],
+      "formulas": 14,
+      "tablas_aproximadas": 7,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "04",
+      "id_editorial": "04",
+      "archivo": "04_construir_funciones_con_compuertas.md",
+      "titulo": "Capítulo 4. Construir funciones con compuertas",
+      "aporte_educativo": "funciones combinacionales y XOR con NAND",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c04_fig01_or_nor",
+        "c04_fig02_xor_discrepancia",
+        "c04_fig03_xor_cuatro_nand",
+        "c04_fig04_simplificacion"
+      ],
+      "formulas": 13,
+      "tablas_aproximadas": 7,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "05",
+      "id_editorial": "05",
+      "archivo": "05_la_realimentacion_conserva_informacion.md",
+      "titulo": "Capítulo 5. La realimentación conserva información",
+      "aporte_educativo": "realimentación y almacenamiento de un bit",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 5,
+      "identificadores_figuras": [
+        "c05_fig01_combinacional_realimentacion",
+        "c05_fig02_latch_nand_cruzado",
+        "c05_fig03_tabla_estados",
+        "c05_fig04_secuencia_memoria",
+        "c05_fig05_sn74hct00_patillaje"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 3,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "06",
+      "id_editorial": "06",
+      "archivo": "06_memorizar_en_el_tiempo.md",
+      "titulo": "Capítulo 6. Memorizar en el tiempo",
+      "aporte_educativo": "biestable D y control de carga mediante reloj",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c06_fig01_desde_sr_hasta_d",
+        "c06_fig02_tabla_latch_d",
+        "c06_fig03_flancos_y_capturas",
+        "c06_fig04_latch_versus_flipflop"
+      ],
+      "formulas": 9,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "07",
+      "id_editorial": "07",
+      "archivo": "07_del_bit_al_registro.md",
+      "titulo": "Capítulo 7. Del bit al registro",
+      "aporte_educativo": "ocho biestables forman el registro R0 de Aula-8",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 5,
+      "identificadores_figuras": [
+        "c07_fig01_ocho_flips_un_registro",
+        "c07_fig02_multiplexor_y_carga",
+        "c07_fig03_almacenamiento_y_triestado",
+        "c07_fig04_transferencia_a_b",
+        "c07_fig05_registro_aula8"
+      ],
+      "formulas": 8,
+      "tablas_aproximadas": 5,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "07b",
+      "id_editorial": "07B",
+      "archivo": "07b_del_bit_al_significado.md",
+      "titulo": "Capítulo 7B. Del bit al significado",
+      "aporte_educativo": "significado de un byte, números, texto e instrucciones",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "p07b_fig01_del_voltaje_a_la_logica",
+        "p07b_fig02_un_byte_varios_significados",
+        "p07b_fig03_pesos_con_y_sin_signo",
+        "p07b_fig04_escalera_de_significado"
+      ],
+      "formulas": 8,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "08",
+      "id_editorial": "08",
+      "archivo": "08_direcciones_y_buses.md",
+      "titulo": "Capítulo 8. Direcciones y buses",
+      "aporte_educativo": "buses de 16 direcciones y 8 datos; acceso a memoria",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 5,
+      "identificadores_figuras": [
+        "c08_fig01_decodificador_dos_bits",
+        "c08_fig02_buses_separados",
+        "c08_fig03_lectura_escritura",
+        "c08_fig04_aula8_aula16",
+        "c08_fig05_buses_aula8"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 7,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "09",
+      "id_editorial": "09",
+      "archivo": "09_ram_y_rom_reales.md",
+      "titulo": "Capítulo 9. RAM y ROM reales",
+      "aporte_educativo": "transferencias entre registros, RAM y ROM",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c09_fig01_celda_sram_conceptual",
+        "c09_fig02_sram_pines",
+        "c09_fig03_mapa_64k_ejemplo",
+        "c09_fig04_expansion_profundidad_anchura"
+      ],
+      "formulas": 10,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "10",
+      "id_editorial": "10",
+      "archivo": "10_el_circuito_que_suma.md",
+      "titulo": "Capítulo 10. El circuito que suma",
+      "aporte_educativo": "sumador y cambio del estado aritmético",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c10_fig01_medio_sumador",
+        "c10_fig02_sumador_completo",
+        "c10_fig03_suma_trece_mas_nueve",
+        "c10_fig04_cadena_y_dos_bytes"
+      ],
+      "formulas": 17,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "11",
+      "id_editorial": "11",
+      "archivo": "11_la_unidad_aritmetico_logica.md",
+      "titulo": "Capítulo 11. La unidad aritmético-lógica",
+      "aporte_educativo": "selección de operaciones de una ALU de 8 bits",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c11_fig01_resta_complemento_dos",
+        "c11_fig03_logica_por_bits",
+        "c11_fig04_comparaciones_banderas",
+        "c11_fig02_alu_selector"
+      ],
+      "formulas": 21,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "12",
+      "id_editorial": "12",
+      "archivo": "12_arquitectura_aula_8.md",
+      "titulo": "Capítulo 12. Arquitectura Aula-8",
+      "aporte_educativo": "integración del datapath de Aula-8",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 5,
+      "identificadores_figuras": [
+        "c12_fig01_mapa_cpu_aula8",
+        "c12_fig02_movimiento_registros",
+        "c12_fig03_lectura_escritura",
+        "c12_fig04_direccion_dos_pasadas",
+        "c12_fig05_ruta_acumulada_aula8"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "13",
+      "id_editorial": "13",
+      "archivo": "13_la_unidad_de_control.md",
+      "titulo": "Capítulo 13. La unidad de control",
+      "aporte_educativo": "señales que coordinan las microacciones",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c13_fig01_unidad_control",
+        "c13_fig02_macro_lectura",
+        "c13_fig03_despacho",
+        "c13_fig04_escritura_segura"
+      ],
+      "formulas": 8,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "14",
+      "id_editorial": "14",
+      "archivo": "14_de_numeros_a_instrucciones.md",
+      "titulo": "Capítulo 14. De números a instrucciones",
+      "aporte_educativo": "bytes de programa y flujo de lectura del panel",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 6,
+      "identificadores_figuras": [
+        "c14_fig01_un_byte_tres_lecturas",
+        "c14_fig02_mapa_programa",
+        "c14_fig03_modos_direccion",
+        "c14_fig04_panel_seguro",
+        "c14_fig05_ram_contigua_deposito",
+        "c14_fig06_ram_salto"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 5,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "15",
+      "id_editorial": "15",
+      "archivo": "15_la_instruccion_en_movimiento.md",
+      "titulo": "Capítulo 15. La instrucción en movimiento",
+      "aporte_educativo": "trayecto PC/MAR/MDR/IR y acceso a instrucciones",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c15_fig01_camino_fetch",
+        "c15_fig02_direccion_st",
+        "c15_fig03_preparar_escritura",
+        "c15_fig04_transacciones"
+      ],
+      "formulas": 10,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "16",
+      "id_editorial": "16",
+      "archivo": "16_subrutinas_y_pila.md",
+      "titulo": "Capítulo 16. Subrutinas y pila",
+      "aporte_educativo": "pila, SP, saltos, CALL y RET",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 6,
+      "identificadores_figuras": [
+        "c16_fig01_pila_retorno",
+        "c16_fig02_llamar_regresar",
+        "c16_fig03_llamadas_anidadas",
+        "c16_fig04_bucle_jnz",
+        "c16_fig05_ram_y_pila_call_ret",
+        "c16_fig06_ram_bucle_jnz"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "17",
+      "id_editorial": "17",
+      "archivo": "17_encender_una_computadora.md",
+      "titulo": "Capítulo 17. Encender una computadora",
+      "aporte_educativo": "vector de reset y arranque desde ROM",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c17_fig01_vector_reset",
+        "c17_fig02_mapa_memoria",
+        "c17_fig03_ranuras_rom",
+        "c17_fig04_run_dos_ret"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 5,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "18",
+      "id_editorial": "18",
+      "archivo": "18_hablar_con_la_maquina.md",
+      "titulo": "Capítulo 18. Hablar con la máquina",
+      "aporte_educativo": "terminal y periféricos en mapa de memoria",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c18_fig01_terminal_y_mmio",
+        "c18_fig02_llamada_publica_rom",
+        "c18_fig03_eco_con_variable",
+        "c18_fig04_cadena_terminada"
+      ],
+      "formulas": 14,
+      "tablas_aproximadas": 6,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "19",
+      "id_editorial": "19",
+      "archivo": "19_guardar_y_recuperar_programas.md",
+      "titulo": "Capítulo 19. Guardar y recuperar programas",
+      "aporte_educativo": "bloques de almacenamiento y recuperación de programas",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c19_fig01_bloques_y_offsets",
+        "c19_fig02_registros_controlador",
+        "c19_fig03_estados_transferencia",
+        "c19_fig04_carga_cruda_y_aex1"
+      ],
+      "formulas": 15,
+      "tablas_aproximadas": 3,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "20",
+      "id_editorial": "20",
+      "archivo": "20_programar_un_pequeno_sistema.md",
+      "titulo": "Capítulo 20. Programar un pequeño sistema",
+      "aporte_educativo": "programas y ensamblado en el anfitrión",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c20_fig01_herramientas_y_capas",
+        "c20_fig02_dos_pasadas_y_etiquetas",
+        "c20_fig03_euclides_estados",
+        "c20_fig04_mini_sistema_y_pruebas"
+      ],
+      "formulas": 14,
+      "tablas_aproximadas": 5,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "21",
+      "id_editorial": "21",
+      "archivo": "21_que_implica_ampliar_la_palabra.md",
+      "titulo": "Capítulo 21. Qué implica ampliar la palabra",
+      "aporte_educativo": "operaciones de 16 bits sin alterar 16 bits de dirección",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c21_fig01_palabra_y_direcciones",
+        "c21_fig02_acarreo_16_bits",
+        "c21_fig03_suma_dos_anchos",
+        "c21_fig04_registro_a_ram"
+      ],
+      "formulas": 17,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "22",
+      "id_editorial": "22",
+      "archivo": "22_un_bus_externo_de_16_bits.md",
+      "titulo": "Capítulo 22. Un bus externo de 16 bits",
+      "aporte_educativo": "bus externo Aula-16 de 16 bits y bancos bajo/alto",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 5,
+      "identificadores_figuras": [
+        "c22_fig01_bancos_y_carriles",
+        "c22_fig02_palabra_y_little_endian",
+        "c22_fig03_matriz_operaciones",
+        "c22_fig04_casos_fallo_bus",
+        "c22_fig05_dos_bancos_aula16"
+      ],
+      "formulas": 11,
+      "tablas_aproximadas": 4,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "23",
+      "id_editorial": "23",
+      "archivo": "23_programacion_para_aula_16.md",
+      "titulo": "Capítulo 23. Programación para Aula-16",
+      "aporte_educativo": "algoritmos Aula-16 con ISA aún candidata",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c23_fig01_niveles_de_programa",
+        "c23_fig02_sumar_arreglo",
+        "c23_fig03_euclides_dos_maquinas",
+        "c23_fig04_compilacion_y_pruebas"
+      ],
+      "formulas": 12,
+      "tablas_aproximadas": 6,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "23v",
+      "id_editorial": "23B",
+      "archivo": "23v_de_mapas_de_caracteres_a_escritorio_grafico.md",
+      "titulo": "Capítulo 23B. De los mapas de caracteres al escritorio gráfico",
+      "aporte_educativo": "periférico de vídeo V1 en texto y gráficos",
+      "seccion_construimos_explicita": true,
+      "figuras_referenciadas": 7,
+      "identificadores_figuras": [
+        "p23v_fig01_codigo_glifo",
+        "p23v_fig02_mapa_texto_32x16",
+        "p23v_fig03_pixeles_y_offsets",
+        "p23v_fig04_rom_controlador",
+        "p23v_fig05_tres_direcciones",
+        "p23v_fig06_profundidad_color",
+        "p23v_fig07_tipografia_y_contornos"
+      ],
+      "formulas": 13,
+      "tablas_aproximadas": 3,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    },
+    {
+      "id": "24",
+      "id_editorial": "24",
+      "archivo": "24_una_computadora_que_podemos_explicar.md",
+      "titulo": "Capítulo 24. Una computadora que podemos explicar",
+      "aporte_educativo": "integración didáctica y límites del prototipo",
+      "seccion_construimos_explicita": false,
+      "figuras_referenciadas": 4,
+      "identificadores_figuras": [
+        "c24_fig01_alcances_y_evidencias",
+        "c24_fig02_mapa_final",
+        "c24_fig03_dos_arquitecturas_un_metodo",
+        "c24_fig04_escalera_verificacion"
+      ],
+      "formulas": 13,
+      "tablas_aproximadas": 5,
+      "tiene_solucionario": true,
+      "problemas_estructurales": []
+    }
+  ]
+}

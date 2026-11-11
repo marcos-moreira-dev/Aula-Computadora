@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1310" viewBox="0 0 1900 1310">
+<rect width="100%" height="100%" fill="#fdfdfc"/>
+<text x="80" y="91" fill="#153a4e" font-size="39" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">El PC guarda una dirección; no cambia cuando cambia su entrada</text>
+<text x="80" y="147" fill="#587080" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">PC16 · banco de 16 DFF de flanco ascendente · circuito candidato de laboratorio</text>
+<rect x="76" y="182" width="1740" height="388" rx="15" fill="#edf4f8"/>
+<text x="117" y="232" fill="#153a4e" font-size="29" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Vista de los dieciséis bits</text>
+<rect x="480" y="284" width="540" height="178" rx="15" fill="#e3f0ec"/>
+<text x="750" y="341" fill="#153a4e" font-size="31" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">RED COMBINACIONAL</text>
+<text x="750" y="387" fill="#153a4e" font-size="27" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">82 NAND · LOAD / CLR_TEST</text>
+<text x="750" y="430" fill="#153a4e" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">D = ¬CLR_TEST · MUX(LOAD, Q, NEXT)</text>
+<rect x="1190" y="284" width="348" height="178" rx="15" fill="#dfe8f6"/>
+<text x="1364" y="345" fill="#153a4e" font-size="35" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">16 × DFF</text>
+<text x="1364" y="394" fill="#153a4e" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">capturan solo en CLK ↑</text>
+<path d="M116 315 H470" stroke="#247d91" stroke-width="6"/>
+<text x="116" y="284" fill="#153a4e" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC_NEXT[15:0]</text>
+<path d="M1020 363 H1180" stroke="#247d91" stroke-width="6"/>
+<text x="1098" y="335" fill="#153a4e" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">D[15:0]</text>
+<path d="M1538 363 H1762" stroke="#247d91" stroke-width="6"/>
+<text x="1556" y="330" fill="#153a4e" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC_Q[15:0]</text>
+<path d="M1658 363 V510 H360 V437 H470" fill="none" stroke="#1b8b79" stroke-width="5"/>
+<text x="490" y="537" fill="#1b806f" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Realimentación Q hacia la función HOLD</text>
+<path d="M736 475 V462" stroke="#b78a3e" stroke-width="5"/>
+<text x="736" y="501" fill="#153a4e" font-size="22" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">LOAD · CLR_TEST</text>
+<path d="M1364 514 V465" stroke="#b78a3e" stroke-width="5"/>
+<text x="1364" y="542" fill="#153a4e" font-size="24" font-family="DejaVu Sans" font-weight="normal" text-anchor="middle">CLK ↑</text>
+<rect x="76" y="602" width="1740" height="660" rx="15" fill="#f4f8f5"/>
+<text x="116" y="649" fill="#153a4e" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Detalle de una celda i (las etiquetas de red conectan señales iguales)</text>
+<rect x="306" y="743" width="155" height="98" rx="10" fill="#fff8e8" stroke="#ae803f" stroke-width="3"/>
+<text x="383" y="809" fill="#684f27" font-size="49" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">&amp;</text>
+<circle cx="471" cy="792" r="10" fill="#fdfdfc" stroke="#ae803f" stroke-width="3"/>
+<text x="383" y="730" fill="#153a4e" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">A_i</text>
+<path d="M252 774 H306" stroke="#2d687d" stroke-width="4"/>
+<text x="244" y="765" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">Q[i]</text>
+<path d="M252 813 H306" stroke="#2d687d" stroke-width="4"/>
+<text x="244" y="804" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">LOAD_N</text>
+<rect x="306" y="931" width="155" height="98" rx="10" fill="#fff8e8" stroke="#ae803f" stroke-width="3"/>
+<text x="383" y="997" fill="#684f27" font-size="49" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">&amp;</text>
+<circle cx="471" cy="980" r="10" fill="#fdfdfc" stroke="#ae803f" stroke-width="3"/>
+<text x="383" y="918" fill="#153a4e" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">B_i</text>
+<path d="M252 962 H306" stroke="#2d687d" stroke-width="4"/>
+<text x="244" y="953" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">NEXT[i]</text>
+<path d="M252 1001 H306" stroke="#2d687d" stroke-width="4"/>
+<text x="244" y="992" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">LOAD</text>
+<rect x="734" y="830" width="155" height="98" rx="10" fill="#fff8e8" stroke="#ae803f" stroke-width="3"/>
+<text x="811" y="896" fill="#684f27" font-size="49" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">&amp;</text>
+<circle cx="899" cy="879" r="10" fill="#fdfdfc" stroke="#ae803f" stroke-width="3"/>
+<text x="811" y="817" fill="#153a4e" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">M_i</text>
+<path d="M680 861 H734" stroke="#2d687d" stroke-width="4"/>
+<text x="672" y="852" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">A_i</text>
+<path d="M680 900 H734" stroke="#2d687d" stroke-width="4"/>
+<text x="672" y="891" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">B_i</text>
+<rect x="1172" y="830" width="155" height="98" rx="10" fill="#fff8e8" stroke="#ae803f" stroke-width="3"/>
+<text x="1249" y="896" fill="#684f27" font-size="49" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">&amp;</text>
+<circle cx="1337" cy="879" r="10" fill="#fdfdfc" stroke="#ae803f" stroke-width="3"/>
+<text x="1249" y="817" fill="#153a4e" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">N_i</text>
+<path d="M1118 861 H1172" stroke="#2d687d" stroke-width="4"/>
+<text x="1110" y="852" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">M_i</text>
+<path d="M1118 900 H1172" stroke="#2d687d" stroke-width="4"/>
+<text x="1110" y="891" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">CLR_N</text>
+<rect x="1530" y="830" width="155" height="98" rx="10" fill="#fff8e8" stroke="#ae803f" stroke-width="3"/>
+<text x="1607" y="896" fill="#684f27" font-size="49" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">&amp;</text>
+<circle cx="1695" cy="879" r="10" fill="#fdfdfc" stroke="#ae803f" stroke-width="3"/>
+<text x="1607" y="817" fill="#153a4e" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="middle">D_i</text>
+<path d="M1476 861 H1530" stroke="#2d687d" stroke-width="4"/>
+<text x="1468" y="852" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">N_i</text>
+<path d="M1476 900 H1530" stroke="#2d687d" stroke-width="4"/>
+<text x="1468" y="891" fill="#2d687d" font-size="20" font-family="DejaVu Sans" font-weight="normal" text-anchor="end">N_i</text>
+<path d="M471 792 H620 V861 H680" stroke="#35768a" stroke-width="4" fill="none"/>
+<path d="M471 980 H645 V900 H680" stroke="#35768a" stroke-width="4" fill="none"/>
+<text x="518" y="778" fill="#153a4e" font-size="21" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">A_i</text>
+<text x="526" y="967" fill="#153a4e" font-size="21" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">B_i</text>
+<path d="M899 879 H1028 V861 H1118" stroke="#35768a" stroke-width="4" fill="none"/>
+<path d="M1337 879 H1410 V861 H1476 M1410 879 V900 H1476" stroke="#35768a" stroke-width="4" fill="none"/>
+<circle cx="1410" cy="879" r="6" fill="#35768a"/>
+<path d="M1695 879 H1780" stroke="#35768a" stroke-width="5"/>
+<text x="1778" y="851" fill="#153a4e" font-size="23" font-family="DejaVu Sans" font-weight="bold" text-anchor="end">D[i]</text>
+<text x="120" y="1128" fill="#153a4e" font-size="27" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">LOAD_N = NAND(LOAD, LOAD)   ·   CLR_N = NAND(CLR_TEST, CLR_TEST)</text>
+<text x="120" y="1179" fill="#153a4e" font-size="27" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Se repiten cinco NAND por bit: 2 compartidas + 5 × 16 = 82 NAND.</text>
+<text x="120" y="1228" fill="#596f7d" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">No dibuja el interior de los DFF, ni RESET físico, retardos o bus externo.</text>
+</svg>

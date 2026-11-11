@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 2000 1200">
+<title>Los 16 conductores de datos de Aula-16: dos bancos RAM de ocho bits</title>
+<rect width="2000" height="1200" fill="#fbfcfd"/>
+<text x="75" y="84" fill="#1d3446" font-family="DejaVu Sans" font-size="55" font-weight="bold">Un bus de 16 bits tiene 16 conductores</text>
+<text x="75" y="140" fill="#43606d" font-family="DejaVu Sans" font-size="27">Cada línea D15…D0 conecta el dato de CPU con un carril de memoria, no es una sola flecha.</text>
+<rect x="65" y="220" width="365" height="815" rx="20" fill="#e5edf5" stroke="#54738a" stroke-width="3"/>
+<text x="245" y="267" text-anchor="middle" fill="#1d3446" font-family="DejaVu Sans" font-size="29" font-weight="bold">CPU Aula-16</text>
+<text x="245" y="304" text-anchor="middle" fill="#1d3446" font-family="DejaVu Sans" font-size="22">D15…D0 · bidireccional</text>
+<rect x="1522" y="250" width="414" height="389" rx="17" fill="#e6f1fc" stroke="#447ca6" stroke-width="3"/>
+<rect x="1522" y="645" width="414" height="390" rx="17" fill="#e7f5ee" stroke="#348368" stroke-width="3"/>
+<text x="1725" y="303" text-anchor="middle" fill="#1b587e" font-family="DejaVu Sans" font-size="27" font-weight="bold">Banco alto · 8 bits</text>
+<text x="1725" y="698" text-anchor="middle" fill="#206b52" font-family="DejaVu Sans" font-size="27" font-weight="bold">Banco bajo · 8 bits</text>
+<text x="475" y="205" fill="#46606d" font-family="DejaVu Sans" font-size="23">Cada renglón representa una línea independiente</text>
+<rect x="450" y="328" width="1050" height="298" rx="15" fill="#f1f7fd"/>
+<rect x="450" y="724" width="1050" height="297" rx="15" fill="#f1faf5"/>
+<line id="data-0" x1="430" y1="1000" x2="1522" y2="1000" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="1000" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="1000" r="4.5" fill="#318264"/>
+<text x="400" y="991" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D0</text>
+<text x="895" y="991" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D0</text>
+<text x="1550" y="991" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D0</text>
+<line id="data-1" x1="430" y1="964" x2="1522" y2="964" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="964" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="964" r="4.5" fill="#318264"/>
+<text x="400" y="955" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D1</text>
+<text x="895" y="955" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D1</text>
+<text x="1550" y="955" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D1</text>
+<line id="data-2" x1="430" y1="928" x2="1522" y2="928" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="928" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="928" r="4.5" fill="#318264"/>
+<text x="400" y="919" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D2</text>
+<text x="895" y="919" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D2</text>
+<text x="1550" y="919" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D2</text>
+<line id="data-3" x1="430" y1="892" x2="1522" y2="892" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="892" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="892" r="4.5" fill="#318264"/>
+<text x="400" y="883" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D3</text>
+<text x="895" y="883" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D3</text>
+<text x="1550" y="883" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D3</text>
+<line id="data-4" x1="430" y1="856" x2="1522" y2="856" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="856" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="856" r="4.5" fill="#318264"/>
+<text x="400" y="847" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D4</text>
+<text x="895" y="847" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D4</text>
+<text x="1550" y="847" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D4</text>
+<line id="data-5" x1="430" y1="820" x2="1522" y2="820" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="820" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="820" r="4.5" fill="#318264"/>
+<text x="400" y="811" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D5</text>
+<text x="895" y="811" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D5</text>
+<text x="1550" y="811" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D5</text>
+<line id="data-6" x1="430" y1="784" x2="1522" y2="784" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="784" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="784" r="4.5" fill="#318264"/>
+<text x="400" y="775" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D6</text>
+<text x="895" y="775" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D6</text>
+<text x="1550" y="775" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D6</text>
+<line id="data-7" x1="430" y1="748" x2="1522" y2="748" stroke="#318264" stroke-width="3.2"/>
+<circle cx="430" cy="748" r="4.5" fill="#318264"/>
+<circle cx="1522" cy="748" r="4.5" fill="#318264"/>
+<text x="400" y="739" text-anchor="end" fill="#318264" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D7</text>
+<text x="895" y="739" text-anchor="middle" fill="#318264" font-family="DejaVu Sans Mono" font-size="22">D7</text>
+<text x="1550" y="739" fill="#318264" font-family="DejaVu Sans Mono" font-size="20">D7</text>
+<line id="data-8" x1="430" y1="605" x2="1522" y2="605" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="605" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="605" r="4.5" fill="#2d7499"/>
+<text x="400" y="596" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D8</text>
+<text x="895" y="596" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D8</text>
+<text x="1550" y="596" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D8</text>
+<line id="data-9" x1="430" y1="569" x2="1522" y2="569" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="569" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="569" r="4.5" fill="#2d7499"/>
+<text x="400" y="560" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D9</text>
+<text x="895" y="560" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D9</text>
+<text x="1550" y="560" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D9</text>
+<line id="data-10" x1="430" y1="533" x2="1522" y2="533" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="533" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="533" r="4.5" fill="#2d7499"/>
+<text x="400" y="524" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D10</text>
+<text x="895" y="524" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D10</text>
+<text x="1550" y="524" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D10</text>
+<line id="data-11" x1="430" y1="497" x2="1522" y2="497" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="497" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="497" r="4.5" fill="#2d7499"/>
+<text x="400" y="488" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D11</text>
+<text x="895" y="488" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D11</text>
+<text x="1550" y="488" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D11</text>
+<line id="data-12" x1="430" y1="461" x2="1522" y2="461" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="461" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="461" r="4.5" fill="#2d7499"/>
+<text x="400" y="452" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D12</text>
+<text x="895" y="452" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D12</text>
+<text x="1550" y="452" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D12</text>
+<line id="data-13" x1="430" y1="425" x2="1522" y2="425" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="425" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="425" r="4.5" fill="#2d7499"/>
+<text x="400" y="416" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D13</text>
+<text x="895" y="416" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D13</text>
+<text x="1550" y="416" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D13</text>
+<line id="data-14" x1="430" y1="389" x2="1522" y2="389" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="389" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="389" r="4.5" fill="#2d7499"/>
+<text x="400" y="380" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D14</text>
+<text x="895" y="380" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D14</text>
+<text x="1550" y="380" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D14</text>
+<line id="data-15" x1="430" y1="353" x2="1522" y2="353" stroke="#2d7499" stroke-width="3.2"/>
+<circle cx="430" cy="353" r="4.5" fill="#2d7499"/>
+<circle cx="1522" cy="353" r="4.5" fill="#2d7499"/>
+<text x="400" y="344" text-anchor="end" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22" font-weight="bold">D15</text>
+<text x="895" y="344" text-anchor="middle" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="22">D15</text>
+<text x="1550" y="344" fill="#2d7499" font-family="DejaVu Sans Mono" font-size="20">D15</text>
+<rect x="70" y="1063" width="1860" height="106" rx="14" fill="#e9f0f5"/>
+<text x="100" y="1104" fill="#233b4b" font-family="DejaVu Sans" font-size="25" font-weight="bold">RAM de 32 KiB: A14…A1 → fila · A15 → selección de región · A0 → carril de byte</text>
+<text x="100" y="1144" fill="#233b4b" font-family="DejaVu Sans" font-size="24">En dirección par, una palabra usa los 16 bits: 0x2000→0x34 (bajo), 0x2001→0x12 (alto) = 0x1234.</text>
+</svg>

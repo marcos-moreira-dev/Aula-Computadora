@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Tabla de estados del latch SR NAND activo en bajo</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="45" y="47" class="label">Tabla de estados: las entradas no bastan para HOLD</text>
+<text x="45" y="81" class="small">Las salidas indicadas corresponden a estados estables ideales.</text>
+<rect x="59" y="123" width="880" height="333" rx="16" fill="#f2f8fb"/>
+<text x="121" y="168" class="label">S_n R_n</text>
+<text x="369" y="168" class="label">Q</text>
+<text x="518" y="168" class="label">Q_n</text>
+<text x="683" y="168" class="label">Lectura</text>
+<path class="wire" d="M79,187 H916"/>
+<rect x="79" y="199" width="837" height="47" rx="7" fill="#e5f3e9"/>
+<text x="150" y="233" class="label">0 1</text><text x="381" y="233" class="label">1</text><text x="531" y="233" class="label">0</text><text x="695" y="233" class="label">SET</text>
+<rect x="79" y="254" width="837" height="47" rx="7" fill="#e5f3e9"/>
+<text x="150" y="288" class="label">1 0</text><text x="381" y="288" class="label">0</text><text x="531" y="288" class="label">1</text><text x="695" y="288" class="label">RESET</text>
+<rect x="79" y="309" width="837" height="47" rx="7" fill="#e5eff8"/>
+<text x="150" y="343" class="label">1 1</text><text x="353" y="343" class="small">anterior</text><text x="494" y="343" class="small">anterior</text><text x="695" y="343" class="label accent">HOLD</text>
+<rect x="79" y="364" width="837" height="47" rx="7" fill="#ffebe7"/>
+<text x="150" y="398" class="label">0 0</text><text x="381" y="398" class="label">1</text><text x="531" y="398" class="label">1</text><text x="695" y="398" class="small">PROHIBIDA</text>
+<text x="501" y="440" text-anchor="middle" class="tiny">Con 00, Q = Q_n = 1; al liberar ambas órdenes, el futuro estado no está garantizado.</text>
+</svg>

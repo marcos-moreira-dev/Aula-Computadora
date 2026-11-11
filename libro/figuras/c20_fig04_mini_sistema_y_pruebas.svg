@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Una microcomputadora con zonas y responsabilidades</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Una microcomputadora con zonas y responsabilidades</text><text x="35" y="76" class="small">Cuatro regiones funcionales, no tamaños de binarios medidos.</text><rect x="24" y="150" width="216" height="189" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="132.0" y="198" class="label" text-anchor="middle">ROM</text><text x="132.0" y="244" class="small" text-anchor="middle">E000-FFFF</text><text x="132" y="309" class="tiny" text-anchor="middle">Monitor propuesto</text><rect x="270" y="150" width="216" height="189" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="378.0" y="198" class="label" text-anchor="middle">HERRAMIENTAS</text><text x="378.0" y="244" class="small" text-anchor="middle">1000-2FFF</text><text x="378" y="309" class="tiny" text-anchor="middle">Editor/ASM futuros</text><rect x="516" y="150" width="216" height="189" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="624.0" y="198" class="label" text-anchor="middle">PRÁCTICA</text><text x="624.0" y="244" class="small" text-anchor="middle">6000-6EFF</text><text x="624" y="309" class="tiny" text-anchor="middle">Programas de usuario</text><rect x="762" y="150" width="216" height="189" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="870.0" y="198" class="label" text-anchor="middle">DATOS</text><text x="870.0" y="244" class="small" text-anchor="middle">6F00</text><text x="870" y="309" class="tiny" text-anchor="middle">Variable ejemplo</text><text x="500" y="398" class="small" text-anchor="middle">Soporte por bloques: requiere LOAD/LOADX para copiar a RAM.</text><text x="500" y="436" class="tiny" text-anchor="middle">Mapa y capacidades candidatos; no existe sistema operativo ejecutable.</text></svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Modelo ideal de dos permisos AND con interruptores en serie</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="50" y="45" class="label">Dos permisos en serie: A Y B</text>
+<text x="50" y="81" class="small">Modelo de interruptores ideales; representa AND, no un montaje NPN.</text>
+<rect class="block" x="77" y="169" width="144" height="110" rx="12"/>
+<text x="149" y="213" text-anchor="middle" class="label">Inicio</text>
+<text x="149" y="246" text-anchor="middle" class="small">de la ruta</text>
+<path class="wire" d="M221,224 H296 M443,224 H548 M695,224 H776"/>
+<rect x="296" y="161" width="147" height="128" rx="12" fill="#e8f5e9" stroke="#336d4c" stroke-width="3"/>
+<text x="369" y="204" text-anchor="middle" class="label">A = 1</text>
+<text x="369" y="242" text-anchor="middle" class="small">cerrado</text>
+<rect x="548" y="161" width="147" height="128" rx="12" fill="#e8f5e9" stroke="#336d4c" stroke-width="3"/>
+<text x="622" y="204" text-anchor="middle" class="label">B = 1</text>
+<text x="622" y="242" text-anchor="middle" class="small">cerrado</text>
+<rect class="block" x="776" y="169" width="150" height="110" rx="12"/>
+<text x="851" y="213" text-anchor="middle" class="label">Ruta</text>
+<text x="851" y="246" text-anchor="middle" class="small">completa</text>
+<path d="M448,326 H551" stroke="#096b91" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="500" y="355" text-anchor="middle" class="label accent">Z = A ∧ B = 1</text>
+<rect x="75" y="404" width="850" height="72" rx="10" fill="#fff1dc"/>
+<text x="500" y="432" text-anchor="middle" class="small">Si A = 0 o B = 0, uno de los interruptores se abre</text>
+<text x="500" y="459" text-anchor="middle" class="small">y se interrumpe la ruta: Z = 0.</text>
+</svg>

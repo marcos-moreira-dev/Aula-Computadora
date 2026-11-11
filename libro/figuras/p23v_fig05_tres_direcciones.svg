@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>La CPU no tiene que conocer el píxel como opcode</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">La CPU no tiene que conocer el píxel como opcode</text><text x="35" y="76" class="small">Secuencia de ejemplo con registros ya especificados; sintaxis de ISA aún candidata.</text><rect x="21" y="145" width="232" height="147" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="137.0" y="193" class="label" text-anchor="middle">CPU / ISA</text><text x="137.0" y="239" class="small" text-anchor="middle">escritura absoluta</text><rect x="295" y="145" width="209" height="147" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="399.5" y="193" class="label" text-anchor="middle">DECODIFICADOR</text><text x="399.5" y="239" class="small" text-anchor="middle">EA = C020</text><rect x="549" y="145" width="209" height="147" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="653.5" y="193" class="label" text-anchor="middle">REGISTROS</text><text x="653.5" y="239" class="small" text-anchor="middle">C024/C026/C028</text><rect x="805" y="145" width="174" height="147" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="892.0" y="193" class="label" text-anchor="middle">VRAM</text><text x="892.0" y="239" class="small" text-anchor="middle">offset 0002</text><path d="M253,217 L295,217" fill="none" stroke="#244d68" stroke-width="4"/><path d="M295,217 L278.0,226.0 L278.0,208.0 Z" fill="#244d68"/><path d="M504,217 L549,217" fill="none" stroke="#244d68" stroke-width="4"/><path d="M549,217 L532.0,226.0 L532.0,208.0 Z" fill="#244d68"/><path d="M758,217 L805,217" fill="none" stroke="#244d68" stroke-width="4"/><path d="M805,217 L788.0,226.0 L788.0,208.0 Z" fill="#244d68"/><text x="500" y="350" class="small" text-anchor="middle">1) C020 ← 01 (ver gráficos)    2) C02A ← 0E (acceder bitmap)</text><text x="500" y="399" class="small" text-anchor="middle">3) C024 ← 02, C026 ← 00    4) C028 ← 80</text><text x="500" y="466" class="label" text-anchor="middle">Dirección de CPU C028 ≠ puntero interno 0002 de la VRAM.</text></svg>

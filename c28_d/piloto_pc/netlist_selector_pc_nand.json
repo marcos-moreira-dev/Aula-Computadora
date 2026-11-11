@@ -1,0 +1,423 @@
+{
+  "status": "piloto combinacional; no PC completo",
+  "ports": [
+    "Z",
+    "JNZ",
+    "SEQ[15:0]",
+    "TARGET[15:0]"
+  ],
+  "outputs": [
+    "TAKE",
+    "D[15:0]"
+  ],
+  "gates": [
+    {
+      "ident": "NZ",
+      "operation": "NAND",
+      "inputs": [
+        "Z",
+        "Z"
+      ]
+    },
+    {
+      "ident": "TAKE_N",
+      "operation": "NAND",
+      "inputs": [
+        "JNZ",
+        "NZ"
+      ]
+    },
+    {
+      "ident": "TAKE",
+      "operation": "NAND",
+      "inputs": [
+        "TAKE_N",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "A0",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ0",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B0",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET0",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D0",
+      "operation": "NAND",
+      "inputs": [
+        "A0",
+        "B0"
+      ]
+    },
+    {
+      "ident": "A1",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ1",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B1",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET1",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D1",
+      "operation": "NAND",
+      "inputs": [
+        "A1",
+        "B1"
+      ]
+    },
+    {
+      "ident": "A2",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ2",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B2",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET2",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D2",
+      "operation": "NAND",
+      "inputs": [
+        "A2",
+        "B2"
+      ]
+    },
+    {
+      "ident": "A3",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ3",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B3",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET3",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D3",
+      "operation": "NAND",
+      "inputs": [
+        "A3",
+        "B3"
+      ]
+    },
+    {
+      "ident": "A4",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ4",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B4",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET4",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D4",
+      "operation": "NAND",
+      "inputs": [
+        "A4",
+        "B4"
+      ]
+    },
+    {
+      "ident": "A5",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ5",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B5",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET5",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D5",
+      "operation": "NAND",
+      "inputs": [
+        "A5",
+        "B5"
+      ]
+    },
+    {
+      "ident": "A6",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ6",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B6",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET6",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D6",
+      "operation": "NAND",
+      "inputs": [
+        "A6",
+        "B6"
+      ]
+    },
+    {
+      "ident": "A7",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ7",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B7",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET7",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D7",
+      "operation": "NAND",
+      "inputs": [
+        "A7",
+        "B7"
+      ]
+    },
+    {
+      "ident": "A8",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ8",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B8",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET8",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D8",
+      "operation": "NAND",
+      "inputs": [
+        "A8",
+        "B8"
+      ]
+    },
+    {
+      "ident": "A9",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ9",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B9",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET9",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D9",
+      "operation": "NAND",
+      "inputs": [
+        "A9",
+        "B9"
+      ]
+    },
+    {
+      "ident": "A10",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ10",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B10",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET10",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D10",
+      "operation": "NAND",
+      "inputs": [
+        "A10",
+        "B10"
+      ]
+    },
+    {
+      "ident": "A11",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ11",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B11",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET11",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D11",
+      "operation": "NAND",
+      "inputs": [
+        "A11",
+        "B11"
+      ]
+    },
+    {
+      "ident": "A12",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ12",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B12",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET12",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D12",
+      "operation": "NAND",
+      "inputs": [
+        "A12",
+        "B12"
+      ]
+    },
+    {
+      "ident": "A13",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ13",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B13",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET13",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D13",
+      "operation": "NAND",
+      "inputs": [
+        "A13",
+        "B13"
+      ]
+    },
+    {
+      "ident": "A14",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ14",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B14",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET14",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D14",
+      "operation": "NAND",
+      "inputs": [
+        "A14",
+        "B14"
+      ]
+    },
+    {
+      "ident": "A15",
+      "operation": "NAND",
+      "inputs": [
+        "SEQ15",
+        "TAKE_N"
+      ]
+    },
+    {
+      "ident": "B15",
+      "operation": "NAND",
+      "inputs": [
+        "TARGET15",
+        "TAKE"
+      ]
+    },
+    {
+      "ident": "D15",
+      "operation": "NAND",
+      "inputs": [
+        "A15",
+        "B15"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "estado": "APROBADO",
+  "etapa": "C28-AD",
+  "recursos_libro": 4,
+  "modulos_representados": 9,
+  "buses_logicos_escenificados": 8,
+  "pistas_visualizadas": 61,
+  "topologia_alu_NAND2": 359,
+  "alcance": "Sin footprints, posiciones físicas reales, netlist eléctrica ni JavaFX compilado."
+}

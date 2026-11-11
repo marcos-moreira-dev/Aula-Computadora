@@ -1,0 +1,30 @@
+{
+  "etapa": "C28-M: memoria, aritmética, banderas e ISA de papel",
+  "vectores_exhaustivos": {
+    "decodificacion_memoria": 65536,
+    "sumador8": 65536,
+    "restador8_y_comparaciones": 65536,
+    "medio_sumador": 4,
+    "sumador_completo": 8
+  },
+  "total_vectores": 196620,
+  "programa_documental": {
+    "instrucciones": [
+      "LDI",
+      "ST",
+      "HALT"
+    ],
+    "lecturas": 8,
+    "escrituras": 1,
+    "pc_final": "0x6008",
+    "registro_r0": "0x2a",
+    "ram_6f00": "0x2a"
+  },
+  "limitaciones": [
+    "No ensaya SRAM/EEPROM físicas ni las señales eléctricas de CE/OE/WE",
+    "ALU ideal; no calcula retardos reales ni implementa un HDL de ocho bits",
+    "La interpretación LDI/ST/HALT es una referencia de tres instrucciones, NO una CPU",
+    "ISA, mapa y microsecuencias siguen propuestas sin aprobación física",
+    "Presencia de ecuaciones/tablas no equivale a transcribir todos los cables de imágenes"
+  ]
+}

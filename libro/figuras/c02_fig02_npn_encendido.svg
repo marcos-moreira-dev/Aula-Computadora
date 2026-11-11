@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Estado 1: la entrada conecta la base a +5 V</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="37" y="41" class="label">Estado 1: la entrada conecta la base a +5 V</text>
+<path class="wire" d="M120,111 V87 H293 M403,87 H662 V175 M662,257 V289 M662,363 V408 H120 V239"/>
+<rect class="block" x="59" y="111" width="122" height="128" rx="12"/>
+<text x="120" y="145" class="label" text-anchor="middle">5 V</text>
+<text x="120" y="174" class="small" text-anchor="middle">CC</text>
+<text x="120" y="201" class="tiny" text-anchor="middle">regulada</text>
+<text x="101" y="90" class="label" text-anchor="middle">+</text>
+<text x="101" y="262" class="label" text-anchor="middle">−</text>
+<rect class="block" x="293" y="65" width="110" height="44" rx="7"/>
+<text x="348" y="94" class="label" text-anchor="middle">330 Ω</text>
+<rect x="608" y="175" width="108" height="82" rx="14" class="light"/>
+<text x="662" y="218.0" class="label" text-anchor="middle">LED</text>
+<text x="662" y="245.0" class="tiny" text-anchor="middle">rojo</text>
+<text x="585" y="182" class="tiny">A (+)</text>
+<text x="585" y="274" class="tiny">K (−)</text>
+<path class="red" d="M 723,195.0 l 22,-22 m -8,0 l 8,0 l 0,8 M 732,213.0 l 22,-22 m -8,0 l 8,0 l 0,8"/>
+<rect x="609" y="289" width="106" height="74" rx="13" fill="#e8f3fb" stroke="#273746" stroke-width="3"/>
+<text x="662" y="317" class="small" font-weight="bold" text-anchor="middle">Q1 NPN</text>
+<text x="662" y="342" class="tiny" text-anchor="middle">SATURACIÓN</text>
+<text x="729" y="303" class="tiny">C</text><text x="729" y="355" class="tiny">E</text>
+<text x="584" y="321" class="tiny">B</text>
+<circle cx="183" cy="325" r="7" fill="white" stroke="#273746" stroke-width="3"/>
+<text x="165" y="289" class="label accent" text-anchor="middle">IN = +5 V</text>
+<path class="wire" d="M190,325 H341 M481,325 H609"/>
+<rect class="block" x="341" y="303" width="140" height="44" rx="7"/>
+<text x="411" y="331" class="label" text-anchor="middle">4,7 kΩ</text>
+<text x="411" y="373" class="tiny" text-anchor="middle">Resistencia de base</text>
+<text x="886" y="206" class="label accent" text-anchor="middle">I_C ≈ 8,5 mA</text>
+<text x="886" y="232" class="tiny" text-anchor="middle">estimación, no medida</text>
+<rect x="75" y="436" width="863" height="49" rx="8" fill="#eaf3f9"/>
+<text x="500" y="467" class="small" text-anchor="middle">IN debe conectarse físicamente al raíl indicado, con GND compartido.</text>
+</svg>

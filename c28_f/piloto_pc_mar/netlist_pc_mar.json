@@ -1,0 +1,1427 @@
+{
+  "candidate": true,
+  "gate_count": 177,
+  "increment_nand": 75,
+  "branch_nand": 53,
+  "mar_nand": 49,
+  "no_flags_side_effect": true,
+  "control_constraint": "JMP and JNZ may not both be asserted",
+  "gates": [
+    {
+      "name": "INC0",
+      "kind": "NAND",
+      "inputs": [
+        "PC0",
+        "PC0"
+      ]
+    },
+    {
+      "name": "T1",
+      "kind": "NAND",
+      "inputs": [
+        "PC1",
+        "PC0"
+      ]
+    },
+    {
+      "name": "U1",
+      "kind": "NAND",
+      "inputs": [
+        "PC1",
+        "T1"
+      ]
+    },
+    {
+      "name": "V1",
+      "kind": "NAND",
+      "inputs": [
+        "PC0",
+        "T1"
+      ]
+    },
+    {
+      "name": "INC1",
+      "kind": "NAND",
+      "inputs": [
+        "U1",
+        "V1"
+      ]
+    },
+    {
+      "name": "C2",
+      "kind": "NAND",
+      "inputs": [
+        "T1",
+        "T1"
+      ]
+    },
+    {
+      "name": "T2",
+      "kind": "NAND",
+      "inputs": [
+        "PC2",
+        "C2"
+      ]
+    },
+    {
+      "name": "U2",
+      "kind": "NAND",
+      "inputs": [
+        "PC2",
+        "T2"
+      ]
+    },
+    {
+      "name": "V2",
+      "kind": "NAND",
+      "inputs": [
+        "C2",
+        "T2"
+      ]
+    },
+    {
+      "name": "INC2",
+      "kind": "NAND",
+      "inputs": [
+        "U2",
+        "V2"
+      ]
+    },
+    {
+      "name": "C3",
+      "kind": "NAND",
+      "inputs": [
+        "T2",
+        "T2"
+      ]
+    },
+    {
+      "name": "T3",
+      "kind": "NAND",
+      "inputs": [
+        "PC3",
+        "C3"
+      ]
+    },
+    {
+      "name": "U3",
+      "kind": "NAND",
+      "inputs": [
+        "PC3",
+        "T3"
+      ]
+    },
+    {
+      "name": "V3",
+      "kind": "NAND",
+      "inputs": [
+        "C3",
+        "T3"
+      ]
+    },
+    {
+      "name": "INC3",
+      "kind": "NAND",
+      "inputs": [
+        "U3",
+        "V3"
+      ]
+    },
+    {
+      "name": "C4",
+      "kind": "NAND",
+      "inputs": [
+        "T3",
+        "T3"
+      ]
+    },
+    {
+      "name": "T4",
+      "kind": "NAND",
+      "inputs": [
+        "PC4",
+        "C4"
+      ]
+    },
+    {
+      "name": "U4",
+      "kind": "NAND",
+      "inputs": [
+        "PC4",
+        "T4"
+      ]
+    },
+    {
+      "name": "V4",
+      "kind": "NAND",
+      "inputs": [
+        "C4",
+        "T4"
+      ]
+    },
+    {
+      "name": "INC4",
+      "kind": "NAND",
+      "inputs": [
+        "U4",
+        "V4"
+      ]
+    },
+    {
+      "name": "C5",
+      "kind": "NAND",
+      "inputs": [
+        "T4",
+        "T4"
+      ]
+    },
+    {
+      "name": "T5",
+      "kind": "NAND",
+      "inputs": [
+        "PC5",
+        "C5"
+      ]
+    },
+    {
+      "name": "U5",
+      "kind": "NAND",
+      "inputs": [
+        "PC5",
+        "T5"
+      ]
+    },
+    {
+      "name": "V5",
+      "kind": "NAND",
+      "inputs": [
+        "C5",
+        "T5"
+      ]
+    },
+    {
+      "name": "INC5",
+      "kind": "NAND",
+      "inputs": [
+        "U5",
+        "V5"
+      ]
+    },
+    {
+      "name": "C6",
+      "kind": "NAND",
+      "inputs": [
+        "T5",
+        "T5"
+      ]
+    },
+    {
+      "name": "T6",
+      "kind": "NAND",
+      "inputs": [
+        "PC6",
+        "C6"
+      ]
+    },
+    {
+      "name": "U6",
+      "kind": "NAND",
+      "inputs": [
+        "PC6",
+        "T6"
+      ]
+    },
+    {
+      "name": "V6",
+      "kind": "NAND",
+      "inputs": [
+        "C6",
+        "T6"
+      ]
+    },
+    {
+      "name": "INC6",
+      "kind": "NAND",
+      "inputs": [
+        "U6",
+        "V6"
+      ]
+    },
+    {
+      "name": "C7",
+      "kind": "NAND",
+      "inputs": [
+        "T6",
+        "T6"
+      ]
+    },
+    {
+      "name": "T7",
+      "kind": "NAND",
+      "inputs": [
+        "PC7",
+        "C7"
+      ]
+    },
+    {
+      "name": "U7",
+      "kind": "NAND",
+      "inputs": [
+        "PC7",
+        "T7"
+      ]
+    },
+    {
+      "name": "V7",
+      "kind": "NAND",
+      "inputs": [
+        "C7",
+        "T7"
+      ]
+    },
+    {
+      "name": "INC7",
+      "kind": "NAND",
+      "inputs": [
+        "U7",
+        "V7"
+      ]
+    },
+    {
+      "name": "C8",
+      "kind": "NAND",
+      "inputs": [
+        "T7",
+        "T7"
+      ]
+    },
+    {
+      "name": "T8",
+      "kind": "NAND",
+      "inputs": [
+        "PC8",
+        "C8"
+      ]
+    },
+    {
+      "name": "U8",
+      "kind": "NAND",
+      "inputs": [
+        "PC8",
+        "T8"
+      ]
+    },
+    {
+      "name": "V8",
+      "kind": "NAND",
+      "inputs": [
+        "C8",
+        "T8"
+      ]
+    },
+    {
+      "name": "INC8",
+      "kind": "NAND",
+      "inputs": [
+        "U8",
+        "V8"
+      ]
+    },
+    {
+      "name": "C9",
+      "kind": "NAND",
+      "inputs": [
+        "T8",
+        "T8"
+      ]
+    },
+    {
+      "name": "T9",
+      "kind": "NAND",
+      "inputs": [
+        "PC9",
+        "C9"
+      ]
+    },
+    {
+      "name": "U9",
+      "kind": "NAND",
+      "inputs": [
+        "PC9",
+        "T9"
+      ]
+    },
+    {
+      "name": "V9",
+      "kind": "NAND",
+      "inputs": [
+        "C9",
+        "T9"
+      ]
+    },
+    {
+      "name": "INC9",
+      "kind": "NAND",
+      "inputs": [
+        "U9",
+        "V9"
+      ]
+    },
+    {
+      "name": "C10",
+      "kind": "NAND",
+      "inputs": [
+        "T9",
+        "T9"
+      ]
+    },
+    {
+      "name": "T10",
+      "kind": "NAND",
+      "inputs": [
+        "PC10",
+        "C10"
+      ]
+    },
+    {
+      "name": "U10",
+      "kind": "NAND",
+      "inputs": [
+        "PC10",
+        "T10"
+      ]
+    },
+    {
+      "name": "V10",
+      "kind": "NAND",
+      "inputs": [
+        "C10",
+        "T10"
+      ]
+    },
+    {
+      "name": "INC10",
+      "kind": "NAND",
+      "inputs": [
+        "U10",
+        "V10"
+      ]
+    },
+    {
+      "name": "C11",
+      "kind": "NAND",
+      "inputs": [
+        "T10",
+        "T10"
+      ]
+    },
+    {
+      "name": "T11",
+      "kind": "NAND",
+      "inputs": [
+        "PC11",
+        "C11"
+      ]
+    },
+    {
+      "name": "U11",
+      "kind": "NAND",
+      "inputs": [
+        "PC11",
+        "T11"
+      ]
+    },
+    {
+      "name": "V11",
+      "kind": "NAND",
+      "inputs": [
+        "C11",
+        "T11"
+      ]
+    },
+    {
+      "name": "INC11",
+      "kind": "NAND",
+      "inputs": [
+        "U11",
+        "V11"
+      ]
+    },
+    {
+      "name": "C12",
+      "kind": "NAND",
+      "inputs": [
+        "T11",
+        "T11"
+      ]
+    },
+    {
+      "name": "T12",
+      "kind": "NAND",
+      "inputs": [
+        "PC12",
+        "C12"
+      ]
+    },
+    {
+      "name": "U12",
+      "kind": "NAND",
+      "inputs": [
+        "PC12",
+        "T12"
+      ]
+    },
+    {
+      "name": "V12",
+      "kind": "NAND",
+      "inputs": [
+        "C12",
+        "T12"
+      ]
+    },
+    {
+      "name": "INC12",
+      "kind": "NAND",
+      "inputs": [
+        "U12",
+        "V12"
+      ]
+    },
+    {
+      "name": "C13",
+      "kind": "NAND",
+      "inputs": [
+        "T12",
+        "T12"
+      ]
+    },
+    {
+      "name": "T13",
+      "kind": "NAND",
+      "inputs": [
+        "PC13",
+        "C13"
+      ]
+    },
+    {
+      "name": "U13",
+      "kind": "NAND",
+      "inputs": [
+        "PC13",
+        "T13"
+      ]
+    },
+    {
+      "name": "V13",
+      "kind": "NAND",
+      "inputs": [
+        "C13",
+        "T13"
+      ]
+    },
+    {
+      "name": "INC13",
+      "kind": "NAND",
+      "inputs": [
+        "U13",
+        "V13"
+      ]
+    },
+    {
+      "name": "C14",
+      "kind": "NAND",
+      "inputs": [
+        "T13",
+        "T13"
+      ]
+    },
+    {
+      "name": "T14",
+      "kind": "NAND",
+      "inputs": [
+        "PC14",
+        "C14"
+      ]
+    },
+    {
+      "name": "U14",
+      "kind": "NAND",
+      "inputs": [
+        "PC14",
+        "T14"
+      ]
+    },
+    {
+      "name": "V14",
+      "kind": "NAND",
+      "inputs": [
+        "C14",
+        "T14"
+      ]
+    },
+    {
+      "name": "INC14",
+      "kind": "NAND",
+      "inputs": [
+        "U14",
+        "V14"
+      ]
+    },
+    {
+      "name": "C15",
+      "kind": "NAND",
+      "inputs": [
+        "T14",
+        "T14"
+      ]
+    },
+    {
+      "name": "T15",
+      "kind": "NAND",
+      "inputs": [
+        "PC15",
+        "C15"
+      ]
+    },
+    {
+      "name": "U15",
+      "kind": "NAND",
+      "inputs": [
+        "PC15",
+        "T15"
+      ]
+    },
+    {
+      "name": "V15",
+      "kind": "NAND",
+      "inputs": [
+        "C15",
+        "T15"
+      ]
+    },
+    {
+      "name": "INC15",
+      "kind": "NAND",
+      "inputs": [
+        "U15",
+        "V15"
+      ]
+    },
+    {
+      "name": "ZN",
+      "kind": "NAND",
+      "inputs": [
+        "Z",
+        "Z"
+      ]
+    },
+    {
+      "name": "JNZ_N",
+      "kind": "NAND",
+      "inputs": [
+        "JNZ",
+        "ZN"
+      ]
+    },
+    {
+      "name": "JMP_N",
+      "kind": "NAND",
+      "inputs": [
+        "JMP",
+        "JMP"
+      ]
+    },
+    {
+      "name": "TAKE",
+      "kind": "NAND",
+      "inputs": [
+        "JNZ_N",
+        "JMP_N"
+      ]
+    },
+    {
+      "name": "TAKE_N",
+      "kind": "NAND",
+      "inputs": [
+        "TAKE",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "SA0",
+      "kind": "NAND",
+      "inputs": [
+        "INC0",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB0",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET0",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D0",
+      "kind": "NAND",
+      "inputs": [
+        "SA0",
+        "SB0"
+      ]
+    },
+    {
+      "name": "SA1",
+      "kind": "NAND",
+      "inputs": [
+        "INC1",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB1",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET1",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D1",
+      "kind": "NAND",
+      "inputs": [
+        "SA1",
+        "SB1"
+      ]
+    },
+    {
+      "name": "SA2",
+      "kind": "NAND",
+      "inputs": [
+        "INC2",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB2",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET2",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D2",
+      "kind": "NAND",
+      "inputs": [
+        "SA2",
+        "SB2"
+      ]
+    },
+    {
+      "name": "SA3",
+      "kind": "NAND",
+      "inputs": [
+        "INC3",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB3",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET3",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D3",
+      "kind": "NAND",
+      "inputs": [
+        "SA3",
+        "SB3"
+      ]
+    },
+    {
+      "name": "SA4",
+      "kind": "NAND",
+      "inputs": [
+        "INC4",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB4",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET4",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D4",
+      "kind": "NAND",
+      "inputs": [
+        "SA4",
+        "SB4"
+      ]
+    },
+    {
+      "name": "SA5",
+      "kind": "NAND",
+      "inputs": [
+        "INC5",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB5",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET5",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D5",
+      "kind": "NAND",
+      "inputs": [
+        "SA5",
+        "SB5"
+      ]
+    },
+    {
+      "name": "SA6",
+      "kind": "NAND",
+      "inputs": [
+        "INC6",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB6",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET6",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D6",
+      "kind": "NAND",
+      "inputs": [
+        "SA6",
+        "SB6"
+      ]
+    },
+    {
+      "name": "SA7",
+      "kind": "NAND",
+      "inputs": [
+        "INC7",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB7",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET7",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D7",
+      "kind": "NAND",
+      "inputs": [
+        "SA7",
+        "SB7"
+      ]
+    },
+    {
+      "name": "SA8",
+      "kind": "NAND",
+      "inputs": [
+        "INC8",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB8",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET8",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D8",
+      "kind": "NAND",
+      "inputs": [
+        "SA8",
+        "SB8"
+      ]
+    },
+    {
+      "name": "SA9",
+      "kind": "NAND",
+      "inputs": [
+        "INC9",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB9",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET9",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D9",
+      "kind": "NAND",
+      "inputs": [
+        "SA9",
+        "SB9"
+      ]
+    },
+    {
+      "name": "SA10",
+      "kind": "NAND",
+      "inputs": [
+        "INC10",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB10",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET10",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D10",
+      "kind": "NAND",
+      "inputs": [
+        "SA10",
+        "SB10"
+      ]
+    },
+    {
+      "name": "SA11",
+      "kind": "NAND",
+      "inputs": [
+        "INC11",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB11",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET11",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D11",
+      "kind": "NAND",
+      "inputs": [
+        "SA11",
+        "SB11"
+      ]
+    },
+    {
+      "name": "SA12",
+      "kind": "NAND",
+      "inputs": [
+        "INC12",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB12",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET12",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D12",
+      "kind": "NAND",
+      "inputs": [
+        "SA12",
+        "SB12"
+      ]
+    },
+    {
+      "name": "SA13",
+      "kind": "NAND",
+      "inputs": [
+        "INC13",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB13",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET13",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D13",
+      "kind": "NAND",
+      "inputs": [
+        "SA13",
+        "SB13"
+      ]
+    },
+    {
+      "name": "SA14",
+      "kind": "NAND",
+      "inputs": [
+        "INC14",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB14",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET14",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D14",
+      "kind": "NAND",
+      "inputs": [
+        "SA14",
+        "SB14"
+      ]
+    },
+    {
+      "name": "SA15",
+      "kind": "NAND",
+      "inputs": [
+        "INC15",
+        "TAKE_N"
+      ]
+    },
+    {
+      "name": "SB15",
+      "kind": "NAND",
+      "inputs": [
+        "TARGET15",
+        "TAKE"
+      ]
+    },
+    {
+      "name": "PC_D15",
+      "kind": "NAND",
+      "inputs": [
+        "SA15",
+        "SB15"
+      ]
+    },
+    {
+      "name": "FETCH_N",
+      "kind": "NAND",
+      "inputs": [
+        "FETCH",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MA0",
+      "kind": "NAND",
+      "inputs": [
+        "PC0",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB0",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR0",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D0",
+      "kind": "NAND",
+      "inputs": [
+        "MA0",
+        "MB0"
+      ]
+    },
+    {
+      "name": "MA1",
+      "kind": "NAND",
+      "inputs": [
+        "PC1",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB1",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR1",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D1",
+      "kind": "NAND",
+      "inputs": [
+        "MA1",
+        "MB1"
+      ]
+    },
+    {
+      "name": "MA2",
+      "kind": "NAND",
+      "inputs": [
+        "PC2",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB2",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR2",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D2",
+      "kind": "NAND",
+      "inputs": [
+        "MA2",
+        "MB2"
+      ]
+    },
+    {
+      "name": "MA3",
+      "kind": "NAND",
+      "inputs": [
+        "PC3",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB3",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR3",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D3",
+      "kind": "NAND",
+      "inputs": [
+        "MA3",
+        "MB3"
+      ]
+    },
+    {
+      "name": "MA4",
+      "kind": "NAND",
+      "inputs": [
+        "PC4",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB4",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR4",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D4",
+      "kind": "NAND",
+      "inputs": [
+        "MA4",
+        "MB4"
+      ]
+    },
+    {
+      "name": "MA5",
+      "kind": "NAND",
+      "inputs": [
+        "PC5",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB5",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR5",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D5",
+      "kind": "NAND",
+      "inputs": [
+        "MA5",
+        "MB5"
+      ]
+    },
+    {
+      "name": "MA6",
+      "kind": "NAND",
+      "inputs": [
+        "PC6",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB6",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR6",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D6",
+      "kind": "NAND",
+      "inputs": [
+        "MA6",
+        "MB6"
+      ]
+    },
+    {
+      "name": "MA7",
+      "kind": "NAND",
+      "inputs": [
+        "PC7",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB7",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR7",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D7",
+      "kind": "NAND",
+      "inputs": [
+        "MA7",
+        "MB7"
+      ]
+    },
+    {
+      "name": "MA8",
+      "kind": "NAND",
+      "inputs": [
+        "PC8",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB8",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR8",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D8",
+      "kind": "NAND",
+      "inputs": [
+        "MA8",
+        "MB8"
+      ]
+    },
+    {
+      "name": "MA9",
+      "kind": "NAND",
+      "inputs": [
+        "PC9",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB9",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR9",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D9",
+      "kind": "NAND",
+      "inputs": [
+        "MA9",
+        "MB9"
+      ]
+    },
+    {
+      "name": "MA10",
+      "kind": "NAND",
+      "inputs": [
+        "PC10",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB10",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR10",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D10",
+      "kind": "NAND",
+      "inputs": [
+        "MA10",
+        "MB10"
+      ]
+    },
+    {
+      "name": "MA11",
+      "kind": "NAND",
+      "inputs": [
+        "PC11",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB11",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR11",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D11",
+      "kind": "NAND",
+      "inputs": [
+        "MA11",
+        "MB11"
+      ]
+    },
+    {
+      "name": "MA12",
+      "kind": "NAND",
+      "inputs": [
+        "PC12",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB12",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR12",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D12",
+      "kind": "NAND",
+      "inputs": [
+        "MA12",
+        "MB12"
+      ]
+    },
+    {
+      "name": "MA13",
+      "kind": "NAND",
+      "inputs": [
+        "PC13",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB13",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR13",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D13",
+      "kind": "NAND",
+      "inputs": [
+        "MA13",
+        "MB13"
+      ]
+    },
+    {
+      "name": "MA14",
+      "kind": "NAND",
+      "inputs": [
+        "PC14",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB14",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR14",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D14",
+      "kind": "NAND",
+      "inputs": [
+        "MA14",
+        "MB14"
+      ]
+    },
+    {
+      "name": "MA15",
+      "kind": "NAND",
+      "inputs": [
+        "PC15",
+        "FETCH"
+      ]
+    },
+    {
+      "name": "MB15",
+      "kind": "NAND",
+      "inputs": [
+        "DATA_ADDR15",
+        "FETCH_N"
+      ]
+    },
+    {
+      "name": "MAR_D15",
+      "kind": "NAND",
+      "inputs": [
+        "MA15",
+        "MB15"
+      ]
+    }
+  ]
+}

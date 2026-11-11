@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "nature": "redes_logicas_educativas_no_esquemas_electricos",
+  "status": "contratos_para_auditoria_no_hardware_fabricado",
+  "circuits": [
+    {
+      "id": "C04_XOR_4NAND",
+      "kind": "combinational",
+      "primary_inputs": ["A", "B"],
+      "output": "D",
+      "figure": "libro/figuras/c04_fig03_xor_cuatro_nand.svg",
+      "source_chapter": "libro/capitulos/04_construir_funciones_con_compuertas.md",
+      "gates": [
+        {"name": "N1", "operation": "NAND", "inputs": ["A", "B"]},
+        {"name": "N2", "operation": "NAND", "inputs": ["A", "N1"]},
+        {"name": "N3", "operation": "NAND", "inputs": ["B", "N1"]},
+        {"name": "D", "operation": "NAND", "inputs": ["N2", "N3"]}
+      ]
+    },
+    {
+      "id": "C05_SR_LATCH_2NAND",
+      "kind": "feedback_sequential_ideal",
+      "primary_inputs": ["S_n", "R_n"],
+      "outputs": ["Q", "Q_n"],
+      "figure": "libro/figuras/c05_fig02_latch_nand_cruzado.svg",
+      "source_chapter": "libro/capitulos/05_la_realimentacion_conserva_informacion.md",
+      "gates": [
+        {"name": "Q", "operation": "NAND", "inputs": ["S_n", "Q_n"]},
+        {"name": "Q_n", "operation": "NAND", "inputs": ["R_n", "Q"]}
+      ],
+      "invalid_release": "sin_estado_final_determinista; no_modelar_metastabilidad"
+    }
+  ]
+}

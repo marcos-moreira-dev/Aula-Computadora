@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "traza_esperada_no_ejecutada",
+  "project_release": "R0.4",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "isa_status": "propuesta_no_aprobada",
+  "program_name": "depositar_42",
+  "program_origin": 24576,
+  "external_bus": {
+    "address_bits": 16,
+    "data_bits": 8,
+    "address_driver": "cpu",
+    "panel_isolated": true
+  },
+  "transactions": [
+    {"order": 1, "operation": "read", "address": 24576, "value": 17, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "opcode LDI"},
+    {"order": 2, "operation": "read", "address": 24577, "value": 0, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "selector R0"},
+    {"order": 3, "operation": "read", "address": 24578, "value": 42, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "inmediato 42"},
+    {"order": 4, "operation": "read", "address": 24579, "value": 19, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "opcode ST"},
+    {"order": 5, "operation": "read", "address": 24580, "value": 0, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "modo absoluto R0"},
+    {"order": 6, "operation": "read", "address": 24581, "value": 0, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "direccion baja"},
+    {"order": 7, "operation": "read", "address": 24582, "value": 111, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "direccion alta"},
+    {"order": 8, "operation": "write", "address": 28416, "value": 42, "data_driver": "cpu", "read_active": false, "write_active": true, "meaning": "RAM captura R0"},
+    {"order": 9, "operation": "read", "address": 24583, "value": 1, "data_driver": "memory", "read_active": true, "write_active": false, "meaning": "opcode HALT"}
+  ],
+  "expected_end_state": {
+    "pc": 24584,
+    "halted": true,
+    "r0": 42,
+    "ram_write": {"address": 28416, "value": 42},
+    "flags": "preserved_unknown_initial"
+  },
+  "exact_clock_cycles": null,
+  "electrical_validation": "not_performed"
+}

@@ -1,0 +1,1131 @@
+{
+  "name": "C28R_AULA8_RUTA_ARITMETICA_ADD_SUB_NAND",
+  "status": "modelo_combinacional_educativo_no_isa_aprobada_no_hardware",
+  "chapters": [
+    "libro/capitulos/10_el_circuito_que_suma.md",
+    "libro/capitulos/11_la_unidad_aritmetico_logica.md"
+  ],
+  "figures": [
+    "libro/figuras/c10_fig02_sumador_completo.svg",
+    "libro/figuras/c10_fig04_cadena_y_dos_bytes.svg",
+    "libro/figuras/c11_fig01_resta_complemento_dos.svg",
+    "libro/figuras/c11_fig02_alu_selector.svg"
+  ],
+  "inputs": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "SUB"
+  ],
+  "gates": [
+    {
+      "name": "bx0_1",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx0_2",
+      "op": "NAND",
+      "inputs": [
+        "B0",
+        "bx0_1"
+      ]
+    },
+    {
+      "name": "bx0_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx0_1"
+      ]
+    },
+    {
+      "name": "Bmod0",
+      "op": "NAND",
+      "inputs": [
+        "bx0_2",
+        "bx0_3"
+      ]
+    },
+    {
+      "name": "an0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "Bmod0"
+      ]
+    },
+    {
+      "name": "au0",
+      "op": "NAND",
+      "inputs": [
+        "A0",
+        "an0"
+      ]
+    },
+    {
+      "name": "av0",
+      "op": "NAND",
+      "inputs": [
+        "Bmod0",
+        "an0"
+      ]
+    },
+    {
+      "name": "P0",
+      "op": "NAND",
+      "inputs": [
+        "au0",
+        "av0"
+      ]
+    },
+    {
+      "name": "cn0",
+      "op": "NAND",
+      "inputs": [
+        "P0",
+        "SUB"
+      ]
+    },
+    {
+      "name": "su0",
+      "op": "NAND",
+      "inputs": [
+        "P0",
+        "cn0"
+      ]
+    },
+    {
+      "name": "sv0",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "cn0"
+      ]
+    },
+    {
+      "name": "S0",
+      "op": "NAND",
+      "inputs": [
+        "su0",
+        "sv0"
+      ]
+    },
+    {
+      "name": "C1",
+      "op": "NAND",
+      "inputs": [
+        "an0",
+        "cn0"
+      ]
+    },
+    {
+      "name": "bx1_1",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx1_2",
+      "op": "NAND",
+      "inputs": [
+        "B1",
+        "bx1_1"
+      ]
+    },
+    {
+      "name": "bx1_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx1_1"
+      ]
+    },
+    {
+      "name": "Bmod1",
+      "op": "NAND",
+      "inputs": [
+        "bx1_2",
+        "bx1_3"
+      ]
+    },
+    {
+      "name": "an1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "Bmod1"
+      ]
+    },
+    {
+      "name": "au1",
+      "op": "NAND",
+      "inputs": [
+        "A1",
+        "an1"
+      ]
+    },
+    {
+      "name": "av1",
+      "op": "NAND",
+      "inputs": [
+        "Bmod1",
+        "an1"
+      ]
+    },
+    {
+      "name": "P1",
+      "op": "NAND",
+      "inputs": [
+        "au1",
+        "av1"
+      ]
+    },
+    {
+      "name": "cn1",
+      "op": "NAND",
+      "inputs": [
+        "P1",
+        "C1"
+      ]
+    },
+    {
+      "name": "su1",
+      "op": "NAND",
+      "inputs": [
+        "P1",
+        "cn1"
+      ]
+    },
+    {
+      "name": "sv1",
+      "op": "NAND",
+      "inputs": [
+        "C1",
+        "cn1"
+      ]
+    },
+    {
+      "name": "S1",
+      "op": "NAND",
+      "inputs": [
+        "su1",
+        "sv1"
+      ]
+    },
+    {
+      "name": "C2",
+      "op": "NAND",
+      "inputs": [
+        "an1",
+        "cn1"
+      ]
+    },
+    {
+      "name": "bx2_1",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx2_2",
+      "op": "NAND",
+      "inputs": [
+        "B2",
+        "bx2_1"
+      ]
+    },
+    {
+      "name": "bx2_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx2_1"
+      ]
+    },
+    {
+      "name": "Bmod2",
+      "op": "NAND",
+      "inputs": [
+        "bx2_2",
+        "bx2_3"
+      ]
+    },
+    {
+      "name": "an2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "Bmod2"
+      ]
+    },
+    {
+      "name": "au2",
+      "op": "NAND",
+      "inputs": [
+        "A2",
+        "an2"
+      ]
+    },
+    {
+      "name": "av2",
+      "op": "NAND",
+      "inputs": [
+        "Bmod2",
+        "an2"
+      ]
+    },
+    {
+      "name": "P2",
+      "op": "NAND",
+      "inputs": [
+        "au2",
+        "av2"
+      ]
+    },
+    {
+      "name": "cn2",
+      "op": "NAND",
+      "inputs": [
+        "P2",
+        "C2"
+      ]
+    },
+    {
+      "name": "su2",
+      "op": "NAND",
+      "inputs": [
+        "P2",
+        "cn2"
+      ]
+    },
+    {
+      "name": "sv2",
+      "op": "NAND",
+      "inputs": [
+        "C2",
+        "cn2"
+      ]
+    },
+    {
+      "name": "S2",
+      "op": "NAND",
+      "inputs": [
+        "su2",
+        "sv2"
+      ]
+    },
+    {
+      "name": "C3",
+      "op": "NAND",
+      "inputs": [
+        "an2",
+        "cn2"
+      ]
+    },
+    {
+      "name": "bx3_1",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx3_2",
+      "op": "NAND",
+      "inputs": [
+        "B3",
+        "bx3_1"
+      ]
+    },
+    {
+      "name": "bx3_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx3_1"
+      ]
+    },
+    {
+      "name": "Bmod3",
+      "op": "NAND",
+      "inputs": [
+        "bx3_2",
+        "bx3_3"
+      ]
+    },
+    {
+      "name": "an3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "Bmod3"
+      ]
+    },
+    {
+      "name": "au3",
+      "op": "NAND",
+      "inputs": [
+        "A3",
+        "an3"
+      ]
+    },
+    {
+      "name": "av3",
+      "op": "NAND",
+      "inputs": [
+        "Bmod3",
+        "an3"
+      ]
+    },
+    {
+      "name": "P3",
+      "op": "NAND",
+      "inputs": [
+        "au3",
+        "av3"
+      ]
+    },
+    {
+      "name": "cn3",
+      "op": "NAND",
+      "inputs": [
+        "P3",
+        "C3"
+      ]
+    },
+    {
+      "name": "su3",
+      "op": "NAND",
+      "inputs": [
+        "P3",
+        "cn3"
+      ]
+    },
+    {
+      "name": "sv3",
+      "op": "NAND",
+      "inputs": [
+        "C3",
+        "cn3"
+      ]
+    },
+    {
+      "name": "S3",
+      "op": "NAND",
+      "inputs": [
+        "su3",
+        "sv3"
+      ]
+    },
+    {
+      "name": "C4",
+      "op": "NAND",
+      "inputs": [
+        "an3",
+        "cn3"
+      ]
+    },
+    {
+      "name": "bx4_1",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx4_2",
+      "op": "NAND",
+      "inputs": [
+        "B4",
+        "bx4_1"
+      ]
+    },
+    {
+      "name": "bx4_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx4_1"
+      ]
+    },
+    {
+      "name": "Bmod4",
+      "op": "NAND",
+      "inputs": [
+        "bx4_2",
+        "bx4_3"
+      ]
+    },
+    {
+      "name": "an4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "Bmod4"
+      ]
+    },
+    {
+      "name": "au4",
+      "op": "NAND",
+      "inputs": [
+        "A4",
+        "an4"
+      ]
+    },
+    {
+      "name": "av4",
+      "op": "NAND",
+      "inputs": [
+        "Bmod4",
+        "an4"
+      ]
+    },
+    {
+      "name": "P4",
+      "op": "NAND",
+      "inputs": [
+        "au4",
+        "av4"
+      ]
+    },
+    {
+      "name": "cn4",
+      "op": "NAND",
+      "inputs": [
+        "P4",
+        "C4"
+      ]
+    },
+    {
+      "name": "su4",
+      "op": "NAND",
+      "inputs": [
+        "P4",
+        "cn4"
+      ]
+    },
+    {
+      "name": "sv4",
+      "op": "NAND",
+      "inputs": [
+        "C4",
+        "cn4"
+      ]
+    },
+    {
+      "name": "S4",
+      "op": "NAND",
+      "inputs": [
+        "su4",
+        "sv4"
+      ]
+    },
+    {
+      "name": "C5",
+      "op": "NAND",
+      "inputs": [
+        "an4",
+        "cn4"
+      ]
+    },
+    {
+      "name": "bx5_1",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx5_2",
+      "op": "NAND",
+      "inputs": [
+        "B5",
+        "bx5_1"
+      ]
+    },
+    {
+      "name": "bx5_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx5_1"
+      ]
+    },
+    {
+      "name": "Bmod5",
+      "op": "NAND",
+      "inputs": [
+        "bx5_2",
+        "bx5_3"
+      ]
+    },
+    {
+      "name": "an5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "Bmod5"
+      ]
+    },
+    {
+      "name": "au5",
+      "op": "NAND",
+      "inputs": [
+        "A5",
+        "an5"
+      ]
+    },
+    {
+      "name": "av5",
+      "op": "NAND",
+      "inputs": [
+        "Bmod5",
+        "an5"
+      ]
+    },
+    {
+      "name": "P5",
+      "op": "NAND",
+      "inputs": [
+        "au5",
+        "av5"
+      ]
+    },
+    {
+      "name": "cn5",
+      "op": "NAND",
+      "inputs": [
+        "P5",
+        "C5"
+      ]
+    },
+    {
+      "name": "su5",
+      "op": "NAND",
+      "inputs": [
+        "P5",
+        "cn5"
+      ]
+    },
+    {
+      "name": "sv5",
+      "op": "NAND",
+      "inputs": [
+        "C5",
+        "cn5"
+      ]
+    },
+    {
+      "name": "S5",
+      "op": "NAND",
+      "inputs": [
+        "su5",
+        "sv5"
+      ]
+    },
+    {
+      "name": "C6",
+      "op": "NAND",
+      "inputs": [
+        "an5",
+        "cn5"
+      ]
+    },
+    {
+      "name": "bx6_1",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx6_2",
+      "op": "NAND",
+      "inputs": [
+        "B6",
+        "bx6_1"
+      ]
+    },
+    {
+      "name": "bx6_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx6_1"
+      ]
+    },
+    {
+      "name": "Bmod6",
+      "op": "NAND",
+      "inputs": [
+        "bx6_2",
+        "bx6_3"
+      ]
+    },
+    {
+      "name": "an6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "Bmod6"
+      ]
+    },
+    {
+      "name": "au6",
+      "op": "NAND",
+      "inputs": [
+        "A6",
+        "an6"
+      ]
+    },
+    {
+      "name": "av6",
+      "op": "NAND",
+      "inputs": [
+        "Bmod6",
+        "an6"
+      ]
+    },
+    {
+      "name": "P6",
+      "op": "NAND",
+      "inputs": [
+        "au6",
+        "av6"
+      ]
+    },
+    {
+      "name": "cn6",
+      "op": "NAND",
+      "inputs": [
+        "P6",
+        "C6"
+      ]
+    },
+    {
+      "name": "su6",
+      "op": "NAND",
+      "inputs": [
+        "P6",
+        "cn6"
+      ]
+    },
+    {
+      "name": "sv6",
+      "op": "NAND",
+      "inputs": [
+        "C6",
+        "cn6"
+      ]
+    },
+    {
+      "name": "S6",
+      "op": "NAND",
+      "inputs": [
+        "su6",
+        "sv6"
+      ]
+    },
+    {
+      "name": "C7",
+      "op": "NAND",
+      "inputs": [
+        "an6",
+        "cn6"
+      ]
+    },
+    {
+      "name": "bx7_1",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "SUB"
+      ]
+    },
+    {
+      "name": "bx7_2",
+      "op": "NAND",
+      "inputs": [
+        "B7",
+        "bx7_1"
+      ]
+    },
+    {
+      "name": "bx7_3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "bx7_1"
+      ]
+    },
+    {
+      "name": "Bmod7",
+      "op": "NAND",
+      "inputs": [
+        "bx7_2",
+        "bx7_3"
+      ]
+    },
+    {
+      "name": "an7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "Bmod7"
+      ]
+    },
+    {
+      "name": "au7",
+      "op": "NAND",
+      "inputs": [
+        "A7",
+        "an7"
+      ]
+    },
+    {
+      "name": "av7",
+      "op": "NAND",
+      "inputs": [
+        "Bmod7",
+        "an7"
+      ]
+    },
+    {
+      "name": "P7",
+      "op": "NAND",
+      "inputs": [
+        "au7",
+        "av7"
+      ]
+    },
+    {
+      "name": "cn7",
+      "op": "NAND",
+      "inputs": [
+        "P7",
+        "C7"
+      ]
+    },
+    {
+      "name": "su7",
+      "op": "NAND",
+      "inputs": [
+        "P7",
+        "cn7"
+      ]
+    },
+    {
+      "name": "sv7",
+      "op": "NAND",
+      "inputs": [
+        "C7",
+        "cn7"
+      ]
+    },
+    {
+      "name": "S7",
+      "op": "NAND",
+      "inputs": [
+        "su7",
+        "sv7"
+      ]
+    },
+    {
+      "name": "C8",
+      "op": "NAND",
+      "inputs": [
+        "an7",
+        "cn7"
+      ]
+    },
+    {
+      "name": "cf1",
+      "op": "NAND",
+      "inputs": [
+        "C8",
+        "SUB"
+      ]
+    },
+    {
+      "name": "cf2",
+      "op": "NAND",
+      "inputs": [
+        "C8",
+        "cf1"
+      ]
+    },
+    {
+      "name": "cf3",
+      "op": "NAND",
+      "inputs": [
+        "SUB",
+        "cf1"
+      ]
+    },
+    {
+      "name": "Cflag",
+      "op": "NAND",
+      "inputs": [
+        "cf2",
+        "cf3"
+      ]
+    },
+    {
+      "name": "vf1",
+      "op": "NAND",
+      "inputs": [
+        "C7",
+        "C8"
+      ]
+    },
+    {
+      "name": "vf2",
+      "op": "NAND",
+      "inputs": [
+        "C7",
+        "vf1"
+      ]
+    },
+    {
+      "name": "vf3",
+      "op": "NAND",
+      "inputs": [
+        "C8",
+        "vf1"
+      ]
+    },
+    {
+      "name": "V",
+      "op": "NAND",
+      "inputs": [
+        "vf2",
+        "vf3"
+      ]
+    },
+    {
+      "name": "notS0",
+      "op": "NAND",
+      "inputs": [
+        "S0",
+        "S0"
+      ]
+    },
+    {
+      "name": "notS1",
+      "op": "NAND",
+      "inputs": [
+        "S1",
+        "S1"
+      ]
+    },
+    {
+      "name": "notS2",
+      "op": "NAND",
+      "inputs": [
+        "S2",
+        "S2"
+      ]
+    },
+    {
+      "name": "notS3",
+      "op": "NAND",
+      "inputs": [
+        "S3",
+        "S3"
+      ]
+    },
+    {
+      "name": "notS4",
+      "op": "NAND",
+      "inputs": [
+        "S4",
+        "S4"
+      ]
+    },
+    {
+      "name": "notS5",
+      "op": "NAND",
+      "inputs": [
+        "S5",
+        "S5"
+      ]
+    },
+    {
+      "name": "notS6",
+      "op": "NAND",
+      "inputs": [
+        "S6",
+        "S6"
+      ]
+    },
+    {
+      "name": "notS7",
+      "op": "NAND",
+      "inputs": [
+        "S7",
+        "S7"
+      ]
+    },
+    {
+      "name": "z_0_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "notS0",
+        "notS1"
+      ]
+    },
+    {
+      "name": "z_0_0",
+      "op": "NAND",
+      "inputs": [
+        "z_0_0_neg",
+        "z_0_0_neg"
+      ]
+    },
+    {
+      "name": "z_0_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "notS2",
+        "notS3"
+      ]
+    },
+    {
+      "name": "z_0_2",
+      "op": "NAND",
+      "inputs": [
+        "z_0_2_neg",
+        "z_0_2_neg"
+      ]
+    },
+    {
+      "name": "z_0_4_neg",
+      "op": "NAND",
+      "inputs": [
+        "notS4",
+        "notS5"
+      ]
+    },
+    {
+      "name": "z_0_4",
+      "op": "NAND",
+      "inputs": [
+        "z_0_4_neg",
+        "z_0_4_neg"
+      ]
+    },
+    {
+      "name": "z_0_6_neg",
+      "op": "NAND",
+      "inputs": [
+        "notS6",
+        "notS7"
+      ]
+    },
+    {
+      "name": "z_0_6",
+      "op": "NAND",
+      "inputs": [
+        "z_0_6_neg",
+        "z_0_6_neg"
+      ]
+    },
+    {
+      "name": "z_1_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_0_0",
+        "z_0_2"
+      ]
+    },
+    {
+      "name": "z_1_0",
+      "op": "NAND",
+      "inputs": [
+        "z_1_0_neg",
+        "z_1_0_neg"
+      ]
+    },
+    {
+      "name": "z_1_2_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_0_4",
+        "z_0_6"
+      ]
+    },
+    {
+      "name": "z_1_2",
+      "op": "NAND",
+      "inputs": [
+        "z_1_2_neg",
+        "z_1_2_neg"
+      ]
+    },
+    {
+      "name": "z_2_0_neg",
+      "op": "NAND",
+      "inputs": [
+        "z_1_0",
+        "z_1_2"
+      ]
+    },
+    {
+      "name": "z_2_0",
+      "op": "NAND",
+      "inputs": [
+        "z_2_0_neg",
+        "z_2_0_neg"
+      ]
+    }
+  ],
+  "outputs": {
+    "S": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "C7": "C7",
+    "Cout": "C8",
+    "Cflag": "Cflag",
+    "V": "V",
+    "N": "S7",
+    "Z": "z_2_0"
+  },
+  "limits": [
+    "134 NAND sin retardos ni cargas eléctricas",
+    "solo ADD/SUB, no multiplexor completo de ALU",
+    "no política de flags para AND/OR/XOR/NOT",
+    "no reloj, registros, microcódigo ni CPU"
+  ]
+}

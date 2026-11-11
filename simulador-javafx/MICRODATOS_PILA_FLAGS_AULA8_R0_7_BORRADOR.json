@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "project_release": "R0.7",
+  "status": "propuesta_no_aprobada",
+  "granularity": "acciones_logicas_no_ciclos_de_reloj",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "fetch_reference": "MICROSECUENCIAS_AULA8_BORRADOR.json",
+  "stack_reference": "MICROFLUJO_AULA8_R0_6_BORRADOR.json",
+  "microcode_compiled": false,
+  "cpu_executed": false,
+  "electrical_validation": false,
+  "exact_clock_cycles": null,
+  "flags": ["Z", "N", "C", "V"],
+  "flags_conventions": {
+    "add_adc": "C=carry_out; V=signed_overflow; Z/N from 8bit result",
+    "sub_sbc_cmp": "C=borrow_out; SBC consumes incoming borrow; V=signed_overflow; Z/N from 8bit result",
+    "inc_dec": "Z/N/V updated; C preserved; V only at 7F_to_80 for INC or 80_to_7F for DEC",
+    "bitwise": "Z/N updated; C preserved; V zero",
+    "shift": "Z/N updated; C equals shifted-out bit; V zero",
+    "stack_and_load": "PUSH/POP/PUSHX/POPX/LDI preserve Z/N/C/V",
+    "address_arithmetic": "ADDR_CARRY private; Z/N/C/V preserved"
+  },
+  "routes": {
+    "PUSH": {
+      "opcode": "1A",
+      "states": [
+        {"id": "PUSH_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "PUSH_CHECK"},
+        {"id": "PUSH_CHECK", "action": "CHECK_REG_SELECTOR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSH_DEC_SP", "on_invalid": "FAULT"},
+        {"id": "PUSH_DEC_SP", "action": "SUB_ONE_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSH_MAR"},
+        {"id": "PUSH_MAR", "action": "LOAD_MAR_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSH_MDR"},
+        {"id": "PUSH_MDR", "action": "LOAD_MDR_FROM_SELECTED_REG", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSH_WRITE"},
+        {"id": "PUSH_WRITE", "action": "WRITE_MDR_AT_MAR", "bus": "write", "pc_advance": false, "flags_write": false, "next": "PUSH_END"},
+        {"id": "PUSH_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "POP": {
+      "opcode": "1B",
+      "states": [
+        {"id": "POP_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "POP_CHECK"},
+        {"id": "POP_CHECK", "action": "CHECK_REG_SELECTOR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POP_MAR", "on_invalid": "FAULT"},
+        {"id": "POP_MAR", "action": "LOAD_MAR_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POP_READ"},
+        {"id": "POP_READ", "action": "READ_MAR_TO_TMP", "bus": "read", "pc_advance": false, "flags_write": false, "next": "POP_REG"},
+        {"id": "POP_REG", "action": "LOAD_SELECTED_REG_FROM_TMP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POP_INC_SP"},
+        {"id": "POP_INC_SP", "action": "ADD_ONE_TO_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POP_END"},
+        {"id": "POP_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "PUSHX": {
+      "opcode": "1C",
+      "states": [
+        {"id": "PUSHX_DEC_SP", "action": "SUB_TWO_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSHX_MAR_LO"},
+        {"id": "PUSHX_MAR_LO", "action": "LOAD_MAR_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSHX_MDR_LO"},
+        {"id": "PUSHX_MDR_LO", "action": "LOAD_MDR_FROM_X_LO", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSHX_WRITE_LO"},
+        {"id": "PUSHX_WRITE_LO", "action": "WRITE_MDR_AT_MAR", "bus": "write", "pc_advance": false, "flags_write": false, "next": "PUSHX_MAR_HI"},
+        {"id": "PUSHX_MAR_HI", "action": "LOAD_MAR_FROM_SP_PLUS_ONE", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSHX_MDR_HI"},
+        {"id": "PUSHX_MDR_HI", "action": "LOAD_MDR_FROM_X_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "PUSHX_WRITE_HI"},
+        {"id": "PUSHX_WRITE_HI", "action": "WRITE_MDR_AT_MAR", "bus": "write", "pc_advance": false, "flags_write": false, "next": "PUSHX_END"},
+        {"id": "PUSHX_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "POPX": {
+      "opcode": "1D",
+      "states": [
+        {"id": "POPX_MAR_LO", "action": "LOAD_MAR_FROM_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POPX_READ_LO"},
+        {"id": "POPX_READ_LO", "action": "READ_MAR_TO_ADDR_LO", "bus": "read", "pc_advance": false, "flags_write": false, "next": "POPX_MAR_HI"},
+        {"id": "POPX_MAR_HI", "action": "LOAD_MAR_FROM_SP_PLUS_ONE", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POPX_READ_HI"},
+        {"id": "POPX_READ_HI", "action": "READ_MAR_TO_ADDR_HI", "bus": "read", "pc_advance": false, "flags_write": false, "next": "POPX_LOAD_X"},
+        {"id": "POPX_LOAD_X", "action": "LOAD_X_FROM_ADDR_LO_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POPX_INC_SP"},
+        {"id": "POPX_INC_SP", "action": "ADD_TWO_TO_SP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "POPX_END"},
+        {"id": "POPX_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "INC": {
+      "opcode": "29",
+      "states": [
+        {"id": "INC_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "INC_CHECK"},
+        {"id": "INC_CHECK", "action": "CHECK_REG_SELECTOR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "INC_COMMIT", "on_invalid": "FAULT"},
+        {"id": "INC_COMMIT", "action": "INC_SELECTED_REG_AND_ZNV_PRESERVE_C", "bus": "none", "pc_advance": false, "flags_write": true, "next": "INC_END"},
+        {"id": "INC_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "DEC": {
+      "opcode": "2A",
+      "states": [
+        {"id": "DEC_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "DEC_CHECK"},
+        {"id": "DEC_CHECK", "action": "CHECK_REG_SELECTOR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "DEC_COMMIT", "on_invalid": "FAULT"},
+        {"id": "DEC_COMMIT", "action": "DEC_SELECTED_REG_AND_ZNV_PRESERVE_C", "bus": "none", "pc_advance": false, "flags_write": true, "next": "DEC_END"},
+        {"id": "DEC_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    }
+  },
+  "edge_vectors": [
+    {"operation": "INC", "a": 127, "carry_in": 1, "result": 128, "Z": 0, "N": 1, "C": 1, "V": 1},
+    {"operation": "INC", "a": 255, "carry_in": 0, "result": 0, "Z": 1, "N": 0, "C": 0, "V": 0},
+    {"operation": "DEC", "a": 128, "carry_in": 0, "result": 127, "Z": 0, "N": 0, "C": 0, "V": 1},
+    {"operation": "DEC", "a": 0, "carry_in": 1, "result": 255, "Z": 0, "N": 1, "C": 1, "V": 0},
+    {"operation": "DEC", "a": 1, "carry_in": 1, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0},
+    {"operation": "ADD", "a": 127, "b": 1, "carry_in": 0, "result": 128, "Z": 0, "N": 1, "C": 0, "V": 1},
+    {"operation": "ADD", "a": 255, "b": 1, "carry_in": 0, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0},
+    {"operation": "ADC", "a": 255, "b": 0, "carry_in": 1, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0},
+    {"operation": "SUB", "a": 0, "b": 1, "carry_in": 0, "result": 255, "Z": 0, "N": 1, "C": 1, "V": 0},
+    {"operation": "SUB", "a": 128, "b": 1, "carry_in": 0, "result": 127, "Z": 0, "N": 0, "C": 0, "V": 1},
+    {"operation": "SBC", "a": 0, "b": 0, "carry_in": 1, "result": 255, "Z": 0, "N": 1, "C": 1, "V": 0},
+    {"operation": "CMP", "a": 5, "b": 7, "carry_in": 0, "result": 254, "Z": 0, "N": 1, "C": 1, "V": 0},
+    {"operation": "AND", "a": 255, "b": 0, "carry_in": 1, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0},
+    {"operation": "SHL", "a": 128, "carry_in": 0, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0},
+    {"operation": "SHR", "a": 1, "carry_in": 0, "result": 0, "Z": 1, "N": 0, "C": 1, "V": 0}
+  ],
+  "examples": {
+    "push_pop_dec": {
+      "origin": 24576,
+      "bytes_hex": "11 00 2A 1A 00 11 00 00 1B 00 2A 00 01",
+      "initial_sp": 32768,
+      "expected_trace": [
+        {"operation": "read", "address": 24576, "value": 17},
+        {"operation": "read", "address": 24577, "value": 0},
+        {"operation": "read", "address": 24578, "value": 42},
+        {"operation": "read", "address": 24579, "value": 26},
+        {"operation": "read", "address": 24580, "value": 0},
+        {"operation": "write", "address": 32767, "value": 42},
+        {"operation": "read", "address": 24581, "value": 17},
+        {"operation": "read", "address": 24582, "value": 0},
+        {"operation": "read", "address": 24583, "value": 0},
+        {"operation": "read", "address": 24584, "value": 27},
+        {"operation": "read", "address": 24585, "value": 0},
+        {"operation": "read", "address": 32767, "value": 42},
+        {"operation": "read", "address": 24586, "value": 42},
+        {"operation": "read", "address": 24587, "value": 0},
+        {"operation": "read", "address": 24588, "value": 1}
+      ],
+      "expected_final": {
+        "pc": 24589,
+        "sp": 32768,
+        "r0": 41,
+        "stack_byte_address": 32767,
+        "stack_byte_residual": 42,
+        "flags": {"Z": 0, "N": 0, "C": "preserved_initial", "V": 0},
+        "halted": true
+      }
+    },
+    "pushx_popx": {
+      "initial_sp": 32768,
+      "initial_x": 4779,
+      "after_pushx_sp": 32766,
+      "stack_low": 171,
+      "stack_high": 18,
+      "after_popx_sp": 32768,
+      "after_popx_x": 4779,
+      "flags": "preserved_initial"
+    },
+    "dec_jnz_3": {
+      "initial_r0": 3,
+      "after_dec": [2, 1, 0],
+      "Z_after_dec": [0, 0, 1],
+      "JNZ_taken": [true, true, false],
+      "C": "preserved_initial"
+    }
+  }
+}

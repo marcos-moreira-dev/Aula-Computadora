@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Celda SRAM de seis transistores, abstracción lógica</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">SRAM: conservar un bit y habilitar su acceso</text>
+<text x="39" y="80" class="small">Dos inversores se realimentan; WL gobierna dos accesos hacia las líneas de bit.</text>
+<rect x="40" y="116" width="922" height="319" rx="17" fill="#f5f8fa" stroke="#bbccd7"/>
+<rect x="335" y="218" width="142" height="79" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/><rect x="547" y="218" width="142" height="79" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/>
+<text x="406" y="263" class="label" text-anchor="middle">INV 1</text>
+<text x="618" y="263" class="label" text-anchor="middle">INV 2</text>
+<path class="wire" d="M335,258 H299 V329 H726 V258 H689"/>
+<path class="wire" d="M477,258 H547"/>
+<text x="506" y="284" class="tiny" text-anchor="middle">Q̅</text>
+<text x="516" y="346" class="tiny" text-anchor="middle">Q</text>
+<rect x="201" y="206" width="87" height="66" rx="14" fill="#fff3dc" stroke="#28465b" stroke-width="3"/><rect x="740" y="206" width="87" height="66" rx="14" fill="#fff3dc" stroke="#28465b" stroke-width="3"/>
+<text x="245" y="247" class="small" text-anchor="middle">Acceso</text>
+<text x="784" y="247" class="small" text-anchor="middle">Acceso</text>
+<path class="wire" d="M112,240 H201 M827,240 H916"/>
+<text x="111" y="213" class="label accent">BL</text>
+<text x="883" y="213" class="label accent">BL̅</text>
+<path class="wire" d="M245,150 V206 M784,150 V206 M245,150 H784"/>
+<text x="493" y="138" class="label accent" text-anchor="middle">WL: línea de palabra</text>
+<path class="wire" d="M288,240 H335 M512,258 V184 H740 V240"/>
+<text x="500" y="403" class="small" text-anchor="middle">Núcleo lógico de realimentación + dos transistores de acceso</text>
+<text x="500" y="473" class="tiny" text-anchor="middle">Bloques funcionales; no es un esquema 6T de transistores ni incluye prelectura y amplificador.</text>
+</svg>

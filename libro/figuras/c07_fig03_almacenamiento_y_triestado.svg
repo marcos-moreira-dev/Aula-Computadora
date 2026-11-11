@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Almacenamiento y salida triestado</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="44" y="47" class="label">Guardar un byte no equivale a conducirlo al bus</text>
+<text x="44" y="82" class="small">LOAD y OE_n controlan bloques diferentes.</text>
+<rect x="106" y="186" width="273" height="155" rx="12" fill="#e6f3fa" stroke="#28465b" stroke-width="3"/><text x="242.5" y="270.5" text-anchor="middle" class="label">Registro de 8 bits</text><rect x="538" y="198" width="199" height="131" rx="12" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/><text x="637.5" y="270.5" text-anchor="middle" class="small">Búfer 3 estados</text>
+<text x="54" y="230" class="small accent">IN[7:0]</text>
+<path class="wire" d="M80,244 H106"/>
+<path class="wire" d="M379,264 H538"/>
+<text x="439" y="245" class="small accent">Q[7:0]</text>
+<path class="wire" d="M737,264 H928"/>
+<text x="793" y="246" class="label accent">BUS[7:0]</text>
+<path class="wire" d="M239,127 V186"/>
+<text x="199" y="117" class="small accent">LOAD + CLK</text>
+<path class="wire" d="M629,129 V198"/>
+<text x="607" y="116" class="label accent">OE_n</text>
+<rect x="126" y="382" width="741" height="69" rx="12" fill="#f0f5f9"/>
+<text x="500" y="409" class="small" text-anchor="middle">OE_n = 0: BUS recibe Q.  OE_n = 1: salida Z.</text>
+<text x="500" y="437" class="tiny" text-anchor="middle">Z no borra Q y no debe confundirse con 0 lógico.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Little-endian desde un registro hacia dos bytes</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Little-endian desde un registro hacia dos bytes</text><text x="35" y="76" class="small">La posición de los bytes cambia, no los bits de cada byte.</text><rect x="308" y="120" width="388" height="112" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="502.0" y="168" class="label" text-anchor="middle">REGISTRO R0</text><text x="502.0" y="214" class="small" text-anchor="middle">0x1234</text><rect x="35" y="314" width="420" height="120" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="245.0" y="362" class="label" text-anchor="middle">RAM[2000]  ·  BANCO BAJO</text><text x="245.0" y="408" class="small" text-anchor="middle">0x34</text><rect x="544" y="314" width="420" height="120" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="754.0" y="362" class="label" text-anchor="middle">RAM[2001]  ·  BANCO ALTO</text><text x="754.0" y="408" class="small" text-anchor="middle">0x12</text><path d="M397,234 L248,310" fill="none" stroke="#244d68" stroke-width="4"/><path d="M248,310 L259.05442963821747,294.25834870880124 L267.2331531347461,310.2929513533113 Z" fill="#244d68"/><path d="M607,234 L754,310" fill="none" stroke="#244d68" stroke-width="4"/><path d="M754,310 L734.7655281383595,310.18732913217434 L743.0321814549552,294.19788126981155 Z" fill="#244d68"/><text x="500" y="475" class="small" text-anchor="middle">Lectura: 34 + (12 × 256) = 0x1234.</text></svg>

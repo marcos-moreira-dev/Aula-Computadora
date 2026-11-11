@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Interfaz funcional SRAM 32K por 8</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="45" class="label">AS6C62256: el chip lleva dentro la matriz y sus decodificadores</text>
+<text x="40" y="83" class="small">Las etiquetas son nombres de señal, no números físicos de patilla.</text>
+<rect x="332" y="141" width="346" height="277" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/>
+<text x="505" y="193" class="label" text-anchor="middle">SRAM AS6C62256</text>
+<text x="505" y="228" class="small" text-anchor="middle">32K posiciones × 8 bits</text>
+<text x="505" y="278" class="small" text-anchor="middle">Decodificador + matriz</text>
+<text x="505" y="315" class="small" text-anchor="middle">Lectura + escritura</text>
+<path class="wire" d="M67,212 H332"/>
+<path d="M317,202 l15,10 -15,10" fill="none" stroke="#28465b" stroke-width="3"/>
+<text x="75" y="193" class="label accent">A0…A14 (15)</text>
+<path class="wire" d="M678,212 H939"/>
+<path d="M693,202 l-15,10 15,10 M924,202 l15,10 -15,10" fill="none" stroke="#28465b" stroke-width="3"/>
+<text x="712" y="189" class="label accent">DQ0…DQ7 (8)</text>
+<path class="wire" d="M174,364 H332"/>
+<text x="73" y="351" class="small accent">CE#, OE#, WE#</text>
+<path class="wire" d="M504,113 V141 M504,418 V454"/>
+<text x="521" y="130" class="tiny">VCC</text>
+<text x="520" y="446" class="tiny">VSS</text>
+<text x="500" y="482" text-anchor="middle" class="tiny">Los detalles de alimentación y tiempos dependen de la hoja de datos del modelo y encapsulado exactos.</text>
+</svg>

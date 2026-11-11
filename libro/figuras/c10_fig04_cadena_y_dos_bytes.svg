@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Acarreo propagado en 8 bits y dos bytes</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">El acarreo conecta cada etapa con la siguiente</text>
+<text x="38" y="80" class="small">La etapa FA0 trabaja con el bit de menor peso; FA7 recibe el último acarreo interno.</text>
+<rect x="71" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="112" y="198" class="label" text-anchor="middle">FA0</text><text x="112" y="228" class="tiny" text-anchor="middle">S0</text><path class="wire" d="M112,119 V163"/><text x="112" y="107" class="tiny" text-anchor="middle">A0,B0</text><path class="wire" d="M153,206 H180"/><text x="166" y="193" class="tiny" text-anchor="middle">C1</text><rect x="180" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="221" y="198" class="label" text-anchor="middle">FA1</text><text x="221" y="228" class="tiny" text-anchor="middle">S1</text><path class="wire" d="M221,119 V163"/><text x="221" y="107" class="tiny" text-anchor="middle">A1,B1</text><path class="wire" d="M262,206 H289"/><text x="275" y="193" class="tiny" text-anchor="middle">C2</text><rect x="289" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="330" y="198" class="label" text-anchor="middle">FA2</text><text x="330" y="228" class="tiny" text-anchor="middle">S2</text><path class="wire" d="M330,119 V163"/><text x="330" y="107" class="tiny" text-anchor="middle">A2,B2</text><path class="wire" d="M371,206 H398"/><text x="384" y="193" class="tiny" text-anchor="middle">C3</text><rect x="398" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="439" y="198" class="label" text-anchor="middle">FA3</text><text x="439" y="228" class="tiny" text-anchor="middle">S3</text><path class="wire" d="M439,119 V163"/><text x="439" y="107" class="tiny" text-anchor="middle">A3,B3</text><path class="wire" d="M480,206 H507"/><text x="493" y="193" class="tiny" text-anchor="middle">C4</text><rect x="507" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="548" y="198" class="label" text-anchor="middle">FA4</text><text x="548" y="228" class="tiny" text-anchor="middle">S4</text><path class="wire" d="M548,119 V163"/><text x="548" y="107" class="tiny" text-anchor="middle">A4,B4</text><path class="wire" d="M589,206 H616"/><text x="602" y="193" class="tiny" text-anchor="middle">C5</text><rect x="616" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="657" y="198" class="label" text-anchor="middle">FA5</text><text x="657" y="228" class="tiny" text-anchor="middle">S5</text><path class="wire" d="M657,119 V163"/><text x="657" y="107" class="tiny" text-anchor="middle">A5,B5</text><path class="wire" d="M698,206 H725"/><text x="711" y="193" class="tiny" text-anchor="middle">C6</text><rect x="725" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="766" y="198" class="label" text-anchor="middle">FA6</text><text x="766" y="228" class="tiny" text-anchor="middle">S6</text><path class="wire" d="M766,119 V163"/><text x="766" y="107" class="tiny" text-anchor="middle">A6,B6</text><path class="wire" d="M807,206 H834"/><text x="820" y="193" class="tiny" text-anchor="middle">C7</text><rect x="834" y="163" width="82" height="88" rx="14" fill="#e4f3e9" stroke="#28465b" stroke-width="3"/><text x="875" y="198" class="label" text-anchor="middle">FA7</text><text x="875" y="228" class="tiny" text-anchor="middle">S7</text><path class="wire" d="M875,119 V163"/><text x="875" y="107" class="tiny" text-anchor="middle">A7,B7</text>
+<path class="wire" d="M35,206 H71 M916,206 H968"/>
+<text x="33" y="192" class="tiny">C0=0</text>
+<text x="929" y="190" class="tiny">C8</text>
+<text x="500" y="287" class="small" text-anchor="middle">Ocho sumadores completos: las salidas S0...S7 forman un byte.</text>
+<rect x="71" y="323" width="389" height="115" rx="14" fill="#eef6fc" stroke="#28465b" stroke-width="3"/><rect x="541" y="323" width="389" height="115" rx="14" fill="#f1f8ec" stroke="#28465b" stroke-width="3"/>
+<text x="265" y="353" class="label" text-anchor="middle">Primera pasada: byte bajo</text>
+<text x="265" y="391" class="small" text-anchor="middle">FF + 01 + 0 = 100 (hex)</text>
+<text x="265" y="420" class="tiny" text-anchor="middle">Sale 00, pasa acarreo 1</text>
+<text x="736" y="353" class="label" text-anchor="middle">Segunda pasada: byte alto</text>
+<text x="736" y="391" class="small" text-anchor="middle">01 + 00 + 1 = 02 (hex)</text>
+<text x="736" y="420" class="tiny" text-anchor="middle">Resultado global 0x0200</text>
+<path class="wire" d="M460,388 H541"/>
+<text x="501" y="376" class="tiny accent" text-anchor="middle">carry</text>
+<text x="500" y="485" class="tiny" text-anchor="middle">El ejemplo de dos bytes usa una ALU de 8 bits en dos pasos; no es un diagrama temporal ni un plano eléctrico.</text>
+</svg>

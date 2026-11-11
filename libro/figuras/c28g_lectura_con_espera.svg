@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1115" viewBox="0 0 1760 1115">
+<rect width="100%" height="100%" fill="#fdfdfb"/>
+<text x="72" y="82" fill="#173b4d" font-size="37" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Una lectura ocupa varios momentos, no un instante mágico</text>
+<text x="72" y="134" fill="#4d697c" font-size="25" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Contrato temporal del piloto, sin tiempos eléctricos ni pin READY obligatorio</text>
+<rect x="69" y="179" width="1622" height="760" rx="12" fill="#edf4f8"/>
+<text x="98" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Momento</text>
+<text x="380" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC después</text>
+<text x="620" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">MAR después</text>
+<text x="912" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">RD</text>
+<text x="1085" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">MDR válido</text>
+<text x="1380" y="237" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">Dato</text>
+<rect x="90" y="275" width="1580" height="82" rx="12" fill="#e3ebf7"/>
+<text x="112" y="327" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PREPARAR</text>
+<text x="390" y="327" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="625" y="327" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="926" y="327" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">1</text>
+<text x="1118" y="327" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">no</text>
+<text x="1385" y="327" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">—</text>
+<rect x="90" y="371" width="1580" height="82" rx="12" fill="#fff0d8"/>
+<text x="112" y="423" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">ESPERAR</text>
+<text x="390" y="423" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="625" y="423" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="926" y="423" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">1</text>
+<text x="1118" y="423" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">no</text>
+<text x="1385" y="423" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">—</text>
+<rect x="90" y="467" width="1580" height="82" rx="12" fill="#fff0d8"/>
+<text x="112" y="519" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">ESPERAR</text>
+<text x="390" y="519" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="625" y="519" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="926" y="519" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">1</text>
+<text x="1118" y="519" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">no</text>
+<text x="1385" y="519" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">—</text>
+<rect x="90" y="563" width="1580" height="82" rx="12" fill="#dcefe7"/>
+<text x="112" y="615" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">ACEPTAR</text>
+<text x="390" y="615" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6001</text>
+<text x="625" y="615" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6000</text>
+<text x="926" y="615" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0</text>
+<text x="1118" y="615" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">sí</text>
+<text x="1385" y="615" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">32</text>
+<rect x="90" y="659" width="1580" height="82" rx="12" fill="#e3ebf7"/>
+<text x="112" y="711" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PREPARAR</text>
+<text x="390" y="711" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6001</text>
+<text x="625" y="711" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6001</text>
+<text x="926" y="711" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">1</text>
+<text x="1118" y="711" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">no</text>
+<text x="1385" y="711" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">—</text>
+<rect x="90" y="755" width="1580" height="82" rx="12" fill="#dcefe7"/>
+<text x="112" y="807" fill="#173b4d" font-size="26" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">ACEPTAR</text>
+<text x="390" y="807" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6002</text>
+<text x="625" y="807" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">6001</text>
+<text x="926" y="807" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">0</text>
+<text x="1118" y="807" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">sí</text>
+<text x="1385" y="807" fill="#173b4d" font-size="28" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">09</text>
+<text x="94" y="1003" fill="#173b4d" font-size="25" font-family="DejaVu Sans" font-weight="bold" text-anchor="start">PC y MAR se mantienen durante READY=0; el PC avanza solo al aceptar el byte.</text>
+<text x="94" y="1052" fill="#526b78" font-size="23" font-family="DejaVu Sans" font-weight="normal" text-anchor="start">Dato de ejemplo: MEM[6000]=32, MEM[6001]=09; sólo modelo de anfitrión.</text>
+</svg>

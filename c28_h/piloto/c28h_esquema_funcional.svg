@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="780" viewBox="0 0 1500 780">
+<defs><marker id="arrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 Z" fill="#315774"/></marker></defs>
+<rect width="1500" height="780" fill="#f8fbfe"/>
+<text x="70" y="87" font-family="DejaVu Sans" font-size="38" font-weight="bold" fill="#153952">C28-H · Cómo se conserva una lectura</text>
+<text x="70" y="130" font-family="DejaVu Sans" font-size="23" fill="#526c80">Diagrama funcional del piloto, no esquema de cables ni netlist eléctrico.</text>
+<g stroke="#315774" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M337 335 H440"/><path d="M680 335 H790"/><path d="M1038 335 H1140"/><path d="M555 235 V280"/><path d="M920 230 V280"/></g>
+<g stroke="#24465c" stroke-width="3">
+<rect x="70" y="281" width="267" height="110" rx="14" fill="#e5eff6"/>
+<rect x="440" y="281" width="240" height="110" rx="14" fill="#e6ecff"/>
+<rect x="790" y="281" width="248" height="110" rx="14" fill="#fff0dc"/>
+<rect x="1140" y="281" width="265" height="110" rx="14" fill="#dcf2e7"/>
+<rect x="416" y="151" width="280" height="79" rx="14" fill="#dceaf5"/>
+<rect x="790" y="151" width="248" height="79" rx="14" fill="#f1e7fc"/>
+</g>
+<g font-family="DejaVu Sans" fill="#183b53" text-anchor="middle">
+<text x="204" y="326" font-size="25" font-weight="bold">Solicitud</text><text x="204" y="360" font-size="21">FETCH / DATO</text>
+<text x="560" y="326" font-size="27" font-weight="bold">MAR (16)</text><text x="560" y="360" font-size="20">retiene dirección</text>
+<text x="914" y="326" font-size="26" font-weight="bold">Memoria</text><text x="914" y="360" font-size="20">respuesta ideal</text>
+<text x="1272" y="326" font-size="26" font-weight="bold">MDR (8)</text><text x="1272" y="360" font-size="20">captura byte</text>
+<text x="555" y="184" font-size="25" font-weight="bold">PC (16)</text><text x="555" y="211" font-size="18">dirección de instrucción</text>
+<text x="914" y="184" font-size="25" font-weight="bold">RD / READY</text><text x="914" y="211" font-size="18">esperar o aceptar</text>
+</g>
+<rect x="70" y="455" width="1335" height="225" rx="15" fill="#eaf2f7"/>
+<g font-family="DejaVu Sans" fill="#173c55"><text x="100" y="500" font-size="26" font-weight="bold">¿Cuándo cambia el PC?</text>
+<text x="105" y="551" font-size="23">Alternativa A (C28-F): al solicitar FETCH, con MAR conservando la dirección anterior.</text>
+<text x="105" y="600" font-size="23">Alternativa B (C28-G): al aceptar FETCH tras READY=1.</text>
+<text x="105" y="645" font-size="20" fill="#6f4350">Ambas están a prueba; ninguna es arquitectura definitiva.</text></g>
+<text x="70" y="744" font-family="DejaVu Sans" font-size="20" fill="#556d7d">Fuente: contrato C28-H y vectores del modelo de referencia. RESET=6000 solo para el piloto.</text>
+</svg>

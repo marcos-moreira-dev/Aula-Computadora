@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Dos convenios distintos para ubicar un píxel</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Dos convenios distintos para ubicar un píxel</text><text x="35" y="76" class="small">El monocromo es hipotético; el dispositivo V1 usa 2 bits por píxel.</text><rect x="36" y="136" width="438" height="151" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="255.0" y="184" class="label" text-anchor="middle">1 bpp · SOLO COMPARACIÓN</text><text x="255.0" y="230" class="small" text-anchor="middle">256×128 = 4096 bytes</text><rect x="527" y="136" width="438" height="151" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="746.0" y="184" class="label" text-anchor="middle">2 bpp · V1 REAL</text><text x="746.0" y="230" class="small" text-anchor="middle">256×128 = 8192 bytes</text><text x="251" y="338" class="small" text-anchor="middle">x=7 → byte 0, bit 0</text><text x="251" y="380" class="small" text-anchor="middle">x=8 → byte 1, bit 7</text><text x="251" y="422" class="small" text-anchor="middle">(255,127) → byte 4095, bit 0</text><text x="746" y="338" class="small" text-anchor="middle">(8,0) → byte 2, bits 7–6</text><text x="746" y="380" class="small" text-anchor="middle">índice 2 → byte 80 en hex</text><text x="746" y="422" class="small" text-anchor="middle">(255,127) → byte 8191, bits 1–0</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>CALL guarda la continuación; RET la recupera</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">CALL guarda la continuación; RET la recupera</text><text x="35" y="76" class="small">Este recorrido es lógico: no indica cuántos ciclos tarda una CPU real.</text><rect x="22" y="164" width="226" height="177" rx="14" fill="#e7f1fa" stroke="#36556b" stroke-width="2.5"/><text x="135" y="222" class="small" text-anchor="middle">6000: CALL 6010</text><text x="135" y="274" class="tiny" text-anchor="middle">PC tras operandos: 6003</text><path class="wire" d="M248,252 H272"/><rect x="272" y="164" width="226" height="177" rx="14" fill="#f5eedf" stroke="#36556b" stroke-width="2.5"/><text x="385" y="222" class="small" text-anchor="middle">PILA: 03 60</text><text x="385" y="274" class="tiny" text-anchor="middle">SP=7FFE; guardar retorno</text><path class="wire" d="M498,252 H522"/><rect x="522" y="164" width="226" height="177" rx="14" fill="#eaf5e9" stroke="#36556b" stroke-width="2.5"/><text x="635" y="222" class="small" text-anchor="middle">6010: LDI R0,2A</text><text x="635" y="274" class="tiny" text-anchor="middle">R0 recibe 42 decimal</text><path class="wire" d="M748,252 H772"/><rect x="772" y="164" width="226" height="177" rx="14" fill="#dfeef8" stroke="#36556b" stroke-width="2.5"/><text x="885" y="222" class="small" text-anchor="middle">6013: RET</text><text x="885" y="274" class="tiny" text-anchor="middle">PC vuelve a 6003</text><rect x="331" y="391" width="336" height="61" rx="14" fill="#fff1dd" stroke="#36556b" stroke-width="2.5"/><text x="499" y="430" class="label" text-anchor="middle">6003: HALT, PC=6004</text><path class="wire" d="M885,341 V370 H500 V391"/></svg>

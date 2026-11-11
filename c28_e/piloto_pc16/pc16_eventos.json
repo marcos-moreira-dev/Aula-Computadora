@@ -1,0 +1,134 @@
+[
+  {
+    "step": 0,
+    "clk": 0,
+    "edge": "—",
+    "load": 0,
+    "clear_test": 0,
+    "next": 4369,
+    "q": null,
+    "meaning": "Encender: Q desconocido",
+    "previous_q": null
+  },
+  {
+    "step": 1,
+    "clk": 1,
+    "edge": "↑",
+    "load": 0,
+    "clear_test": 0,
+    "next": 4369,
+    "q": null,
+    "meaning": "HOLD en flanco: sigue X",
+    "previous_q": null
+  },
+  {
+    "step": 2,
+    "clk": 1,
+    "edge": "—",
+    "load": 1,
+    "clear_test": 0,
+    "next": 24576,
+    "q": null,
+    "meaning": "LOAD sin nuevo flanco: sigue X",
+    "previous_q": null
+  },
+  {
+    "step": 3,
+    "clk": 0,
+    "edge": "↓",
+    "load": 1,
+    "clear_test": 0,
+    "next": 24576,
+    "q": null,
+    "meaning": "CLK baja: sigue X",
+    "previous_q": null
+  },
+  {
+    "step": 4,
+    "clk": 1,
+    "edge": "↑",
+    "load": 1,
+    "clear_test": 0,
+    "next": 24576,
+    "q": 24576,
+    "meaning": "Flanco: cargar 6000",
+    "previous_q": null
+  },
+  {
+    "step": 5,
+    "clk": 0,
+    "edge": "↓",
+    "load": 0,
+    "clear_test": 0,
+    "next": 24579,
+    "q": 24576,
+    "meaning": "Dato cambia; Q no",
+    "previous_q": 24576
+  },
+  {
+    "step": 6,
+    "clk": 1,
+    "edge": "↑",
+    "load": 0,
+    "clear_test": 0,
+    "next": 24579,
+    "q": 24576,
+    "meaning": "HOLD en flanco",
+    "previous_q": 24576
+  },
+  {
+    "step": 7,
+    "clk": 0,
+    "edge": "↓",
+    "load": 1,
+    "clear_test": 0,
+    "next": 24585,
+    "q": 24576,
+    "meaning": "Preparar destino JNZ",
+    "previous_q": 24576
+  },
+  {
+    "step": 8,
+    "clk": 1,
+    "edge": "↑",
+    "load": 1,
+    "clear_test": 0,
+    "next": 24585,
+    "q": 24585,
+    "meaning": "Flanco: cargar 6009",
+    "previous_q": 24576
+  },
+  {
+    "step": 9,
+    "clk": 1,
+    "edge": "—",
+    "load": 1,
+    "clear_test": 1,
+    "next": 30583,
+    "q": 24585,
+    "meaning": "CLEAR con CLK alto; esperar",
+    "previous_q": 24585
+  },
+  {
+    "step": 10,
+    "clk": 0,
+    "edge": "↓",
+    "load": 1,
+    "clear_test": 1,
+    "next": 30583,
+    "q": 24585,
+    "meaning": "CLK baja: Q no cambia",
+    "previous_q": 24585
+  },
+  {
+    "step": 11,
+    "clk": 1,
+    "edge": "↑",
+    "load": 1,
+    "clear_test": 1,
+    "next": 30583,
+    "q": 0,
+    "meaning": "CLEAR gana ante LOAD",
+    "previous_q": 24585
+  }
+]

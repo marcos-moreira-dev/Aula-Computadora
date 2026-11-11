@@ -1,0 +1,41 @@
+AULA-COMPUTADORA — PARCHE C28-C
+================================
+
+Este es un parche incremental de la edición del libro y del material fuente.
+Se aplica sobre C27 GLOBAL + el parche C28-B, en ese orden.
+NO elimina los archivos originales ni sustituye las ediciones anteriores.
+
+Trae nuevas fuentes de los capítulos 7 y 22, esquemas de registro R0 y
+dieciséis carriles del bus Aula-16, sus generadores y el índice C28-C.
+
+INTEGRACIÓN EN POWERSHELL (Windows; desde Descargas)
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath .\Aula_C28C_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath .\Aula_C28C_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_C_PARCHE.zip -DestinationPath .\Aula_C28C_COMPLETO -Force
+  Set-Location .\Aula_C28C_COMPLETO\Aula-Computadora
+  py -m pip install python-docx
+  py .\scripts\generar_libro_maestro_c28c.py --pages-json .\libro\ediciones\C28_C\INDICE_C28_C.json
+
+WORD resultante:
+  libro\ediciones\C28_C\Aula_Computadora_C28_C_MAESTRO.docx
+
+El PNG del bus está incluido, así que para regenerar el Word NO hace
+falta Inkscape. Para regenerar también el SVG y PNG del bus desde cero,
+el script adicional requiere Inkscape accesible desde el sistema:
+
+  py .\scripts\generar_c28c_bus16_carriles.py
+
+El PDF se entrega ya exportado. Si se desea reproducir el PDF desde
+Word, usar LibreOffice con las fuentes Liberation Sans y Liberation
+Serif instaladas y revisar la paginación posterior.
+
+COMPROBACIONES
+
+  py .\scripts\c28_verificar_piloto.py
+
+509268 comprobaciones de C28-A son del modelo lógico en Python, NO
+de simulación Verilog ni de un circuito electrónico físico.
+
+Para detalles y riesgos pendientes: INFORME_C28_C.md.

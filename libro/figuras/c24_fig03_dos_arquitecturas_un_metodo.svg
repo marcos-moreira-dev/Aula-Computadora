@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Dos máquinas: una disciplina de razonamiento</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Dos máquinas: una disciplina de razonamiento</text><text x="35" y="76" class="small">Comparar resultados y modelos no significa prometer compatibilidad binaria.</text><rect x="30" y="137" width="443" height="135" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="251.5" y="185" class="label" text-anchor="middle">AULA-8</text><text x="251.5" y="231" class="small" text-anchor="middle">bus 8 bits; natural 8 bits</text><rect x="526" y="137" width="443" height="135" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="747.5" y="185" class="label" text-anchor="middle">AULA-16</text><text x="747.5" y="231" class="small" text-anchor="middle">bus 16 bits; natural 16 bits</text><rect x="260" y="341" width="483" height="112" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="501.5" y="389" class="label" text-anchor="middle">MISMO PROBLEMA</text><text x="501.5" y="435" class="small" text-anchor="middle">almacenar → sumar → Euclides → Fibonacci</text><path d="M260,272 L400,341" fill="none" stroke="#244d68" stroke-width="4"/><path d="M400,341 L380.7726939362566,341.5574060738239 L388.7301461625709,325.41185083202674 Z" fill="#244d68"/><path d="M750,272 L601,341" fill="none" stroke="#244d68" stroke-width="4"/><path d="M601,341 L612.6442584368191,325.6895053817139 L620.2081543460916,342.02313567854895 Z" fill="#244d68"/><text x="500" y="492" class="tiny" text-anchor="middle">Algoritmos compartidos; ISA, ABI y binarios NO compartidos.</text></svg>

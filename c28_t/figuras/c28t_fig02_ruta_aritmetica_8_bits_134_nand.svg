@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="900" viewBox="0 0 1650 900" role="img" aria-labelledby="titulo descripcion">
+<title id="titulo">Ocho etapas ADD/SUB y banderas, red de 134 NAND</title>
+<desc id="descripcion">La señal SUB controla la inversión de ocho bits B y el acarreo inicial C0. Ocho sumadores completos de nueve NAND propagan C1 hasta C8. Se agregan Cflag, V, Z y N con presupuesto total de 134 NAND; el dibujo representa bloques del netlist, no pistas eléctricas.</desc>
+<defs>
+<style>
+ text{font-family:'DejaVu Sans',Arial,sans-serif;fill:#18354a}
+ .titulo{font-weight:700;font-size:36px}.sub{font-size:19px;fill:#506a7d}
+ .panel{fill:#f5f9fc;stroke:#c7d8e6;stroke-width:2.2}
+ .cell{fill:#fff;stroke:#54758c;stroke-width:2.5}
+ .head{fill:#dfedf8}.xor{fill:#eaf2fe;stroke:#a6c5e0;stroke-width:1}
+ .adder{fill:#e8f5ec;stroke:#a6ceb4;stroke-width:1}
+ .label{font-size:22px;font-weight:700}.value{font-size:17px}
+ .mini{font-size:16px;fill:#4c6679}.wide{font-size:21px;font-weight:700}
+ .line{stroke:#357c9e;stroke-width:3;fill:none;marker-end:url(#arrow)}
+ .flag{fill:#fff;stroke:#6892aa;stroke-width:2.2}.pill{fill:#e8f3f9;stroke:#85b5ca;stroke-width:1.5}
+</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7.2" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#357c9e"/></marker>
+</defs>
+<rect width="1650" height="900" fill="#fbfdff"/>
+<text x="51" y="63" class="titulo">Una ruta ADD/SUB de ocho bits, puerta por puerta</text>
+<text x="52" y="97" class="sub">Cada celda usa 4 NAND para Bᵢ XOR SUB y 9 NAND para un sumador completo: 13 NAND por bit.</text>
+<rect x="51" y="121" width="1549" height="57" rx="12" class="pill"/>
+<text x="80" y="157" class="wide">SUB=0 → A+B ; C0=0</text>
+<text x="599" y="157" class="wide">SUB=1 → A+NOT(B)+1 ; C0=1</text>
+<text x="1270" y="157" class="value">A y B: 8 bits</text>
+<rect x="43" y="197" width="1563" height="329" rx="19" class="panel"/>
+<text x="64" y="225" class="label">Propagación de acarreo: de bit 0 hacia bit 7</text>
+<path class="line" d="M238 409 H254"/><path class="line" d="M432 409 H448"/><path class="line" d="M626 409 H642"/><path class="line" d="M820 409 H836"/><path class="line" d="M1014 409 H1030"/><path class="line" d="M1208 409 H1224"/><path class="line" d="M1402 409 H1418"/>
+
+<g transform="translate(60 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 0</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B0'=B0⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A0,B0',C0)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S0, C1 →</text></g>
+<g transform="translate(254 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 1</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B1'=B1⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A1,B1',C1)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S1, C2 →</text></g>
+<g transform="translate(448 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 2</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B2'=B2⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A2,B2',C2)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S2, C3 →</text></g>
+<g transform="translate(642 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 3</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B3'=B3⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A3,B3',C3)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S3, C4 →</text></g>
+<g transform="translate(836 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 4</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B4'=B4⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A4,B4',C4)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S4, C5 →</text></g>
+<g transform="translate(1030 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 5</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B5'=B5⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A5,B5',C5)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S5, C6 →</text></g>
+<g transform="translate(1224 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 6</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B6'=B6⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A6,B6',C6)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S6, C7 →</text></g>
+<g transform="translate(1418 245)"><rect width="178" height="244" rx="13" class="cell"/><path d="M0 13 Q0 0 13 0 H165 Q178 0 178 13 V47 H0 Z" class="head"/><text x="22" y="33" class="label">BIT 7</text><rect x="10" y="61" width="158" height="72" rx="8" class="xor"/><text x="18" y="85" class="value">B7'=B7⊕SUB</text><text x="18" y="117" class="mini">4 NAND</text><rect x="10" y="141" width="158" height="69" rx="8" class="adder"/><text x="18" y="167" class="value">FA(A7,B7',C7)</text><text x="18" y="194" class="mini">9 NAND</text><text x="18" y="232" class="value">S7, C8</text></g>
+
+<text x="59" y="558" class="label">Banderas de la ruta aritmética (no de AND/OR/XOR/NOT):</text>
+<rect x="56" y="582" width="368" height="163" rx="14" class="flag"/>
+<text x="77" y="622" class="label">Cflag: 4 NAND</text><text x="77" y="663" class="wide">C8 XOR SUB</text><text x="77" y="700" class="mini">ADD: acarreo · SUB: préstamo</text>
+<rect x="443" y="582" width="368" height="163" rx="14" class="flag"/>
+<text x="464" y="622" class="label">V: 4 NAND</text><text x="464" y="663" class="wide">C7 XOR C8</text><text x="464" y="700" class="mini">Desbordamiento con signo</text>
+<rect x="830" y="582" width="368" height="163" rx="14" class="flag"/>
+<text x="851" y="622" class="label">Z: 22 NAND</text><text x="851" y="663" class="wide">AND(NOT(S0...S7))</text><text x="851" y="700" class="mini">Uno si el byte de salida es cero</text>
+<rect x="1217" y="582" width="368" height="163" rx="14" class="flag"/>
+<text x="1238" y="622" class="label">N: sin puerta adicional</text><text x="1238" y="663" class="wide">N = S7</text><text x="1238" y="700" class="mini">Copia el bit de mayor peso</text>
+
+<rect x="56" y="774" width="1529" height="73" rx="14" fill="#e5f3eb" stroke="#8fbfa4" stroke-width="2"/>
+<text x="79" y="817" class="label">32 NAND (XOR de B) + 72 NAND (8 sumadores) + 4 NAND (C) + 4 NAND (V) + 22 NAND (Z) = 134 NAND</text>
+<text x="58" y="880" class="mini">Diagrama funcional trazado desde el netlist C28-R: no incorpora selección lógica completa, reloj, transistores concretos ni conexiones de alimentación.</text>
+</svg>

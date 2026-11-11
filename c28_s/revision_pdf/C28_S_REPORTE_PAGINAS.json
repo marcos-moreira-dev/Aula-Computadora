@@ -1,0 +1,2254 @@
+{
+  "etapa": "C28-S / auditoria geometrica y contacto visual del maestro PDF",
+  "maestro_pdf": "libro/ediciones/C28_G/Aula_Computadora_C28_G_MAESTRO.pdf",
+  "sha256_maestro": "c4e03e24adb5633b70b5cbd22b8f37ac559d3f2a134e2a43c456f83b77dda89f",
+  "paginas": 248,
+  "formato": "A4",
+  "fragmentos_texto": 17216,
+  "bloques_imagen": 127,
+  "caracteres_reemplazo": 0,
+  "entradas_indice_verificadas": 26,
+  "pies_de_pagina_con_numero": 247,
+  "indice_coincide_con_capitulos": true,
+  "indice": [
+    {
+      "id": "1",
+      "titulo": "La corriente y sus caminos",
+      "pagina": 6
+    },
+    {
+      "id": "2",
+      "titulo": "El transistor como interruptor",
+      "pagina": 15
+    },
+    {
+      "id": "3",
+      "titulo": "De interruptores a lógica",
+      "pagina": 25
+    },
+    {
+      "id": "4",
+      "titulo": "Construir funciones con compuertas",
+      "pagina": 35
+    },
+    {
+      "id": "5",
+      "titulo": "La realimentación conserva información",
+      "pagina": 44
+    },
+    {
+      "id": "6",
+      "titulo": "Memorizar en el tiempo",
+      "pagina": 53
+    },
+    {
+      "id": "7",
+      "titulo": "Del bit al registro",
+      "pagina": 61
+    },
+    {
+      "id": "7B",
+      "titulo": "Del bit al significado",
+      "pagina": 72
+    },
+    {
+      "id": "8",
+      "titulo": "Direcciones y buses",
+      "pagina": 80
+    },
+    {
+      "id": "9",
+      "titulo": "RAM y ROM reales",
+      "pagina": 89
+    },
+    {
+      "id": "10",
+      "titulo": "El circuito que suma",
+      "pagina": 97
+    },
+    {
+      "id": "11",
+      "titulo": "La unidad aritmético-lógica",
+      "pagina": 106
+    },
+    {
+      "id": "12",
+      "titulo": "Arquitectura Aula-8",
+      "pagina": 115
+    },
+    {
+      "id": "13",
+      "titulo": "La unidad de control",
+      "pagina": 125
+    },
+    {
+      "id": "14",
+      "titulo": "De números a instrucciones",
+      "pagina": 133
+    },
+    {
+      "id": "15",
+      "titulo": "La instrucción en movimiento",
+      "pagina": 145
+    },
+    {
+      "id": "16",
+      "titulo": "Subrutinas y pila",
+      "pagina": 161
+    },
+    {
+      "id": "17",
+      "titulo": "Encender una computadora",
+      "pagina": 169
+    },
+    {
+      "id": "18",
+      "titulo": "Hablar con la máquina",
+      "pagina": 178
+    },
+    {
+      "id": "19",
+      "titulo": "Guardar y recuperar programas",
+      "pagina": 186
+    },
+    {
+      "id": "20",
+      "titulo": "Programar un pequeño sistema",
+      "pagina": 194
+    },
+    {
+      "id": "21",
+      "titulo": "Qué implica ampliar la palabra",
+      "pagina": 203
+    },
+    {
+      "id": "22",
+      "titulo": "Un bus externo de 16 bits",
+      "pagina": 212
+    },
+    {
+      "id": "23",
+      "titulo": "Programación para Aula-16",
+      "pagina": 221
+    },
+    {
+      "id": "23B",
+      "titulo": "De los mapas de caracteres al escritorio gráfico",
+      "pagina": 229
+    },
+    {
+      "id": "24",
+      "titulo": "Una computadora que podemos explicar",
+      "pagina": 239
+    }
+  ],
+  "alertas_cajas_o_paginas": [],
+  "paginas_detalle": [
+    {
+      "numero": 1,
+      "fragmentos_texto": 0,
+      "imagenes": 1,
+      "caracteres": 0,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 2,
+      "fragmentos_texto": 25,
+      "imagenes": 0,
+      "caracteres": 1157,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 3,
+      "fragmentos_texto": 44,
+      "imagenes": 0,
+      "caracteres": 1977,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 4,
+      "fragmentos_texto": 44,
+      "imagenes": 0,
+      "caracteres": 1918,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 5,
+      "fragmentos_texto": 23,
+      "imagenes": 0,
+      "caracteres": 1317,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 6,
+      "fragmentos_texto": 63,
+      "imagenes": 0,
+      "caracteres": 2881,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 7,
+      "fragmentos_texto": 71,
+      "imagenes": 0,
+      "caracteres": 2617,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 8,
+      "fragmentos_texto": 46,
+      "imagenes": 1,
+      "caracteres": 1855,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 9,
+      "fragmentos_texto": 106,
+      "imagenes": 0,
+      "caracteres": 2647,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 10,
+      "fragmentos_texto": 45,
+      "imagenes": 1,
+      "caracteres": 2769,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 11,
+      "fragmentos_texto": 35,
+      "imagenes": 1,
+      "caracteres": 1635,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 12,
+      "fragmentos_texto": 48,
+      "imagenes": 1,
+      "caracteres": 2337,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 13,
+      "fragmentos_texto": 36,
+      "imagenes": 0,
+      "caracteres": 1794,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 14,
+      "fragmentos_texto": 33,
+      "imagenes": 0,
+      "caracteres": 1221,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 15,
+      "fragmentos_texto": 58,
+      "imagenes": 0,
+      "caracteres": 3280,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 16,
+      "fragmentos_texto": 66,
+      "imagenes": 0,
+      "caracteres": 2950,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 17,
+      "fragmentos_texto": 35,
+      "imagenes": 1,
+      "caracteres": 1789,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 18,
+      "fragmentos_texto": 21,
+      "imagenes": 2,
+      "caracteres": 1121,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 19,
+      "fragmentos_texto": 135,
+      "imagenes": 0,
+      "caracteres": 2411,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 20,
+      "fragmentos_texto": 86,
+      "imagenes": 0,
+      "caracteres": 2969,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 21,
+      "fragmentos_texto": 56,
+      "imagenes": 0,
+      "caracteres": 3331,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 22,
+      "fragmentos_texto": 73,
+      "imagenes": 0,
+      "caracteres": 3370,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 23,
+      "fragmentos_texto": 6,
+      "imagenes": 0,
+      "caracteres": 202,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 24,
+      "fragmentos_texto": 23,
+      "imagenes": 0,
+      "caracteres": 941,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 25,
+      "fragmentos_texto": 76,
+      "imagenes": 0,
+      "caracteres": 2712,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 26,
+      "fragmentos_texto": 78,
+      "imagenes": 0,
+      "caracteres": 2343,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 27,
+      "fragmentos_texto": 60,
+      "imagenes": 1,
+      "caracteres": 1073,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 28,
+      "fragmentos_texto": 52,
+      "imagenes": 1,
+      "caracteres": 1605,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 29,
+      "fragmentos_texto": 85,
+      "imagenes": 0,
+      "caracteres": 2698,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 30,
+      "fragmentos_texto": 55,
+      "imagenes": 1,
+      "caracteres": 1559,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 31,
+      "fragmentos_texto": 84,
+      "imagenes": 1,
+      "caracteres": 1534,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 32,
+      "fragmentos_texto": 69,
+      "imagenes": 0,
+      "caracteres": 3264,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 33,
+      "fragmentos_texto": 46,
+      "imagenes": 0,
+      "caracteres": 2434,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 34,
+      "fragmentos_texto": 36,
+      "imagenes": 0,
+      "caracteres": 747,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 35,
+      "fragmentos_texto": 58,
+      "imagenes": 0,
+      "caracteres": 2570,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 36,
+      "fragmentos_texto": 69,
+      "imagenes": 1,
+      "caracteres": 1143,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 37,
+      "fragmentos_texto": 61,
+      "imagenes": 1,
+      "caracteres": 1559,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 38,
+      "fragmentos_texto": 96,
+      "imagenes": 0,
+      "caracteres": 2042,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 39,
+      "fragmentos_texto": 54,
+      "imagenes": 1,
+      "caracteres": 2027,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 40,
+      "fragmentos_texto": 59,
+      "imagenes": 1,
+      "caracteres": 900,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 41,
+      "fragmentos_texto": 99,
+      "imagenes": 0,
+      "caracteres": 2939,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 42,
+      "fragmentos_texto": 27,
+      "imagenes": 0,
+      "caracteres": 1069,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 43,
+      "fragmentos_texto": 26,
+      "imagenes": 0,
+      "caracteres": 740,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 44,
+      "fragmentos_texto": 57,
+      "imagenes": 0,
+      "caracteres": 2375,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 45,
+      "fragmentos_texto": 82,
+      "imagenes": 1,
+      "caracteres": 1712,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 46,
+      "fragmentos_texto": 75,
+      "imagenes": 1,
+      "caracteres": 1424,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 47,
+      "fragmentos_texto": 65,
+      "imagenes": 1,
+      "caracteres": 1561,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 48,
+      "fragmentos_texto": 80,
+      "imagenes": 1,
+      "caracteres": 1775,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 49,
+      "fragmentos_texto": 63,
+      "imagenes": 0,
+      "caracteres": 2150,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 50,
+      "fragmentos_texto": 33,
+      "imagenes": 1,
+      "caracteres": 2076,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 51,
+      "fragmentos_texto": 40,
+      "imagenes": 0,
+      "caracteres": 1731,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 52,
+      "fragmentos_texto": 24,
+      "imagenes": 0,
+      "caracteres": 916,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 53,
+      "fragmentos_texto": 111,
+      "imagenes": 0,
+      "caracteres": 2941,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 54,
+      "fragmentos_texto": 41,
+      "imagenes": 1,
+      "caracteres": 1335,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 55,
+      "fragmentos_texto": 56,
+      "imagenes": 1,
+      "caracteres": 1703,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 56,
+      "fragmentos_texto": 65,
+      "imagenes": 1,
+      "caracteres": 1648,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 57,
+      "fragmentos_texto": 63,
+      "imagenes": 1,
+      "caracteres": 1571,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 58,
+      "fragmentos_texto": 138,
+      "imagenes": 0,
+      "caracteres": 3383,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 59,
+      "fragmentos_texto": 50,
+      "imagenes": 0,
+      "caracteres": 2791,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 60,
+      "fragmentos_texto": 20,
+      "imagenes": 0,
+      "caracteres": 815,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 61,
+      "fragmentos_texto": 118,
+      "imagenes": 0,
+      "caracteres": 2421,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 62,
+      "fragmentos_texto": 55,
+      "imagenes": 1,
+      "caracteres": 1565,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 63,
+      "fragmentos_texto": 76,
+      "imagenes": 1,
+      "caracteres": 1228,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 64,
+      "fragmentos_texto": 38,
+      "imagenes": 1,
+      "caracteres": 897,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 65,
+      "fragmentos_texto": 76,
+      "imagenes": 1,
+      "caracteres": 1531,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 66,
+      "fragmentos_texto": 69,
+      "imagenes": 1,
+      "caracteres": 1531,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 67,
+      "fragmentos_texto": 87,
+      "imagenes": 1,
+      "caracteres": 1870,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 68,
+      "fragmentos_texto": 93,
+      "imagenes": 1,
+      "caracteres": 2374,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 69,
+      "fragmentos_texto": 58,
+      "imagenes": 1,
+      "caracteres": 2175,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 70,
+      "fragmentos_texto": 45,
+      "imagenes": 1,
+      "caracteres": 1635,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 71,
+      "fragmentos_texto": 24,
+      "imagenes": 0,
+      "caracteres": 657,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 72,
+      "fragmentos_texto": 88,
+      "imagenes": 0,
+      "caracteres": 2593,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 73,
+      "fragmentos_texto": 65,
+      "imagenes": 1,
+      "caracteres": 1766,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 74,
+      "fragmentos_texto": 66,
+      "imagenes": 1,
+      "caracteres": 1923,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 75,
+      "fragmentos_texto": 61,
+      "imagenes": 1,
+      "caracteres": 1635,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 76,
+      "fragmentos_texto": 107,
+      "imagenes": 0,
+      "caracteres": 3553,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 77,
+      "fragmentos_texto": 48,
+      "imagenes": 1,
+      "caracteres": 2386,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 78,
+      "fragmentos_texto": 15,
+      "imagenes": 0,
+      "caracteres": 627,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 79,
+      "fragmentos_texto": 23,
+      "imagenes": 0,
+      "caracteres": 734,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 80,
+      "fragmentos_texto": 133,
+      "imagenes": 0,
+      "caracteres": 2552,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 81,
+      "fragmentos_texto": 46,
+      "imagenes": 1,
+      "caracteres": 1480,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 82,
+      "fragmentos_texto": 67,
+      "imagenes": 1,
+      "caracteres": 1775,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 83,
+      "fragmentos_texto": 162,
+      "imagenes": 0,
+      "caracteres": 2433,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 84,
+      "fragmentos_texto": 82,
+      "imagenes": 1,
+      "caracteres": 2113,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 85,
+      "fragmentos_texto": 72,
+      "imagenes": 1,
+      "caracteres": 2130,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 86,
+      "fragmentos_texto": 80,
+      "imagenes": 1,
+      "caracteres": 2319,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 87,
+      "fragmentos_texto": 43,
+      "imagenes": 0,
+      "caracteres": 1588,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 88,
+      "fragmentos_texto": 58,
+      "imagenes": 0,
+      "caracteres": 1293,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 89,
+      "fragmentos_texto": 98,
+      "imagenes": 0,
+      "caracteres": 2998,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 90,
+      "fragmentos_texto": 79,
+      "imagenes": 1,
+      "caracteres": 2200,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 91,
+      "fragmentos_texto": 67,
+      "imagenes": 1,
+      "caracteres": 2319,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 92,
+      "fragmentos_texto": 103,
+      "imagenes": 0,
+      "caracteres": 3195,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 93,
+      "fragmentos_texto": 87,
+      "imagenes": 1,
+      "caracteres": 1671,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 94,
+      "fragmentos_texto": 115,
+      "imagenes": 1,
+      "caracteres": 2485,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 95,
+      "fragmentos_texto": 88,
+      "imagenes": 0,
+      "caracteres": 2807,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 96,
+      "fragmentos_texto": 47,
+      "imagenes": 0,
+      "caracteres": 1604,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 97,
+      "fragmentos_texto": 111,
+      "imagenes": 0,
+      "caracteres": 2155,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 98,
+      "fragmentos_texto": 131,
+      "imagenes": 1,
+      "caracteres": 1127,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 99,
+      "fragmentos_texto": 130,
+      "imagenes": 1,
+      "caracteres": 1559,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 100,
+      "fragmentos_texto": 141,
+      "imagenes": 0,
+      "caracteres": 1572,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 101,
+      "fragmentos_texto": 40,
+      "imagenes": 1,
+      "caracteres": 799,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 102,
+      "fragmentos_texto": 179,
+      "imagenes": 0,
+      "caracteres": 2506,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 103,
+      "fragmentos_texto": 79,
+      "imagenes": 1,
+      "caracteres": 2544,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 104,
+      "fragmentos_texto": 49,
+      "imagenes": 0,
+      "caracteres": 945,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 105,
+      "fragmentos_texto": 89,
+      "imagenes": 0,
+      "caracteres": 1695,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 106,
+      "fragmentos_texto": 92,
+      "imagenes": 0,
+      "caracteres": 2337,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 107,
+      "fragmentos_texto": 90,
+      "imagenes": 1,
+      "caracteres": 909,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 108,
+      "fragmentos_texto": 150,
+      "imagenes": 0,
+      "caracteres": 2363,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 109,
+      "fragmentos_texto": 121,
+      "imagenes": 0,
+      "caracteres": 1535,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 110,
+      "fragmentos_texto": 58,
+      "imagenes": 1,
+      "caracteres": 1421,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 111,
+      "fragmentos_texto": 111,
+      "imagenes": 1,
+      "caracteres": 1786,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 112,
+      "fragmentos_texto": 69,
+      "imagenes": 1,
+      "caracteres": 2225,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 113,
+      "fragmentos_texto": 51,
+      "imagenes": 0,
+      "caracteres": 1598,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 114,
+      "fragmentos_texto": 59,
+      "imagenes": 0,
+      "caracteres": 1683,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 115,
+      "fragmentos_texto": 65,
+      "imagenes": 0,
+      "caracteres": 2490,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 116,
+      "fragmentos_texto": 90,
+      "imagenes": 0,
+      "caracteres": 2018,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 117,
+      "fragmentos_texto": 28,
+      "imagenes": 1,
+      "caracteres": 912,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 118,
+      "fragmentos_texto": 42,
+      "imagenes": 1,
+      "caracteres": 1556,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 119,
+      "fragmentos_texto": 83,
+      "imagenes": 1,
+      "caracteres": 1882,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 120,
+      "fragmentos_texto": 76,
+      "imagenes": 0,
+      "caracteres": 1611,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 121,
+      "fragmentos_texto": 75,
+      "imagenes": 1,
+      "caracteres": 1654,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 122,
+      "fragmentos_texto": 65,
+      "imagenes": 1,
+      "caracteres": 2270,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 123,
+      "fragmentos_texto": 43,
+      "imagenes": 0,
+      "caracteres": 1703,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 124,
+      "fragmentos_texto": 67,
+      "imagenes": 0,
+      "caracteres": 1813,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 125,
+      "fragmentos_texto": 115,
+      "imagenes": 0,
+      "caracteres": 2886,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 126,
+      "fragmentos_texto": 58,
+      "imagenes": 1,
+      "caracteres": 2288,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 127,
+      "fragmentos_texto": 77,
+      "imagenes": 1,
+      "caracteres": 2433,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 128,
+      "fragmentos_texto": 106,
+      "imagenes": 1,
+      "caracteres": 2147,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 129,
+      "fragmentos_texto": 95,
+      "imagenes": 1,
+      "caracteres": 2282,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 130,
+      "fragmentos_texto": 101,
+      "imagenes": 0,
+      "caracteres": 3110,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 131,
+      "fragmentos_texto": 6,
+      "imagenes": 0,
+      "caracteres": 270,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 132,
+      "fragmentos_texto": 57,
+      "imagenes": 0,
+      "caracteres": 1724,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 133,
+      "fragmentos_texto": 36,
+      "imagenes": 0,
+      "caracteres": 1611,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 134,
+      "fragmentos_texto": 97,
+      "imagenes": 1,
+      "caracteres": 2165,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 135,
+      "fragmentos_texto": 150,
+      "imagenes": 0,
+      "caracteres": 2714,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 136,
+      "fragmentos_texto": 38,
+      "imagenes": 1,
+      "caracteres": 869,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 137,
+      "fragmentos_texto": 98,
+      "imagenes": 1,
+      "caracteres": 1576,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 138,
+      "fragmentos_texto": 54,
+      "imagenes": 1,
+      "caracteres": 1948,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 139,
+      "fragmentos_texto": 134,
+      "imagenes": 0,
+      "caracteres": 3378,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 140,
+      "fragmentos_texto": 51,
+      "imagenes": 1,
+      "caracteres": 1576,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 141,
+      "fragmentos_texto": 83,
+      "imagenes": 1,
+      "caracteres": 1813,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 142,
+      "fragmentos_texto": 14,
+      "imagenes": 1,
+      "caracteres": 428,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 143,
+      "fragmentos_texto": 35,
+      "imagenes": 1,
+      "caracteres": 1238,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 144,
+      "fragmentos_texto": 74,
+      "imagenes": 0,
+      "caracteres": 1233,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 145,
+      "fragmentos_texto": 86,
+      "imagenes": 0,
+      "caracteres": 2162,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 146,
+      "fragmentos_texto": 50,
+      "imagenes": 1,
+      "caracteres": 1895,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 147,
+      "fragmentos_texto": 136,
+      "imagenes": 0,
+      "caracteres": 1935,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 148,
+      "fragmentos_texto": 45,
+      "imagenes": 1,
+      "caracteres": 1095,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 149,
+      "fragmentos_texto": 68,
+      "imagenes": 1,
+      "caracteres": 1583,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 150,
+      "fragmentos_texto": 86,
+      "imagenes": 1,
+      "caracteres": 1175,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 151,
+      "fragmentos_texto": 90,
+      "imagenes": 0,
+      "caracteres": 1920,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 152,
+      "fragmentos_texto": 78,
+      "imagenes": 1,
+      "caracteres": 2050,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 153,
+      "fragmentos_texto": 122,
+      "imagenes": 0,
+      "caracteres": 1784,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 154,
+      "fragmentos_texto": 93,
+      "imagenes": 1,
+      "caracteres": 1393,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 155,
+      "fragmentos_texto": 73,
+      "imagenes": 1,
+      "caracteres": 2245,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 156,
+      "fragmentos_texto": 161,
+      "imagenes": 0,
+      "caracteres": 3039,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 157,
+      "fragmentos_texto": 101,
+      "imagenes": 0,
+      "caracteres": 2813,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 158,
+      "fragmentos_texto": 68,
+      "imagenes": 1,
+      "caracteres": 2333,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 159,
+      "fragmentos_texto": 54,
+      "imagenes": 0,
+      "caracteres": 1523,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 160,
+      "fragmentos_texto": 44,
+      "imagenes": 0,
+      "caracteres": 1314,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 161,
+      "fragmentos_texto": 99,
+      "imagenes": 0,
+      "caracteres": 2718,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 162,
+      "fragmentos_texto": 80,
+      "imagenes": 1,
+      "caracteres": 1551,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 163,
+      "fragmentos_texto": 109,
+      "imagenes": 1,
+      "caracteres": 1520,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 164,
+      "fragmentos_texto": 76,
+      "imagenes": 1,
+      "caracteres": 1780,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 165,
+      "fragmentos_texto": 79,
+      "imagenes": 1,
+      "caracteres": 2146,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 166,
+      "fragmentos_texto": 57,
+      "imagenes": 1,
+      "caracteres": 2189,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 167,
+      "fragmentos_texto": 38,
+      "imagenes": 1,
+      "caracteres": 845,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 168,
+      "fragmentos_texto": 51,
+      "imagenes": 0,
+      "caracteres": 1031,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 169,
+      "fragmentos_texto": 80,
+      "imagenes": 0,
+      "caracteres": 2499,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 170,
+      "fragmentos_texto": 35,
+      "imagenes": 1,
+      "caracteres": 1304,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 171,
+      "fragmentos_texto": 61,
+      "imagenes": 1,
+      "caracteres": 1505,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 172,
+      "fragmentos_texto": 126,
+      "imagenes": 0,
+      "caracteres": 2557,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 173,
+      "fragmentos_texto": 67,
+      "imagenes": 1,
+      "caracteres": 1517,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 174,
+      "fragmentos_texto": 81,
+      "imagenes": 1,
+      "caracteres": 1976,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 175,
+      "fragmentos_texto": 19,
+      "imagenes": 0,
+      "caracteres": 896,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 176,
+      "fragmentos_texto": 38,
+      "imagenes": 0,
+      "caracteres": 1366,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 177,
+      "fragmentos_texto": 26,
+      "imagenes": 0,
+      "caracteres": 1066,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 178,
+      "fragmentos_texto": 62,
+      "imagenes": 0,
+      "caracteres": 2174,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 179,
+      "fragmentos_texto": 67,
+      "imagenes": 1,
+      "caracteres": 1746,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 180,
+      "fragmentos_texto": 99,
+      "imagenes": 1,
+      "caracteres": 1886,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 181,
+      "fragmentos_texto": 100,
+      "imagenes": 0,
+      "caracteres": 1902,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 182,
+      "fragmentos_texto": 52,
+      "imagenes": 2,
+      "caracteres": 1093,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 183,
+      "fragmentos_texto": 92,
+      "imagenes": 0,
+      "caracteres": 2041,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 184,
+      "fragmentos_texto": 44,
+      "imagenes": 0,
+      "caracteres": 1330,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 185,
+      "fragmentos_texto": 31,
+      "imagenes": 0,
+      "caracteres": 774,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 186,
+      "fragmentos_texto": 71,
+      "imagenes": 0,
+      "caracteres": 2049,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 187,
+      "fragmentos_texto": 91,
+      "imagenes": 1,
+      "caracteres": 1409,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 188,
+      "fragmentos_texto": 76,
+      "imagenes": 1,
+      "caracteres": 1435,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 189,
+      "fragmentos_texto": 70,
+      "imagenes": 1,
+      "caracteres": 2082,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 190,
+      "fragmentos_texto": 141,
+      "imagenes": 0,
+      "caracteres": 3130,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 191,
+      "fragmentos_texto": 46,
+      "imagenes": 1,
+      "caracteres": 1962,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 192,
+      "fragmentos_texto": 38,
+      "imagenes": 0,
+      "caracteres": 1372,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 193,
+      "fragmentos_texto": 30,
+      "imagenes": 0,
+      "caracteres": 780,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 194,
+      "fragmentos_texto": 63,
+      "imagenes": 1,
+      "caracteres": 2358,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 195,
+      "fragmentos_texto": 114,
+      "imagenes": 0,
+      "caracteres": 2671,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 196,
+      "fragmentos_texto": 96,
+      "imagenes": 1,
+      "caracteres": 1857,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 197,
+      "fragmentos_texto": 112,
+      "imagenes": 1,
+      "caracteres": 1802,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 198,
+      "fragmentos_texto": 174,
+      "imagenes": 0,
+      "caracteres": 2773,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 199,
+      "fragmentos_texto": 54,
+      "imagenes": 1,
+      "caracteres": 2187,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 200,
+      "fragmentos_texto": 6,
+      "imagenes": 0,
+      "caracteres": 229,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 201,
+      "fragmentos_texto": 33,
+      "imagenes": 0,
+      "caracteres": 1558,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 202,
+      "fragmentos_texto": 37,
+      "imagenes": 0,
+      "caracteres": 883,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 203,
+      "fragmentos_texto": 91,
+      "imagenes": 0,
+      "caracteres": 2558,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 204,
+      "fragmentos_texto": 42,
+      "imagenes": 1,
+      "caracteres": 1127,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 205,
+      "fragmentos_texto": 105,
+      "imagenes": 1,
+      "caracteres": 1768,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 206,
+      "fragmentos_texto": 81,
+      "imagenes": 1,
+      "caracteres": 1466,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 207,
+      "fragmentos_texto": 109,
+      "imagenes": 0,
+      "caracteres": 1935,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 208,
+      "fragmentos_texto": 84,
+      "imagenes": 1,
+      "caracteres": 2407,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 209,
+      "fragmentos_texto": 28,
+      "imagenes": 0,
+      "caracteres": 897,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 210,
+      "fragmentos_texto": 36,
+      "imagenes": 0,
+      "caracteres": 1327,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 211,
+      "fragmentos_texto": 27,
+      "imagenes": 0,
+      "caracteres": 785,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 212,
+      "fragmentos_texto": 69,
+      "imagenes": 0,
+      "caracteres": 2023,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 213,
+      "fragmentos_texto": 73,
+      "imagenes": 1,
+      "caracteres": 1695,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 214,
+      "fragmentos_texto": 73,
+      "imagenes": 1,
+      "caracteres": 1757,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 215,
+      "fragmentos_texto": 82,
+      "imagenes": 1,
+      "caracteres": 1687,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 216,
+      "fragmentos_texto": 59,
+      "imagenes": 1,
+      "caracteres": 1783,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 217,
+      "fragmentos_texto": 118,
+      "imagenes": 0,
+      "caracteres": 3090,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 218,
+      "fragmentos_texto": 19,
+      "imagenes": 1,
+      "caracteres": 908,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 219,
+      "fragmentos_texto": 54,
+      "imagenes": 1,
+      "caracteres": 1681,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 220,
+      "fragmentos_texto": 38,
+      "imagenes": 0,
+      "caracteres": 807,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 221,
+      "fragmentos_texto": 72,
+      "imagenes": 0,
+      "caracteres": 2158,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 222,
+      "fragmentos_texto": 98,
+      "imagenes": 1,
+      "caracteres": 1585,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 223,
+      "fragmentos_texto": 75,
+      "imagenes": 1,
+      "caracteres": 1504,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 224,
+      "fragmentos_texto": 96,
+      "imagenes": 1,
+      "caracteres": 2079,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 225,
+      "fragmentos_texto": 126,
+      "imagenes": 0,
+      "caracteres": 2936,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 226,
+      "fragmentos_texto": 67,
+      "imagenes": 1,
+      "caracteres": 1793,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 227,
+      "fragmentos_texto": 19,
+      "imagenes": 0,
+      "caracteres": 549,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 228,
+      "fragmentos_texto": 29,
+      "imagenes": 0,
+      "caracteres": 801,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 229,
+      "fragmentos_texto": 101,
+      "imagenes": 0,
+      "caracteres": 3096,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 230,
+      "fragmentos_texto": 69,
+      "imagenes": 1,
+      "caracteres": 1476,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 231,
+      "fragmentos_texto": 29,
+      "imagenes": 1,
+      "caracteres": 1289,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 232,
+      "fragmentos_texto": 114,
+      "imagenes": 1,
+      "caracteres": 2178,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 233,
+      "fragmentos_texto": 71,
+      "imagenes": 1,
+      "caracteres": 2015,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 234,
+      "fragmentos_texto": 104,
+      "imagenes": 1,
+      "caracteres": 2117,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 235,
+      "fragmentos_texto": 62,
+      "imagenes": 1,
+      "caracteres": 1568,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 236,
+      "fragmentos_texto": 25,
+      "imagenes": 1,
+      "caracteres": 1715,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 237,
+      "fragmentos_texto": 33,
+      "imagenes": 0,
+      "caracteres": 1425,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 238,
+      "fragmentos_texto": 19,
+      "imagenes": 0,
+      "caracteres": 913,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 239,
+      "fragmentos_texto": 89,
+      "imagenes": 0,
+      "caracteres": 2978,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 240,
+      "fragmentos_texto": 55,
+      "imagenes": 1,
+      "caracteres": 1441,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 241,
+      "fragmentos_texto": 99,
+      "imagenes": 1,
+      "caracteres": 2257,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 242,
+      "fragmentos_texto": 82,
+      "imagenes": 0,
+      "caracteres": 2808,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 243,
+      "fragmentos_texto": 40,
+      "imagenes": 1,
+      "caracteres": 1626,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 244,
+      "fragmentos_texto": 47,
+      "imagenes": 1,
+      "caracteres": 1667,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 245,
+      "fragmentos_texto": 58,
+      "imagenes": 0,
+      "caracteres": 2528,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 246,
+      "fragmentos_texto": 32,
+      "imagenes": 0,
+      "caracteres": 1730,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 247,
+      "fragmentos_texto": 22,
+      "imagenes": 0,
+      "caracteres": 842,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    },
+    {
+      "numero": 248,
+      "fragmentos_texto": 86,
+      "imagenes": 0,
+      "caracteres": 2360,
+      "caracteres_reemplazo": 0,
+      "cajas_fuera_de_pagina": 0
+    }
+  ],
+  "titulos_detectados_por_extraccion": [
+    {
+      "pagina": 6,
+      "titulo": "Capítulo 1. La corriente y sus caminos"
+    },
+    {
+      "pagina": 15,
+      "titulo": "Capítulo 2. El transistor como interruptor"
+    },
+    {
+      "pagina": 25,
+      "titulo": "Capítulo 3. De interruptores a lógica"
+    },
+    {
+      "pagina": 35,
+      "titulo": "Capítulo 4. Construir funciones con compuertas"
+    },
+    {
+      "pagina": 44,
+      "titulo": "Capítulo 5. La realimentación conserva información"
+    },
+    {
+      "pagina": 53,
+      "titulo": "Capítulo 6. Memorizar en el tiempo"
+    },
+    {
+      "pagina": 61,
+      "titulo": "Capítulo 7. Del bit al registro"
+    },
+    {
+      "pagina": 72,
+      "titulo": "Capítulo 7B. Del bit al significado"
+    },
+    {
+      "pagina": 80,
+      "titulo": "Capítulo 8. Direcciones y buses"
+    },
+    {
+      "pagina": 89,
+      "titulo": "Capítulo 9. RAM y ROM reales"
+    },
+    {
+      "pagina": 97,
+      "titulo": "Capítulo 10. El circuito que suma"
+    },
+    {
+      "pagina": 106,
+      "titulo": "Capítulo 11. La unidad aritmético-lógica"
+    },
+    {
+      "pagina": 115,
+      "titulo": "Capítulo 12. Arquitectura Aula-8"
+    },
+    {
+      "pagina": 125,
+      "titulo": "Capítulo 13. La unidad de control"
+    },
+    {
+      "pagina": 133,
+      "titulo": "Capítulo 14. De números a instrucciones"
+    },
+    {
+      "pagina": 145,
+      "titulo": "Capítulo 15. La instrucción en movimiento"
+    },
+    {
+      "pagina": 161,
+      "titulo": "Capítulo 16. Subrutinas y pila"
+    },
+    {
+      "pagina": 169,
+      "titulo": "Capítulo 17. Encender una computadora"
+    },
+    {
+      "pagina": 178,
+      "titulo": "Capítulo 18. Hablar con la máquina"
+    },
+    {
+      "pagina": 186,
+      "titulo": "Capítulo 19. Guardar y recuperar programas"
+    },
+    {
+      "pagina": 194,
+      "titulo": "Capítulo 20. Programar un pequeño sistema"
+    },
+    {
+      "pagina": 203,
+      "titulo": "Capítulo 21. Qué implica ampliar la palabra"
+    },
+    {
+      "pagina": 212,
+      "titulo": "Capítulo 22. Un bus externo de 16 bits"
+    },
+    {
+      "pagina": 221,
+      "titulo": "Capítulo 23. Programación para Aula-16"
+    },
+    {
+      "pagina": 229,
+      "titulo": "Capítulo 23B. De los mapas de caracteres al escritorio "
+    },
+    {
+      "pagina": 239,
+      "titulo": "Capítulo 24. Una computadora que podemos explicar"
+    }
+  ],
+  "hojas_contacto": [
+    "hojas_contacto/C28_S_CONTACTO_01.jpg",
+    "hojas_contacto/C28_S_CONTACTO_02.jpg",
+    "hojas_contacto/C28_S_CONTACTO_03.jpg",
+    "hojas_contacto/C28_S_CONTACTO_04.jpg",
+    "hojas_contacto/C28_S_CONTACTO_05.jpg",
+    "hojas_contacto/C28_S_CONTACTO_06.jpg",
+    "hojas_contacto/C28_S_CONTACTO_07.jpg",
+    "hojas_contacto/C28_S_CONTACTO_08.jpg"
+  ],
+  "limitaciones": [
+    "La geometria de texto/imagen no detecta una ecuacion semanticamente errada",
+    "Los montajes reducidos no demuestran legibilidad, orden de lectura ni ausencia de superposiciones finas",
+    "La revision visual de 248 paginas a resolucion final permanece pendiente",
+    "No se altero el Word/PDF maestro ni se verifica fisicamente ningun circuito"
+  ]
+}

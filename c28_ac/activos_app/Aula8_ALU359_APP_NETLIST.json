@@ -1,0 +1,8668 @@
+{
+  "schema": "aula.circuito.logico.v1",
+  "name": "Aula8_ALU_NAND359",
+  "source_netlist_sha256": "c646aad404be022eacc4c7f6df1bd87f60fd064a0b3a0441def89124d3c07c4f",
+  "logic_levels": "ideal_binary_combinatorial",
+  "clocked": false,
+  "selector_policy": "ONE_HOT_EXACTLY_ONE",
+  "inputs": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "SEL_ADD",
+    "SEL_SUB",
+    "SEL_AND",
+    "SEL_OR",
+    "SEL_XOR",
+    "SEL_NOTA"
+  ],
+  "outputs": {
+    "S": [
+      "OUT0",
+      "OUT1",
+      "OUT2",
+      "OUT3",
+      "OUT4",
+      "OUT5",
+      "OUT6",
+      "OUT7"
+    ],
+    "N": "OUT7",
+    "Z": "z_and_2_0",
+    "C_arith": "arith_Cflag",
+    "V_arith": "arith_V",
+    "CV_valid": "valid_mux"
+  },
+  "nodes": [
+    {
+      "id": "IN.A0",
+      "kind": "input",
+      "signal": "A0",
+      "width": 1
+    },
+    {
+      "id": "IN.A1",
+      "kind": "input",
+      "signal": "A1",
+      "width": 1
+    },
+    {
+      "id": "IN.A2",
+      "kind": "input",
+      "signal": "A2",
+      "width": 1
+    },
+    {
+      "id": "IN.A3",
+      "kind": "input",
+      "signal": "A3",
+      "width": 1
+    },
+    {
+      "id": "IN.A4",
+      "kind": "input",
+      "signal": "A4",
+      "width": 1
+    },
+    {
+      "id": "IN.A5",
+      "kind": "input",
+      "signal": "A5",
+      "width": 1
+    },
+    {
+      "id": "IN.A6",
+      "kind": "input",
+      "signal": "A6",
+      "width": 1
+    },
+    {
+      "id": "IN.A7",
+      "kind": "input",
+      "signal": "A7",
+      "width": 1
+    },
+    {
+      "id": "IN.B0",
+      "kind": "input",
+      "signal": "B0",
+      "width": 1
+    },
+    {
+      "id": "IN.B1",
+      "kind": "input",
+      "signal": "B1",
+      "width": 1
+    },
+    {
+      "id": "IN.B2",
+      "kind": "input",
+      "signal": "B2",
+      "width": 1
+    },
+    {
+      "id": "IN.B3",
+      "kind": "input",
+      "signal": "B3",
+      "width": 1
+    },
+    {
+      "id": "IN.B4",
+      "kind": "input",
+      "signal": "B4",
+      "width": 1
+    },
+    {
+      "id": "IN.B5",
+      "kind": "input",
+      "signal": "B5",
+      "width": 1
+    },
+    {
+      "id": "IN.B6",
+      "kind": "input",
+      "signal": "B6",
+      "width": 1
+    },
+    {
+      "id": "IN.B7",
+      "kind": "input",
+      "signal": "B7",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_ADD",
+      "kind": "input",
+      "signal": "SEL_ADD",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_SUB",
+      "kind": "input",
+      "signal": "SEL_SUB",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_AND",
+      "kind": "input",
+      "signal": "SEL_AND",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_OR",
+      "kind": "input",
+      "signal": "SEL_OR",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_XOR",
+      "kind": "input",
+      "signal": "SEL_XOR",
+      "width": 1
+    },
+    {
+      "id": "IN.SEL_NOTA",
+      "kind": "input",
+      "signal": "SEL_NOTA",
+      "width": 1
+    },
+    {
+      "id": "G.arith_bx0_1",
+      "kind": "NAND2",
+      "gate": "arith_bx0_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 0
+    },
+    {
+      "id": "G.arith_bx0_2",
+      "kind": "NAND2",
+      "gate": "arith_bx0_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 1
+    },
+    {
+      "id": "G.arith_bx0_3",
+      "kind": "NAND2",
+      "gate": "arith_bx0_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 2
+    },
+    {
+      "id": "G.arith_Bmod0",
+      "kind": "NAND2",
+      "gate": "arith_Bmod0",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 3
+    },
+    {
+      "id": "G.arith_an0",
+      "kind": "NAND2",
+      "gate": "arith_an0",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 4
+    },
+    {
+      "id": "G.arith_au0",
+      "kind": "NAND2",
+      "gate": "arith_au0",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 5
+    },
+    {
+      "id": "G.arith_av0",
+      "kind": "NAND2",
+      "gate": "arith_av0",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 6
+    },
+    {
+      "id": "G.arith_P0",
+      "kind": "NAND2",
+      "gate": "arith_P0",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 7
+    },
+    {
+      "id": "G.arith_cn0",
+      "kind": "NAND2",
+      "gate": "arith_cn0",
+      "category": "Aritmética",
+      "depth": 7,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 8
+    },
+    {
+      "id": "G.arith_su0",
+      "kind": "NAND2",
+      "gate": "arith_su0",
+      "category": "Aritmética",
+      "depth": 8,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 9
+    },
+    {
+      "id": "G.arith_sv0",
+      "kind": "NAND2",
+      "gate": "arith_sv0",
+      "category": "Aritmética",
+      "depth": 8,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 10
+    },
+    {
+      "id": "G.arith_S0",
+      "kind": "NAND2",
+      "gate": "arith_S0",
+      "category": "Aritmética",
+      "depth": 9,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 11
+    },
+    {
+      "id": "G.arith_C1",
+      "kind": "NAND2",
+      "gate": "arith_C1",
+      "category": "Aritmética",
+      "depth": 8,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 12
+    },
+    {
+      "id": "G.arith_bx1_1",
+      "kind": "NAND2",
+      "gate": "arith_bx1_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 13
+    },
+    {
+      "id": "G.arith_bx1_2",
+      "kind": "NAND2",
+      "gate": "arith_bx1_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 14
+    },
+    {
+      "id": "G.arith_bx1_3",
+      "kind": "NAND2",
+      "gate": "arith_bx1_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 15
+    },
+    {
+      "id": "G.arith_Bmod1",
+      "kind": "NAND2",
+      "gate": "arith_Bmod1",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 16
+    },
+    {
+      "id": "G.arith_an1",
+      "kind": "NAND2",
+      "gate": "arith_an1",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 17
+    },
+    {
+      "id": "G.arith_au1",
+      "kind": "NAND2",
+      "gate": "arith_au1",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 18
+    },
+    {
+      "id": "G.arith_av1",
+      "kind": "NAND2",
+      "gate": "arith_av1",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 19
+    },
+    {
+      "id": "G.arith_P1",
+      "kind": "NAND2",
+      "gate": "arith_P1",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 20
+    },
+    {
+      "id": "G.arith_cn1",
+      "kind": "NAND2",
+      "gate": "arith_cn1",
+      "category": "Aritmética",
+      "depth": 9,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 21
+    },
+    {
+      "id": "G.arith_su1",
+      "kind": "NAND2",
+      "gate": "arith_su1",
+      "category": "Aritmética",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 22
+    },
+    {
+      "id": "G.arith_sv1",
+      "kind": "NAND2",
+      "gate": "arith_sv1",
+      "category": "Aritmética",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 23
+    },
+    {
+      "id": "G.arith_S1",
+      "kind": "NAND2",
+      "gate": "arith_S1",
+      "category": "Aritmética",
+      "depth": 11,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 24
+    },
+    {
+      "id": "G.arith_C2",
+      "kind": "NAND2",
+      "gate": "arith_C2",
+      "category": "Aritmética",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 25
+    },
+    {
+      "id": "G.arith_bx2_1",
+      "kind": "NAND2",
+      "gate": "arith_bx2_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 26
+    },
+    {
+      "id": "G.arith_bx2_2",
+      "kind": "NAND2",
+      "gate": "arith_bx2_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 27
+    },
+    {
+      "id": "G.arith_bx2_3",
+      "kind": "NAND2",
+      "gate": "arith_bx2_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 28
+    },
+    {
+      "id": "G.arith_Bmod2",
+      "kind": "NAND2",
+      "gate": "arith_Bmod2",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 29
+    },
+    {
+      "id": "G.arith_an2",
+      "kind": "NAND2",
+      "gate": "arith_an2",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 30
+    },
+    {
+      "id": "G.arith_au2",
+      "kind": "NAND2",
+      "gate": "arith_au2",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 31
+    },
+    {
+      "id": "G.arith_av2",
+      "kind": "NAND2",
+      "gate": "arith_av2",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 32
+    },
+    {
+      "id": "G.arith_P2",
+      "kind": "NAND2",
+      "gate": "arith_P2",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 33
+    },
+    {
+      "id": "G.arith_cn2",
+      "kind": "NAND2",
+      "gate": "arith_cn2",
+      "category": "Aritmética",
+      "depth": 11,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 34
+    },
+    {
+      "id": "G.arith_su2",
+      "kind": "NAND2",
+      "gate": "arith_su2",
+      "category": "Aritmética",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 35
+    },
+    {
+      "id": "G.arith_sv2",
+      "kind": "NAND2",
+      "gate": "arith_sv2",
+      "category": "Aritmética",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 36
+    },
+    {
+      "id": "G.arith_S2",
+      "kind": "NAND2",
+      "gate": "arith_S2",
+      "category": "Aritmética",
+      "depth": 13,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 37
+    },
+    {
+      "id": "G.arith_C3",
+      "kind": "NAND2",
+      "gate": "arith_C3",
+      "category": "Aritmética",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 38
+    },
+    {
+      "id": "G.arith_bx3_1",
+      "kind": "NAND2",
+      "gate": "arith_bx3_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 39
+    },
+    {
+      "id": "G.arith_bx3_2",
+      "kind": "NAND2",
+      "gate": "arith_bx3_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 40
+    },
+    {
+      "id": "G.arith_bx3_3",
+      "kind": "NAND2",
+      "gate": "arith_bx3_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 41
+    },
+    {
+      "id": "G.arith_Bmod3",
+      "kind": "NAND2",
+      "gate": "arith_Bmod3",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 42
+    },
+    {
+      "id": "G.arith_an3",
+      "kind": "NAND2",
+      "gate": "arith_an3",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 43
+    },
+    {
+      "id": "G.arith_au3",
+      "kind": "NAND2",
+      "gate": "arith_au3",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 44
+    },
+    {
+      "id": "G.arith_av3",
+      "kind": "NAND2",
+      "gate": "arith_av3",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 45
+    },
+    {
+      "id": "G.arith_P3",
+      "kind": "NAND2",
+      "gate": "arith_P3",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 46
+    },
+    {
+      "id": "G.arith_cn3",
+      "kind": "NAND2",
+      "gate": "arith_cn3",
+      "category": "Aritmética",
+      "depth": 13,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 47
+    },
+    {
+      "id": "G.arith_su3",
+      "kind": "NAND2",
+      "gate": "arith_su3",
+      "category": "Aritmética",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 48
+    },
+    {
+      "id": "G.arith_sv3",
+      "kind": "NAND2",
+      "gate": "arith_sv3",
+      "category": "Aritmética",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 49
+    },
+    {
+      "id": "G.arith_S3",
+      "kind": "NAND2",
+      "gate": "arith_S3",
+      "category": "Aritmética",
+      "depth": 15,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 50
+    },
+    {
+      "id": "G.arith_C4",
+      "kind": "NAND2",
+      "gate": "arith_C4",
+      "category": "Aritmética",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 51
+    },
+    {
+      "id": "G.arith_bx4_1",
+      "kind": "NAND2",
+      "gate": "arith_bx4_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 52
+    },
+    {
+      "id": "G.arith_bx4_2",
+      "kind": "NAND2",
+      "gate": "arith_bx4_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 53
+    },
+    {
+      "id": "G.arith_bx4_3",
+      "kind": "NAND2",
+      "gate": "arith_bx4_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 54
+    },
+    {
+      "id": "G.arith_Bmod4",
+      "kind": "NAND2",
+      "gate": "arith_Bmod4",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 55
+    },
+    {
+      "id": "G.arith_an4",
+      "kind": "NAND2",
+      "gate": "arith_an4",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 56
+    },
+    {
+      "id": "G.arith_au4",
+      "kind": "NAND2",
+      "gate": "arith_au4",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 57
+    },
+    {
+      "id": "G.arith_av4",
+      "kind": "NAND2",
+      "gate": "arith_av4",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 58
+    },
+    {
+      "id": "G.arith_P4",
+      "kind": "NAND2",
+      "gate": "arith_P4",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 59
+    },
+    {
+      "id": "G.arith_cn4",
+      "kind": "NAND2",
+      "gate": "arith_cn4",
+      "category": "Aritmética",
+      "depth": 15,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 60
+    },
+    {
+      "id": "G.arith_su4",
+      "kind": "NAND2",
+      "gate": "arith_su4",
+      "category": "Aritmética",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 61
+    },
+    {
+      "id": "G.arith_sv4",
+      "kind": "NAND2",
+      "gate": "arith_sv4",
+      "category": "Aritmética",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 62
+    },
+    {
+      "id": "G.arith_S4",
+      "kind": "NAND2",
+      "gate": "arith_S4",
+      "category": "Aritmética",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 63
+    },
+    {
+      "id": "G.arith_C5",
+      "kind": "NAND2",
+      "gate": "arith_C5",
+      "category": "Aritmética",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 64
+    },
+    {
+      "id": "G.arith_bx5_1",
+      "kind": "NAND2",
+      "gate": "arith_bx5_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 65
+    },
+    {
+      "id": "G.arith_bx5_2",
+      "kind": "NAND2",
+      "gate": "arith_bx5_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 66
+    },
+    {
+      "id": "G.arith_bx5_3",
+      "kind": "NAND2",
+      "gate": "arith_bx5_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 67
+    },
+    {
+      "id": "G.arith_Bmod5",
+      "kind": "NAND2",
+      "gate": "arith_Bmod5",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 68
+    },
+    {
+      "id": "G.arith_an5",
+      "kind": "NAND2",
+      "gate": "arith_an5",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 69
+    },
+    {
+      "id": "G.arith_au5",
+      "kind": "NAND2",
+      "gate": "arith_au5",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 70
+    },
+    {
+      "id": "G.arith_av5",
+      "kind": "NAND2",
+      "gate": "arith_av5",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 71
+    },
+    {
+      "id": "G.arith_P5",
+      "kind": "NAND2",
+      "gate": "arith_P5",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 72
+    },
+    {
+      "id": "G.arith_cn5",
+      "kind": "NAND2",
+      "gate": "arith_cn5",
+      "category": "Aritmética",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 73
+    },
+    {
+      "id": "G.arith_su5",
+      "kind": "NAND2",
+      "gate": "arith_su5",
+      "category": "Aritmética",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 74
+    },
+    {
+      "id": "G.arith_sv5",
+      "kind": "NAND2",
+      "gate": "arith_sv5",
+      "category": "Aritmética",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 75
+    },
+    {
+      "id": "G.arith_S5",
+      "kind": "NAND2",
+      "gate": "arith_S5",
+      "category": "Aritmética",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 76
+    },
+    {
+      "id": "G.arith_C6",
+      "kind": "NAND2",
+      "gate": "arith_C6",
+      "category": "Aritmética",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 77
+    },
+    {
+      "id": "G.arith_bx6_1",
+      "kind": "NAND2",
+      "gate": "arith_bx6_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 78
+    },
+    {
+      "id": "G.arith_bx6_2",
+      "kind": "NAND2",
+      "gate": "arith_bx6_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 79
+    },
+    {
+      "id": "G.arith_bx6_3",
+      "kind": "NAND2",
+      "gate": "arith_bx6_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 80
+    },
+    {
+      "id": "G.arith_Bmod6",
+      "kind": "NAND2",
+      "gate": "arith_Bmod6",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 81
+    },
+    {
+      "id": "G.arith_an6",
+      "kind": "NAND2",
+      "gate": "arith_an6",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 82
+    },
+    {
+      "id": "G.arith_au6",
+      "kind": "NAND2",
+      "gate": "arith_au6",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 83
+    },
+    {
+      "id": "G.arith_av6",
+      "kind": "NAND2",
+      "gate": "arith_av6",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 84
+    },
+    {
+      "id": "G.arith_P6",
+      "kind": "NAND2",
+      "gate": "arith_P6",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 85
+    },
+    {
+      "id": "G.arith_cn6",
+      "kind": "NAND2",
+      "gate": "arith_cn6",
+      "category": "Aritmética",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 86
+    },
+    {
+      "id": "G.arith_su6",
+      "kind": "NAND2",
+      "gate": "arith_su6",
+      "category": "Aritmética",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 87
+    },
+    {
+      "id": "G.arith_sv6",
+      "kind": "NAND2",
+      "gate": "arith_sv6",
+      "category": "Aritmética",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 88
+    },
+    {
+      "id": "G.arith_S6",
+      "kind": "NAND2",
+      "gate": "arith_S6",
+      "category": "Aritmética",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 89
+    },
+    {
+      "id": "G.arith_C7",
+      "kind": "NAND2",
+      "gate": "arith_C7",
+      "category": "Aritmética",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 90
+    },
+    {
+      "id": "G.arith_bx7_1",
+      "kind": "NAND2",
+      "gate": "arith_bx7_1",
+      "category": "Aritmética",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 91
+    },
+    {
+      "id": "G.arith_bx7_2",
+      "kind": "NAND2",
+      "gate": "arith_bx7_2",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 92
+    },
+    {
+      "id": "G.arith_bx7_3",
+      "kind": "NAND2",
+      "gate": "arith_bx7_3",
+      "category": "Aritmética",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 93
+    },
+    {
+      "id": "G.arith_Bmod7",
+      "kind": "NAND2",
+      "gate": "arith_Bmod7",
+      "category": "Aritmética",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 94
+    },
+    {
+      "id": "G.arith_an7",
+      "kind": "NAND2",
+      "gate": "arith_an7",
+      "category": "Aritmética",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 95
+    },
+    {
+      "id": "G.arith_au7",
+      "kind": "NAND2",
+      "gate": "arith_au7",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 96
+    },
+    {
+      "id": "G.arith_av7",
+      "kind": "NAND2",
+      "gate": "arith_av7",
+      "category": "Aritmética",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 97
+    },
+    {
+      "id": "G.arith_P7",
+      "kind": "NAND2",
+      "gate": "arith_P7",
+      "category": "Aritmética",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 98
+    },
+    {
+      "id": "G.arith_cn7",
+      "kind": "NAND2",
+      "gate": "arith_cn7",
+      "category": "Aritmética",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 99
+    },
+    {
+      "id": "G.arith_su7",
+      "kind": "NAND2",
+      "gate": "arith_su7",
+      "category": "Aritmética",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 100
+    },
+    {
+      "id": "G.arith_sv7",
+      "kind": "NAND2",
+      "gate": "arith_sv7",
+      "category": "Aritmética",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 101
+    },
+    {
+      "id": "G.arith_S7",
+      "kind": "NAND2",
+      "gate": "arith_S7",
+      "category": "Aritmética",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 102
+    },
+    {
+      "id": "G.arith_C8",
+      "kind": "NAND2",
+      "gate": "arith_C8",
+      "category": "Aritmética",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 103
+    },
+    {
+      "id": "G.arith_cf1",
+      "kind": "NAND2",
+      "gate": "arith_cf1",
+      "category": "Aritmética",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 104
+    },
+    {
+      "id": "G.arith_cf2",
+      "kind": "NAND2",
+      "gate": "arith_cf2",
+      "category": "Aritmética",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 105
+    },
+    {
+      "id": "G.arith_cf3",
+      "kind": "NAND2",
+      "gate": "arith_cf3",
+      "category": "Aritmética",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 106
+    },
+    {
+      "id": "G.arith_Cflag",
+      "kind": "NAND2",
+      "gate": "arith_Cflag",
+      "category": "Aritmética",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 107
+    },
+    {
+      "id": "G.arith_vf1",
+      "kind": "NAND2",
+      "gate": "arith_vf1",
+      "category": "Aritmética",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 108
+    },
+    {
+      "id": "G.arith_vf2",
+      "kind": "NAND2",
+      "gate": "arith_vf2",
+      "category": "Aritmética",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 109
+    },
+    {
+      "id": "G.arith_vf3",
+      "kind": "NAND2",
+      "gate": "arith_vf3",
+      "category": "Aritmética",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 110
+    },
+    {
+      "id": "G.arith_V",
+      "kind": "NAND2",
+      "gate": "arith_V",
+      "category": "Aritmética",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 111
+    },
+    {
+      "id": "G.arith_notS0",
+      "kind": "NAND2",
+      "gate": "arith_notS0",
+      "category": "Aritmética",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 112
+    },
+    {
+      "id": "G.arith_notS1",
+      "kind": "NAND2",
+      "gate": "arith_notS1",
+      "category": "Aritmética",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 113
+    },
+    {
+      "id": "G.arith_notS2",
+      "kind": "NAND2",
+      "gate": "arith_notS2",
+      "category": "Aritmética",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 114
+    },
+    {
+      "id": "G.arith_notS3",
+      "kind": "NAND2",
+      "gate": "arith_notS3",
+      "category": "Aritmética",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 115
+    },
+    {
+      "id": "G.arith_notS4",
+      "kind": "NAND2",
+      "gate": "arith_notS4",
+      "category": "Aritmética",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 116
+    },
+    {
+      "id": "G.arith_notS5",
+      "kind": "NAND2",
+      "gate": "arith_notS5",
+      "category": "Aritmética",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 117
+    },
+    {
+      "id": "G.arith_notS6",
+      "kind": "NAND2",
+      "gate": "arith_notS6",
+      "category": "Aritmética",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 118
+    },
+    {
+      "id": "G.arith_notS7",
+      "kind": "NAND2",
+      "gate": "arith_notS7",
+      "category": "Aritmética",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 119
+    },
+    {
+      "id": "G.arith_z_0_0_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_0_0_neg",
+      "category": "Aritmética",
+      "depth": 13,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 120
+    },
+    {
+      "id": "G.arith_z_0_0",
+      "kind": "NAND2",
+      "gate": "arith_z_0_0",
+      "category": "Aritmética",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 121
+    },
+    {
+      "id": "G.arith_z_0_2_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_0_2_neg",
+      "category": "Aritmética",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 122
+    },
+    {
+      "id": "G.arith_z_0_2",
+      "kind": "NAND2",
+      "gate": "arith_z_0_2",
+      "category": "Aritmética",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 123
+    },
+    {
+      "id": "G.arith_z_0_4_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_0_4_neg",
+      "category": "Aritmética",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 124
+    },
+    {
+      "id": "G.arith_z_0_4",
+      "kind": "NAND2",
+      "gate": "arith_z_0_4",
+      "category": "Aritmética",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 125
+    },
+    {
+      "id": "G.arith_z_0_6_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_0_6_neg",
+      "category": "Aritmética",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 126
+    },
+    {
+      "id": "G.arith_z_0_6",
+      "kind": "NAND2",
+      "gate": "arith_z_0_6",
+      "category": "Aritmética",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 127
+    },
+    {
+      "id": "G.arith_z_1_0_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_1_0_neg",
+      "category": "Aritmética",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 128
+    },
+    {
+      "id": "G.arith_z_1_0",
+      "kind": "NAND2",
+      "gate": "arith_z_1_0",
+      "category": "Aritmética",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 129
+    },
+    {
+      "id": "G.arith_z_1_2_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_1_2_neg",
+      "category": "Aritmética",
+      "depth": 27,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 130
+    },
+    {
+      "id": "G.arith_z_1_2",
+      "kind": "NAND2",
+      "gate": "arith_z_1_2",
+      "category": "Aritmética",
+      "depth": 28,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 131
+    },
+    {
+      "id": "G.arith_z_2_0_neg",
+      "kind": "NAND2",
+      "gate": "arith_z_2_0_neg",
+      "category": "Aritmética",
+      "depth": 29,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 132
+    },
+    {
+      "id": "G.arith_z_2_0",
+      "kind": "NAND2",
+      "gate": "arith_z_2_0",
+      "category": "Aritmética",
+      "depth": 30,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 133
+    },
+    {
+      "id": "G.logic_nand0",
+      "kind": "NAND2",
+      "gate": "logic_nand0",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 134
+    },
+    {
+      "id": "G.logic_nota0",
+      "kind": "NAND2",
+      "gate": "logic_nota0",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 135
+    },
+    {
+      "id": "G.logic_notb0",
+      "kind": "NAND2",
+      "gate": "logic_notb0",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 136
+    },
+    {
+      "id": "G.logic_and0",
+      "kind": "NAND2",
+      "gate": "logic_and0",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 137
+    },
+    {
+      "id": "G.logic_or0",
+      "kind": "NAND2",
+      "gate": "logic_or0",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 138
+    },
+    {
+      "id": "G.logic_xor_b1_0",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_0",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 139
+    },
+    {
+      "id": "G.logic_xor_b2_0",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_0",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 140
+    },
+    {
+      "id": "G.logic_xor0",
+      "kind": "NAND2",
+      "gate": "logic_xor0",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 141
+    },
+    {
+      "id": "G.mux_m0_0",
+      "kind": "NAND2",
+      "gate": "mux_m0_0",
+      "category": "Selección de ruta",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 142
+    },
+    {
+      "id": "G.mux_m0_1",
+      "kind": "NAND2",
+      "gate": "mux_m0_1",
+      "category": "Selección de ruta",
+      "depth": 10,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 143
+    },
+    {
+      "id": "G.mux_m0_2",
+      "kind": "NAND2",
+      "gate": "mux_m0_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 144
+    },
+    {
+      "id": "G.mux_m0_3",
+      "kind": "NAND2",
+      "gate": "mux_m0_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 145
+    },
+    {
+      "id": "G.mux_m0_4",
+      "kind": "NAND2",
+      "gate": "mux_m0_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 146
+    },
+    {
+      "id": "G.mux_m0_5",
+      "kind": "NAND2",
+      "gate": "mux_m0_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 147
+    },
+    {
+      "id": "G.mux_p0_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p0_0_neg",
+      "category": "Selección de ruta",
+      "depth": 11,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 148
+    },
+    {
+      "id": "G.mux_p0_0",
+      "kind": "NAND2",
+      "gate": "mux_p0_0",
+      "category": "Selección de ruta",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 149
+    },
+    {
+      "id": "G.mux_p0_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p0_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 150
+    },
+    {
+      "id": "G.mux_p0_1",
+      "kind": "NAND2",
+      "gate": "mux_p0_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 151
+    },
+    {
+      "id": "G.mux_p0_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p0_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 152
+    },
+    {
+      "id": "G.mux_p0_2",
+      "kind": "NAND2",
+      "gate": "mux_p0_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 153
+    },
+    {
+      "id": "G.mux_g0_neg",
+      "kind": "NAND2",
+      "gate": "mux_g0_neg",
+      "category": "Selección de ruta",
+      "depth": 13,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 154
+    },
+    {
+      "id": "G.mux_g0",
+      "kind": "NAND2",
+      "gate": "mux_g0",
+      "category": "Selección de ruta",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 155
+    },
+    {
+      "id": "G.mux_all0_neg",
+      "kind": "NAND2",
+      "gate": "mux_all0_neg",
+      "category": "Selección de ruta",
+      "depth": 15,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 156
+    },
+    {
+      "id": "G.mux_all0",
+      "kind": "NAND2",
+      "gate": "mux_all0",
+      "category": "Selección de ruta",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 157
+    },
+    {
+      "id": "G.OUT0",
+      "kind": "NAND2",
+      "gate": "OUT0",
+      "category": "Selección de ruta",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 158
+    },
+    {
+      "id": "G.logic_nand1",
+      "kind": "NAND2",
+      "gate": "logic_nand1",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 159
+    },
+    {
+      "id": "G.logic_nota1",
+      "kind": "NAND2",
+      "gate": "logic_nota1",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 160
+    },
+    {
+      "id": "G.logic_notb1",
+      "kind": "NAND2",
+      "gate": "logic_notb1",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 161
+    },
+    {
+      "id": "G.logic_and1",
+      "kind": "NAND2",
+      "gate": "logic_and1",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 162
+    },
+    {
+      "id": "G.logic_or1",
+      "kind": "NAND2",
+      "gate": "logic_or1",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 163
+    },
+    {
+      "id": "G.logic_xor_b1_1",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_1",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 164
+    },
+    {
+      "id": "G.logic_xor_b2_1",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_1",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 165
+    },
+    {
+      "id": "G.logic_xor1",
+      "kind": "NAND2",
+      "gate": "logic_xor1",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 166
+    },
+    {
+      "id": "G.mux_m1_0",
+      "kind": "NAND2",
+      "gate": "mux_m1_0",
+      "category": "Selección de ruta",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 167
+    },
+    {
+      "id": "G.mux_m1_1",
+      "kind": "NAND2",
+      "gate": "mux_m1_1",
+      "category": "Selección de ruta",
+      "depth": 12,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 168
+    },
+    {
+      "id": "G.mux_m1_2",
+      "kind": "NAND2",
+      "gate": "mux_m1_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 169
+    },
+    {
+      "id": "G.mux_m1_3",
+      "kind": "NAND2",
+      "gate": "mux_m1_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 170
+    },
+    {
+      "id": "G.mux_m1_4",
+      "kind": "NAND2",
+      "gate": "mux_m1_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 171
+    },
+    {
+      "id": "G.mux_m1_5",
+      "kind": "NAND2",
+      "gate": "mux_m1_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 172
+    },
+    {
+      "id": "G.mux_p1_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p1_0_neg",
+      "category": "Selección de ruta",
+      "depth": 13,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 173
+    },
+    {
+      "id": "G.mux_p1_0",
+      "kind": "NAND2",
+      "gate": "mux_p1_0",
+      "category": "Selección de ruta",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 174
+    },
+    {
+      "id": "G.mux_p1_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p1_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 175
+    },
+    {
+      "id": "G.mux_p1_1",
+      "kind": "NAND2",
+      "gate": "mux_p1_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 176
+    },
+    {
+      "id": "G.mux_p1_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p1_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 177
+    },
+    {
+      "id": "G.mux_p1_2",
+      "kind": "NAND2",
+      "gate": "mux_p1_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 178
+    },
+    {
+      "id": "G.mux_g1_neg",
+      "kind": "NAND2",
+      "gate": "mux_g1_neg",
+      "category": "Selección de ruta",
+      "depth": 15,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 179
+    },
+    {
+      "id": "G.mux_g1",
+      "kind": "NAND2",
+      "gate": "mux_g1",
+      "category": "Selección de ruta",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 180
+    },
+    {
+      "id": "G.mux_all1_neg",
+      "kind": "NAND2",
+      "gate": "mux_all1_neg",
+      "category": "Selección de ruta",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 181
+    },
+    {
+      "id": "G.mux_all1",
+      "kind": "NAND2",
+      "gate": "mux_all1",
+      "category": "Selección de ruta",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 182
+    },
+    {
+      "id": "G.OUT1",
+      "kind": "NAND2",
+      "gate": "OUT1",
+      "category": "Selección de ruta",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 183
+    },
+    {
+      "id": "G.logic_nand2",
+      "kind": "NAND2",
+      "gate": "logic_nand2",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 184
+    },
+    {
+      "id": "G.logic_nota2",
+      "kind": "NAND2",
+      "gate": "logic_nota2",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 185
+    },
+    {
+      "id": "G.logic_notb2",
+      "kind": "NAND2",
+      "gate": "logic_notb2",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 186
+    },
+    {
+      "id": "G.logic_and2",
+      "kind": "NAND2",
+      "gate": "logic_and2",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 187
+    },
+    {
+      "id": "G.logic_or2",
+      "kind": "NAND2",
+      "gate": "logic_or2",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 188
+    },
+    {
+      "id": "G.logic_xor_b1_2",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_2",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 189
+    },
+    {
+      "id": "G.logic_xor_b2_2",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_2",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 190
+    },
+    {
+      "id": "G.logic_xor2",
+      "kind": "NAND2",
+      "gate": "logic_xor2",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 191
+    },
+    {
+      "id": "G.mux_m2_0",
+      "kind": "NAND2",
+      "gate": "mux_m2_0",
+      "category": "Selección de ruta",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 192
+    },
+    {
+      "id": "G.mux_m2_1",
+      "kind": "NAND2",
+      "gate": "mux_m2_1",
+      "category": "Selección de ruta",
+      "depth": 14,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 193
+    },
+    {
+      "id": "G.mux_m2_2",
+      "kind": "NAND2",
+      "gate": "mux_m2_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 194
+    },
+    {
+      "id": "G.mux_m2_3",
+      "kind": "NAND2",
+      "gate": "mux_m2_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 195
+    },
+    {
+      "id": "G.mux_m2_4",
+      "kind": "NAND2",
+      "gate": "mux_m2_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 196
+    },
+    {
+      "id": "G.mux_m2_5",
+      "kind": "NAND2",
+      "gate": "mux_m2_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 197
+    },
+    {
+      "id": "G.mux_p2_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p2_0_neg",
+      "category": "Selección de ruta",
+      "depth": 15,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 198
+    },
+    {
+      "id": "G.mux_p2_0",
+      "kind": "NAND2",
+      "gate": "mux_p2_0",
+      "category": "Selección de ruta",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 199
+    },
+    {
+      "id": "G.mux_p2_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p2_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 200
+    },
+    {
+      "id": "G.mux_p2_1",
+      "kind": "NAND2",
+      "gate": "mux_p2_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 201
+    },
+    {
+      "id": "G.mux_p2_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p2_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 202
+    },
+    {
+      "id": "G.mux_p2_2",
+      "kind": "NAND2",
+      "gate": "mux_p2_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 203
+    },
+    {
+      "id": "G.mux_g2_neg",
+      "kind": "NAND2",
+      "gate": "mux_g2_neg",
+      "category": "Selección de ruta",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 204
+    },
+    {
+      "id": "G.mux_g2",
+      "kind": "NAND2",
+      "gate": "mux_g2",
+      "category": "Selección de ruta",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 205
+    },
+    {
+      "id": "G.mux_all2_neg",
+      "kind": "NAND2",
+      "gate": "mux_all2_neg",
+      "category": "Selección de ruta",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 206
+    },
+    {
+      "id": "G.mux_all2",
+      "kind": "NAND2",
+      "gate": "mux_all2",
+      "category": "Selección de ruta",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 207
+    },
+    {
+      "id": "G.OUT2",
+      "kind": "NAND2",
+      "gate": "OUT2",
+      "category": "Selección de ruta",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 208
+    },
+    {
+      "id": "G.logic_nand3",
+      "kind": "NAND2",
+      "gate": "logic_nand3",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 209
+    },
+    {
+      "id": "G.logic_nota3",
+      "kind": "NAND2",
+      "gate": "logic_nota3",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 210
+    },
+    {
+      "id": "G.logic_notb3",
+      "kind": "NAND2",
+      "gate": "logic_notb3",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 211
+    },
+    {
+      "id": "G.logic_and3",
+      "kind": "NAND2",
+      "gate": "logic_and3",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 212
+    },
+    {
+      "id": "G.logic_or3",
+      "kind": "NAND2",
+      "gate": "logic_or3",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 213
+    },
+    {
+      "id": "G.logic_xor_b1_3",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_3",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 214
+    },
+    {
+      "id": "G.logic_xor_b2_3",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_3",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 215
+    },
+    {
+      "id": "G.logic_xor3",
+      "kind": "NAND2",
+      "gate": "logic_xor3",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 216
+    },
+    {
+      "id": "G.mux_m3_0",
+      "kind": "NAND2",
+      "gate": "mux_m3_0",
+      "category": "Selección de ruta",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 217
+    },
+    {
+      "id": "G.mux_m3_1",
+      "kind": "NAND2",
+      "gate": "mux_m3_1",
+      "category": "Selección de ruta",
+      "depth": 16,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 218
+    },
+    {
+      "id": "G.mux_m3_2",
+      "kind": "NAND2",
+      "gate": "mux_m3_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 219
+    },
+    {
+      "id": "G.mux_m3_3",
+      "kind": "NAND2",
+      "gate": "mux_m3_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 220
+    },
+    {
+      "id": "G.mux_m3_4",
+      "kind": "NAND2",
+      "gate": "mux_m3_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 221
+    },
+    {
+      "id": "G.mux_m3_5",
+      "kind": "NAND2",
+      "gate": "mux_m3_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 222
+    },
+    {
+      "id": "G.mux_p3_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p3_0_neg",
+      "category": "Selección de ruta",
+      "depth": 17,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 223
+    },
+    {
+      "id": "G.mux_p3_0",
+      "kind": "NAND2",
+      "gate": "mux_p3_0",
+      "category": "Selección de ruta",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 224
+    },
+    {
+      "id": "G.mux_p3_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p3_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 225
+    },
+    {
+      "id": "G.mux_p3_1",
+      "kind": "NAND2",
+      "gate": "mux_p3_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 226
+    },
+    {
+      "id": "G.mux_p3_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p3_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 227
+    },
+    {
+      "id": "G.mux_p3_2",
+      "kind": "NAND2",
+      "gate": "mux_p3_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 228
+    },
+    {
+      "id": "G.mux_g3_neg",
+      "kind": "NAND2",
+      "gate": "mux_g3_neg",
+      "category": "Selección de ruta",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 229
+    },
+    {
+      "id": "G.mux_g3",
+      "kind": "NAND2",
+      "gate": "mux_g3",
+      "category": "Selección de ruta",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 230
+    },
+    {
+      "id": "G.mux_all3_neg",
+      "kind": "NAND2",
+      "gate": "mux_all3_neg",
+      "category": "Selección de ruta",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 231
+    },
+    {
+      "id": "G.mux_all3",
+      "kind": "NAND2",
+      "gate": "mux_all3",
+      "category": "Selección de ruta",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 232
+    },
+    {
+      "id": "G.OUT3",
+      "kind": "NAND2",
+      "gate": "OUT3",
+      "category": "Selección de ruta",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 233
+    },
+    {
+      "id": "G.logic_nand4",
+      "kind": "NAND2",
+      "gate": "logic_nand4",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 234
+    },
+    {
+      "id": "G.logic_nota4",
+      "kind": "NAND2",
+      "gate": "logic_nota4",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 235
+    },
+    {
+      "id": "G.logic_notb4",
+      "kind": "NAND2",
+      "gate": "logic_notb4",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 236
+    },
+    {
+      "id": "G.logic_and4",
+      "kind": "NAND2",
+      "gate": "logic_and4",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 237
+    },
+    {
+      "id": "G.logic_or4",
+      "kind": "NAND2",
+      "gate": "logic_or4",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 238
+    },
+    {
+      "id": "G.logic_xor_b1_4",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_4",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 239
+    },
+    {
+      "id": "G.logic_xor_b2_4",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_4",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 240
+    },
+    {
+      "id": "G.logic_xor4",
+      "kind": "NAND2",
+      "gate": "logic_xor4",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 241
+    },
+    {
+      "id": "G.mux_m4_0",
+      "kind": "NAND2",
+      "gate": "mux_m4_0",
+      "category": "Selección de ruta",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 242
+    },
+    {
+      "id": "G.mux_m4_1",
+      "kind": "NAND2",
+      "gate": "mux_m4_1",
+      "category": "Selección de ruta",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 243
+    },
+    {
+      "id": "G.mux_m4_2",
+      "kind": "NAND2",
+      "gate": "mux_m4_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 244
+    },
+    {
+      "id": "G.mux_m4_3",
+      "kind": "NAND2",
+      "gate": "mux_m4_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 245
+    },
+    {
+      "id": "G.mux_m4_4",
+      "kind": "NAND2",
+      "gate": "mux_m4_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 246
+    },
+    {
+      "id": "G.mux_m4_5",
+      "kind": "NAND2",
+      "gate": "mux_m4_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 247
+    },
+    {
+      "id": "G.mux_p4_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p4_0_neg",
+      "category": "Selección de ruta",
+      "depth": 19,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 248
+    },
+    {
+      "id": "G.mux_p4_0",
+      "kind": "NAND2",
+      "gate": "mux_p4_0",
+      "category": "Selección de ruta",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 249
+    },
+    {
+      "id": "G.mux_p4_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p4_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 250
+    },
+    {
+      "id": "G.mux_p4_1",
+      "kind": "NAND2",
+      "gate": "mux_p4_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 251
+    },
+    {
+      "id": "G.mux_p4_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p4_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 252
+    },
+    {
+      "id": "G.mux_p4_2",
+      "kind": "NAND2",
+      "gate": "mux_p4_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 253
+    },
+    {
+      "id": "G.mux_g4_neg",
+      "kind": "NAND2",
+      "gate": "mux_g4_neg",
+      "category": "Selección de ruta",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 254
+    },
+    {
+      "id": "G.mux_g4",
+      "kind": "NAND2",
+      "gate": "mux_g4",
+      "category": "Selección de ruta",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 255
+    },
+    {
+      "id": "G.mux_all4_neg",
+      "kind": "NAND2",
+      "gate": "mux_all4_neg",
+      "category": "Selección de ruta",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 256
+    },
+    {
+      "id": "G.mux_all4",
+      "kind": "NAND2",
+      "gate": "mux_all4",
+      "category": "Selección de ruta",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 257
+    },
+    {
+      "id": "G.OUT4",
+      "kind": "NAND2",
+      "gate": "OUT4",
+      "category": "Selección de ruta",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 258
+    },
+    {
+      "id": "G.logic_nand5",
+      "kind": "NAND2",
+      "gate": "logic_nand5",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 259
+    },
+    {
+      "id": "G.logic_nota5",
+      "kind": "NAND2",
+      "gate": "logic_nota5",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 260
+    },
+    {
+      "id": "G.logic_notb5",
+      "kind": "NAND2",
+      "gate": "logic_notb5",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 261
+    },
+    {
+      "id": "G.logic_and5",
+      "kind": "NAND2",
+      "gate": "logic_and5",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 262
+    },
+    {
+      "id": "G.logic_or5",
+      "kind": "NAND2",
+      "gate": "logic_or5",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 263
+    },
+    {
+      "id": "G.logic_xor_b1_5",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_5",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 264
+    },
+    {
+      "id": "G.logic_xor_b2_5",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_5",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 265
+    },
+    {
+      "id": "G.logic_xor5",
+      "kind": "NAND2",
+      "gate": "logic_xor5",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 266
+    },
+    {
+      "id": "G.mux_m5_0",
+      "kind": "NAND2",
+      "gate": "mux_m5_0",
+      "category": "Selección de ruta",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 267
+    },
+    {
+      "id": "G.mux_m5_1",
+      "kind": "NAND2",
+      "gate": "mux_m5_1",
+      "category": "Selección de ruta",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 268
+    },
+    {
+      "id": "G.mux_m5_2",
+      "kind": "NAND2",
+      "gate": "mux_m5_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 269
+    },
+    {
+      "id": "G.mux_m5_3",
+      "kind": "NAND2",
+      "gate": "mux_m5_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 270
+    },
+    {
+      "id": "G.mux_m5_4",
+      "kind": "NAND2",
+      "gate": "mux_m5_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 271
+    },
+    {
+      "id": "G.mux_m5_5",
+      "kind": "NAND2",
+      "gate": "mux_m5_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 272
+    },
+    {
+      "id": "G.mux_p5_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p5_0_neg",
+      "category": "Selección de ruta",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 273
+    },
+    {
+      "id": "G.mux_p5_0",
+      "kind": "NAND2",
+      "gate": "mux_p5_0",
+      "category": "Selección de ruta",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 274
+    },
+    {
+      "id": "G.mux_p5_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p5_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 275
+    },
+    {
+      "id": "G.mux_p5_1",
+      "kind": "NAND2",
+      "gate": "mux_p5_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 276
+    },
+    {
+      "id": "G.mux_p5_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p5_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 277
+    },
+    {
+      "id": "G.mux_p5_2",
+      "kind": "NAND2",
+      "gate": "mux_p5_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 278
+    },
+    {
+      "id": "G.mux_g5_neg",
+      "kind": "NAND2",
+      "gate": "mux_g5_neg",
+      "category": "Selección de ruta",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 279
+    },
+    {
+      "id": "G.mux_g5",
+      "kind": "NAND2",
+      "gate": "mux_g5",
+      "category": "Selección de ruta",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 280
+    },
+    {
+      "id": "G.mux_all5_neg",
+      "kind": "NAND2",
+      "gate": "mux_all5_neg",
+      "category": "Selección de ruta",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 281
+    },
+    {
+      "id": "G.mux_all5",
+      "kind": "NAND2",
+      "gate": "mux_all5",
+      "category": "Selección de ruta",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 282
+    },
+    {
+      "id": "G.OUT5",
+      "kind": "NAND2",
+      "gate": "OUT5",
+      "category": "Selección de ruta",
+      "depth": 27,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 283
+    },
+    {
+      "id": "G.logic_nand6",
+      "kind": "NAND2",
+      "gate": "logic_nand6",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 284
+    },
+    {
+      "id": "G.logic_nota6",
+      "kind": "NAND2",
+      "gate": "logic_nota6",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 285
+    },
+    {
+      "id": "G.logic_notb6",
+      "kind": "NAND2",
+      "gate": "logic_notb6",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 286
+    },
+    {
+      "id": "G.logic_and6",
+      "kind": "NAND2",
+      "gate": "logic_and6",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 287
+    },
+    {
+      "id": "G.logic_or6",
+      "kind": "NAND2",
+      "gate": "logic_or6",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 288
+    },
+    {
+      "id": "G.logic_xor_b1_6",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_6",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 289
+    },
+    {
+      "id": "G.logic_xor_b2_6",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_6",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 290
+    },
+    {
+      "id": "G.logic_xor6",
+      "kind": "NAND2",
+      "gate": "logic_xor6",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 291
+    },
+    {
+      "id": "G.mux_m6_0",
+      "kind": "NAND2",
+      "gate": "mux_m6_0",
+      "category": "Selección de ruta",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 292
+    },
+    {
+      "id": "G.mux_m6_1",
+      "kind": "NAND2",
+      "gate": "mux_m6_1",
+      "category": "Selección de ruta",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 293
+    },
+    {
+      "id": "G.mux_m6_2",
+      "kind": "NAND2",
+      "gate": "mux_m6_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 294
+    },
+    {
+      "id": "G.mux_m6_3",
+      "kind": "NAND2",
+      "gate": "mux_m6_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 295
+    },
+    {
+      "id": "G.mux_m6_4",
+      "kind": "NAND2",
+      "gate": "mux_m6_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 296
+    },
+    {
+      "id": "G.mux_m6_5",
+      "kind": "NAND2",
+      "gate": "mux_m6_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 297
+    },
+    {
+      "id": "G.mux_p6_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p6_0_neg",
+      "category": "Selección de ruta",
+      "depth": 23,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 298
+    },
+    {
+      "id": "G.mux_p6_0",
+      "kind": "NAND2",
+      "gate": "mux_p6_0",
+      "category": "Selección de ruta",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 299
+    },
+    {
+      "id": "G.mux_p6_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p6_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 300
+    },
+    {
+      "id": "G.mux_p6_1",
+      "kind": "NAND2",
+      "gate": "mux_p6_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 301
+    },
+    {
+      "id": "G.mux_p6_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p6_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 302
+    },
+    {
+      "id": "G.mux_p6_2",
+      "kind": "NAND2",
+      "gate": "mux_p6_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 303
+    },
+    {
+      "id": "G.mux_g6_neg",
+      "kind": "NAND2",
+      "gate": "mux_g6_neg",
+      "category": "Selección de ruta",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 304
+    },
+    {
+      "id": "G.mux_g6",
+      "kind": "NAND2",
+      "gate": "mux_g6",
+      "category": "Selección de ruta",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 305
+    },
+    {
+      "id": "G.mux_all6_neg",
+      "kind": "NAND2",
+      "gate": "mux_all6_neg",
+      "category": "Selección de ruta",
+      "depth": 27,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 306
+    },
+    {
+      "id": "G.mux_all6",
+      "kind": "NAND2",
+      "gate": "mux_all6",
+      "category": "Selección de ruta",
+      "depth": 28,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 307
+    },
+    {
+      "id": "G.OUT6",
+      "kind": "NAND2",
+      "gate": "OUT6",
+      "category": "Selección de ruta",
+      "depth": 29,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 308
+    },
+    {
+      "id": "G.logic_nand7",
+      "kind": "NAND2",
+      "gate": "logic_nand7",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 309
+    },
+    {
+      "id": "G.logic_nota7",
+      "kind": "NAND2",
+      "gate": "logic_nota7",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 310
+    },
+    {
+      "id": "G.logic_notb7",
+      "kind": "NAND2",
+      "gate": "logic_notb7",
+      "category": "Lógica",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 311
+    },
+    {
+      "id": "G.logic_and7",
+      "kind": "NAND2",
+      "gate": "logic_and7",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 312
+    },
+    {
+      "id": "G.logic_or7",
+      "kind": "NAND2",
+      "gate": "logic_or7",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 313
+    },
+    {
+      "id": "G.logic_xor_b1_7",
+      "kind": "NAND2",
+      "gate": "logic_xor_b1_7",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 314
+    },
+    {
+      "id": "G.logic_xor_b2_7",
+      "kind": "NAND2",
+      "gate": "logic_xor_b2_7",
+      "category": "Lógica",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 315
+    },
+    {
+      "id": "G.logic_xor7",
+      "kind": "NAND2",
+      "gate": "logic_xor7",
+      "category": "Lógica",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 316
+    },
+    {
+      "id": "G.mux_m7_0",
+      "kind": "NAND2",
+      "gate": "mux_m7_0",
+      "category": "Selección de ruta",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 317
+    },
+    {
+      "id": "G.mux_m7_1",
+      "kind": "NAND2",
+      "gate": "mux_m7_1",
+      "category": "Selección de ruta",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 318
+    },
+    {
+      "id": "G.mux_m7_2",
+      "kind": "NAND2",
+      "gate": "mux_m7_2",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 319
+    },
+    {
+      "id": "G.mux_m7_3",
+      "kind": "NAND2",
+      "gate": "mux_m7_3",
+      "category": "Selección de ruta",
+      "depth": 3,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 320
+    },
+    {
+      "id": "G.mux_m7_4",
+      "kind": "NAND2",
+      "gate": "mux_m7_4",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 321
+    },
+    {
+      "id": "G.mux_m7_5",
+      "kind": "NAND2",
+      "gate": "mux_m7_5",
+      "category": "Selección de ruta",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 322
+    },
+    {
+      "id": "G.mux_p7_0_neg",
+      "kind": "NAND2",
+      "gate": "mux_p7_0_neg",
+      "category": "Selección de ruta",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 323
+    },
+    {
+      "id": "G.mux_p7_0",
+      "kind": "NAND2",
+      "gate": "mux_p7_0",
+      "category": "Selección de ruta",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 324
+    },
+    {
+      "id": "G.mux_p7_1_neg",
+      "kind": "NAND2",
+      "gate": "mux_p7_1_neg",
+      "category": "Selección de ruta",
+      "depth": 4,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 325
+    },
+    {
+      "id": "G.mux_p7_1",
+      "kind": "NAND2",
+      "gate": "mux_p7_1",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 326
+    },
+    {
+      "id": "G.mux_p7_2_neg",
+      "kind": "NAND2",
+      "gate": "mux_p7_2_neg",
+      "category": "Selección de ruta",
+      "depth": 5,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 327
+    },
+    {
+      "id": "G.mux_p7_2",
+      "kind": "NAND2",
+      "gate": "mux_p7_2",
+      "category": "Selección de ruta",
+      "depth": 6,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 328
+    },
+    {
+      "id": "G.mux_g7_neg",
+      "kind": "NAND2",
+      "gate": "mux_g7_neg",
+      "category": "Selección de ruta",
+      "depth": 27,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 329
+    },
+    {
+      "id": "G.mux_g7",
+      "kind": "NAND2",
+      "gate": "mux_g7",
+      "category": "Selección de ruta",
+      "depth": 28,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 330
+    },
+    {
+      "id": "G.mux_all7_neg",
+      "kind": "NAND2",
+      "gate": "mux_all7_neg",
+      "category": "Selección de ruta",
+      "depth": 29,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 331
+    },
+    {
+      "id": "G.mux_all7",
+      "kind": "NAND2",
+      "gate": "mux_all7",
+      "category": "Selección de ruta",
+      "depth": 30,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 332
+    },
+    {
+      "id": "G.OUT7",
+      "kind": "NAND2",
+      "gate": "OUT7",
+      "category": "Selección de ruta",
+      "depth": 31,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 333
+    },
+    {
+      "id": "G.z_not0",
+      "kind": "NAND2",
+      "gate": "z_not0",
+      "category": "Bandera cero",
+      "depth": 18,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 334
+    },
+    {
+      "id": "G.z_not1",
+      "kind": "NAND2",
+      "gate": "z_not1",
+      "category": "Bandera cero",
+      "depth": 20,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 335
+    },
+    {
+      "id": "G.z_not2",
+      "kind": "NAND2",
+      "gate": "z_not2",
+      "category": "Bandera cero",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 336
+    },
+    {
+      "id": "G.z_not3",
+      "kind": "NAND2",
+      "gate": "z_not3",
+      "category": "Bandera cero",
+      "depth": 24,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 337
+    },
+    {
+      "id": "G.z_not4",
+      "kind": "NAND2",
+      "gate": "z_not4",
+      "category": "Bandera cero",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 338
+    },
+    {
+      "id": "G.z_not5",
+      "kind": "NAND2",
+      "gate": "z_not5",
+      "category": "Bandera cero",
+      "depth": 28,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 339
+    },
+    {
+      "id": "G.z_not6",
+      "kind": "NAND2",
+      "gate": "z_not6",
+      "category": "Bandera cero",
+      "depth": 30,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 340
+    },
+    {
+      "id": "G.z_not7",
+      "kind": "NAND2",
+      "gate": "z_not7",
+      "category": "Bandera cero",
+      "depth": 32,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 341
+    },
+    {
+      "id": "G.z_and_0_0_neg",
+      "kind": "NAND2",
+      "gate": "z_and_0_0_neg",
+      "category": "Bandera cero",
+      "depth": 21,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 342
+    },
+    {
+      "id": "G.z_and_0_0",
+      "kind": "NAND2",
+      "gate": "z_and_0_0",
+      "category": "Bandera cero",
+      "depth": 22,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 343
+    },
+    {
+      "id": "G.z_and_0_2_neg",
+      "kind": "NAND2",
+      "gate": "z_and_0_2_neg",
+      "category": "Bandera cero",
+      "depth": 25,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 344
+    },
+    {
+      "id": "G.z_and_0_2",
+      "kind": "NAND2",
+      "gate": "z_and_0_2",
+      "category": "Bandera cero",
+      "depth": 26,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 345
+    },
+    {
+      "id": "G.z_and_0_4_neg",
+      "kind": "NAND2",
+      "gate": "z_and_0_4_neg",
+      "category": "Bandera cero",
+      "depth": 29,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 346
+    },
+    {
+      "id": "G.z_and_0_4",
+      "kind": "NAND2",
+      "gate": "z_and_0_4",
+      "category": "Bandera cero",
+      "depth": 30,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 347
+    },
+    {
+      "id": "G.z_and_0_6_neg",
+      "kind": "NAND2",
+      "gate": "z_and_0_6_neg",
+      "category": "Bandera cero",
+      "depth": 33,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 348
+    },
+    {
+      "id": "G.z_and_0_6",
+      "kind": "NAND2",
+      "gate": "z_and_0_6",
+      "category": "Bandera cero",
+      "depth": 34,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 349
+    },
+    {
+      "id": "G.z_and_1_0_neg",
+      "kind": "NAND2",
+      "gate": "z_and_1_0_neg",
+      "category": "Bandera cero",
+      "depth": 27,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 350
+    },
+    {
+      "id": "G.z_and_1_0",
+      "kind": "NAND2",
+      "gate": "z_and_1_0",
+      "category": "Bandera cero",
+      "depth": 28,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 351
+    },
+    {
+      "id": "G.z_and_1_2_neg",
+      "kind": "NAND2",
+      "gate": "z_and_1_2_neg",
+      "category": "Bandera cero",
+      "depth": 35,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 352
+    },
+    {
+      "id": "G.z_and_1_2",
+      "kind": "NAND2",
+      "gate": "z_and_1_2",
+      "category": "Bandera cero",
+      "depth": 36,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 353
+    },
+    {
+      "id": "G.z_and_2_0_neg",
+      "kind": "NAND2",
+      "gate": "z_and_2_0_neg",
+      "category": "Bandera cero",
+      "depth": 37,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 354
+    },
+    {
+      "id": "G.z_and_2_0",
+      "kind": "NAND2",
+      "gate": "z_and_2_0",
+      "category": "Bandera cero",
+      "depth": 38,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 355
+    },
+    {
+      "id": "G.valid_not_add",
+      "kind": "NAND2",
+      "gate": "valid_not_add",
+      "category": "Validez C/V",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 356
+    },
+    {
+      "id": "G.valid_not_sub",
+      "kind": "NAND2",
+      "gate": "valid_not_sub",
+      "category": "Validez C/V",
+      "depth": 1,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 357
+    },
+    {
+      "id": "G.valid_mux",
+      "kind": "NAND2",
+      "gate": "valid_mux",
+      "category": "Validez C/V",
+      "depth": 2,
+      "pins": [
+        "A",
+        "B",
+        "Y"
+      ],
+      "topological_index": 358
+    },
+    {
+      "id": "OUT.S0",
+      "kind": "output",
+      "signal": "S",
+      "bit": 0
+    },
+    {
+      "id": "OUT.S1",
+      "kind": "output",
+      "signal": "S",
+      "bit": 1
+    },
+    {
+      "id": "OUT.S2",
+      "kind": "output",
+      "signal": "S",
+      "bit": 2
+    },
+    {
+      "id": "OUT.S3",
+      "kind": "output",
+      "signal": "S",
+      "bit": 3
+    },
+    {
+      "id": "OUT.S4",
+      "kind": "output",
+      "signal": "S",
+      "bit": 4
+    },
+    {
+      "id": "OUT.S5",
+      "kind": "output",
+      "signal": "S",
+      "bit": 5
+    },
+    {
+      "id": "OUT.S6",
+      "kind": "output",
+      "signal": "S",
+      "bit": 6
+    },
+    {
+      "id": "OUT.S7",
+      "kind": "output",
+      "signal": "S",
+      "bit": 7
+    },
+    {
+      "id": "OUT.N",
+      "kind": "output",
+      "signal": "N",
+      "bit": null
+    },
+    {
+      "id": "OUT.Z",
+      "kind": "output",
+      "signal": "Z",
+      "bit": null
+    },
+    {
+      "id": "OUT.C_arith",
+      "kind": "output",
+      "signal": "C_arith",
+      "bit": null
+    },
+    {
+      "id": "OUT.V_arith",
+      "kind": "output",
+      "signal": "V_arith",
+      "bit": null
+    },
+    {
+      "id": "OUT.CV_valid",
+      "kind": "output",
+      "signal": "CV_valid",
+      "bit": null
+    }
+  ],
+  "connections": [
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.arith_bx0_1.A",
+      "signal": "B0"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx0_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.arith_bx0_2.A",
+      "signal": "B0"
+    },
+    {
+      "from": "G.arith_bx0_1.Y",
+      "to": "G.arith_bx0_2.B",
+      "signal": "arith_bx0_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx0_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx0_1.Y",
+      "to": "G.arith_bx0_3.B",
+      "signal": "arith_bx0_1"
+    },
+    {
+      "from": "G.arith_bx0_2.Y",
+      "to": "G.arith_Bmod0.A",
+      "signal": "arith_bx0_2"
+    },
+    {
+      "from": "G.arith_bx0_3.Y",
+      "to": "G.arith_Bmod0.B",
+      "signal": "arith_bx0_3"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.arith_an0.A",
+      "signal": "A0"
+    },
+    {
+      "from": "G.arith_Bmod0.Y",
+      "to": "G.arith_an0.B",
+      "signal": "arith_Bmod0"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.arith_au0.A",
+      "signal": "A0"
+    },
+    {
+      "from": "G.arith_an0.Y",
+      "to": "G.arith_au0.B",
+      "signal": "arith_an0"
+    },
+    {
+      "from": "G.arith_Bmod0.Y",
+      "to": "G.arith_av0.A",
+      "signal": "arith_Bmod0"
+    },
+    {
+      "from": "G.arith_an0.Y",
+      "to": "G.arith_av0.B",
+      "signal": "arith_an0"
+    },
+    {
+      "from": "G.arith_au0.Y",
+      "to": "G.arith_P0.A",
+      "signal": "arith_au0"
+    },
+    {
+      "from": "G.arith_av0.Y",
+      "to": "G.arith_P0.B",
+      "signal": "arith_av0"
+    },
+    {
+      "from": "G.arith_P0.Y",
+      "to": "G.arith_cn0.A",
+      "signal": "arith_P0"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_cn0.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_P0.Y",
+      "to": "G.arith_su0.A",
+      "signal": "arith_P0"
+    },
+    {
+      "from": "G.arith_cn0.Y",
+      "to": "G.arith_su0.B",
+      "signal": "arith_cn0"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_sv0.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_cn0.Y",
+      "to": "G.arith_sv0.B",
+      "signal": "arith_cn0"
+    },
+    {
+      "from": "G.arith_su0.Y",
+      "to": "G.arith_S0.A",
+      "signal": "arith_su0"
+    },
+    {
+      "from": "G.arith_sv0.Y",
+      "to": "G.arith_S0.B",
+      "signal": "arith_sv0"
+    },
+    {
+      "from": "G.arith_an0.Y",
+      "to": "G.arith_C1.A",
+      "signal": "arith_an0"
+    },
+    {
+      "from": "G.arith_cn0.Y",
+      "to": "G.arith_C1.B",
+      "signal": "arith_cn0"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.arith_bx1_1.A",
+      "signal": "B1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx1_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.arith_bx1_2.A",
+      "signal": "B1"
+    },
+    {
+      "from": "G.arith_bx1_1.Y",
+      "to": "G.arith_bx1_2.B",
+      "signal": "arith_bx1_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx1_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx1_1.Y",
+      "to": "G.arith_bx1_3.B",
+      "signal": "arith_bx1_1"
+    },
+    {
+      "from": "G.arith_bx1_2.Y",
+      "to": "G.arith_Bmod1.A",
+      "signal": "arith_bx1_2"
+    },
+    {
+      "from": "G.arith_bx1_3.Y",
+      "to": "G.arith_Bmod1.B",
+      "signal": "arith_bx1_3"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.arith_an1.A",
+      "signal": "A1"
+    },
+    {
+      "from": "G.arith_Bmod1.Y",
+      "to": "G.arith_an1.B",
+      "signal": "arith_Bmod1"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.arith_au1.A",
+      "signal": "A1"
+    },
+    {
+      "from": "G.arith_an1.Y",
+      "to": "G.arith_au1.B",
+      "signal": "arith_an1"
+    },
+    {
+      "from": "G.arith_Bmod1.Y",
+      "to": "G.arith_av1.A",
+      "signal": "arith_Bmod1"
+    },
+    {
+      "from": "G.arith_an1.Y",
+      "to": "G.arith_av1.B",
+      "signal": "arith_an1"
+    },
+    {
+      "from": "G.arith_au1.Y",
+      "to": "G.arith_P1.A",
+      "signal": "arith_au1"
+    },
+    {
+      "from": "G.arith_av1.Y",
+      "to": "G.arith_P1.B",
+      "signal": "arith_av1"
+    },
+    {
+      "from": "G.arith_P1.Y",
+      "to": "G.arith_cn1.A",
+      "signal": "arith_P1"
+    },
+    {
+      "from": "G.arith_C1.Y",
+      "to": "G.arith_cn1.B",
+      "signal": "arith_C1"
+    },
+    {
+      "from": "G.arith_P1.Y",
+      "to": "G.arith_su1.A",
+      "signal": "arith_P1"
+    },
+    {
+      "from": "G.arith_cn1.Y",
+      "to": "G.arith_su1.B",
+      "signal": "arith_cn1"
+    },
+    {
+      "from": "G.arith_C1.Y",
+      "to": "G.arith_sv1.A",
+      "signal": "arith_C1"
+    },
+    {
+      "from": "G.arith_cn1.Y",
+      "to": "G.arith_sv1.B",
+      "signal": "arith_cn1"
+    },
+    {
+      "from": "G.arith_su1.Y",
+      "to": "G.arith_S1.A",
+      "signal": "arith_su1"
+    },
+    {
+      "from": "G.arith_sv1.Y",
+      "to": "G.arith_S1.B",
+      "signal": "arith_sv1"
+    },
+    {
+      "from": "G.arith_an1.Y",
+      "to": "G.arith_C2.A",
+      "signal": "arith_an1"
+    },
+    {
+      "from": "G.arith_cn1.Y",
+      "to": "G.arith_C2.B",
+      "signal": "arith_cn1"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.arith_bx2_1.A",
+      "signal": "B2"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx2_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.arith_bx2_2.A",
+      "signal": "B2"
+    },
+    {
+      "from": "G.arith_bx2_1.Y",
+      "to": "G.arith_bx2_2.B",
+      "signal": "arith_bx2_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx2_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx2_1.Y",
+      "to": "G.arith_bx2_3.B",
+      "signal": "arith_bx2_1"
+    },
+    {
+      "from": "G.arith_bx2_2.Y",
+      "to": "G.arith_Bmod2.A",
+      "signal": "arith_bx2_2"
+    },
+    {
+      "from": "G.arith_bx2_3.Y",
+      "to": "G.arith_Bmod2.B",
+      "signal": "arith_bx2_3"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.arith_an2.A",
+      "signal": "A2"
+    },
+    {
+      "from": "G.arith_Bmod2.Y",
+      "to": "G.arith_an2.B",
+      "signal": "arith_Bmod2"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.arith_au2.A",
+      "signal": "A2"
+    },
+    {
+      "from": "G.arith_an2.Y",
+      "to": "G.arith_au2.B",
+      "signal": "arith_an2"
+    },
+    {
+      "from": "G.arith_Bmod2.Y",
+      "to": "G.arith_av2.A",
+      "signal": "arith_Bmod2"
+    },
+    {
+      "from": "G.arith_an2.Y",
+      "to": "G.arith_av2.B",
+      "signal": "arith_an2"
+    },
+    {
+      "from": "G.arith_au2.Y",
+      "to": "G.arith_P2.A",
+      "signal": "arith_au2"
+    },
+    {
+      "from": "G.arith_av2.Y",
+      "to": "G.arith_P2.B",
+      "signal": "arith_av2"
+    },
+    {
+      "from": "G.arith_P2.Y",
+      "to": "G.arith_cn2.A",
+      "signal": "arith_P2"
+    },
+    {
+      "from": "G.arith_C2.Y",
+      "to": "G.arith_cn2.B",
+      "signal": "arith_C2"
+    },
+    {
+      "from": "G.arith_P2.Y",
+      "to": "G.arith_su2.A",
+      "signal": "arith_P2"
+    },
+    {
+      "from": "G.arith_cn2.Y",
+      "to": "G.arith_su2.B",
+      "signal": "arith_cn2"
+    },
+    {
+      "from": "G.arith_C2.Y",
+      "to": "G.arith_sv2.A",
+      "signal": "arith_C2"
+    },
+    {
+      "from": "G.arith_cn2.Y",
+      "to": "G.arith_sv2.B",
+      "signal": "arith_cn2"
+    },
+    {
+      "from": "G.arith_su2.Y",
+      "to": "G.arith_S2.A",
+      "signal": "arith_su2"
+    },
+    {
+      "from": "G.arith_sv2.Y",
+      "to": "G.arith_S2.B",
+      "signal": "arith_sv2"
+    },
+    {
+      "from": "G.arith_an2.Y",
+      "to": "G.arith_C3.A",
+      "signal": "arith_an2"
+    },
+    {
+      "from": "G.arith_cn2.Y",
+      "to": "G.arith_C3.B",
+      "signal": "arith_cn2"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.arith_bx3_1.A",
+      "signal": "B3"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx3_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.arith_bx3_2.A",
+      "signal": "B3"
+    },
+    {
+      "from": "G.arith_bx3_1.Y",
+      "to": "G.arith_bx3_2.B",
+      "signal": "arith_bx3_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx3_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx3_1.Y",
+      "to": "G.arith_bx3_3.B",
+      "signal": "arith_bx3_1"
+    },
+    {
+      "from": "G.arith_bx3_2.Y",
+      "to": "G.arith_Bmod3.A",
+      "signal": "arith_bx3_2"
+    },
+    {
+      "from": "G.arith_bx3_3.Y",
+      "to": "G.arith_Bmod3.B",
+      "signal": "arith_bx3_3"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.arith_an3.A",
+      "signal": "A3"
+    },
+    {
+      "from": "G.arith_Bmod3.Y",
+      "to": "G.arith_an3.B",
+      "signal": "arith_Bmod3"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.arith_au3.A",
+      "signal": "A3"
+    },
+    {
+      "from": "G.arith_an3.Y",
+      "to": "G.arith_au3.B",
+      "signal": "arith_an3"
+    },
+    {
+      "from": "G.arith_Bmod3.Y",
+      "to": "G.arith_av3.A",
+      "signal": "arith_Bmod3"
+    },
+    {
+      "from": "G.arith_an3.Y",
+      "to": "G.arith_av3.B",
+      "signal": "arith_an3"
+    },
+    {
+      "from": "G.arith_au3.Y",
+      "to": "G.arith_P3.A",
+      "signal": "arith_au3"
+    },
+    {
+      "from": "G.arith_av3.Y",
+      "to": "G.arith_P3.B",
+      "signal": "arith_av3"
+    },
+    {
+      "from": "G.arith_P3.Y",
+      "to": "G.arith_cn3.A",
+      "signal": "arith_P3"
+    },
+    {
+      "from": "G.arith_C3.Y",
+      "to": "G.arith_cn3.B",
+      "signal": "arith_C3"
+    },
+    {
+      "from": "G.arith_P3.Y",
+      "to": "G.arith_su3.A",
+      "signal": "arith_P3"
+    },
+    {
+      "from": "G.arith_cn3.Y",
+      "to": "G.arith_su3.B",
+      "signal": "arith_cn3"
+    },
+    {
+      "from": "G.arith_C3.Y",
+      "to": "G.arith_sv3.A",
+      "signal": "arith_C3"
+    },
+    {
+      "from": "G.arith_cn3.Y",
+      "to": "G.arith_sv3.B",
+      "signal": "arith_cn3"
+    },
+    {
+      "from": "G.arith_su3.Y",
+      "to": "G.arith_S3.A",
+      "signal": "arith_su3"
+    },
+    {
+      "from": "G.arith_sv3.Y",
+      "to": "G.arith_S3.B",
+      "signal": "arith_sv3"
+    },
+    {
+      "from": "G.arith_an3.Y",
+      "to": "G.arith_C4.A",
+      "signal": "arith_an3"
+    },
+    {
+      "from": "G.arith_cn3.Y",
+      "to": "G.arith_C4.B",
+      "signal": "arith_cn3"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.arith_bx4_1.A",
+      "signal": "B4"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx4_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.arith_bx4_2.A",
+      "signal": "B4"
+    },
+    {
+      "from": "G.arith_bx4_1.Y",
+      "to": "G.arith_bx4_2.B",
+      "signal": "arith_bx4_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx4_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx4_1.Y",
+      "to": "G.arith_bx4_3.B",
+      "signal": "arith_bx4_1"
+    },
+    {
+      "from": "G.arith_bx4_2.Y",
+      "to": "G.arith_Bmod4.A",
+      "signal": "arith_bx4_2"
+    },
+    {
+      "from": "G.arith_bx4_3.Y",
+      "to": "G.arith_Bmod4.B",
+      "signal": "arith_bx4_3"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.arith_an4.A",
+      "signal": "A4"
+    },
+    {
+      "from": "G.arith_Bmod4.Y",
+      "to": "G.arith_an4.B",
+      "signal": "arith_Bmod4"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.arith_au4.A",
+      "signal": "A4"
+    },
+    {
+      "from": "G.arith_an4.Y",
+      "to": "G.arith_au4.B",
+      "signal": "arith_an4"
+    },
+    {
+      "from": "G.arith_Bmod4.Y",
+      "to": "G.arith_av4.A",
+      "signal": "arith_Bmod4"
+    },
+    {
+      "from": "G.arith_an4.Y",
+      "to": "G.arith_av4.B",
+      "signal": "arith_an4"
+    },
+    {
+      "from": "G.arith_au4.Y",
+      "to": "G.arith_P4.A",
+      "signal": "arith_au4"
+    },
+    {
+      "from": "G.arith_av4.Y",
+      "to": "G.arith_P4.B",
+      "signal": "arith_av4"
+    },
+    {
+      "from": "G.arith_P4.Y",
+      "to": "G.arith_cn4.A",
+      "signal": "arith_P4"
+    },
+    {
+      "from": "G.arith_C4.Y",
+      "to": "G.arith_cn4.B",
+      "signal": "arith_C4"
+    },
+    {
+      "from": "G.arith_P4.Y",
+      "to": "G.arith_su4.A",
+      "signal": "arith_P4"
+    },
+    {
+      "from": "G.arith_cn4.Y",
+      "to": "G.arith_su4.B",
+      "signal": "arith_cn4"
+    },
+    {
+      "from": "G.arith_C4.Y",
+      "to": "G.arith_sv4.A",
+      "signal": "arith_C4"
+    },
+    {
+      "from": "G.arith_cn4.Y",
+      "to": "G.arith_sv4.B",
+      "signal": "arith_cn4"
+    },
+    {
+      "from": "G.arith_su4.Y",
+      "to": "G.arith_S4.A",
+      "signal": "arith_su4"
+    },
+    {
+      "from": "G.arith_sv4.Y",
+      "to": "G.arith_S4.B",
+      "signal": "arith_sv4"
+    },
+    {
+      "from": "G.arith_an4.Y",
+      "to": "G.arith_C5.A",
+      "signal": "arith_an4"
+    },
+    {
+      "from": "G.arith_cn4.Y",
+      "to": "G.arith_C5.B",
+      "signal": "arith_cn4"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.arith_bx5_1.A",
+      "signal": "B5"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx5_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.arith_bx5_2.A",
+      "signal": "B5"
+    },
+    {
+      "from": "G.arith_bx5_1.Y",
+      "to": "G.arith_bx5_2.B",
+      "signal": "arith_bx5_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx5_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx5_1.Y",
+      "to": "G.arith_bx5_3.B",
+      "signal": "arith_bx5_1"
+    },
+    {
+      "from": "G.arith_bx5_2.Y",
+      "to": "G.arith_Bmod5.A",
+      "signal": "arith_bx5_2"
+    },
+    {
+      "from": "G.arith_bx5_3.Y",
+      "to": "G.arith_Bmod5.B",
+      "signal": "arith_bx5_3"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.arith_an5.A",
+      "signal": "A5"
+    },
+    {
+      "from": "G.arith_Bmod5.Y",
+      "to": "G.arith_an5.B",
+      "signal": "arith_Bmod5"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.arith_au5.A",
+      "signal": "A5"
+    },
+    {
+      "from": "G.arith_an5.Y",
+      "to": "G.arith_au5.B",
+      "signal": "arith_an5"
+    },
+    {
+      "from": "G.arith_Bmod5.Y",
+      "to": "G.arith_av5.A",
+      "signal": "arith_Bmod5"
+    },
+    {
+      "from": "G.arith_an5.Y",
+      "to": "G.arith_av5.B",
+      "signal": "arith_an5"
+    },
+    {
+      "from": "G.arith_au5.Y",
+      "to": "G.arith_P5.A",
+      "signal": "arith_au5"
+    },
+    {
+      "from": "G.arith_av5.Y",
+      "to": "G.arith_P5.B",
+      "signal": "arith_av5"
+    },
+    {
+      "from": "G.arith_P5.Y",
+      "to": "G.arith_cn5.A",
+      "signal": "arith_P5"
+    },
+    {
+      "from": "G.arith_C5.Y",
+      "to": "G.arith_cn5.B",
+      "signal": "arith_C5"
+    },
+    {
+      "from": "G.arith_P5.Y",
+      "to": "G.arith_su5.A",
+      "signal": "arith_P5"
+    },
+    {
+      "from": "G.arith_cn5.Y",
+      "to": "G.arith_su5.B",
+      "signal": "arith_cn5"
+    },
+    {
+      "from": "G.arith_C5.Y",
+      "to": "G.arith_sv5.A",
+      "signal": "arith_C5"
+    },
+    {
+      "from": "G.arith_cn5.Y",
+      "to": "G.arith_sv5.B",
+      "signal": "arith_cn5"
+    },
+    {
+      "from": "G.arith_su5.Y",
+      "to": "G.arith_S5.A",
+      "signal": "arith_su5"
+    },
+    {
+      "from": "G.arith_sv5.Y",
+      "to": "G.arith_S5.B",
+      "signal": "arith_sv5"
+    },
+    {
+      "from": "G.arith_an5.Y",
+      "to": "G.arith_C6.A",
+      "signal": "arith_an5"
+    },
+    {
+      "from": "G.arith_cn5.Y",
+      "to": "G.arith_C6.B",
+      "signal": "arith_cn5"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.arith_bx6_1.A",
+      "signal": "B6"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx6_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.arith_bx6_2.A",
+      "signal": "B6"
+    },
+    {
+      "from": "G.arith_bx6_1.Y",
+      "to": "G.arith_bx6_2.B",
+      "signal": "arith_bx6_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx6_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx6_1.Y",
+      "to": "G.arith_bx6_3.B",
+      "signal": "arith_bx6_1"
+    },
+    {
+      "from": "G.arith_bx6_2.Y",
+      "to": "G.arith_Bmod6.A",
+      "signal": "arith_bx6_2"
+    },
+    {
+      "from": "G.arith_bx6_3.Y",
+      "to": "G.arith_Bmod6.B",
+      "signal": "arith_bx6_3"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.arith_an6.A",
+      "signal": "A6"
+    },
+    {
+      "from": "G.arith_Bmod6.Y",
+      "to": "G.arith_an6.B",
+      "signal": "arith_Bmod6"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.arith_au6.A",
+      "signal": "A6"
+    },
+    {
+      "from": "G.arith_an6.Y",
+      "to": "G.arith_au6.B",
+      "signal": "arith_an6"
+    },
+    {
+      "from": "G.arith_Bmod6.Y",
+      "to": "G.arith_av6.A",
+      "signal": "arith_Bmod6"
+    },
+    {
+      "from": "G.arith_an6.Y",
+      "to": "G.arith_av6.B",
+      "signal": "arith_an6"
+    },
+    {
+      "from": "G.arith_au6.Y",
+      "to": "G.arith_P6.A",
+      "signal": "arith_au6"
+    },
+    {
+      "from": "G.arith_av6.Y",
+      "to": "G.arith_P6.B",
+      "signal": "arith_av6"
+    },
+    {
+      "from": "G.arith_P6.Y",
+      "to": "G.arith_cn6.A",
+      "signal": "arith_P6"
+    },
+    {
+      "from": "G.arith_C6.Y",
+      "to": "G.arith_cn6.B",
+      "signal": "arith_C6"
+    },
+    {
+      "from": "G.arith_P6.Y",
+      "to": "G.arith_su6.A",
+      "signal": "arith_P6"
+    },
+    {
+      "from": "G.arith_cn6.Y",
+      "to": "G.arith_su6.B",
+      "signal": "arith_cn6"
+    },
+    {
+      "from": "G.arith_C6.Y",
+      "to": "G.arith_sv6.A",
+      "signal": "arith_C6"
+    },
+    {
+      "from": "G.arith_cn6.Y",
+      "to": "G.arith_sv6.B",
+      "signal": "arith_cn6"
+    },
+    {
+      "from": "G.arith_su6.Y",
+      "to": "G.arith_S6.A",
+      "signal": "arith_su6"
+    },
+    {
+      "from": "G.arith_sv6.Y",
+      "to": "G.arith_S6.B",
+      "signal": "arith_sv6"
+    },
+    {
+      "from": "G.arith_an6.Y",
+      "to": "G.arith_C7.A",
+      "signal": "arith_an6"
+    },
+    {
+      "from": "G.arith_cn6.Y",
+      "to": "G.arith_C7.B",
+      "signal": "arith_cn6"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.arith_bx7_1.A",
+      "signal": "B7"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx7_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.arith_bx7_2.A",
+      "signal": "B7"
+    },
+    {
+      "from": "G.arith_bx7_1.Y",
+      "to": "G.arith_bx7_2.B",
+      "signal": "arith_bx7_1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_bx7_3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_bx7_1.Y",
+      "to": "G.arith_bx7_3.B",
+      "signal": "arith_bx7_1"
+    },
+    {
+      "from": "G.arith_bx7_2.Y",
+      "to": "G.arith_Bmod7.A",
+      "signal": "arith_bx7_2"
+    },
+    {
+      "from": "G.arith_bx7_3.Y",
+      "to": "G.arith_Bmod7.B",
+      "signal": "arith_bx7_3"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.arith_an7.A",
+      "signal": "A7"
+    },
+    {
+      "from": "G.arith_Bmod7.Y",
+      "to": "G.arith_an7.B",
+      "signal": "arith_Bmod7"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.arith_au7.A",
+      "signal": "A7"
+    },
+    {
+      "from": "G.arith_an7.Y",
+      "to": "G.arith_au7.B",
+      "signal": "arith_an7"
+    },
+    {
+      "from": "G.arith_Bmod7.Y",
+      "to": "G.arith_av7.A",
+      "signal": "arith_Bmod7"
+    },
+    {
+      "from": "G.arith_an7.Y",
+      "to": "G.arith_av7.B",
+      "signal": "arith_an7"
+    },
+    {
+      "from": "G.arith_au7.Y",
+      "to": "G.arith_P7.A",
+      "signal": "arith_au7"
+    },
+    {
+      "from": "G.arith_av7.Y",
+      "to": "G.arith_P7.B",
+      "signal": "arith_av7"
+    },
+    {
+      "from": "G.arith_P7.Y",
+      "to": "G.arith_cn7.A",
+      "signal": "arith_P7"
+    },
+    {
+      "from": "G.arith_C7.Y",
+      "to": "G.arith_cn7.B",
+      "signal": "arith_C7"
+    },
+    {
+      "from": "G.arith_P7.Y",
+      "to": "G.arith_su7.A",
+      "signal": "arith_P7"
+    },
+    {
+      "from": "G.arith_cn7.Y",
+      "to": "G.arith_su7.B",
+      "signal": "arith_cn7"
+    },
+    {
+      "from": "G.arith_C7.Y",
+      "to": "G.arith_sv7.A",
+      "signal": "arith_C7"
+    },
+    {
+      "from": "G.arith_cn7.Y",
+      "to": "G.arith_sv7.B",
+      "signal": "arith_cn7"
+    },
+    {
+      "from": "G.arith_su7.Y",
+      "to": "G.arith_S7.A",
+      "signal": "arith_su7"
+    },
+    {
+      "from": "G.arith_sv7.Y",
+      "to": "G.arith_S7.B",
+      "signal": "arith_sv7"
+    },
+    {
+      "from": "G.arith_an7.Y",
+      "to": "G.arith_C8.A",
+      "signal": "arith_an7"
+    },
+    {
+      "from": "G.arith_cn7.Y",
+      "to": "G.arith_C8.B",
+      "signal": "arith_cn7"
+    },
+    {
+      "from": "G.arith_C8.Y",
+      "to": "G.arith_cf1.A",
+      "signal": "arith_C8"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_cf1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_C8.Y",
+      "to": "G.arith_cf2.A",
+      "signal": "arith_C8"
+    },
+    {
+      "from": "G.arith_cf1.Y",
+      "to": "G.arith_cf2.B",
+      "signal": "arith_cf1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.arith_cf3.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.arith_cf1.Y",
+      "to": "G.arith_cf3.B",
+      "signal": "arith_cf1"
+    },
+    {
+      "from": "G.arith_cf2.Y",
+      "to": "G.arith_Cflag.A",
+      "signal": "arith_cf2"
+    },
+    {
+      "from": "G.arith_cf3.Y",
+      "to": "G.arith_Cflag.B",
+      "signal": "arith_cf3"
+    },
+    {
+      "from": "G.arith_C7.Y",
+      "to": "G.arith_vf1.A",
+      "signal": "arith_C7"
+    },
+    {
+      "from": "G.arith_C8.Y",
+      "to": "G.arith_vf1.B",
+      "signal": "arith_C8"
+    },
+    {
+      "from": "G.arith_C7.Y",
+      "to": "G.arith_vf2.A",
+      "signal": "arith_C7"
+    },
+    {
+      "from": "G.arith_vf1.Y",
+      "to": "G.arith_vf2.B",
+      "signal": "arith_vf1"
+    },
+    {
+      "from": "G.arith_C8.Y",
+      "to": "G.arith_vf3.A",
+      "signal": "arith_C8"
+    },
+    {
+      "from": "G.arith_vf1.Y",
+      "to": "G.arith_vf3.B",
+      "signal": "arith_vf1"
+    },
+    {
+      "from": "G.arith_vf2.Y",
+      "to": "G.arith_V.A",
+      "signal": "arith_vf2"
+    },
+    {
+      "from": "G.arith_vf3.Y",
+      "to": "G.arith_V.B",
+      "signal": "arith_vf3"
+    },
+    {
+      "from": "G.arith_S0.Y",
+      "to": "G.arith_notS0.A",
+      "signal": "arith_S0"
+    },
+    {
+      "from": "G.arith_S0.Y",
+      "to": "G.arith_notS0.B",
+      "signal": "arith_S0"
+    },
+    {
+      "from": "G.arith_S1.Y",
+      "to": "G.arith_notS1.A",
+      "signal": "arith_S1"
+    },
+    {
+      "from": "G.arith_S1.Y",
+      "to": "G.arith_notS1.B",
+      "signal": "arith_S1"
+    },
+    {
+      "from": "G.arith_S2.Y",
+      "to": "G.arith_notS2.A",
+      "signal": "arith_S2"
+    },
+    {
+      "from": "G.arith_S2.Y",
+      "to": "G.arith_notS2.B",
+      "signal": "arith_S2"
+    },
+    {
+      "from": "G.arith_S3.Y",
+      "to": "G.arith_notS3.A",
+      "signal": "arith_S3"
+    },
+    {
+      "from": "G.arith_S3.Y",
+      "to": "G.arith_notS3.B",
+      "signal": "arith_S3"
+    },
+    {
+      "from": "G.arith_S4.Y",
+      "to": "G.arith_notS4.A",
+      "signal": "arith_S4"
+    },
+    {
+      "from": "G.arith_S4.Y",
+      "to": "G.arith_notS4.B",
+      "signal": "arith_S4"
+    },
+    {
+      "from": "G.arith_S5.Y",
+      "to": "G.arith_notS5.A",
+      "signal": "arith_S5"
+    },
+    {
+      "from": "G.arith_S5.Y",
+      "to": "G.arith_notS5.B",
+      "signal": "arith_S5"
+    },
+    {
+      "from": "G.arith_S6.Y",
+      "to": "G.arith_notS6.A",
+      "signal": "arith_S6"
+    },
+    {
+      "from": "G.arith_S6.Y",
+      "to": "G.arith_notS6.B",
+      "signal": "arith_S6"
+    },
+    {
+      "from": "G.arith_S7.Y",
+      "to": "G.arith_notS7.A",
+      "signal": "arith_S7"
+    },
+    {
+      "from": "G.arith_S7.Y",
+      "to": "G.arith_notS7.B",
+      "signal": "arith_S7"
+    },
+    {
+      "from": "G.arith_notS0.Y",
+      "to": "G.arith_z_0_0_neg.A",
+      "signal": "arith_notS0"
+    },
+    {
+      "from": "G.arith_notS1.Y",
+      "to": "G.arith_z_0_0_neg.B",
+      "signal": "arith_notS1"
+    },
+    {
+      "from": "G.arith_z_0_0_neg.Y",
+      "to": "G.arith_z_0_0.A",
+      "signal": "arith_z_0_0_neg"
+    },
+    {
+      "from": "G.arith_z_0_0_neg.Y",
+      "to": "G.arith_z_0_0.B",
+      "signal": "arith_z_0_0_neg"
+    },
+    {
+      "from": "G.arith_notS2.Y",
+      "to": "G.arith_z_0_2_neg.A",
+      "signal": "arith_notS2"
+    },
+    {
+      "from": "G.arith_notS3.Y",
+      "to": "G.arith_z_0_2_neg.B",
+      "signal": "arith_notS3"
+    },
+    {
+      "from": "G.arith_z_0_2_neg.Y",
+      "to": "G.arith_z_0_2.A",
+      "signal": "arith_z_0_2_neg"
+    },
+    {
+      "from": "G.arith_z_0_2_neg.Y",
+      "to": "G.arith_z_0_2.B",
+      "signal": "arith_z_0_2_neg"
+    },
+    {
+      "from": "G.arith_notS4.Y",
+      "to": "G.arith_z_0_4_neg.A",
+      "signal": "arith_notS4"
+    },
+    {
+      "from": "G.arith_notS5.Y",
+      "to": "G.arith_z_0_4_neg.B",
+      "signal": "arith_notS5"
+    },
+    {
+      "from": "G.arith_z_0_4_neg.Y",
+      "to": "G.arith_z_0_4.A",
+      "signal": "arith_z_0_4_neg"
+    },
+    {
+      "from": "G.arith_z_0_4_neg.Y",
+      "to": "G.arith_z_0_4.B",
+      "signal": "arith_z_0_4_neg"
+    },
+    {
+      "from": "G.arith_notS6.Y",
+      "to": "G.arith_z_0_6_neg.A",
+      "signal": "arith_notS6"
+    },
+    {
+      "from": "G.arith_notS7.Y",
+      "to": "G.arith_z_0_6_neg.B",
+      "signal": "arith_notS7"
+    },
+    {
+      "from": "G.arith_z_0_6_neg.Y",
+      "to": "G.arith_z_0_6.A",
+      "signal": "arith_z_0_6_neg"
+    },
+    {
+      "from": "G.arith_z_0_6_neg.Y",
+      "to": "G.arith_z_0_6.B",
+      "signal": "arith_z_0_6_neg"
+    },
+    {
+      "from": "G.arith_z_0_0.Y",
+      "to": "G.arith_z_1_0_neg.A",
+      "signal": "arith_z_0_0"
+    },
+    {
+      "from": "G.arith_z_0_2.Y",
+      "to": "G.arith_z_1_0_neg.B",
+      "signal": "arith_z_0_2"
+    },
+    {
+      "from": "G.arith_z_1_0_neg.Y",
+      "to": "G.arith_z_1_0.A",
+      "signal": "arith_z_1_0_neg"
+    },
+    {
+      "from": "G.arith_z_1_0_neg.Y",
+      "to": "G.arith_z_1_0.B",
+      "signal": "arith_z_1_0_neg"
+    },
+    {
+      "from": "G.arith_z_0_4.Y",
+      "to": "G.arith_z_1_2_neg.A",
+      "signal": "arith_z_0_4"
+    },
+    {
+      "from": "G.arith_z_0_6.Y",
+      "to": "G.arith_z_1_2_neg.B",
+      "signal": "arith_z_0_6"
+    },
+    {
+      "from": "G.arith_z_1_2_neg.Y",
+      "to": "G.arith_z_1_2.A",
+      "signal": "arith_z_1_2_neg"
+    },
+    {
+      "from": "G.arith_z_1_2_neg.Y",
+      "to": "G.arith_z_1_2.B",
+      "signal": "arith_z_1_2_neg"
+    },
+    {
+      "from": "G.arith_z_1_0.Y",
+      "to": "G.arith_z_2_0_neg.A",
+      "signal": "arith_z_1_0"
+    },
+    {
+      "from": "G.arith_z_1_2.Y",
+      "to": "G.arith_z_2_0_neg.B",
+      "signal": "arith_z_1_2"
+    },
+    {
+      "from": "G.arith_z_2_0_neg.Y",
+      "to": "G.arith_z_2_0.A",
+      "signal": "arith_z_2_0_neg"
+    },
+    {
+      "from": "G.arith_z_2_0_neg.Y",
+      "to": "G.arith_z_2_0.B",
+      "signal": "arith_z_2_0_neg"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.logic_nand0.A",
+      "signal": "A0"
+    },
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.logic_nand0.B",
+      "signal": "B0"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.logic_nota0.A",
+      "signal": "A0"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.logic_nota0.B",
+      "signal": "A0"
+    },
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.logic_notb0.A",
+      "signal": "B0"
+    },
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.logic_notb0.B",
+      "signal": "B0"
+    },
+    {
+      "from": "G.logic_nand0.Y",
+      "to": "G.logic_and0.A",
+      "signal": "logic_nand0"
+    },
+    {
+      "from": "G.logic_nand0.Y",
+      "to": "G.logic_and0.B",
+      "signal": "logic_nand0"
+    },
+    {
+      "from": "G.logic_nota0.Y",
+      "to": "G.logic_or0.A",
+      "signal": "logic_nota0"
+    },
+    {
+      "from": "G.logic_notb0.Y",
+      "to": "G.logic_or0.B",
+      "signal": "logic_notb0"
+    },
+    {
+      "from": "IN.A0.OUT",
+      "to": "G.logic_xor_b1_0.A",
+      "signal": "A0"
+    },
+    {
+      "from": "G.logic_nand0.Y",
+      "to": "G.logic_xor_b1_0.B",
+      "signal": "logic_nand0"
+    },
+    {
+      "from": "IN.B0.OUT",
+      "to": "G.logic_xor_b2_0.A",
+      "signal": "B0"
+    },
+    {
+      "from": "G.logic_nand0.Y",
+      "to": "G.logic_xor_b2_0.B",
+      "signal": "logic_nand0"
+    },
+    {
+      "from": "G.logic_xor_b1_0.Y",
+      "to": "G.logic_xor0.A",
+      "signal": "logic_xor_b1_0"
+    },
+    {
+      "from": "G.logic_xor_b2_0.Y",
+      "to": "G.logic_xor0.B",
+      "signal": "logic_xor_b2_0"
+    },
+    {
+      "from": "G.arith_S0.Y",
+      "to": "G.mux_m0_0.A",
+      "signal": "arith_S0"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m0_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S0.Y",
+      "to": "G.mux_m0_1.A",
+      "signal": "arith_S0"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m0_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and0.Y",
+      "to": "G.mux_m0_2.A",
+      "signal": "logic_and0"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m0_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or0.Y",
+      "to": "G.mux_m0_3.A",
+      "signal": "logic_or0"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m0_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor0.Y",
+      "to": "G.mux_m0_4.A",
+      "signal": "logic_xor0"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m0_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota0.Y",
+      "to": "G.mux_m0_5.A",
+      "signal": "logic_nota0"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m0_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m0_0.Y",
+      "to": "G.mux_p0_0_neg.A",
+      "signal": "mux_m0_0"
+    },
+    {
+      "from": "G.mux_m0_1.Y",
+      "to": "G.mux_p0_0_neg.B",
+      "signal": "mux_m0_1"
+    },
+    {
+      "from": "G.mux_p0_0_neg.Y",
+      "to": "G.mux_p0_0.A",
+      "signal": "mux_p0_0_neg"
+    },
+    {
+      "from": "G.mux_p0_0_neg.Y",
+      "to": "G.mux_p0_0.B",
+      "signal": "mux_p0_0_neg"
+    },
+    {
+      "from": "G.mux_m0_2.Y",
+      "to": "G.mux_p0_1_neg.A",
+      "signal": "mux_m0_2"
+    },
+    {
+      "from": "G.mux_m0_3.Y",
+      "to": "G.mux_p0_1_neg.B",
+      "signal": "mux_m0_3"
+    },
+    {
+      "from": "G.mux_p0_1_neg.Y",
+      "to": "G.mux_p0_1.A",
+      "signal": "mux_p0_1_neg"
+    },
+    {
+      "from": "G.mux_p0_1_neg.Y",
+      "to": "G.mux_p0_1.B",
+      "signal": "mux_p0_1_neg"
+    },
+    {
+      "from": "G.mux_m0_4.Y",
+      "to": "G.mux_p0_2_neg.A",
+      "signal": "mux_m0_4"
+    },
+    {
+      "from": "G.mux_m0_5.Y",
+      "to": "G.mux_p0_2_neg.B",
+      "signal": "mux_m0_5"
+    },
+    {
+      "from": "G.mux_p0_2_neg.Y",
+      "to": "G.mux_p0_2.A",
+      "signal": "mux_p0_2_neg"
+    },
+    {
+      "from": "G.mux_p0_2_neg.Y",
+      "to": "G.mux_p0_2.B",
+      "signal": "mux_p0_2_neg"
+    },
+    {
+      "from": "G.mux_p0_0.Y",
+      "to": "G.mux_g0_neg.A",
+      "signal": "mux_p0_0"
+    },
+    {
+      "from": "G.mux_p0_1.Y",
+      "to": "G.mux_g0_neg.B",
+      "signal": "mux_p0_1"
+    },
+    {
+      "from": "G.mux_g0_neg.Y",
+      "to": "G.mux_g0.A",
+      "signal": "mux_g0_neg"
+    },
+    {
+      "from": "G.mux_g0_neg.Y",
+      "to": "G.mux_g0.B",
+      "signal": "mux_g0_neg"
+    },
+    {
+      "from": "G.mux_g0.Y",
+      "to": "G.mux_all0_neg.A",
+      "signal": "mux_g0"
+    },
+    {
+      "from": "G.mux_p0_2.Y",
+      "to": "G.mux_all0_neg.B",
+      "signal": "mux_p0_2"
+    },
+    {
+      "from": "G.mux_all0_neg.Y",
+      "to": "G.mux_all0.A",
+      "signal": "mux_all0_neg"
+    },
+    {
+      "from": "G.mux_all0_neg.Y",
+      "to": "G.mux_all0.B",
+      "signal": "mux_all0_neg"
+    },
+    {
+      "from": "G.mux_all0.Y",
+      "to": "G.OUT0.A",
+      "signal": "mux_all0"
+    },
+    {
+      "from": "G.mux_all0.Y",
+      "to": "G.OUT0.B",
+      "signal": "mux_all0"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.logic_nand1.A",
+      "signal": "A1"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.logic_nand1.B",
+      "signal": "B1"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.logic_nota1.A",
+      "signal": "A1"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.logic_nota1.B",
+      "signal": "A1"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.logic_notb1.A",
+      "signal": "B1"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.logic_notb1.B",
+      "signal": "B1"
+    },
+    {
+      "from": "G.logic_nand1.Y",
+      "to": "G.logic_and1.A",
+      "signal": "logic_nand1"
+    },
+    {
+      "from": "G.logic_nand1.Y",
+      "to": "G.logic_and1.B",
+      "signal": "logic_nand1"
+    },
+    {
+      "from": "G.logic_nota1.Y",
+      "to": "G.logic_or1.A",
+      "signal": "logic_nota1"
+    },
+    {
+      "from": "G.logic_notb1.Y",
+      "to": "G.logic_or1.B",
+      "signal": "logic_notb1"
+    },
+    {
+      "from": "IN.A1.OUT",
+      "to": "G.logic_xor_b1_1.A",
+      "signal": "A1"
+    },
+    {
+      "from": "G.logic_nand1.Y",
+      "to": "G.logic_xor_b1_1.B",
+      "signal": "logic_nand1"
+    },
+    {
+      "from": "IN.B1.OUT",
+      "to": "G.logic_xor_b2_1.A",
+      "signal": "B1"
+    },
+    {
+      "from": "G.logic_nand1.Y",
+      "to": "G.logic_xor_b2_1.B",
+      "signal": "logic_nand1"
+    },
+    {
+      "from": "G.logic_xor_b1_1.Y",
+      "to": "G.logic_xor1.A",
+      "signal": "logic_xor_b1_1"
+    },
+    {
+      "from": "G.logic_xor_b2_1.Y",
+      "to": "G.logic_xor1.B",
+      "signal": "logic_xor_b2_1"
+    },
+    {
+      "from": "G.arith_S1.Y",
+      "to": "G.mux_m1_0.A",
+      "signal": "arith_S1"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m1_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S1.Y",
+      "to": "G.mux_m1_1.A",
+      "signal": "arith_S1"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m1_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and1.Y",
+      "to": "G.mux_m1_2.A",
+      "signal": "logic_and1"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m1_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or1.Y",
+      "to": "G.mux_m1_3.A",
+      "signal": "logic_or1"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m1_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor1.Y",
+      "to": "G.mux_m1_4.A",
+      "signal": "logic_xor1"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m1_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota1.Y",
+      "to": "G.mux_m1_5.A",
+      "signal": "logic_nota1"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m1_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m1_0.Y",
+      "to": "G.mux_p1_0_neg.A",
+      "signal": "mux_m1_0"
+    },
+    {
+      "from": "G.mux_m1_1.Y",
+      "to": "G.mux_p1_0_neg.B",
+      "signal": "mux_m1_1"
+    },
+    {
+      "from": "G.mux_p1_0_neg.Y",
+      "to": "G.mux_p1_0.A",
+      "signal": "mux_p1_0_neg"
+    },
+    {
+      "from": "G.mux_p1_0_neg.Y",
+      "to": "G.mux_p1_0.B",
+      "signal": "mux_p1_0_neg"
+    },
+    {
+      "from": "G.mux_m1_2.Y",
+      "to": "G.mux_p1_1_neg.A",
+      "signal": "mux_m1_2"
+    },
+    {
+      "from": "G.mux_m1_3.Y",
+      "to": "G.mux_p1_1_neg.B",
+      "signal": "mux_m1_3"
+    },
+    {
+      "from": "G.mux_p1_1_neg.Y",
+      "to": "G.mux_p1_1.A",
+      "signal": "mux_p1_1_neg"
+    },
+    {
+      "from": "G.mux_p1_1_neg.Y",
+      "to": "G.mux_p1_1.B",
+      "signal": "mux_p1_1_neg"
+    },
+    {
+      "from": "G.mux_m1_4.Y",
+      "to": "G.mux_p1_2_neg.A",
+      "signal": "mux_m1_4"
+    },
+    {
+      "from": "G.mux_m1_5.Y",
+      "to": "G.mux_p1_2_neg.B",
+      "signal": "mux_m1_5"
+    },
+    {
+      "from": "G.mux_p1_2_neg.Y",
+      "to": "G.mux_p1_2.A",
+      "signal": "mux_p1_2_neg"
+    },
+    {
+      "from": "G.mux_p1_2_neg.Y",
+      "to": "G.mux_p1_2.B",
+      "signal": "mux_p1_2_neg"
+    },
+    {
+      "from": "G.mux_p1_0.Y",
+      "to": "G.mux_g1_neg.A",
+      "signal": "mux_p1_0"
+    },
+    {
+      "from": "G.mux_p1_1.Y",
+      "to": "G.mux_g1_neg.B",
+      "signal": "mux_p1_1"
+    },
+    {
+      "from": "G.mux_g1_neg.Y",
+      "to": "G.mux_g1.A",
+      "signal": "mux_g1_neg"
+    },
+    {
+      "from": "G.mux_g1_neg.Y",
+      "to": "G.mux_g1.B",
+      "signal": "mux_g1_neg"
+    },
+    {
+      "from": "G.mux_g1.Y",
+      "to": "G.mux_all1_neg.A",
+      "signal": "mux_g1"
+    },
+    {
+      "from": "G.mux_p1_2.Y",
+      "to": "G.mux_all1_neg.B",
+      "signal": "mux_p1_2"
+    },
+    {
+      "from": "G.mux_all1_neg.Y",
+      "to": "G.mux_all1.A",
+      "signal": "mux_all1_neg"
+    },
+    {
+      "from": "G.mux_all1_neg.Y",
+      "to": "G.mux_all1.B",
+      "signal": "mux_all1_neg"
+    },
+    {
+      "from": "G.mux_all1.Y",
+      "to": "G.OUT1.A",
+      "signal": "mux_all1"
+    },
+    {
+      "from": "G.mux_all1.Y",
+      "to": "G.OUT1.B",
+      "signal": "mux_all1"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.logic_nand2.A",
+      "signal": "A2"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.logic_nand2.B",
+      "signal": "B2"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.logic_nota2.A",
+      "signal": "A2"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.logic_nota2.B",
+      "signal": "A2"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.logic_notb2.A",
+      "signal": "B2"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.logic_notb2.B",
+      "signal": "B2"
+    },
+    {
+      "from": "G.logic_nand2.Y",
+      "to": "G.logic_and2.A",
+      "signal": "logic_nand2"
+    },
+    {
+      "from": "G.logic_nand2.Y",
+      "to": "G.logic_and2.B",
+      "signal": "logic_nand2"
+    },
+    {
+      "from": "G.logic_nota2.Y",
+      "to": "G.logic_or2.A",
+      "signal": "logic_nota2"
+    },
+    {
+      "from": "G.logic_notb2.Y",
+      "to": "G.logic_or2.B",
+      "signal": "logic_notb2"
+    },
+    {
+      "from": "IN.A2.OUT",
+      "to": "G.logic_xor_b1_2.A",
+      "signal": "A2"
+    },
+    {
+      "from": "G.logic_nand2.Y",
+      "to": "G.logic_xor_b1_2.B",
+      "signal": "logic_nand2"
+    },
+    {
+      "from": "IN.B2.OUT",
+      "to": "G.logic_xor_b2_2.A",
+      "signal": "B2"
+    },
+    {
+      "from": "G.logic_nand2.Y",
+      "to": "G.logic_xor_b2_2.B",
+      "signal": "logic_nand2"
+    },
+    {
+      "from": "G.logic_xor_b1_2.Y",
+      "to": "G.logic_xor2.A",
+      "signal": "logic_xor_b1_2"
+    },
+    {
+      "from": "G.logic_xor_b2_2.Y",
+      "to": "G.logic_xor2.B",
+      "signal": "logic_xor_b2_2"
+    },
+    {
+      "from": "G.arith_S2.Y",
+      "to": "G.mux_m2_0.A",
+      "signal": "arith_S2"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m2_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S2.Y",
+      "to": "G.mux_m2_1.A",
+      "signal": "arith_S2"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m2_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and2.Y",
+      "to": "G.mux_m2_2.A",
+      "signal": "logic_and2"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m2_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or2.Y",
+      "to": "G.mux_m2_3.A",
+      "signal": "logic_or2"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m2_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor2.Y",
+      "to": "G.mux_m2_4.A",
+      "signal": "logic_xor2"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m2_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota2.Y",
+      "to": "G.mux_m2_5.A",
+      "signal": "logic_nota2"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m2_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m2_0.Y",
+      "to": "G.mux_p2_0_neg.A",
+      "signal": "mux_m2_0"
+    },
+    {
+      "from": "G.mux_m2_1.Y",
+      "to": "G.mux_p2_0_neg.B",
+      "signal": "mux_m2_1"
+    },
+    {
+      "from": "G.mux_p2_0_neg.Y",
+      "to": "G.mux_p2_0.A",
+      "signal": "mux_p2_0_neg"
+    },
+    {
+      "from": "G.mux_p2_0_neg.Y",
+      "to": "G.mux_p2_0.B",
+      "signal": "mux_p2_0_neg"
+    },
+    {
+      "from": "G.mux_m2_2.Y",
+      "to": "G.mux_p2_1_neg.A",
+      "signal": "mux_m2_2"
+    },
+    {
+      "from": "G.mux_m2_3.Y",
+      "to": "G.mux_p2_1_neg.B",
+      "signal": "mux_m2_3"
+    },
+    {
+      "from": "G.mux_p2_1_neg.Y",
+      "to": "G.mux_p2_1.A",
+      "signal": "mux_p2_1_neg"
+    },
+    {
+      "from": "G.mux_p2_1_neg.Y",
+      "to": "G.mux_p2_1.B",
+      "signal": "mux_p2_1_neg"
+    },
+    {
+      "from": "G.mux_m2_4.Y",
+      "to": "G.mux_p2_2_neg.A",
+      "signal": "mux_m2_4"
+    },
+    {
+      "from": "G.mux_m2_5.Y",
+      "to": "G.mux_p2_2_neg.B",
+      "signal": "mux_m2_5"
+    },
+    {
+      "from": "G.mux_p2_2_neg.Y",
+      "to": "G.mux_p2_2.A",
+      "signal": "mux_p2_2_neg"
+    },
+    {
+      "from": "G.mux_p2_2_neg.Y",
+      "to": "G.mux_p2_2.B",
+      "signal": "mux_p2_2_neg"
+    },
+    {
+      "from": "G.mux_p2_0.Y",
+      "to": "G.mux_g2_neg.A",
+      "signal": "mux_p2_0"
+    },
+    {
+      "from": "G.mux_p2_1.Y",
+      "to": "G.mux_g2_neg.B",
+      "signal": "mux_p2_1"
+    },
+    {
+      "from": "G.mux_g2_neg.Y",
+      "to": "G.mux_g2.A",
+      "signal": "mux_g2_neg"
+    },
+    {
+      "from": "G.mux_g2_neg.Y",
+      "to": "G.mux_g2.B",
+      "signal": "mux_g2_neg"
+    },
+    {
+      "from": "G.mux_g2.Y",
+      "to": "G.mux_all2_neg.A",
+      "signal": "mux_g2"
+    },
+    {
+      "from": "G.mux_p2_2.Y",
+      "to": "G.mux_all2_neg.B",
+      "signal": "mux_p2_2"
+    },
+    {
+      "from": "G.mux_all2_neg.Y",
+      "to": "G.mux_all2.A",
+      "signal": "mux_all2_neg"
+    },
+    {
+      "from": "G.mux_all2_neg.Y",
+      "to": "G.mux_all2.B",
+      "signal": "mux_all2_neg"
+    },
+    {
+      "from": "G.mux_all2.Y",
+      "to": "G.OUT2.A",
+      "signal": "mux_all2"
+    },
+    {
+      "from": "G.mux_all2.Y",
+      "to": "G.OUT2.B",
+      "signal": "mux_all2"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.logic_nand3.A",
+      "signal": "A3"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.logic_nand3.B",
+      "signal": "B3"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.logic_nota3.A",
+      "signal": "A3"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.logic_nota3.B",
+      "signal": "A3"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.logic_notb3.A",
+      "signal": "B3"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.logic_notb3.B",
+      "signal": "B3"
+    },
+    {
+      "from": "G.logic_nand3.Y",
+      "to": "G.logic_and3.A",
+      "signal": "logic_nand3"
+    },
+    {
+      "from": "G.logic_nand3.Y",
+      "to": "G.logic_and3.B",
+      "signal": "logic_nand3"
+    },
+    {
+      "from": "G.logic_nota3.Y",
+      "to": "G.logic_or3.A",
+      "signal": "logic_nota3"
+    },
+    {
+      "from": "G.logic_notb3.Y",
+      "to": "G.logic_or3.B",
+      "signal": "logic_notb3"
+    },
+    {
+      "from": "IN.A3.OUT",
+      "to": "G.logic_xor_b1_3.A",
+      "signal": "A3"
+    },
+    {
+      "from": "G.logic_nand3.Y",
+      "to": "G.logic_xor_b1_3.B",
+      "signal": "logic_nand3"
+    },
+    {
+      "from": "IN.B3.OUT",
+      "to": "G.logic_xor_b2_3.A",
+      "signal": "B3"
+    },
+    {
+      "from": "G.logic_nand3.Y",
+      "to": "G.logic_xor_b2_3.B",
+      "signal": "logic_nand3"
+    },
+    {
+      "from": "G.logic_xor_b1_3.Y",
+      "to": "G.logic_xor3.A",
+      "signal": "logic_xor_b1_3"
+    },
+    {
+      "from": "G.logic_xor_b2_3.Y",
+      "to": "G.logic_xor3.B",
+      "signal": "logic_xor_b2_3"
+    },
+    {
+      "from": "G.arith_S3.Y",
+      "to": "G.mux_m3_0.A",
+      "signal": "arith_S3"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m3_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S3.Y",
+      "to": "G.mux_m3_1.A",
+      "signal": "arith_S3"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m3_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and3.Y",
+      "to": "G.mux_m3_2.A",
+      "signal": "logic_and3"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m3_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or3.Y",
+      "to": "G.mux_m3_3.A",
+      "signal": "logic_or3"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m3_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor3.Y",
+      "to": "G.mux_m3_4.A",
+      "signal": "logic_xor3"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m3_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota3.Y",
+      "to": "G.mux_m3_5.A",
+      "signal": "logic_nota3"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m3_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m3_0.Y",
+      "to": "G.mux_p3_0_neg.A",
+      "signal": "mux_m3_0"
+    },
+    {
+      "from": "G.mux_m3_1.Y",
+      "to": "G.mux_p3_0_neg.B",
+      "signal": "mux_m3_1"
+    },
+    {
+      "from": "G.mux_p3_0_neg.Y",
+      "to": "G.mux_p3_0.A",
+      "signal": "mux_p3_0_neg"
+    },
+    {
+      "from": "G.mux_p3_0_neg.Y",
+      "to": "G.mux_p3_0.B",
+      "signal": "mux_p3_0_neg"
+    },
+    {
+      "from": "G.mux_m3_2.Y",
+      "to": "G.mux_p3_1_neg.A",
+      "signal": "mux_m3_2"
+    },
+    {
+      "from": "G.mux_m3_3.Y",
+      "to": "G.mux_p3_1_neg.B",
+      "signal": "mux_m3_3"
+    },
+    {
+      "from": "G.mux_p3_1_neg.Y",
+      "to": "G.mux_p3_1.A",
+      "signal": "mux_p3_1_neg"
+    },
+    {
+      "from": "G.mux_p3_1_neg.Y",
+      "to": "G.mux_p3_1.B",
+      "signal": "mux_p3_1_neg"
+    },
+    {
+      "from": "G.mux_m3_4.Y",
+      "to": "G.mux_p3_2_neg.A",
+      "signal": "mux_m3_4"
+    },
+    {
+      "from": "G.mux_m3_5.Y",
+      "to": "G.mux_p3_2_neg.B",
+      "signal": "mux_m3_5"
+    },
+    {
+      "from": "G.mux_p3_2_neg.Y",
+      "to": "G.mux_p3_2.A",
+      "signal": "mux_p3_2_neg"
+    },
+    {
+      "from": "G.mux_p3_2_neg.Y",
+      "to": "G.mux_p3_2.B",
+      "signal": "mux_p3_2_neg"
+    },
+    {
+      "from": "G.mux_p3_0.Y",
+      "to": "G.mux_g3_neg.A",
+      "signal": "mux_p3_0"
+    },
+    {
+      "from": "G.mux_p3_1.Y",
+      "to": "G.mux_g3_neg.B",
+      "signal": "mux_p3_1"
+    },
+    {
+      "from": "G.mux_g3_neg.Y",
+      "to": "G.mux_g3.A",
+      "signal": "mux_g3_neg"
+    },
+    {
+      "from": "G.mux_g3_neg.Y",
+      "to": "G.mux_g3.B",
+      "signal": "mux_g3_neg"
+    },
+    {
+      "from": "G.mux_g3.Y",
+      "to": "G.mux_all3_neg.A",
+      "signal": "mux_g3"
+    },
+    {
+      "from": "G.mux_p3_2.Y",
+      "to": "G.mux_all3_neg.B",
+      "signal": "mux_p3_2"
+    },
+    {
+      "from": "G.mux_all3_neg.Y",
+      "to": "G.mux_all3.A",
+      "signal": "mux_all3_neg"
+    },
+    {
+      "from": "G.mux_all3_neg.Y",
+      "to": "G.mux_all3.B",
+      "signal": "mux_all3_neg"
+    },
+    {
+      "from": "G.mux_all3.Y",
+      "to": "G.OUT3.A",
+      "signal": "mux_all3"
+    },
+    {
+      "from": "G.mux_all3.Y",
+      "to": "G.OUT3.B",
+      "signal": "mux_all3"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.logic_nand4.A",
+      "signal": "A4"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.logic_nand4.B",
+      "signal": "B4"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.logic_nota4.A",
+      "signal": "A4"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.logic_nota4.B",
+      "signal": "A4"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.logic_notb4.A",
+      "signal": "B4"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.logic_notb4.B",
+      "signal": "B4"
+    },
+    {
+      "from": "G.logic_nand4.Y",
+      "to": "G.logic_and4.A",
+      "signal": "logic_nand4"
+    },
+    {
+      "from": "G.logic_nand4.Y",
+      "to": "G.logic_and4.B",
+      "signal": "logic_nand4"
+    },
+    {
+      "from": "G.logic_nota4.Y",
+      "to": "G.logic_or4.A",
+      "signal": "logic_nota4"
+    },
+    {
+      "from": "G.logic_notb4.Y",
+      "to": "G.logic_or4.B",
+      "signal": "logic_notb4"
+    },
+    {
+      "from": "IN.A4.OUT",
+      "to": "G.logic_xor_b1_4.A",
+      "signal": "A4"
+    },
+    {
+      "from": "G.logic_nand4.Y",
+      "to": "G.logic_xor_b1_4.B",
+      "signal": "logic_nand4"
+    },
+    {
+      "from": "IN.B4.OUT",
+      "to": "G.logic_xor_b2_4.A",
+      "signal": "B4"
+    },
+    {
+      "from": "G.logic_nand4.Y",
+      "to": "G.logic_xor_b2_4.B",
+      "signal": "logic_nand4"
+    },
+    {
+      "from": "G.logic_xor_b1_4.Y",
+      "to": "G.logic_xor4.A",
+      "signal": "logic_xor_b1_4"
+    },
+    {
+      "from": "G.logic_xor_b2_4.Y",
+      "to": "G.logic_xor4.B",
+      "signal": "logic_xor_b2_4"
+    },
+    {
+      "from": "G.arith_S4.Y",
+      "to": "G.mux_m4_0.A",
+      "signal": "arith_S4"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m4_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S4.Y",
+      "to": "G.mux_m4_1.A",
+      "signal": "arith_S4"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m4_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and4.Y",
+      "to": "G.mux_m4_2.A",
+      "signal": "logic_and4"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m4_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or4.Y",
+      "to": "G.mux_m4_3.A",
+      "signal": "logic_or4"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m4_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor4.Y",
+      "to": "G.mux_m4_4.A",
+      "signal": "logic_xor4"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m4_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota4.Y",
+      "to": "G.mux_m4_5.A",
+      "signal": "logic_nota4"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m4_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m4_0.Y",
+      "to": "G.mux_p4_0_neg.A",
+      "signal": "mux_m4_0"
+    },
+    {
+      "from": "G.mux_m4_1.Y",
+      "to": "G.mux_p4_0_neg.B",
+      "signal": "mux_m4_1"
+    },
+    {
+      "from": "G.mux_p4_0_neg.Y",
+      "to": "G.mux_p4_0.A",
+      "signal": "mux_p4_0_neg"
+    },
+    {
+      "from": "G.mux_p4_0_neg.Y",
+      "to": "G.mux_p4_0.B",
+      "signal": "mux_p4_0_neg"
+    },
+    {
+      "from": "G.mux_m4_2.Y",
+      "to": "G.mux_p4_1_neg.A",
+      "signal": "mux_m4_2"
+    },
+    {
+      "from": "G.mux_m4_3.Y",
+      "to": "G.mux_p4_1_neg.B",
+      "signal": "mux_m4_3"
+    },
+    {
+      "from": "G.mux_p4_1_neg.Y",
+      "to": "G.mux_p4_1.A",
+      "signal": "mux_p4_1_neg"
+    },
+    {
+      "from": "G.mux_p4_1_neg.Y",
+      "to": "G.mux_p4_1.B",
+      "signal": "mux_p4_1_neg"
+    },
+    {
+      "from": "G.mux_m4_4.Y",
+      "to": "G.mux_p4_2_neg.A",
+      "signal": "mux_m4_4"
+    },
+    {
+      "from": "G.mux_m4_5.Y",
+      "to": "G.mux_p4_2_neg.B",
+      "signal": "mux_m4_5"
+    },
+    {
+      "from": "G.mux_p4_2_neg.Y",
+      "to": "G.mux_p4_2.A",
+      "signal": "mux_p4_2_neg"
+    },
+    {
+      "from": "G.mux_p4_2_neg.Y",
+      "to": "G.mux_p4_2.B",
+      "signal": "mux_p4_2_neg"
+    },
+    {
+      "from": "G.mux_p4_0.Y",
+      "to": "G.mux_g4_neg.A",
+      "signal": "mux_p4_0"
+    },
+    {
+      "from": "G.mux_p4_1.Y",
+      "to": "G.mux_g4_neg.B",
+      "signal": "mux_p4_1"
+    },
+    {
+      "from": "G.mux_g4_neg.Y",
+      "to": "G.mux_g4.A",
+      "signal": "mux_g4_neg"
+    },
+    {
+      "from": "G.mux_g4_neg.Y",
+      "to": "G.mux_g4.B",
+      "signal": "mux_g4_neg"
+    },
+    {
+      "from": "G.mux_g4.Y",
+      "to": "G.mux_all4_neg.A",
+      "signal": "mux_g4"
+    },
+    {
+      "from": "G.mux_p4_2.Y",
+      "to": "G.mux_all4_neg.B",
+      "signal": "mux_p4_2"
+    },
+    {
+      "from": "G.mux_all4_neg.Y",
+      "to": "G.mux_all4.A",
+      "signal": "mux_all4_neg"
+    },
+    {
+      "from": "G.mux_all4_neg.Y",
+      "to": "G.mux_all4.B",
+      "signal": "mux_all4_neg"
+    },
+    {
+      "from": "G.mux_all4.Y",
+      "to": "G.OUT4.A",
+      "signal": "mux_all4"
+    },
+    {
+      "from": "G.mux_all4.Y",
+      "to": "G.OUT4.B",
+      "signal": "mux_all4"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.logic_nand5.A",
+      "signal": "A5"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.logic_nand5.B",
+      "signal": "B5"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.logic_nota5.A",
+      "signal": "A5"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.logic_nota5.B",
+      "signal": "A5"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.logic_notb5.A",
+      "signal": "B5"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.logic_notb5.B",
+      "signal": "B5"
+    },
+    {
+      "from": "G.logic_nand5.Y",
+      "to": "G.logic_and5.A",
+      "signal": "logic_nand5"
+    },
+    {
+      "from": "G.logic_nand5.Y",
+      "to": "G.logic_and5.B",
+      "signal": "logic_nand5"
+    },
+    {
+      "from": "G.logic_nota5.Y",
+      "to": "G.logic_or5.A",
+      "signal": "logic_nota5"
+    },
+    {
+      "from": "G.logic_notb5.Y",
+      "to": "G.logic_or5.B",
+      "signal": "logic_notb5"
+    },
+    {
+      "from": "IN.A5.OUT",
+      "to": "G.logic_xor_b1_5.A",
+      "signal": "A5"
+    },
+    {
+      "from": "G.logic_nand5.Y",
+      "to": "G.logic_xor_b1_5.B",
+      "signal": "logic_nand5"
+    },
+    {
+      "from": "IN.B5.OUT",
+      "to": "G.logic_xor_b2_5.A",
+      "signal": "B5"
+    },
+    {
+      "from": "G.logic_nand5.Y",
+      "to": "G.logic_xor_b2_5.B",
+      "signal": "logic_nand5"
+    },
+    {
+      "from": "G.logic_xor_b1_5.Y",
+      "to": "G.logic_xor5.A",
+      "signal": "logic_xor_b1_5"
+    },
+    {
+      "from": "G.logic_xor_b2_5.Y",
+      "to": "G.logic_xor5.B",
+      "signal": "logic_xor_b2_5"
+    },
+    {
+      "from": "G.arith_S5.Y",
+      "to": "G.mux_m5_0.A",
+      "signal": "arith_S5"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m5_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S5.Y",
+      "to": "G.mux_m5_1.A",
+      "signal": "arith_S5"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m5_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and5.Y",
+      "to": "G.mux_m5_2.A",
+      "signal": "logic_and5"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m5_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or5.Y",
+      "to": "G.mux_m5_3.A",
+      "signal": "logic_or5"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m5_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor5.Y",
+      "to": "G.mux_m5_4.A",
+      "signal": "logic_xor5"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m5_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota5.Y",
+      "to": "G.mux_m5_5.A",
+      "signal": "logic_nota5"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m5_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m5_0.Y",
+      "to": "G.mux_p5_0_neg.A",
+      "signal": "mux_m5_0"
+    },
+    {
+      "from": "G.mux_m5_1.Y",
+      "to": "G.mux_p5_0_neg.B",
+      "signal": "mux_m5_1"
+    },
+    {
+      "from": "G.mux_p5_0_neg.Y",
+      "to": "G.mux_p5_0.A",
+      "signal": "mux_p5_0_neg"
+    },
+    {
+      "from": "G.mux_p5_0_neg.Y",
+      "to": "G.mux_p5_0.B",
+      "signal": "mux_p5_0_neg"
+    },
+    {
+      "from": "G.mux_m5_2.Y",
+      "to": "G.mux_p5_1_neg.A",
+      "signal": "mux_m5_2"
+    },
+    {
+      "from": "G.mux_m5_3.Y",
+      "to": "G.mux_p5_1_neg.B",
+      "signal": "mux_m5_3"
+    },
+    {
+      "from": "G.mux_p5_1_neg.Y",
+      "to": "G.mux_p5_1.A",
+      "signal": "mux_p5_1_neg"
+    },
+    {
+      "from": "G.mux_p5_1_neg.Y",
+      "to": "G.mux_p5_1.B",
+      "signal": "mux_p5_1_neg"
+    },
+    {
+      "from": "G.mux_m5_4.Y",
+      "to": "G.mux_p5_2_neg.A",
+      "signal": "mux_m5_4"
+    },
+    {
+      "from": "G.mux_m5_5.Y",
+      "to": "G.mux_p5_2_neg.B",
+      "signal": "mux_m5_5"
+    },
+    {
+      "from": "G.mux_p5_2_neg.Y",
+      "to": "G.mux_p5_2.A",
+      "signal": "mux_p5_2_neg"
+    },
+    {
+      "from": "G.mux_p5_2_neg.Y",
+      "to": "G.mux_p5_2.B",
+      "signal": "mux_p5_2_neg"
+    },
+    {
+      "from": "G.mux_p5_0.Y",
+      "to": "G.mux_g5_neg.A",
+      "signal": "mux_p5_0"
+    },
+    {
+      "from": "G.mux_p5_1.Y",
+      "to": "G.mux_g5_neg.B",
+      "signal": "mux_p5_1"
+    },
+    {
+      "from": "G.mux_g5_neg.Y",
+      "to": "G.mux_g5.A",
+      "signal": "mux_g5_neg"
+    },
+    {
+      "from": "G.mux_g5_neg.Y",
+      "to": "G.mux_g5.B",
+      "signal": "mux_g5_neg"
+    },
+    {
+      "from": "G.mux_g5.Y",
+      "to": "G.mux_all5_neg.A",
+      "signal": "mux_g5"
+    },
+    {
+      "from": "G.mux_p5_2.Y",
+      "to": "G.mux_all5_neg.B",
+      "signal": "mux_p5_2"
+    },
+    {
+      "from": "G.mux_all5_neg.Y",
+      "to": "G.mux_all5.A",
+      "signal": "mux_all5_neg"
+    },
+    {
+      "from": "G.mux_all5_neg.Y",
+      "to": "G.mux_all5.B",
+      "signal": "mux_all5_neg"
+    },
+    {
+      "from": "G.mux_all5.Y",
+      "to": "G.OUT5.A",
+      "signal": "mux_all5"
+    },
+    {
+      "from": "G.mux_all5.Y",
+      "to": "G.OUT5.B",
+      "signal": "mux_all5"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.logic_nand6.A",
+      "signal": "A6"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.logic_nand6.B",
+      "signal": "B6"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.logic_nota6.A",
+      "signal": "A6"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.logic_nota6.B",
+      "signal": "A6"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.logic_notb6.A",
+      "signal": "B6"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.logic_notb6.B",
+      "signal": "B6"
+    },
+    {
+      "from": "G.logic_nand6.Y",
+      "to": "G.logic_and6.A",
+      "signal": "logic_nand6"
+    },
+    {
+      "from": "G.logic_nand6.Y",
+      "to": "G.logic_and6.B",
+      "signal": "logic_nand6"
+    },
+    {
+      "from": "G.logic_nota6.Y",
+      "to": "G.logic_or6.A",
+      "signal": "logic_nota6"
+    },
+    {
+      "from": "G.logic_notb6.Y",
+      "to": "G.logic_or6.B",
+      "signal": "logic_notb6"
+    },
+    {
+      "from": "IN.A6.OUT",
+      "to": "G.logic_xor_b1_6.A",
+      "signal": "A6"
+    },
+    {
+      "from": "G.logic_nand6.Y",
+      "to": "G.logic_xor_b1_6.B",
+      "signal": "logic_nand6"
+    },
+    {
+      "from": "IN.B6.OUT",
+      "to": "G.logic_xor_b2_6.A",
+      "signal": "B6"
+    },
+    {
+      "from": "G.logic_nand6.Y",
+      "to": "G.logic_xor_b2_6.B",
+      "signal": "logic_nand6"
+    },
+    {
+      "from": "G.logic_xor_b1_6.Y",
+      "to": "G.logic_xor6.A",
+      "signal": "logic_xor_b1_6"
+    },
+    {
+      "from": "G.logic_xor_b2_6.Y",
+      "to": "G.logic_xor6.B",
+      "signal": "logic_xor_b2_6"
+    },
+    {
+      "from": "G.arith_S6.Y",
+      "to": "G.mux_m6_0.A",
+      "signal": "arith_S6"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m6_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S6.Y",
+      "to": "G.mux_m6_1.A",
+      "signal": "arith_S6"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m6_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and6.Y",
+      "to": "G.mux_m6_2.A",
+      "signal": "logic_and6"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m6_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or6.Y",
+      "to": "G.mux_m6_3.A",
+      "signal": "logic_or6"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m6_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor6.Y",
+      "to": "G.mux_m6_4.A",
+      "signal": "logic_xor6"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m6_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota6.Y",
+      "to": "G.mux_m6_5.A",
+      "signal": "logic_nota6"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m6_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m6_0.Y",
+      "to": "G.mux_p6_0_neg.A",
+      "signal": "mux_m6_0"
+    },
+    {
+      "from": "G.mux_m6_1.Y",
+      "to": "G.mux_p6_0_neg.B",
+      "signal": "mux_m6_1"
+    },
+    {
+      "from": "G.mux_p6_0_neg.Y",
+      "to": "G.mux_p6_0.A",
+      "signal": "mux_p6_0_neg"
+    },
+    {
+      "from": "G.mux_p6_0_neg.Y",
+      "to": "G.mux_p6_0.B",
+      "signal": "mux_p6_0_neg"
+    },
+    {
+      "from": "G.mux_m6_2.Y",
+      "to": "G.mux_p6_1_neg.A",
+      "signal": "mux_m6_2"
+    },
+    {
+      "from": "G.mux_m6_3.Y",
+      "to": "G.mux_p6_1_neg.B",
+      "signal": "mux_m6_3"
+    },
+    {
+      "from": "G.mux_p6_1_neg.Y",
+      "to": "G.mux_p6_1.A",
+      "signal": "mux_p6_1_neg"
+    },
+    {
+      "from": "G.mux_p6_1_neg.Y",
+      "to": "G.mux_p6_1.B",
+      "signal": "mux_p6_1_neg"
+    },
+    {
+      "from": "G.mux_m6_4.Y",
+      "to": "G.mux_p6_2_neg.A",
+      "signal": "mux_m6_4"
+    },
+    {
+      "from": "G.mux_m6_5.Y",
+      "to": "G.mux_p6_2_neg.B",
+      "signal": "mux_m6_5"
+    },
+    {
+      "from": "G.mux_p6_2_neg.Y",
+      "to": "G.mux_p6_2.A",
+      "signal": "mux_p6_2_neg"
+    },
+    {
+      "from": "G.mux_p6_2_neg.Y",
+      "to": "G.mux_p6_2.B",
+      "signal": "mux_p6_2_neg"
+    },
+    {
+      "from": "G.mux_p6_0.Y",
+      "to": "G.mux_g6_neg.A",
+      "signal": "mux_p6_0"
+    },
+    {
+      "from": "G.mux_p6_1.Y",
+      "to": "G.mux_g6_neg.B",
+      "signal": "mux_p6_1"
+    },
+    {
+      "from": "G.mux_g6_neg.Y",
+      "to": "G.mux_g6.A",
+      "signal": "mux_g6_neg"
+    },
+    {
+      "from": "G.mux_g6_neg.Y",
+      "to": "G.mux_g6.B",
+      "signal": "mux_g6_neg"
+    },
+    {
+      "from": "G.mux_g6.Y",
+      "to": "G.mux_all6_neg.A",
+      "signal": "mux_g6"
+    },
+    {
+      "from": "G.mux_p6_2.Y",
+      "to": "G.mux_all6_neg.B",
+      "signal": "mux_p6_2"
+    },
+    {
+      "from": "G.mux_all6_neg.Y",
+      "to": "G.mux_all6.A",
+      "signal": "mux_all6_neg"
+    },
+    {
+      "from": "G.mux_all6_neg.Y",
+      "to": "G.mux_all6.B",
+      "signal": "mux_all6_neg"
+    },
+    {
+      "from": "G.mux_all6.Y",
+      "to": "G.OUT6.A",
+      "signal": "mux_all6"
+    },
+    {
+      "from": "G.mux_all6.Y",
+      "to": "G.OUT6.B",
+      "signal": "mux_all6"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.logic_nand7.A",
+      "signal": "A7"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.logic_nand7.B",
+      "signal": "B7"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.logic_nota7.A",
+      "signal": "A7"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.logic_nota7.B",
+      "signal": "A7"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.logic_notb7.A",
+      "signal": "B7"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.logic_notb7.B",
+      "signal": "B7"
+    },
+    {
+      "from": "G.logic_nand7.Y",
+      "to": "G.logic_and7.A",
+      "signal": "logic_nand7"
+    },
+    {
+      "from": "G.logic_nand7.Y",
+      "to": "G.logic_and7.B",
+      "signal": "logic_nand7"
+    },
+    {
+      "from": "G.logic_nota7.Y",
+      "to": "G.logic_or7.A",
+      "signal": "logic_nota7"
+    },
+    {
+      "from": "G.logic_notb7.Y",
+      "to": "G.logic_or7.B",
+      "signal": "logic_notb7"
+    },
+    {
+      "from": "IN.A7.OUT",
+      "to": "G.logic_xor_b1_7.A",
+      "signal": "A7"
+    },
+    {
+      "from": "G.logic_nand7.Y",
+      "to": "G.logic_xor_b1_7.B",
+      "signal": "logic_nand7"
+    },
+    {
+      "from": "IN.B7.OUT",
+      "to": "G.logic_xor_b2_7.A",
+      "signal": "B7"
+    },
+    {
+      "from": "G.logic_nand7.Y",
+      "to": "G.logic_xor_b2_7.B",
+      "signal": "logic_nand7"
+    },
+    {
+      "from": "G.logic_xor_b1_7.Y",
+      "to": "G.logic_xor7.A",
+      "signal": "logic_xor_b1_7"
+    },
+    {
+      "from": "G.logic_xor_b2_7.Y",
+      "to": "G.logic_xor7.B",
+      "signal": "logic_xor_b2_7"
+    },
+    {
+      "from": "G.arith_S7.Y",
+      "to": "G.mux_m7_0.A",
+      "signal": "arith_S7"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.mux_m7_0.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "G.arith_S7.Y",
+      "to": "G.mux_m7_1.A",
+      "signal": "arith_S7"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.mux_m7_1.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.logic_and7.Y",
+      "to": "G.mux_m7_2.A",
+      "signal": "logic_and7"
+    },
+    {
+      "from": "IN.SEL_AND.OUT",
+      "to": "G.mux_m7_2.B",
+      "signal": "SEL_AND"
+    },
+    {
+      "from": "G.logic_or7.Y",
+      "to": "G.mux_m7_3.A",
+      "signal": "logic_or7"
+    },
+    {
+      "from": "IN.SEL_OR.OUT",
+      "to": "G.mux_m7_3.B",
+      "signal": "SEL_OR"
+    },
+    {
+      "from": "G.logic_xor7.Y",
+      "to": "G.mux_m7_4.A",
+      "signal": "logic_xor7"
+    },
+    {
+      "from": "IN.SEL_XOR.OUT",
+      "to": "G.mux_m7_4.B",
+      "signal": "SEL_XOR"
+    },
+    {
+      "from": "G.logic_nota7.Y",
+      "to": "G.mux_m7_5.A",
+      "signal": "logic_nota7"
+    },
+    {
+      "from": "IN.SEL_NOTA.OUT",
+      "to": "G.mux_m7_5.B",
+      "signal": "SEL_NOTA"
+    },
+    {
+      "from": "G.mux_m7_0.Y",
+      "to": "G.mux_p7_0_neg.A",
+      "signal": "mux_m7_0"
+    },
+    {
+      "from": "G.mux_m7_1.Y",
+      "to": "G.mux_p7_0_neg.B",
+      "signal": "mux_m7_1"
+    },
+    {
+      "from": "G.mux_p7_0_neg.Y",
+      "to": "G.mux_p7_0.A",
+      "signal": "mux_p7_0_neg"
+    },
+    {
+      "from": "G.mux_p7_0_neg.Y",
+      "to": "G.mux_p7_0.B",
+      "signal": "mux_p7_0_neg"
+    },
+    {
+      "from": "G.mux_m7_2.Y",
+      "to": "G.mux_p7_1_neg.A",
+      "signal": "mux_m7_2"
+    },
+    {
+      "from": "G.mux_m7_3.Y",
+      "to": "G.mux_p7_1_neg.B",
+      "signal": "mux_m7_3"
+    },
+    {
+      "from": "G.mux_p7_1_neg.Y",
+      "to": "G.mux_p7_1.A",
+      "signal": "mux_p7_1_neg"
+    },
+    {
+      "from": "G.mux_p7_1_neg.Y",
+      "to": "G.mux_p7_1.B",
+      "signal": "mux_p7_1_neg"
+    },
+    {
+      "from": "G.mux_m7_4.Y",
+      "to": "G.mux_p7_2_neg.A",
+      "signal": "mux_m7_4"
+    },
+    {
+      "from": "G.mux_m7_5.Y",
+      "to": "G.mux_p7_2_neg.B",
+      "signal": "mux_m7_5"
+    },
+    {
+      "from": "G.mux_p7_2_neg.Y",
+      "to": "G.mux_p7_2.A",
+      "signal": "mux_p7_2_neg"
+    },
+    {
+      "from": "G.mux_p7_2_neg.Y",
+      "to": "G.mux_p7_2.B",
+      "signal": "mux_p7_2_neg"
+    },
+    {
+      "from": "G.mux_p7_0.Y",
+      "to": "G.mux_g7_neg.A",
+      "signal": "mux_p7_0"
+    },
+    {
+      "from": "G.mux_p7_1.Y",
+      "to": "G.mux_g7_neg.B",
+      "signal": "mux_p7_1"
+    },
+    {
+      "from": "G.mux_g7_neg.Y",
+      "to": "G.mux_g7.A",
+      "signal": "mux_g7_neg"
+    },
+    {
+      "from": "G.mux_g7_neg.Y",
+      "to": "G.mux_g7.B",
+      "signal": "mux_g7_neg"
+    },
+    {
+      "from": "G.mux_g7.Y",
+      "to": "G.mux_all7_neg.A",
+      "signal": "mux_g7"
+    },
+    {
+      "from": "G.mux_p7_2.Y",
+      "to": "G.mux_all7_neg.B",
+      "signal": "mux_p7_2"
+    },
+    {
+      "from": "G.mux_all7_neg.Y",
+      "to": "G.mux_all7.A",
+      "signal": "mux_all7_neg"
+    },
+    {
+      "from": "G.mux_all7_neg.Y",
+      "to": "G.mux_all7.B",
+      "signal": "mux_all7_neg"
+    },
+    {
+      "from": "G.mux_all7.Y",
+      "to": "G.OUT7.A",
+      "signal": "mux_all7"
+    },
+    {
+      "from": "G.mux_all7.Y",
+      "to": "G.OUT7.B",
+      "signal": "mux_all7"
+    },
+    {
+      "from": "G.OUT0.Y",
+      "to": "G.z_not0.A",
+      "signal": "OUT0"
+    },
+    {
+      "from": "G.OUT0.Y",
+      "to": "G.z_not0.B",
+      "signal": "OUT0"
+    },
+    {
+      "from": "G.OUT1.Y",
+      "to": "G.z_not1.A",
+      "signal": "OUT1"
+    },
+    {
+      "from": "G.OUT1.Y",
+      "to": "G.z_not1.B",
+      "signal": "OUT1"
+    },
+    {
+      "from": "G.OUT2.Y",
+      "to": "G.z_not2.A",
+      "signal": "OUT2"
+    },
+    {
+      "from": "G.OUT2.Y",
+      "to": "G.z_not2.B",
+      "signal": "OUT2"
+    },
+    {
+      "from": "G.OUT3.Y",
+      "to": "G.z_not3.A",
+      "signal": "OUT3"
+    },
+    {
+      "from": "G.OUT3.Y",
+      "to": "G.z_not3.B",
+      "signal": "OUT3"
+    },
+    {
+      "from": "G.OUT4.Y",
+      "to": "G.z_not4.A",
+      "signal": "OUT4"
+    },
+    {
+      "from": "G.OUT4.Y",
+      "to": "G.z_not4.B",
+      "signal": "OUT4"
+    },
+    {
+      "from": "G.OUT5.Y",
+      "to": "G.z_not5.A",
+      "signal": "OUT5"
+    },
+    {
+      "from": "G.OUT5.Y",
+      "to": "G.z_not5.B",
+      "signal": "OUT5"
+    },
+    {
+      "from": "G.OUT6.Y",
+      "to": "G.z_not6.A",
+      "signal": "OUT6"
+    },
+    {
+      "from": "G.OUT6.Y",
+      "to": "G.z_not6.B",
+      "signal": "OUT6"
+    },
+    {
+      "from": "G.OUT7.Y",
+      "to": "G.z_not7.A",
+      "signal": "OUT7"
+    },
+    {
+      "from": "G.OUT7.Y",
+      "to": "G.z_not7.B",
+      "signal": "OUT7"
+    },
+    {
+      "from": "G.z_not0.Y",
+      "to": "G.z_and_0_0_neg.A",
+      "signal": "z_not0"
+    },
+    {
+      "from": "G.z_not1.Y",
+      "to": "G.z_and_0_0_neg.B",
+      "signal": "z_not1"
+    },
+    {
+      "from": "G.z_and_0_0_neg.Y",
+      "to": "G.z_and_0_0.A",
+      "signal": "z_and_0_0_neg"
+    },
+    {
+      "from": "G.z_and_0_0_neg.Y",
+      "to": "G.z_and_0_0.B",
+      "signal": "z_and_0_0_neg"
+    },
+    {
+      "from": "G.z_not2.Y",
+      "to": "G.z_and_0_2_neg.A",
+      "signal": "z_not2"
+    },
+    {
+      "from": "G.z_not3.Y",
+      "to": "G.z_and_0_2_neg.B",
+      "signal": "z_not3"
+    },
+    {
+      "from": "G.z_and_0_2_neg.Y",
+      "to": "G.z_and_0_2.A",
+      "signal": "z_and_0_2_neg"
+    },
+    {
+      "from": "G.z_and_0_2_neg.Y",
+      "to": "G.z_and_0_2.B",
+      "signal": "z_and_0_2_neg"
+    },
+    {
+      "from": "G.z_not4.Y",
+      "to": "G.z_and_0_4_neg.A",
+      "signal": "z_not4"
+    },
+    {
+      "from": "G.z_not5.Y",
+      "to": "G.z_and_0_4_neg.B",
+      "signal": "z_not5"
+    },
+    {
+      "from": "G.z_and_0_4_neg.Y",
+      "to": "G.z_and_0_4.A",
+      "signal": "z_and_0_4_neg"
+    },
+    {
+      "from": "G.z_and_0_4_neg.Y",
+      "to": "G.z_and_0_4.B",
+      "signal": "z_and_0_4_neg"
+    },
+    {
+      "from": "G.z_not6.Y",
+      "to": "G.z_and_0_6_neg.A",
+      "signal": "z_not6"
+    },
+    {
+      "from": "G.z_not7.Y",
+      "to": "G.z_and_0_6_neg.B",
+      "signal": "z_not7"
+    },
+    {
+      "from": "G.z_and_0_6_neg.Y",
+      "to": "G.z_and_0_6.A",
+      "signal": "z_and_0_6_neg"
+    },
+    {
+      "from": "G.z_and_0_6_neg.Y",
+      "to": "G.z_and_0_6.B",
+      "signal": "z_and_0_6_neg"
+    },
+    {
+      "from": "G.z_and_0_0.Y",
+      "to": "G.z_and_1_0_neg.A",
+      "signal": "z_and_0_0"
+    },
+    {
+      "from": "G.z_and_0_2.Y",
+      "to": "G.z_and_1_0_neg.B",
+      "signal": "z_and_0_2"
+    },
+    {
+      "from": "G.z_and_1_0_neg.Y",
+      "to": "G.z_and_1_0.A",
+      "signal": "z_and_1_0_neg"
+    },
+    {
+      "from": "G.z_and_1_0_neg.Y",
+      "to": "G.z_and_1_0.B",
+      "signal": "z_and_1_0_neg"
+    },
+    {
+      "from": "G.z_and_0_4.Y",
+      "to": "G.z_and_1_2_neg.A",
+      "signal": "z_and_0_4"
+    },
+    {
+      "from": "G.z_and_0_6.Y",
+      "to": "G.z_and_1_2_neg.B",
+      "signal": "z_and_0_6"
+    },
+    {
+      "from": "G.z_and_1_2_neg.Y",
+      "to": "G.z_and_1_2.A",
+      "signal": "z_and_1_2_neg"
+    },
+    {
+      "from": "G.z_and_1_2_neg.Y",
+      "to": "G.z_and_1_2.B",
+      "signal": "z_and_1_2_neg"
+    },
+    {
+      "from": "G.z_and_1_0.Y",
+      "to": "G.z_and_2_0_neg.A",
+      "signal": "z_and_1_0"
+    },
+    {
+      "from": "G.z_and_1_2.Y",
+      "to": "G.z_and_2_0_neg.B",
+      "signal": "z_and_1_2"
+    },
+    {
+      "from": "G.z_and_2_0_neg.Y",
+      "to": "G.z_and_2_0.A",
+      "signal": "z_and_2_0_neg"
+    },
+    {
+      "from": "G.z_and_2_0_neg.Y",
+      "to": "G.z_and_2_0.B",
+      "signal": "z_and_2_0_neg"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.valid_not_add.A",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "IN.SEL_ADD.OUT",
+      "to": "G.valid_not_add.B",
+      "signal": "SEL_ADD"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.valid_not_sub.A",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "IN.SEL_SUB.OUT",
+      "to": "G.valid_not_sub.B",
+      "signal": "SEL_SUB"
+    },
+    {
+      "from": "G.valid_not_add.Y",
+      "to": "G.valid_mux.A",
+      "signal": "valid_not_add"
+    },
+    {
+      "from": "G.valid_not_sub.Y",
+      "to": "G.valid_mux.B",
+      "signal": "valid_not_sub"
+    },
+    {
+      "from": "G.OUT0.Y",
+      "to": "OUT.S0.IN",
+      "signal": "OUT0"
+    },
+    {
+      "from": "G.OUT1.Y",
+      "to": "OUT.S1.IN",
+      "signal": "OUT1"
+    },
+    {
+      "from": "G.OUT2.Y",
+      "to": "OUT.S2.IN",
+      "signal": "OUT2"
+    },
+    {
+      "from": "G.OUT3.Y",
+      "to": "OUT.S3.IN",
+      "signal": "OUT3"
+    },
+    {
+      "from": "G.OUT4.Y",
+      "to": "OUT.S4.IN",
+      "signal": "OUT4"
+    },
+    {
+      "from": "G.OUT5.Y",
+      "to": "OUT.S5.IN",
+      "signal": "OUT5"
+    },
+    {
+      "from": "G.OUT6.Y",
+      "to": "OUT.S6.IN",
+      "signal": "OUT6"
+    },
+    {
+      "from": "G.OUT7.Y",
+      "to": "OUT.S7.IN",
+      "signal": "OUT7"
+    },
+    {
+      "from": "G.OUT7.Y",
+      "to": "OUT.N.IN",
+      "signal": "OUT7"
+    },
+    {
+      "from": "G.z_and_2_0.Y",
+      "to": "OUT.Z.IN",
+      "signal": "z_and_2_0"
+    },
+    {
+      "from": "G.arith_Cflag.Y",
+      "to": "OUT.C_arith.IN",
+      "signal": "arith_Cflag"
+    },
+    {
+      "from": "G.arith_V.Y",
+      "to": "OUT.V_arith.IN",
+      "signal": "arith_V"
+    },
+    {
+      "from": "G.valid_mux.Y",
+      "to": "OUT.CV_valid.IN",
+      "signal": "valid_mux"
+    }
+  ],
+  "calculations": {
+    "entradas_externas": 22,
+    "NAND2": 359,
+    "patillas_de_entrada_NAND": 718,
+    "origenes_de_senal": 381,
+    "arcos_unicos_senal_a_compuerta": 614,
+    "salidas_visibles": 13,
+    "nodos_de_salida_distintos": 12,
+    "compuertas_NAND_con_ambas_entradas_unidas": 104,
+    "CMOS_estatico_MOS_por_NAND2": 4,
+    "MOS_condicionales_ALU_solo_NAND2": 1436,
+    "profundidad_NAND_maxima": 38,
+    "profundidad_por_salida": {
+      "OUT2": 21,
+      "OUT5": 27,
+      "OUT4": 25,
+      "OUT0": 17,
+      "OUT6": 29,
+      "arith_Cflag": 25,
+      "OUT3": 23,
+      "OUT1": 19,
+      "OUT7": 31,
+      "arith_V": 25,
+      "valid_mux": 2,
+      "z_and_2_0": 38
+    },
+    "fanout_maximo_conteo_pines": 30,
+    "fuentes_con_mas_carga": {
+      "SEL_SUB": 30,
+      "SEL_ADD": 10,
+      "SEL_AND": 8,
+      "SEL_OR": 8,
+      "SEL_XOR": 8,
+      "SEL_NOTA": 8,
+      "B0": 6,
+      "A0": 6,
+      "B1": 6,
+      "A1": 6,
+      "B2": 6,
+      "A2": 6
+    },
+    "distribucion_capas_logicas": {
+      "1": 34,
+      "2": 57,
+      "3": 32,
+      "4": 24,
+      "5": 32,
+      "6": 16,
+      "7": 1,
+      "8": 3,
+      "9": 2,
+      "10": 6,
+      "11": 3,
+      "12": 7,
+      "13": 5,
+      "14": 9,
+      "15": 5,
+      "16": 9,
+      "17": 7,
+      "18": 11,
+      "19": 7,
+      "20": 11,
+      "21": 8,
+      "22": 12,
+      "23": 7,
+      "24": 11,
+      "25": 8,
+      "26": 6,
+      "27": 5,
+      "28": 5,
+      "29": 4,
+      "30": 4,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 1,
+      "38": 1
+    }
+  },
+  "warning": "No incluye transistor sizing, tensiones, atrasos, ruido, corriente ni disipacion; no es protoboard electrico validado."
+}

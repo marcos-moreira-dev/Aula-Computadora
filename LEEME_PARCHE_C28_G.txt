@@ -1,0 +1,44 @@
+AULA-COMPUTADORA — PARCHE INCREMENTAL C28-G
+===========================================
+
+Incluye el contrato didactico PREPARAR / ESPERAR / ACEPTAR de memoria.
+No sustituye las ediciones anteriores.
+
+Orden de instalacion:
+  C27 GLOBAL -> C28-B -> C28-C -> C28-D -> C28-E -> C28-F -> C28-G
+
+PowerShell desde la carpeta Descargas:
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  $destino = Join-Path (Get-Location) "Aula_C28G_COMPLETO"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_C_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_D_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_E_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_F_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_G_PARCHE.zip -DestinationPath $destino -Force
+  Set-Location (Join-Path $destino "Aula-Computadora")
+  py .\scripts\c28g_auditar_hdl_y_memoria.py
+
+Resultado esperado:
+  C28-G: 8,360 vectores del subconjunto Verilog contra referencia correctos
+  C28-G: protocolo PREPARAR/ESPERAR/ACEPTAR y dos rutas coherentes
+  Icarus Verilog: NO EJECUTADO; READY es una abstraccion, no un pin probado
+
+Pruebas de Windows, con ZIP de retroalimentacion (Icarus es opcional):
+
+  .\scripts\c28g_probar_windows.ps1
+
+La prueba crea Retroalimentacion_C28G_*.zip al lado del repositorio.
+Si no tienes iverilog y vvp instalados, el script conserva las pruebas
+Python y reporta que la simulacion HDL sigue pendiente. No los instala.
+
+Para regenerar el Word completo (si instalaste python-docx):
+  py .\scripts\generar_libro_maestro_c28g.py --pages-json .\libro\ediciones\C28_G\INDICE_C28_G.json
+
+El Word y el PDF completos se entregan por separado; no estan
+duplicados dentro del parche. Los PNG ya estan incluidos; Inkscape
+solo es necesario para volver a generarlos.
+
+No se ha validado CPU, temporizacion electrica, integrados ni montaje.

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>De texto a una aplicación sobre Aula-8</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">De texto a una aplicación sobre Aula-8</text><text x="35" y="76" class="small">Secuencia de herramientas propuestas; solo el ensamblador anfitrión funciona.</text><rect x="24" y="158" width="216" height="169" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="132.0" y="206" class="label" text-anchor="middle">EDITOR</text><text x="132.0" y="252" class="small" text-anchor="middle">líneas de texto</text><path d="M240,240 L270,240" fill="none" stroke="#244d68" stroke-width="4"/><path d="M270,240 L253.0,249.0 L253.0,231.0 Z" fill="#244d68"/><rect x="270" y="158" width="216" height="169" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="378.0" y="206" class="label" text-anchor="middle">ENSAMBLADOR</text><text x="378.0" y="252" class="small" text-anchor="middle">dos pasadas en PC</text><path d="M486,240 L516,240" fill="none" stroke="#244d68" stroke-width="4"/><path d="M516,240 L499.0,249.0 L499.0,231.0 Z" fill="#244d68"/><rect x="516" y="158" width="216" height="169" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="624.0" y="206" class="label" text-anchor="middle">CARGA</text><text x="624.0" y="252" class="small" text-anchor="middle">RAM; aún futura</text><path d="M732,240 L762,240" fill="none" stroke="#244d68" stroke-width="4"/><path d="M762,240 L745.0,249.0 L745.0,231.0 Z" fill="#244d68"/><rect x="762" y="158" width="216" height="169" rx="14" fill="#fce8e8" stroke="#36556b" stroke-width="2.5"/><text x="870.0" y="206" class="label" text-anchor="middle">EJECUCIÓN</text><text x="870.0" y="252" class="small" text-anchor="middle">CPU Aula-8 pendiente</text><text x="500" y="384" class="small" text-anchor="middle">Fuente de texto ≠ bytes ensamblados ≠ programa ejecutándose.</text><text x="500" y="426" class="tiny" text-anchor="middle">ROM y soporte persistente son contratos; no hay firmware funcionando.</text></svg>

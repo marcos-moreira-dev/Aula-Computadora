@@ -1,0 +1,53 @@
+AULA-COMPUTADORA — DISTRIBUCION GLOBAL C28-G
+=============================================
+
+Esta es la carpeta COMPLETA del proyecto hasta C28-G. Incluye las
+fuentes de capitulos, figuras, libro completo Word/PDF, historico de
+ediciones C27/C28-E/C28-F, pilotos C28-A a C28-G y todos los scripts.
+No es necesario descargar ni fusionar los parches anteriores.
+
+REQUISITO PARA LAS PRUEBAS:
+  Python 3, comando "py" en Windows. Marcos ya ejecuto Python antes.
+  No hace falta Java, Maven, JavaFX ni Proteus en esta fase.
+
+OPTIONAL, SEGUN LO QUE QUIERAS HACER:
+  - Icarus Verilog (iverilog y vvp): para probar el HDL. Se puede
+    instalar con Windows Package Manager:
+      winget search Icarus.Verilog
+      winget install --id Icarus.Verilog -e
+    Cierra y reabre PowerShell antes de comprobar:
+      iverilog -V
+      vvp -V
+  - python-docx: solo para REGENERAR el Word desde las fuentes:
+      py -m pip install python-docx
+  - Inkscape: solo para REGENERAR los PNG desde los SVG.
+    Los PNG y el Word/PDF ya vienen incluidos.
+
+DESCOMPRIMIR EL ZIP GLOBAL EN DESCARGAS:
+  Set-Location "$env:USERPROFILE\Downloads"
+  Expand-Archive .\Aula_Computadora_C28_G_GLOBAL.zip -DestinationPath .\Aula_C28G_GLOBAL -Force
+  Set-Location .\Aula_C28G_GLOBAL\Aula-Computadora
+
+PRUEBA LOGICA (no requiere librerias de terceros):
+  py .\scripts\c28f_incremento_mary_saltos.py
+  py .\scripts\c28g_auditar_hdl_y_memoria.py
+
+PRUEBA COMPLETA DE WINDOWS + ZIP RETROALIMENTACION:
+  .\scripts\c28g_probar_windows.ps1
+
+Si tu politica de PowerShell bloquea archivos .ps1, no la cambies
+automaticamente; las pruebas Python pueden ejecutarse por separado.
+Icarus es opcional y el script lo detecta. La falta de Icarus no
+invalida los resultados del modelo Python.
+
+LIBRO ACTUAL:
+  libro\ediciones\C28_G\Aula_Computadora_C28_G_MAESTRO.pdf
+  libro\ediciones\C28_G\Aula_Computadora_C28_G_MAESTRO.docx
+
+ESTADO TECNICO:
+  C28-F: 161.537 comparaciones del piloto NAND / PC-MAR.
+  C28-G: 8.360 vectores interpretando asignaciones NAND de Verilog,
+         esperas y dos rutas del programa.
+  NO se ha ejecutado Icarus Verilog en la entrega original, ni hay CPU
+  funcional, montaje electrico, mediciones, JavaFX ejecutable o ISA
+  aprobada. El programa visual es un proyecto futuro.

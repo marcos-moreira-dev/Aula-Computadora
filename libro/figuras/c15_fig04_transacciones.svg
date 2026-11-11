@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Nueve transacciones externas, tres instrucciones</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Nueve transacciones externas, tres instrucciones</text><text x="35" y="76" class="small">LDI: 3 lecturas.  ST: 4 lecturas y 1 escritura.  HALT: 1 lectura.</text><rect x="37" y="137" width="288" height="82" rx="14" fill="#e6f2fa" stroke="#36556b" stroke-width="2.5"/><text x="181" y="186" class="label" text-anchor="middle">1  R  6000:11</text><rect x="358" y="137" width="288" height="82" rx="14" fill="#e6f2fa" stroke="#36556b" stroke-width="2.5"/><text x="502" y="186" class="label" text-anchor="middle">2  R  6001:00</text><rect x="679" y="137" width="288" height="82" rx="14" fill="#e6f2fa" stroke="#36556b" stroke-width="2.5"/><text x="823" y="186" class="label" text-anchor="middle">3  R  6002:2A</text><rect x="37" y="249" width="288" height="82" rx="14" fill="#eaf3e9" stroke="#36556b" stroke-width="2.5"/><text x="181" y="298" class="label" text-anchor="middle">4  R  6003:13</text><rect x="358" y="249" width="288" height="82" rx="14" fill="#eaf3e9" stroke="#36556b" stroke-width="2.5"/><text x="502" y="298" class="label" text-anchor="middle">5  R  6004:00</text><rect x="679" y="249" width="288" height="82" rx="14" fill="#eaf3e9" stroke="#36556b" stroke-width="2.5"/><text x="823" y="298" class="label" text-anchor="middle">6  R  6005:00</text><rect x="37" y="361" width="288" height="82" rx="14" fill="#eaf3e9" stroke="#36556b" stroke-width="2.5"/><text x="181" y="410" class="label" text-anchor="middle">7  R  6006:6F</text><rect x="358" y="361" width="288" height="82" rx="14" fill="#f8e3cf" stroke="#36556b" stroke-width="2.5"/><text x="502" y="410" class="label" text-anchor="middle">8  W  6F00:2A</text><rect x="679" y="361" width="288" height="82" rx="14" fill="#e5eff9" stroke="#36556b" stroke-width="2.5"/><text x="823" y="410" class="label" text-anchor="middle">9  R  6007:01</text><text x="500" y="480" class="small" text-anchor="middle">R: lectura de RAM   ·   W: escritura de RAM   ·   no son ciclos.</text></svg>

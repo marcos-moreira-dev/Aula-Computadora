@@ -1,0 +1,21 @@
+{
+  "identificador": "AULA8_REGISTRO_R0_PILOTO_C28_A",
+  "estado": "PILOTO_LOGICO_NO_VALIDADO_FISICAMENTE",
+  "anchura_bits": 8,
+  "celdas": 8,
+  "elementos_por_celda": [
+    {"tipo": "multiplexor_2_a_1", "entradas": ["IN_i", "Q_i"], "seleccion": "LOAD", "salida": "D_i"},
+    {"tipo": "flip_flop_D", "entrada": "D_i", "reloj": "CLK", "flanco": "ascendente", "salida": "Q_i"},
+    {"tipo": "buffer_tres_estados", "entrada": "Q_i", "habilitacion": "OE_n", "activo": 0, "salida": "BUS_i"}
+  ],
+  "senales_comunes": {"CLK": "flanco_ascendente", "LOAD": "activo_alto", "OE_n": "activo_bajo"},
+  "semantica": {
+    "LOAD_1_en_flanco": "Q_i_t_mas_1 = IN_i",
+    "LOAD_0_en_flanco": "Q_i_t_mas_1 = Q_i_t",
+    "OE_n_0": "BUS_i = Q_i",
+    "OE_n_1": "BUS_i = Z",
+    "encendido": "Q inicial desconocido hasta primera carga valida"
+  },
+  "sin_reset_implicitamente": true,
+  "naturaleza": "circuito logico funcional y HDL, sin elegir encapsulado ni temporizacion"
+}

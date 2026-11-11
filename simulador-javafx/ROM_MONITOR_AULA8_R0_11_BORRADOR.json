@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "release": "R0.11",
+  "architecture": "Aula-8",
+  "status": "propuesta_no_aprobada",
+  "scope": "contrato_documental_de_rom_y_monitor_sin_firmware_ejecutable",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "aula8_external_data_bus_bits": 8,
+  "aula16_external_data_bus_bits": 16,
+  "firmware_implemented": false,
+  "cpu_executed": false,
+  "microcode_compiled": false,
+  "electrical_validation": false,
+  "rom_image_built": false,
+  "rom": {
+    "start": "E000",
+    "end": "FFFF",
+    "capacity_bytes": 8192,
+    "control_rom_is_distinct": true,
+    "public_table": {
+      "start": "FF00",
+      "end": "FF7F",
+      "slot_size_bytes": 4,
+      "reserved_slot_count": 32,
+      "defined_slot_count": 4,
+      "slot_instruction": "JMP",
+      "slot_padding": "NOP",
+      "future_slots_callable": false
+    },
+    "reset_vector": {
+      "address_low": "FFFC",
+      "address_high": "FFFD",
+      "endian": "little",
+      "illustrative_boot_address": "E000",
+      "illustrative_bytes_hex": "00 E0"
+    },
+    "reserved_tail": ["FFFE", "FFFF"],
+    "ram_initial_contents": "indeterminados",
+    "firmware_budget_sections_bytes": [512, 768, 1280, 3072, 1536, 1024],
+    "firmware_binary_size_measured": false
+  },
+  "public_services": [
+    {
+      "name": "FW_PUTC",
+      "slot": "FF00",
+      "illustrative_target": "E100",
+      "illustrative_slot_bytes_hex": "30 00 E1 00",
+      "input": "R0=caracter_u8",
+      "output": "no_garantizado",
+      "blocking": "espera_TX_listo"
+    },
+    {
+      "name": "FW_GETC",
+      "slot": "FF04",
+      "illustrative_target": "E140",
+      "illustrative_slot_bytes_hex": "30 40 E1 00",
+      "input": "ninguna",
+      "output": "R0=caracter_recibido_u8",
+      "blocking": "espera_RX_disponible"
+    },
+    {
+      "name": "FW_PUTS",
+      "slot": "FF08",
+      "illustrative_target": "E180",
+      "illustrative_slot_bytes_hex": "30 80 E1 00",
+      "input": "X=puntero_a_cadena_terminada_en_00",
+      "output": "no_garantizado",
+      "blocking": "espera_TX_listo"
+    },
+    {
+      "name": "FW_STATUS",
+      "slot": "FF0C",
+      "illustrative_target": "E1C0",
+      "illustrative_slot_bytes_hex": "30 C0 E1 00",
+      "input": "ninguna",
+      "output": "R0=bits0_RX_ready_1_TX_ready",
+      "blocking": "no"
+    }
+  ],
+  "firmware_abi_candidate": {
+    "entry_mechanism": "CALL_to_public_slot",
+    "slot_mechanism": "JMP_to_firmware_impl",
+    "exit_mechanism": "RET",
+    "callee_saved_registers": ["R2", "R3", "X"],
+    "caller_clobbered_registers": ["R0", "R1"],
+    "caller_clobbered_flags": ["Z", "N", "C", "V"],
+    "stack_balanced": true,
+    "requires_minic_stack_argument_slots": false,
+    "requires_minic_fixed_frame_prologue": false,
+    "abi_final": false
+  },
+  "terminal": {
+    "memory_mapped_data": "C000",
+    "memory_mapped_status": "C002",
+    "character_bits": 8,
+    "polling": true,
+    "rom_api_status_candidate_bit0": "rx_ready",
+    "rom_api_status_candidate_bit1": "tx_ready",
+    "mmio_status_register_bit_assignments_final": false,
+    "hardware_controller_implemented": false
+  },
+  "monitor_candidate": {
+    "address_hex_digits": 4,
+    "byte_hex_digits": 2,
+    "numbers_prefix": "none",
+    "commands_case_insensitive": true,
+    "mem_default_count_hex": "10",
+    "mem_max_count_hex": "100",
+    "mem_read_regions": [["0000", "7FFF"], ["E000", "FFFF"]],
+    "poke_window": ["6000", "6FFF"],
+    "run_window": ["6000", "6FFF"],
+    "run_uses": "CALL",
+    "on_program_ret": "return_to_monitor_prompt_if_stack_balanced",
+    "on_program_halt": "cpu_halted_no_prompt_reset_needed",
+    "command_registry": [
+      {"name": "HELP", "available_candidate": true, "arguments": []},
+      {"name": "MEM", "available_candidate": true, "arguments": ["address", "optional_length"]},
+      {"name": "POKE", "available_candidate": true, "arguments": ["address", "byte"]},
+      {"name": "RUN", "available_candidate": true, "arguments": ["address"]},
+      {"name": "REG", "available_candidate": false, "reason": "debug_register_snapshot_not_defined"},
+      {"name": "LOAD", "available_candidate": false, "reason": "block_controller_and_raw_loader_not_defined"}
+    ],
+    "storage_block_bytes_candidate": 256,
+    "directory_or_named_files_implemented": false,
+    "cpu_register_snapshot_implemented": false,
+    "parser_implemented": false
+  },
+  "reference_program": {
+    "origin": "6000",
+    "bytes_hex": "11 00 41 35 00 FF 02",
+    "instructions": [
+      {"address": "6000", "mnemonic": "LDI", "length": 3},
+      {"address": "6003", "mnemonic": "CALL", "length": 3},
+      {"address": "6006", "mnemonic": "RET", "length": 1}
+    ],
+    "expected_output_ascii": "A",
+    "first_return_to_program": "6006",
+    "second_return_to_monitor": "only_if_RUN_CALL_and_stack_balanced",
+    "actual_execution": false
+  },
+  "example_monitor_vectors": [
+    {"line": "HELP", "result": "HELP"},
+    {"line": "help", "result": "HELP"},
+    {"line": "MEM 6000", "result": "MEM", "count": 16},
+    {"line": "MEM 6000 10", "result": "MEM", "count": 16},
+    {"line": "mem e000 0001", "result": "MEM", "count": 1},
+    {"line": "MEM FFF0 10", "result": "MEM", "count": 16},
+    {"line": "MEM 6000 100", "result": "MEM", "count": 256},
+    {"line": "POKE 6000 2A", "result": "POKE"},
+    {"line": "POKE 6FFF FF", "result": "POKE"},
+    {"line": "RUN 6000", "result": "RUN"},
+    {"line": "RUN 6FFF", "result": "RUN"},
+    {"line": "REG", "result": "NO_DISPONIBLE"},
+    {"line": "LOAD", "result": "NO_DISPONIBLE"},
+    {"line": "POKE FF00 30", "result": "ERROR", "error": "POKE_FUERA_DE_VENTANA"},
+    {"line": "POKE C000 41", "result": "ERROR", "error": "POKE_FUERA_DE_VENTANA"},
+    {"line": "POKE 7000 01", "result": "ERROR", "error": "POKE_FUERA_DE_VENTANA"},
+    {"line": "POKE 5FFF 41", "result": "ERROR", "error": "POKE_FUERA_DE_VENTANA"},
+    {"line": "MEM C000", "result": "ERROR", "error": "MEM_REGION_NO_LEGIBLE"},
+    {"line": "MEM 7FFF 02", "result": "ERROR", "error": "MEM_REGION_NO_LEGIBLE"},
+    {"line": "MEM FFFF 02", "result": "ERROR", "error": "MEM_DESBORDE"},
+    {"line": "MEM 6000 0000", "result": "ERROR", "error": "MEM_LONGITUD_INVALIDA"},
+    {"line": "MEM 6000 0101", "result": "ERROR", "error": "MEM_LONGITUD_INVALIDA"},
+    {"line": "MEM 6000 GG", "result": "ERROR", "error": "HEX_INVALIDO"},
+    {"line": "MEM 6000 10 XX", "result": "ERROR", "error": "ARGUMENTOS"},
+    {"line": "POKE 6000 2AA", "result": "ERROR", "error": "HEX_INVALIDO"},
+    {"line": "RUN E000", "result": "ERROR", "error": "RUN_FUERA_DE_VENTANA"},
+    {"line": "RUN 0200", "result": "ERROR", "error": "RUN_FUERA_DE_VENTANA"},
+    {"line": "RUN", "result": "ERROR", "error": "ARGUMENTOS"},
+    {"line": "MEM 10000 01", "result": "ERROR", "error": "HEX_INVALIDO"},
+    {"line": "WHAT", "result": "ERROR", "error": "COMANDO_DESCONOCIDO"}
+  ]
+}

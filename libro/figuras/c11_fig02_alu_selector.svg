@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>ALU funcional de ocho bits</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">ALU funcional de ocho bits</text><text x="35" y="76" class="small">Las rutas calculan; un selector elige una sola salida. El registro captura después.</text><rect x="53" y="165" width="165" height="176" rx="14" fill="#f4f7fa" stroke="#36556b" stroke-width="2.5"/><rect x="301" y="137" width="230" height="104" rx="14" fill="#e6f2ed" stroke="#36556b" stroke-width="2.5"/><rect x="301" y="279" width="230" height="104" rx="14" fill="#e6f2ed" stroke="#36556b" stroke-width="2.5"/><rect x="613" y="184" width="157" height="158" rx="14" fill="#fff1d9" stroke="#36556b" stroke-width="2.5"/><rect x="818" y="202" width="145" height="122" rx="14" fill="#e5f3fa" stroke="#36556b" stroke-width="2.5"/><text x="135" y="209" class="label" text-anchor="middle">Entradas</text><text x="135" y="264" class="label" text-anchor="middle">A y B</text><text x="416" y="175" class="label" text-anchor="middle">Aritmética</text><text x="416" y="208" class="small" text-anchor="middle">ADD / SUB</text><text x="416" y="316" class="label" text-anchor="middle">Lógica</text><text x="416" y="354" class="small" text-anchor="middle">AND OR XOR NOT</text><text x="691" y="241" class="label" text-anchor="middle">MUX</text><text x="691" y="271" class="small" text-anchor="middle">operación</text><text x="691" y="301" class="small" text-anchor="middle">elegida</text><text x="890" y="246" class="label" text-anchor="middle">S [7:0]</text><text x="890" y="279" class="small" text-anchor="middle">8 bits</text><path class="wire" d="M218,216 H258 V191 H301 M258,216 V329 H301"/><path class="wire" d="M531,191 H574 V227 H613 M531,329 H574 V303 H613"/><path class="wire" d="M770,263 H818 M693,113 V184"/><text x="705" y="116" class="small">selector</text><text x="510" y="436" class="small" text-anchor="middle">Z, N, C y V: lógica de flags separada; política para operaciones lógicas pendiente.</text><text x="510" y="476" class="tiny" text-anchor="middle">Esquema conceptual: no define conexiones ni reloj reales.</text></svg>

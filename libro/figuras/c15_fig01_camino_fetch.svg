@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Buscar: de PC a IR sin perder el opcode</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Buscar: de PC a IR sin perder el opcode</text><text x="35" y="76" class="small">Las flechas son dependencias funcionales, no pulsos medidos.</text><rect x="35" y="164" width="170" height="112" rx="14" fill="#dfeefa" stroke="#36556b" stroke-width="2.5"/><text x="120" y="206" class="label" text-anchor="middle">PC</text><text x="120" y="250" class="small" text-anchor="middle">0x6000</text><path class="wire" d="M205,220 H233"/><rect x="233" y="164" width="170" height="112" rx="14" fill="#e9f1f8" stroke="#36556b" stroke-width="2.5"/><text x="318" y="206" class="label" text-anchor="middle">MAR</text><text x="318" y="250" class="small" text-anchor="middle">0x6000</text><path class="wire" d="M403,220 H431"/><rect x="431" y="164" width="170" height="112" rx="14" fill="#f6f0dc" stroke="#36556b" stroke-width="2.5"/><text x="516" y="206" class="label" text-anchor="middle">RAM</text><text x="516" y="250" class="small" text-anchor="middle">[6000]=11</text><path class="wire" d="M601,220 H629"/><rect x="629" y="164" width="170" height="112" rx="14" fill="#e8f4e9" stroke="#36556b" stroke-width="2.5"/><text x="714" y="206" class="label" text-anchor="middle">MDR</text><text x="714" y="250" class="small" text-anchor="middle">0x11</text><path class="wire" d="M799,220 H827"/><rect x="827" y="164" width="170" height="112" rx="14" fill="#dfeefa" stroke="#36556b" stroke-width="2.5"/><text x="912" y="206" class="label" text-anchor="middle">IR</text><text x="912" y="250" class="small" text-anchor="middle">0x11</text><path class="wire" d="M912,276 V324 H520 V349"/><rect x="359" y="349" width="321" height="73" rx="14" fill="#f8ebd4" stroke="#36556b" stroke-width="2.5"/><text x="520" y="383" class="label" text-anchor="middle">DECODE → ruta LDI</text><text x="500" y="472" class="small" text-anchor="middle">Una lectura lógica puede requerir varias acciones físicas.</text></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Captura por flancos ascendentes</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="42" y="43" class="label">Flip-flop D: dos flancos ascendentes, dos capturas</text>
+<text x="42" y="76" class="small">t0 a t6 describen estados estables; las líneas no representan nanosegundos medidos.</text>
+<rect x="58" y="105" width="893" height="325" rx="14" fill="#f3f8fb"/>
+<text x="122" y="132" class="small">t0</text><text x="232" y="132" class="small">t1</text><text x="352" y="132" class="small">t2</text><text x="472" y="132" class="small">t3</text><text x="592" y="132" class="small">t4</text><text x="712" y="132" class="small">t5</text><text x="832" y="132" class="small">t6</text>
+<text x="73" y="192" class="small accent">CLK</text><text x="73" y="282" class="small accent">D</text>
+<text x="73" y="370" class="small accent">Q</text>
+<path d="M326,143 V414 M686,143 V414" stroke="#60a584" stroke-width="2" stroke-dasharray="7,6"/>
+<path d="M96,209 H206 H326 V159 H446 H566 V209 H686 V159 H806 H925" fill="none" stroke="#176d92" stroke-width="4" stroke-linejoin="round"/><path d="M96,304 H206 V253 H326 H446 V304 H566 H686 H806 V253 H925" fill="none" stroke="#864b91" stroke-width="4" stroke-linejoin="round"/><path d="M96,397 H206 H326 V346 H446 H566 H686 V397 H806 H925" fill="none" stroke="#268254" stroke-width="4" stroke-linejoin="round"/>
+<text x="332" y="445" class="tiny" style="fill:#268254">Captura 1</text>
+<text x="677" y="445" class="tiny" style="fill:#268254">Captura 0</text>
+<text x="500" y="477" text-anchor="middle" class="tiny">Q dibujada como estado lógico asentado; físicamente hay retardo de CLK a Q.</text>
+</svg>

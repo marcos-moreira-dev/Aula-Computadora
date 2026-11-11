@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Medio sumador: XOR y AND</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">Un medio sumador produce una suma y un acarreo</text>
+<text x="38" y="79" class="small">Dos bits entran en paralelo a dos funciones lógicas; no hay Cin.</text>
+<rect x="62" y="177" width="197" height="131" rx="14" fill="#f4f7fa" stroke="#28465b" stroke-width="3"/>
+<text x="160" y="219" class="label" text-anchor="middle">Entradas</text>
+<text x="160" y="258" class="small" text-anchor="middle">A y B</text>
+<rect x="379" y="137" width="252" height="111" rx="14" fill="#e3f1e7" stroke="#28465b" stroke-width="3"/><rect x="379" y="295" width="252" height="111" rx="14" fill="#fff2d9" stroke="#28465b" stroke-width="3"/>
+<path class="wire" d="M259,214 H315 V192 H379"/>
+<path class="wire" d="M259,270 H315 V351 H379"/>
+<text x="328" y="179" class="tiny" text-anchor="middle">A, B</text>
+<text x="328" y="372" class="tiny" text-anchor="middle">A, B</text>
+<text x="505" y="183" class="label" text-anchor="middle">XOR</text>
+<text x="505" y="215" class="small" text-anchor="middle">distintos → 1</text>
+<text x="505" y="341" class="label" text-anchor="middle">AND</text>
+<text x="505" y="373" class="small" text-anchor="middle">ambos 1 → 1</text>
+<path class="wire" d="M631,192 H792 M631,350 H792"/>
+<text x="804" y="201" class="label accent">S = A ⊕ B</text>
+<text x="804" y="359" class="label accent">C = A ∧ B</text>
+<text x="499" y="462" class="small" text-anchor="middle">Con A=B=1: S=0 y C=1, es decir, 1 + 1 = 10 en binario.</text>
+<text x="500" y="486" class="tiny" text-anchor="middle">Las líneas marcadas A, B representan dos señales separadas, no un cortocircuito.</text>
+</svg>

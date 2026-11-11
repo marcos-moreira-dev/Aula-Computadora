@@ -1,0 +1,670 @@
+{
+  "name": "PC16_C28E",
+  "data_bits": 16,
+  "initial": "X",
+  "clock_edge": "rising",
+  "clear_test": "synchronous, active-high, priority",
+  "load": "synchronous, active-high",
+  "otherwise": "HOLD",
+  "cpu_reset_vector": "NOT IMPLEMENTED; distinct from CLR_TEST",
+  "gates": [
+    {
+      "name": "LOAD_N",
+      "kind": "NAND",
+      "inputs": [
+        "LOAD",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "CLR_N",
+      "kind": "NAND",
+      "inputs": [
+        "CLR_TEST",
+        "CLR_TEST"
+      ]
+    },
+    {
+      "name": "A0",
+      "kind": "NAND",
+      "inputs": [
+        "Q0",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B0",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT0",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M0",
+      "kind": "NAND",
+      "inputs": [
+        "A0",
+        "B0"
+      ]
+    },
+    {
+      "name": "N0",
+      "kind": "NAND",
+      "inputs": [
+        "M0",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D0",
+      "kind": "NAND",
+      "inputs": [
+        "N0",
+        "N0"
+      ]
+    },
+    {
+      "name": "A1",
+      "kind": "NAND",
+      "inputs": [
+        "Q1",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B1",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT1",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M1",
+      "kind": "NAND",
+      "inputs": [
+        "A1",
+        "B1"
+      ]
+    },
+    {
+      "name": "N1",
+      "kind": "NAND",
+      "inputs": [
+        "M1",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D1",
+      "kind": "NAND",
+      "inputs": [
+        "N1",
+        "N1"
+      ]
+    },
+    {
+      "name": "A2",
+      "kind": "NAND",
+      "inputs": [
+        "Q2",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B2",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT2",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M2",
+      "kind": "NAND",
+      "inputs": [
+        "A2",
+        "B2"
+      ]
+    },
+    {
+      "name": "N2",
+      "kind": "NAND",
+      "inputs": [
+        "M2",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D2",
+      "kind": "NAND",
+      "inputs": [
+        "N2",
+        "N2"
+      ]
+    },
+    {
+      "name": "A3",
+      "kind": "NAND",
+      "inputs": [
+        "Q3",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B3",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT3",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M3",
+      "kind": "NAND",
+      "inputs": [
+        "A3",
+        "B3"
+      ]
+    },
+    {
+      "name": "N3",
+      "kind": "NAND",
+      "inputs": [
+        "M3",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D3",
+      "kind": "NAND",
+      "inputs": [
+        "N3",
+        "N3"
+      ]
+    },
+    {
+      "name": "A4",
+      "kind": "NAND",
+      "inputs": [
+        "Q4",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B4",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT4",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M4",
+      "kind": "NAND",
+      "inputs": [
+        "A4",
+        "B4"
+      ]
+    },
+    {
+      "name": "N4",
+      "kind": "NAND",
+      "inputs": [
+        "M4",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D4",
+      "kind": "NAND",
+      "inputs": [
+        "N4",
+        "N4"
+      ]
+    },
+    {
+      "name": "A5",
+      "kind": "NAND",
+      "inputs": [
+        "Q5",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B5",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT5",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M5",
+      "kind": "NAND",
+      "inputs": [
+        "A5",
+        "B5"
+      ]
+    },
+    {
+      "name": "N5",
+      "kind": "NAND",
+      "inputs": [
+        "M5",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D5",
+      "kind": "NAND",
+      "inputs": [
+        "N5",
+        "N5"
+      ]
+    },
+    {
+      "name": "A6",
+      "kind": "NAND",
+      "inputs": [
+        "Q6",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B6",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT6",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M6",
+      "kind": "NAND",
+      "inputs": [
+        "A6",
+        "B6"
+      ]
+    },
+    {
+      "name": "N6",
+      "kind": "NAND",
+      "inputs": [
+        "M6",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D6",
+      "kind": "NAND",
+      "inputs": [
+        "N6",
+        "N6"
+      ]
+    },
+    {
+      "name": "A7",
+      "kind": "NAND",
+      "inputs": [
+        "Q7",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B7",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT7",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M7",
+      "kind": "NAND",
+      "inputs": [
+        "A7",
+        "B7"
+      ]
+    },
+    {
+      "name": "N7",
+      "kind": "NAND",
+      "inputs": [
+        "M7",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D7",
+      "kind": "NAND",
+      "inputs": [
+        "N7",
+        "N7"
+      ]
+    },
+    {
+      "name": "A8",
+      "kind": "NAND",
+      "inputs": [
+        "Q8",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B8",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT8",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M8",
+      "kind": "NAND",
+      "inputs": [
+        "A8",
+        "B8"
+      ]
+    },
+    {
+      "name": "N8",
+      "kind": "NAND",
+      "inputs": [
+        "M8",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D8",
+      "kind": "NAND",
+      "inputs": [
+        "N8",
+        "N8"
+      ]
+    },
+    {
+      "name": "A9",
+      "kind": "NAND",
+      "inputs": [
+        "Q9",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B9",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT9",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M9",
+      "kind": "NAND",
+      "inputs": [
+        "A9",
+        "B9"
+      ]
+    },
+    {
+      "name": "N9",
+      "kind": "NAND",
+      "inputs": [
+        "M9",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D9",
+      "kind": "NAND",
+      "inputs": [
+        "N9",
+        "N9"
+      ]
+    },
+    {
+      "name": "A10",
+      "kind": "NAND",
+      "inputs": [
+        "Q10",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B10",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT10",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M10",
+      "kind": "NAND",
+      "inputs": [
+        "A10",
+        "B10"
+      ]
+    },
+    {
+      "name": "N10",
+      "kind": "NAND",
+      "inputs": [
+        "M10",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D10",
+      "kind": "NAND",
+      "inputs": [
+        "N10",
+        "N10"
+      ]
+    },
+    {
+      "name": "A11",
+      "kind": "NAND",
+      "inputs": [
+        "Q11",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B11",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT11",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M11",
+      "kind": "NAND",
+      "inputs": [
+        "A11",
+        "B11"
+      ]
+    },
+    {
+      "name": "N11",
+      "kind": "NAND",
+      "inputs": [
+        "M11",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D11",
+      "kind": "NAND",
+      "inputs": [
+        "N11",
+        "N11"
+      ]
+    },
+    {
+      "name": "A12",
+      "kind": "NAND",
+      "inputs": [
+        "Q12",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B12",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT12",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M12",
+      "kind": "NAND",
+      "inputs": [
+        "A12",
+        "B12"
+      ]
+    },
+    {
+      "name": "N12",
+      "kind": "NAND",
+      "inputs": [
+        "M12",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D12",
+      "kind": "NAND",
+      "inputs": [
+        "N12",
+        "N12"
+      ]
+    },
+    {
+      "name": "A13",
+      "kind": "NAND",
+      "inputs": [
+        "Q13",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B13",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT13",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M13",
+      "kind": "NAND",
+      "inputs": [
+        "A13",
+        "B13"
+      ]
+    },
+    {
+      "name": "N13",
+      "kind": "NAND",
+      "inputs": [
+        "M13",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D13",
+      "kind": "NAND",
+      "inputs": [
+        "N13",
+        "N13"
+      ]
+    },
+    {
+      "name": "A14",
+      "kind": "NAND",
+      "inputs": [
+        "Q14",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B14",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT14",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M14",
+      "kind": "NAND",
+      "inputs": [
+        "A14",
+        "B14"
+      ]
+    },
+    {
+      "name": "N14",
+      "kind": "NAND",
+      "inputs": [
+        "M14",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D14",
+      "kind": "NAND",
+      "inputs": [
+        "N14",
+        "N14"
+      ]
+    },
+    {
+      "name": "A15",
+      "kind": "NAND",
+      "inputs": [
+        "Q15",
+        "LOAD_N"
+      ]
+    },
+    {
+      "name": "B15",
+      "kind": "NAND",
+      "inputs": [
+        "NEXT15",
+        "LOAD"
+      ]
+    },
+    {
+      "name": "M15",
+      "kind": "NAND",
+      "inputs": [
+        "A15",
+        "B15"
+      ]
+    },
+    {
+      "name": "N15",
+      "kind": "NAND",
+      "inputs": [
+        "M15",
+        "CLR_N"
+      ]
+    },
+    {
+      "name": "D15",
+      "kind": "NAND",
+      "inputs": [
+        "N15",
+        "N15"
+      ]
+    }
+  ],
+  "flipflops": 16,
+  "formula": "D_i = (!CLR_TEST) & ((LOAD & NEXT_i) | (!LOAD & Q_i))"
+}

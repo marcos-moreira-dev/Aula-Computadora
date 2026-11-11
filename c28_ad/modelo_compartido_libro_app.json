@@ -1,0 +1,68 @@
+{
+  "schema": "aula.modelo_vistas.v1",
+  "descripcion": "Una topologia lógica, dos representaciones: libro y aplicativo. No es PCB fabricable.",
+  "regla": "Identidades de modulo y de señal permanentes; las coordenadas visuales nunca definen conectividad.",
+  "fuente_alu_real": "c28_ac/activos_app/Aula8_ALU359_APP_NETLIST.json",
+  "fuente_control_rtl": "c28_w/rtl/operacion_controlada_c28w.v",
+  "unidad_layout": "unidad_visual_arbitraria_no_milimetros",
+  "etapas": [
+    {
+      "id": "E01_NAND2",
+      "estado": "topologia_cmos_conceptual",
+      "libro": "c28_ac/activos_app/CMOS_NAND2_4_MOS.svg",
+      "app_digital": "c28_ac/activos_app/NAND2_tabla_verdad.json",
+      "app_fisica": "modelo_cmos_pmos_en_paralelo_nmos_en_serie_sin_footprints",
+      "aprendizaje": "De transistor a una NAND de dos entradas"
+    },
+    {
+      "id": "E02_ALU359",
+      "estado": "netlist_digital_verificado",
+      "libro": "c28_ac/activos_app/ALU_BIT0_NAND_DESPLEGADO.svg",
+      "app_digital": "c28_ac/activos_app/Aula8_ALU359_APP_NETLIST.json",
+      "app_fisica": null,
+      "aprendizaje": "Seis operaciones y propagacion de los bits"
+    },
+    {
+      "id": "E03_CONTROL_C28W",
+      "estado": "rtl_secuencial_verificado_sin_implementacion_fisica",
+      "libro": "c28_ac/activos_app/AULA8_C28W_BUS_DATAPATH_8_LINEAS.svg",
+      "app_digital": "c28_ac/activos_app/Visor_PASO_A_PASO_C28W.html",
+      "app_fisica": null,
+      "aprendizaje": "START, flancos, A, B, ALU, resultado y banderas"
+    },
+    {
+      "id": "E04_MEMORIA_AULA16",
+      "estado": "arquitectura_candidata",
+      "libro": "c28_ac/activos_app/AULA16_MEMORIA_DOS_BANCOS_16_LINEAS.svg",
+      "app_digital": null,
+      "app_fisica": null,
+      "aprendizaje": "Direccionamiento por bytes y dos bancos de memoria"
+    }
+  ],
+  "placa_conceptual": {
+    "ancho": 1780,
+    "alto": 835,
+    "modulos": [
+      {"id":"ENTRADA_A","titulo":"ENTRADA A","x":110,"y":115,"w":235,"h":150,"estado":"panel_didactico"},
+      {"id":"ENTRADA_B","titulo":"ENTRADA B","x":110,"y":520,"w":235,"h":150,"estado":"panel_didactico"},
+      {"id":"MUX8","titulo":"MUX 2:1 × 8","x":380,"y":345,"w":215,"h":145,"estado":"rtl_sin_footprint"},
+      {"id":"REG_A","titulo":"REGISTRO A · 8 FF","x":650,"y":115,"w":255,"h":150,"estado":"rtl_sin_footprint"},
+      {"id":"REG_B","titulo":"REGISTRO B · 8 FF","x":650,"y":520,"w":255,"h":150,"estado":"rtl_sin_footprint"},
+      {"id":"ALU359","titulo":"ALU · 359 NAND2","x":1050,"y":295,"w":315,"h":235,"estado":"netlist_logica_sin_footprint"},
+      {"id":"RESULT_Q","titulo":"RESULTADO · 8 FF","x":1450,"y":300,"w":280,"h":160,"estado":"rtl_sin_footprint"},
+      {"id":"CONTROL","titulo":"CONTROL · C28-W","x":900,"y":660,"w":385,"h":120,"estado":"rtl_sin_footprint"},
+      {"id":"FLAGS","titulo":"BANDERAS · 5 FF","x":1450,"y":640,"w":280,"h":120,"estado":"rtl_sin_footprint"}
+    ],
+    "buses": [
+      {"id":"NET_A_IN","bits":8,"origen":"ENTRADA_A","destino":"MUX8","puntos":[[345,190],[363,190],[363,385],[380,385]]},
+      {"id":"NET_B_IN","bits":8,"origen":"ENTRADA_B","destino":"MUX8","puntos":[[345,590],[363,590],[363,455],[380,455]]},
+      {"id":"BUS_DATA_A","senal_logica":"BUS_DATA","bits":8,"origen":"MUX8","destino":"REG_A","puntos":[[595,402],[620,402],[620,190],[650,190]]},
+      {"id":"BUS_DATA_B","senal_logica":"BUS_DATA","bits":8,"origen":"MUX8","destino":"REG_B","puntos":[[595,438],[632,438],[632,600],[650,600]]},
+      {"id":"NET_A_Q","bits":8,"origen":"REG_A","destino":"ALU359","puntos":[[905,190],[970,190],[970,365],[1050,365]]},
+      {"id":"NET_B_Q","bits":8,"origen":"REG_B","destino":"ALU359","puntos":[[905,600],[991,600],[991,470],[1050,470]]},
+      {"id":"NET_RESULT","bits":8,"origen":"ALU359","destino":"RESULT_Q","puntos":[[1365,380],[1450,380]]},
+      {"id":"NET_FLAGS","bits":5,"origen":"ALU359","destino":"FLAGS","puntos":[[1365,510],[1408,510],[1408,696],[1450,696]]}
+    ],
+    "comentario": "Los buses de ocho líneas y las cinco banderas se dibujan individualmente. El MUX8 es la fuente de BUS_DATA hacia ambos registros; sus salidas se capturan bajo señales de control. Posiciones ilustrativas; la interconexion fisica de CLK/LOAD/SEL y alimentación aun no se ha trazado."
+  }
+}

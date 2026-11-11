@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>X de 16 bits, ALU de 8 bits</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">X de 16 bits, ALU de 8 bits</text><text x="35" y="76" class="small">Desplazamiento +2 sobre X=0x12FF, conservando FLAGS.C visible.</text><rect x="43" y="115" width="913" height="92" rx="14" fill="#f3f7fb" stroke="#36556b" stroke-width="2.5"/><text x="490" y="153" class="label" text-anchor="middle">X inicial = 0x12FF     |     sumar 0x0002</text><text x="490" y="185" class="small" text-anchor="middle">Primero se procesa el byte bajo; después el alto.</text><rect x="72" y="249" width="355" height="126" rx="14" fill="#e8f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="576" y="249" width="355" height="126" rx="14" fill="#eaf5e9" stroke="#36556b" stroke-width="2.5"/><text x="249" y="283" class="label" text-anchor="middle">Paso 1 · byte bajo</text><text x="249" y="323" class="label" text-anchor="middle">FF + 02 = 101 (hex)</text><text x="249" y="353" class="small" text-anchor="middle">Guardar 01 · carry interno 1</text><text x="754" y="283" class="label" text-anchor="middle">Paso 2 · byte alto</text><text x="754" y="323" class="label" text-anchor="middle">12 + 00 + 1 = 13 (hex)</text><text x="754" y="353" class="small" text-anchor="middle">Guardar 13 · X=0x1301</text><path class="wire" d="M427,313 H576"/><text x="501" y="299" class="tiny" text-anchor="middle">ADDR_CARRY</text><text x="500" y="427" class="small" text-anchor="middle">La bandera visible FLAGS.C no cambia por este cálculo de dirección.</text><text x="500" y="476" class="tiny" text-anchor="middle">Este recorrido no implica una ALU general de 16 bits ni tiempos probados.</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Reset no ejecuta bytes aleatorios de RAM</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Reset no ejecuta bytes aleatorios de RAM</text><text x="35" y="76" class="small">La dirección E000 depende de un vector 00 E0 grabado previamente.</text><rect x="22" y="171" width="224" height="168" rx="14" fill="#e8f2fa" stroke="#36556b" stroke-width="2.5"/><text x="134" y="228" class="label" text-anchor="middle">RESET</text><text x="134" y="286" class="small" text-anchor="middle">estado definido</text><path class="wire" d="M246,254 H273"/><rect x="273" y="171" width="224" height="168" rx="14" fill="#f8f0dc" stroke="#36556b" stroke-width="2.5"/><text x="385" y="228" class="label" text-anchor="middle">ROM FFFC</text><text x="385" y="286" class="small" text-anchor="middle">byte bajo: 00</text><path class="wire" d="M497,254 H524"/><rect x="524" y="171" width="224" height="168" rx="14" fill="#f8f0dc" stroke="#36556b" stroke-width="2.5"/><text x="636" y="228" class="label" text-anchor="middle">ROM FFFD</text><text x="636" y="286" class="small" text-anchor="middle">byte alto: E0</text><path class="wire" d="M748,254 H775"/><rect x="775" y="171" width="224" height="168" rx="14" fill="#e9f5e9" stroke="#36556b" stroke-width="2.5"/><text x="887" y="228" class="label" text-anchor="middle">PC = E000</text><text x="887" y="286" class="small" text-anchor="middle">inicio firmware</text><text x="500" y="420" class="small" text-anchor="middle">Vector en ROM de firmware ≠ micro-ROM de la unidad de control.</text></svg>

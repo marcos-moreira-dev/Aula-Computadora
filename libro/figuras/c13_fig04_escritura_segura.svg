@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>ST: conservar dirección y preparar dato</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">ST: conservar dirección y preparar dato</text><text x="35" y="76" class="small">Los bytes de dirección sobreviven aunque MDR se reutilice.</text><rect x="30" y="145" width="285" height="222" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="358" y="145" width="285" height="222" rx="14" fill="#f9f0d8" stroke="#36556b" stroke-width="2.5"/><rect x="686" y="145" width="285" height="222" rx="14" fill="#eaf4e9" stroke="#36556b" stroke-width="2.5"/><text x="173" y="185" class="label" text-anchor="middle">1. Retener dirección</text><text x="173" y="232" class="small" text-anchor="middle">ADDR_LO = 00</text><text x="173" y="273" class="small" text-anchor="middle">ADDR_HI = 6F</text><text x="173" y="327" class="small" text-anchor="middle">MDR puede cambiar</text><text x="501" y="185" class="label" text-anchor="middle">2. Preparar salida</text><text x="501" y="232" class="small" text-anchor="middle">MAR = 0x6F00</text><text x="501" y="273" class="small" text-anchor="middle">R0 = 0x2A</text><text x="501" y="327" class="small" text-anchor="middle">MDR recibe 2A</text><text x="828" y="185" class="label" text-anchor="middle">3. Escribir RAM</text><text x="828" y="232" class="small" text-anchor="middle">WR habilitado</text><text x="828" y="273" class="small" text-anchor="middle">CPU conduce datos</text><text x="828" y="327" class="small" text-anchor="middle">RAM guarda 0x2A</text><path class="wire" d="M315,255 H358 M643,255 H686"/><text x="500" y="417" class="small" text-anchor="middle">Activar WR cuando MDR aún contiene 6F escribiría el byte equivocado.</text><text x="500" y="471" class="tiny" text-anchor="middle">Secuencia propuesta: sin tiempo, reloj ni circuitería comprobados.</text></svg>

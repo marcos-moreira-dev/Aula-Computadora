@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Conexiones funcionales de cuatro NAND para realizar XOR</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="40" y="44" class="label">Construir XOR a partir de cuatro NAND</text>
+<text x="40" y="79" class="small">Sigue las señales intermedias N1 → N2 y N3 → D.</text>
+<rect x="225" y="189" width="112" height="82" rx="12" fill="#e7f3fa" stroke="#273746" stroke-width="3"/>
+<text x="281" y="222" text-anchor="middle" class="label">N1</text>
+<text x="281" y="250" text-anchor="middle" class="small">NAND</text><rect x="530" y="145" width="112" height="82" rx="12" fill="#e7f3fa" stroke="#273746" stroke-width="3"/>
+<text x="586" y="178" text-anchor="middle" class="label">N2</text>
+<text x="586" y="206" text-anchor="middle" class="small">NAND</text><rect x="530" y="286" width="112" height="82" rx="12" fill="#e7f3fa" stroke="#273746" stroke-width="3"/>
+<text x="586" y="319" text-anchor="middle" class="label">N3</text>
+<text x="586" y="347" text-anchor="middle" class="small">NAND</text><rect x="752" y="224" width="112" height="82" rx="12" fill="#e7f3fa" stroke="#273746" stroke-width="3"/>
+<text x="808" y="257" text-anchor="middle" class="label">N4</text>
+<text x="808" y="285" text-anchor="middle" class="small">NAND</text>
+<path class="wire" d="M89,130 H483 V169 H530 M175,130 V209 H225"/>
+<path class="wire" d="M89,386 H485 V342 H530 M203,386 V250 H225"/>
+<text x="48" y="136" class="label accent">A</text><text x="48" y="392" class="label accent">B</text>
+<path class="wire" d="M337,230 H423 V196 H530 M423,230 V307 H530"/>
+<circle cx="423" cy="230" r="6" class="node"/>
+<text x="370" y="220" class="tiny accent">N1</text>
+<path class="wire" d="M642,186 H695 V251 H752 M642,327 H695 V297 H752"/>
+<path class="wire" d="M864,265 H940"/>
+<text x="890" y="248" class="label accent">D</text>
+<rect x="59" y="427" width="883" height="56" rx="11" fill="#edf6fa"/>
+<text x="500" y="449" text-anchor="middle" class="small">N1 = NAND(A,B); N2 = NAND(A,N1); N3 = NAND(B,N1).</text>
+<text x="500" y="473" text-anchor="middle" class="small">D = NAND(N2,N3) = A ⊕ B.</text>
+</svg>

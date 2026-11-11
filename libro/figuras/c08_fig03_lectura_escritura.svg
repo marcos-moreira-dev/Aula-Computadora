@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Lectura y escritura abstractas de memoria</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="36" y="44" class="label">Misma clase de memoria, diferente dirección del dato</text>
+<text x="38" y="77" class="small">El byte contenido y la dirección elegida se representan por separado.</text>
+<rect x="32" y="103" width="936" height="160" rx="13" fill="#f2f8fc"/>
+<text x="57" y="133" class="label accent">LECTURA · 0x1200</text>
+<rect x="62" y="153" width="226" height="80" rx="13" fill="#e6f3fa" stroke="#28465b" stroke-width="3"/><rect x="705" y="153" width="228" height="80" rx="13" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/>
+<text x="175" y="198" class="label" text-anchor="middle">CPU</text>
+<text x="819" y="198" class="label" text-anchor="middle">RAM[0x1200]</text>
+<path class="wire" d="M705,194 H288"/>
+<path d="M303,184 l-15,10 15,10" fill="none" stroke="#28465b" stroke-width="3"/>
+<text x="497" y="177" class="label accent" text-anchor="middle">← 0x41</text>
+<text x="497" y="220" class="tiny" text-anchor="middle">Memoria conduce; CPU recibe</text>
+<rect x="32" y="279" width="936" height="160" rx="13" fill="#fff6e9"/>
+<text x="57" y="309" class="label accent">ESCRITURA · 0x1201</text>
+<rect x="62" y="329" width="226" height="80" rx="13" fill="#e6f3fa" stroke="#28465b" stroke-width="3"/><rect x="705" y="329" width="228" height="80" rx="13" fill="#e2f3e8" stroke="#28465b" stroke-width="3"/>
+<text x="175" y="376" class="label" text-anchor="middle">CPU</text>
+<text x="819" y="376" class="small" text-anchor="middle">RAM[0x1201]</text>
+<path class="wire" d="M288,368 H705"/>
+<path d="M690,358 l15,10 -15,10" fill="none" stroke="#28465b" stroke-width="3"/>
+<text x="497" y="352" class="label accent" text-anchor="middle">0x53 →</text>
+<text x="497" y="399" class="tiny" text-anchor="middle">CPU conduce; memoria recibe</text>
+<text x="500" y="478" class="tiny" text-anchor="middle">Las lecturas/escrituras se completan solo si se respetan las señales y tiempos válidos.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Diagnosticar un bus de dos carriles</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Diagnosticar un bus de dos carriles</text><text x="35" y="76" class="small">Síntomas lógicos para el modelo; no mediciones de osciloscopio.</text><rect x="28" y="143" width="448" height="143" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="252" y="193" class="label" text-anchor="middle">BYTE SWAP</text><text x="252" y="249" class="small" text-anchor="middle">1234 → 3412</text><rect x="523" y="143" width="448" height="143" rx="14" fill="#fce8e8" stroke="#36556b" stroke-width="2.5"/><text x="747" y="193" class="label" text-anchor="middle">CARRIL CRUZADO</text><text x="747" y="249" class="small" text-anchor="middle">STB altera vecino</text><rect x="28" y="320" width="448" height="143" rx="14" fill="#fce8e8" stroke="#36556b" stroke-width="2.5"/><text x="252" y="370" class="label" text-anchor="middle">IMPAR</text><text x="252" y="426" class="small" text-anchor="middle">LDW 2001 admitida</text><rect x="523" y="320" width="448" height="143" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="747" y="370" class="label" text-anchor="middle">MMIO</text><text x="747" y="426" class="small" text-anchor="middle">C020 leído como word</text><text x="500" y="484" class="tiny" text-anchor="middle">Los cuatro síntomas tienen causas y pruebas diferentes.</text></svg>

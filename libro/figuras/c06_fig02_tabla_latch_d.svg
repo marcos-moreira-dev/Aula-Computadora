@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Tabla del latch D transparente</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="45" y="47" class="label">Tabla del latch D sensible a nivel alto</text>
+<text x="45" y="81" class="small">Q solo conserva un valor anterior cuando la habilitación está cerrada.</text>
+<rect x="55" y="118" width="890" height="317" rx="17" fill="#eef6fb"/>
+<text x="133" y="167" class="label">LE</text><text x="317" y="167" class="label">D</text>
+<text x="499" y="167" class="label">Q estable</text><text x="751" y="167" class="label">Estado</text>
+<path d="M72,187 H930" stroke="#7f9aaa" stroke-width="2"/>
+<rect x="75" y="203" width="852" height="63" rx="8" fill="#dbeaf5"/>
+<text x="138" y="245" class="label">0</text><text x="296" y="245" class="small">0 o 1</text>
+<text x="485" y="245" class="small">Q anterior</text><text x="751" y="245" class="label accent">HOLD</text>
+<rect x="75" y="274" width="852" height="63" rx="8" fill="#e0f2e7"/>
+<text x="138" y="316" class="label">1</text><text x="323" y="316" class="label">0</text>
+<text x="522" y="316" class="label">0</text><text x="748" y="316" class="small">Deja pasar 0</text>
+<rect x="75" y="345" width="852" height="63" rx="8" fill="#e0f2e7"/>
+<text x="138" y="388" class="label">1</text><text x="323" y="388" class="label">1</text>
+<text x="522" y="388" class="label">1</text><text x="748" y="388" class="small">Deja pasar 1</text>
+<text x="501" y="467" text-anchor="middle" class="tiny">LE alto: transparente; LE bajo: conserva el último estado válido.</text>
+</svg>

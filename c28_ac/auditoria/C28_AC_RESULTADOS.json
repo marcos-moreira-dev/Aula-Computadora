@@ -1,0 +1,26 @@
+{
+  "estado": "APROBADO",
+  "tipo": "equivalencia_logica_ideal_y_serializacion_no_electrica",
+  "NAND": 359,
+  "cobertura_portable_por_modo": {
+    "ADD": 343,
+    "SUB": 346,
+    "AND": 344,
+    "OR": 346,
+    "XOR": 346,
+    "NOT_A": 345
+  },
+  "cobertura_exhaustiva_por_modo": {
+    "ADD": 65536,
+    "SUB": 65536,
+    "AND": 65536,
+    "OR": 65536,
+    "XOR": 65536,
+    "NOT_A": 65536
+  },
+  "cobertura_exhaustiva_total": 393216,
+  "archivos_svg_verificados": 5,
+  "visores_html": 2,
+  "grafo_conexiones": 731,
+  "nota": "No valida atrasos, potencia, VDD, cortocircuitos ni geometria de protoboard."
+}

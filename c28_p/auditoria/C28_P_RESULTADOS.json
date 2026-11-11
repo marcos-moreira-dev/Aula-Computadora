@@ -1,0 +1,59 @@
+{
+  "estado": "APROBADO_MODELOS_DOCUMENTALES",
+  "capitulos": [
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "23B",
+    "24"
+  ],
+  "total_capitulos": 11,
+  "figuras_con_png_y_svg": 50,
+  "mapa": {
+    "ram": 32768,
+    "expansion": 16384,
+    "mmio": 256,
+    "reserva": 7936,
+    "rom": 8192,
+    "direcciones_controladas": 65536,
+    "ranuras_rom": 32
+  },
+  "pila_y_bucles": {
+    "casos_pila": 14337,
+    "comprobaciones_pila": 114696,
+    "vueltas_dec": 32640,
+    "accesos_ejemplo_c16": {
+      "lecturas": 10,
+      "escrituras": 2
+    }
+  },
+  "almacenamiento_y_programas": {
+    "tamanos_aex1": 8160,
+    "pares_euclides": 4096,
+    "fibonacci": {
+      "f6": 8,
+      "f13": 233,
+      "f14": 377,
+      "f25": 75025
+    }
+  },
+  "aula16_y_video": {
+    "direcciones_ram_por_carril": 32768,
+    "palabras_alineadas_ram": 16384,
+    "posiciones_pixel": 32768,
+    "celdas_texto": 512
+  },
+  "limites": [
+    "La revision de anclas y estructuras no es correccion de estilo pagina por pagina",
+    "La matematica no demuestra que la CPU o la ISA sean ejecutables",
+    "Los 50 diagramas no son planos electricos validados",
+    "Las politicas PC anticipado y PC diferido siguen candidatas",
+    "El Word/PDF maestro sigue en C28-G; C28-H y atlas son suplementos"
+  ]
+}

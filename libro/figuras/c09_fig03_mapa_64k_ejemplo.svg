@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Mapa de memoria ilustrativo 64 KiB</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="37" y="46" class="label">Un espacio de 64 KiB no implica 64 KiB de RAM instalada</text>
+<text x="38" y="81" class="small">Ejemplo de reparto: capacidad física, ventanas de dirección y regiones sin asignación.</text>
+<rect x="181" y="116" width="230" height="320" fill="none" stroke="#28465b" stroke-width="3"/>
+<rect x="184" y="119" width="224" height="154" fill="#cfe9f5"/>
+<rect x="184" y="276" width="224" height="114" fill="#eeeef1"/>
+<rect x="184" y="393" width="224" height="40" fill="#ddf0df"/>
+<path class="wire" d="M182,275 H410 M182,392 H410"/>
+<text x="88" y="127" class="small">0x0000</text>
+<text x="88" y="286" class="small">0x8000</text>
+<text x="88" y="404" class="small">0xE000</text>
+<text x="88" y="443" class="small">0xFFFF</text>
+<path class="wire" d="M412,187 H499 M412,338 H499 M412,412 H499"/>
+<text x="520" y="182" class="label accent">SRAM · 32 KiB</text>
+<text x="521" y="209" class="small">0x0000 – 0x7FFF</text>
+<text x="521" y="237" class="tiny">A15 = 0; dirección interna A14…A0</text>
+<text x="520" y="325" class="label">Sin asignación · 24 KiB</text>
+<text x="521" y="352" class="small">0x8000 – 0xDFFF</text>
+<text x="520" y="395" class="label accent">EEPROM · 8 KiB</text>
+<text x="521" y="425" class="small">0xE000 – 0xFFFF</text>
+<text x="521" y="449" class="tiny">A15:A13 = 111; A12…A0 internos</text>
+<text x="500" y="487" class="tiny" text-anchor="middle">Mapa únicamente ilustrativo; no establece el reparto final de memoria o E/S de Aula.</text>
+</svg>

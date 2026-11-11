@@ -1,0 +1,63 @@
+{
+  "version": "C28-N",
+  "proposito": "Candidatas para revision editorial; NO incluidas automaticamente en el libro",
+  "fuente": "Wikimedia Commons",
+  "ancho_maximo_px": 1800,
+  "fotografias": [
+    {
+      "id": "H01_ALTAIR_8800",
+      "archivo": "H01_altair_8800_panel.jpg",
+      "titulo_commons": "File:MITS Altair 8800 Front Panel.jpg",
+      "pagina_fuente": "https://commons.wikimedia.org/wiki/File:MITS_Altair_8800_Front_Panel.jpg",
+      "autor_documentado": "Cromemco",
+      "licencia_esperada": "CC BY-SA 4.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "uso_propuesto": "Capitulos 14-17: interruptores y luces del panel; entrada/salida manual y carga de datos",
+      "pie_propuesto": "Panel frontal de un Altair 8800. Los interruptores y los indicadores permiten introducir y observar estados; no es el circuito de Aula-8."
+    },
+    {
+      "id": "H02_APPLE_II_PLACA",
+      "archivo": "H02_apple_ii_placa.jpg",
+      "titulo_commons": "File:Apple II motherboard (53171103722).jpg",
+      "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Apple_II_motherboard_(53171103722).jpg",
+      "autor_documentado": "Steve Jurvetson",
+      "licencia_esperada": "CC BY 2.0",
+      "url_licencia": "https://creativecommons.org/licenses/by/2.0/",
+      "uso_propuesto": "Capitulos 9-12: componentes reales de una placa frente a bloques RAM, ROM, CPU y buses didacticos",
+      "pie_propuesto": "Placa de un Apple II fotografiada en la actualidad: ejemplo real de integracion de componentes, distinto del diseno de Aula."
+    },
+    {
+      "id": "H03_DEC_VT100",
+      "archivo": "H03_dec_vt100_terminal.jpg",
+      "titulo_commons": "File:DEC VT100 terminal.jpg",
+      "pagina_fuente": "https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg",
+      "autor_documentado": "Jason Scott",
+      "licencia_esperada": "CC BY 2.0",
+      "url_licencia": "https://creativecommons.org/licenses/by/2.0/",
+      "uso_propuesto": "Capitulos 18 y 23B: terminal de texto y distincion entre codigos, caracteres, pantalla y memoria de video",
+      "pie_propuesto": "Terminal DEC VT100, dispositivo historico de texto. Sirve para contextualizar entrada/salida; no implementa el contrato de video de Aula."
+    },
+    {
+      "id": "H04_INTEL_8086",
+      "archivo": "H04_intel_8086_chip.jpg",
+      "titulo_commons": "File:Intel P8086.jpg",
+      "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Intel_P8086.jpg",
+      "autor_documentado": "Thomas Nguyen (Stelo.xyz / Pttn)",
+      "licencia_esperada": "CC BY-SA 4.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "uso_propuesto": "Capitulo 22: comparacion historica entre microprocesadores reales y las propuestas educativas Aula-8/Aula-16",
+      "pie_propuesto": "Microprocesador Intel 8086. Su arquitectura comercial no equivale a los bloques simplificados propuestos para Aula-16."
+    },
+    {
+      "id": "H05_IBM_PC_5150",
+      "archivo": "H05_ibm_pc_5150.jpg",
+      "titulo_commons": "File:Ibm pc 5150.jpg",
+      "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Ibm_pc_5150.jpg",
+      "autor_documentado": "Ruben de Rijcke",
+      "licencia_esperada": "CC BY-SA 3.0",
+      "url_licencia": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "uso_propuesto": "Capitulos 22-24: aspecto de una computadora personal historica integrada",
+      "pie_propuesto": "IBM PC 5150 con monitor y teclado. El modelo original usaba Intel 8088; no confundirlo con un 8086 ni con Aula-16."
+    }
+  ]
+}

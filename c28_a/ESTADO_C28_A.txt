@@ -1,0 +1,15 @@
+AULA-COMPUTADORA / C28-A / 2026-11-08
+
+Base C27-0.1 conservada sin reescritura de su PDF maestro.
+Figuras existentes: 115 SVG + 115 PNG; todas inventariadas.
+Hojas de contacto visual: 10; primera pasada de miniaturas completada.
+Auditoria detallada de las 115 figuras a escala PDF: PENDIENTE.
+
+Piloto: registro R0 de 8 bits; contrato JSON, esquemas SVG y PNG,
+RTL Verilog + banco de pruebas, modelo logico de puertas NAND en Python.
+Pruebas Python observadas: 509268 comparaciones correctas.
+Pruebas Icarus Verilog: NO EJECUTADAS por falta de la herramienta.
+Prueba de circuito fisico: NO REALIZADA.
+
+Proxima etapa: C28-B, lectura PDF pagina a pagina, figuras y formulas,
+integracion narrativa y nueva maquetacion. NO es un release final del libro.

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>La pila desciende y RET no borra la RAM</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">La pila desciende y RET no borra la RAM</text><text x="35" y="76" class="small">CALL de 6000 a 6010 conserva el retorno 6003 como bajo 03 y alto 60.</text><rect x="28" y="144" width="285" height="280" rx="14" fill="#e7f1fa" stroke="#36556b" stroke-width="2.5"/><rect x="357" y="144" width="285" height="280" rx="14" fill="#eaf4e6" stroke="#36556b" stroke-width="2.5"/><rect x="686" y="144" width="285" height="280" rx="14" fill="#fff2de" stroke="#36556b" stroke-width="2.5"/><text x="170" y="184" class="label" text-anchor="middle">ANTES DE CALL</text><text x="170" y="229" class="label" text-anchor="middle">SP = 8000</text><text x="170" y="284" class="small" text-anchor="middle">7FFF: ?    7FFE: ?</text><text x="170" y="349" class="small" text-anchor="middle">8000 no es RAM</text><text x="500" y="184" class="label" text-anchor="middle">DESPUÉS DE CALL</text><text x="500" y="229" class="label" text-anchor="middle">SP = 7FFE</text><text x="500" y="284" class="small" text-anchor="middle">7FFF: 60    alto</text><text x="500" y="320" class="small" text-anchor="middle">7FFE: 03    bajo</text><text x="828" y="184" class="label" text-anchor="middle">DESPUÉS DE RET</text><text x="828" y="229" class="label" text-anchor="middle">SP = 8000</text><text x="828" y="284" class="small" text-anchor="middle">7FFF: 60    residuo</text><text x="828" y="320" class="small" text-anchor="middle">7FFE: 03    residuo</text><text x="500" y="468" class="small" text-anchor="middle">Liberar pila cambia SP, no borra automáticamente los bytes.</text></svg>

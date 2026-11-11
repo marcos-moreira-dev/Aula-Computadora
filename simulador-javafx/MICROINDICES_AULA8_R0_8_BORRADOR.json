@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "project_release": "R0.8",
+  "status": "propuesta_no_aprobada",
+  "granularity": "acciones_logicas_no_ciclos_de_reloj",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "microarchitecture_reference": "MICROARQUITECTURA_AULA8_BORRADOR.md",
+  "fetch_reference": "MICROSECUENCIAS_AULA8_BORRADOR.json",
+  "cpu_executed": false,
+  "microcode_compiled": false,
+  "electrical_validation": false,
+  "clock_cycles_known": false,
+  "word_size_address_bits": 16,
+  "external_data_bus_bits": 8,
+  "displacement_bits": 8,
+  "displacement_signed_range": [-128, 127],
+  "effective_address_modulus": 65536,
+  "private_address_carry": true,
+  "preserve_visible_flags": ["Z", "N", "C", "V"],
+  "preserve_index_and_stack_base_on_ld_st": true,
+  "selector_convention": {
+    "base": "(mode << 2) | register",
+    "absolute_mode": 0,
+    "x_relative_mode": 1,
+    "sp_relative_mode": 2,
+    "reserved_mode": 3,
+    "allowed_registers": [0, 1, 2, 3],
+    "valid_indexed_selector_ranges": [[4, 7], [8, 11]]
+  },
+  "candidate_alu8_address_steps": [
+    "SIGN_EXTEND_DISP8_TO_HIGH_FF_OR_00",
+    "ADD_BASE_LOW_PLUS_DISP_TO_ADDR_LO_AND_PRIVATE_CARRY",
+    "ADD_BASE_HIGH_PLUS_SIGN_PLUS_PRIVATE_CARRY_TO_ADDR_HI",
+    "LOAD_MAR_FROM_ADDR_LO_HI"
+  ],
+  "routes": {
+    "SETX": {
+      "opcode": "14",
+      "states": [
+        {"id": "SETX_ADDR_LO", "action": "READ_PC_TO_ADDR_LO", "bus": "read", "pc_advance": true, "flags_write": false, "next": "SETX_ADDR_HI"},
+        {"id": "SETX_ADDR_HI", "action": "READ_PC_TO_ADDR_HI", "bus": "read", "pc_advance": true, "flags_write": false, "next": "SETX_LOAD_X"},
+        {"id": "SETX_LOAD_X", "action": "LOAD_X_FROM_ADDR_LO_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "SETX_END"},
+        {"id": "SETX_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "LD_INDEXED": {
+      "opcode": "12",
+      "states": [
+        {"id": "LD_IDX_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "LD_IDX_CHECK"},
+        {"id": "LD_IDX_CHECK", "action": "VALIDATE_MODE1_OR2_REGISTER_SEL", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_DISP", "on_invalid": "FAULT"},
+        {"id": "LD_IDX_DISP", "action": "READ_PC_TO_SIGNED_DISP8", "bus": "read", "pc_advance": true, "flags_write": false, "next": "LD_IDX_BASE"},
+        {"id": "LD_IDX_BASE", "action": "SELECT_BASE_X_OR_SP_BY_MODE", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_LO"},
+        {"id": "LD_IDX_LO", "action": "ADD_BASE_LOW_DISP_TO_ADDR_LO_CARRY", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_HI"},
+        {"id": "LD_IDX_HI", "action": "ADD_BASE_HIGH_SIGN_CARRY_TO_ADDR_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_MAR"},
+        {"id": "LD_IDX_MAR", "action": "LOAD_MAR_FROM_ADDR_LO_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_READ"},
+        {"id": "LD_IDX_READ", "action": "READ_MAR_TO_MDR", "bus": "read", "pc_advance": false, "flags_write": false, "next": "LD_IDX_COMMIT"},
+        {"id": "LD_IDX_COMMIT", "action": "LOAD_SELECTED_REG_FROM_MDR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LD_IDX_END"},
+        {"id": "LD_IDX_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    },
+    "ST_INDEXED": {
+      "opcode": "13",
+      "states": [
+        {"id": "STI_IDX_SEL", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "STI_IDX_CHECK"},
+        {"id": "STI_IDX_CHECK", "action": "VALIDATE_MODE1_OR2_REGISTER_SEL", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_DISP", "on_invalid": "FAULT"},
+        {"id": "STI_IDX_DISP", "action": "READ_PC_TO_SIGNED_DISP8", "bus": "read", "pc_advance": true, "flags_write": false, "next": "STI_IDX_BASE"},
+        {"id": "STI_IDX_BASE", "action": "SELECT_BASE_X_OR_SP_BY_MODE", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_LO"},
+        {"id": "STI_IDX_LO", "action": "ADD_BASE_LOW_DISP_TO_ADDR_LO_CARRY", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_HI"},
+        {"id": "STI_IDX_HI", "action": "ADD_BASE_HIGH_SIGN_CARRY_TO_ADDR_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_MAR"},
+        {"id": "STI_IDX_MAR", "action": "LOAD_MAR_FROM_ADDR_LO_HI", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_MDR"},
+        {"id": "STI_IDX_MDR", "action": "STAGE_SELECTED_REG_TO_MDR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "STI_IDX_WRITE"},
+        {"id": "STI_IDX_WRITE", "action": "WRITE_MDR_AT_MAR", "bus": "write", "pc_advance": false, "flags_write": false, "next": "STI_IDX_END"},
+        {"id": "STI_IDX_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+      ]
+    }
+  },
+  "edge_vectors": [
+    {"base": 4863, "disp8": 2, "effective": 4865},
+    {"base": 4608, "disp8": 255, "effective": 4607},
+    {"base": 0, "disp8": 128, "effective": 65408},
+    {"base": 65535, "disp8": 1, "effective": 0},
+    {"base": 32750, "disp8": 0, "effective": 32750},
+    {"base": 32766, "disp8": 127, "effective": 32893},
+    {"base": 0, "disp8": 127, "effective": 127},
+    {"base": 32768, "disp8": 128, "effective": 32640},
+    {"base": 255, "disp8": 1, "effective": 256},
+    {"base": 256, "disp8": 255, "effective": 255}
+  ],
+  "examples": {
+    "x_store_load_42": {
+      "origin": 24576,
+      "bytes_hex": "14 00 6F 11 00 2A 13 04 01 12 05 01 01",
+      "initial_flags": "unknown_preserved",
+      "expected_trace": [
+        {"operation": "read", "address": 24576, "value": 20},
+        {"operation": "read", "address": 24577, "value": 0},
+        {"operation": "read", "address": 24578, "value": 111},
+        {"operation": "read", "address": 24579, "value": 17},
+        {"operation": "read", "address": 24580, "value": 0},
+        {"operation": "read", "address": 24581, "value": 42},
+        {"operation": "read", "address": 24582, "value": 19},
+        {"operation": "read", "address": 24583, "value": 4},
+        {"operation": "read", "address": 24584, "value": 1},
+        {"operation": "write", "address": 28417, "value": 42},
+        {"operation": "read", "address": 24585, "value": 18},
+        {"operation": "read", "address": 24586, "value": 5},
+        {"operation": "read", "address": 24587, "value": 1},
+        {"operation": "read", "address": 28417, "value": 42},
+        {"operation": "read", "address": 24588, "value": 1}
+      ],
+      "expected_final": {
+        "pc": 24589,
+        "x": 28416,
+        "r0": 42,
+        "r1": 42,
+        "ram_address": 28417,
+        "ram_value": 42,
+        "flags": "unknown_preserved",
+        "halted": true
+      }
+    },
+    "sp_local_frame": {
+      "initial_sp": 32752,
+      "reserve_bytes": 2,
+      "sp_after_reservation": 32750,
+      "store_selector": 10,
+      "load_selector": 11,
+      "displacement": 0,
+      "r2_value": 53,
+      "r3_after_load": 53,
+      "sp_after_release": 32752,
+      "adjsp_microcontrol_implemented": false
+    }
+  },
+  "address_space_permission_note": "La suma puede apuntar a RAM, ROM, E/S o un hueco. Calcular una direccion no garantiza acceso de escritura ni proteccion fisica."
+}

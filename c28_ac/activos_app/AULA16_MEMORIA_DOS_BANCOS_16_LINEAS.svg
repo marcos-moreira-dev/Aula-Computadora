@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1180" viewBox="0 0 1960 1180">
+<rect width="1960" height="1180" fill="#f8fbfd"/>
+<style>text{font-family:DejaVu Sans,sans-serif;fill:#17334b}.title{font-size:38px;font-weight:750}.sub{font-size:20px;fill:#537086}.block{font-size:26px;font-weight:700}.tiny{font-size:18px}.micro{font-size:15px}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.mono{font-family:DejaVu Sans Mono,monospace}</style>
+<text x="75" y="76" class="title">AULA-16 · dos bancos de RAM de 8 bits, palabra de 16 bits</text>
+<text x="75" y="115" class="sub">Arquitectura candidata: dirección de 16 bits, memoria direccionada por bytes, little-endian y palabra alineada.</text>
+<rect x="65" y="215" width="320" height="230" rx="16" fill="#e6f4fa" stroke="#8dbad0" stroke-width="2"/>
+<text x="99" y="267" class="block">CPU · interfaz</text>
+<text x="99" y="311" class="tiny">A[15:0] (16 líneas)</text>
+<text x="99" y="355" class="tiny">D[15:0] (16 líneas)</text>
+<text x="99" y="398" class="tiny">RD / WR (control)</text>
+<rect x="535" y="188" width="330" height="250" rx="16" fill="#e6ecfa" stroke="#899fc6" stroke-width="2"/>
+<text x="563" y="237" class="block">Dirección de palabra</text>
+<text x="563" y="281" class="tiny">A[15:1] · 15 líneas</text>
+<text x="563" y="326" class="tiny">A0 selecciona byte</text>
+<text x="563" y="367" class="tiny">A0 = 0 → banco par</text>
+<text x="563" y="404" class="tiny">A0 = 1 → banco impar</text>
+<polyline points="385,271.0 462,271.0 462,253.0 535,253.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="385,274.0 462,274.0 462,256.0 535,256.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="385,277.0 462,277.0 462,259.0 535,259.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="385,280.0 462,280.0 462,262.0 535,262.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="385,283.0 462,283.0 462,265.0 535,265.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="385,286.0 462,286.0 462,268.0 535,268.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="385,289.0 462,289.0 462,271.0 535,271.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="385,292.0 462,292.0 462,274.0 535,274.0" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<polyline points="385,295.0 462,295.0 462,277.0 535,277.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="385,298.0 462,298.0 462,280.0 535,280.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="385,301.0 462,301.0 462,283.0 535,283.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="385,304.0 462,304.0 462,286.0 535,286.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="385,307.0 462,307.0 462,289.0 535,289.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="385,310.0 462,310.0 462,292.0 535,292.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="385,313.0 462,313.0 462,295.0 535,295.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<path d="M525,268 L535,274 L525,280" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="406" y="247" class="tiny">A[15:1] ×15</text>
+<polyline points="385,413 450,413 450,351 535,351" class="wire" stroke="#ce7d32" stroke-width="4"/>
+<circle cx="450" cy="413" r="4" fill="#ce7d32"/>
+<rect x="1040" y="188" width="385" height="365" rx="18" fill="#e7f3e8" stroke="#7ab288" stroke-width="3"/>
+<text x="1075" y="248" class="block">Banco PAR</text>
+<text x="1075" y="292" class="tiny">32.768 × 8 bits</text>
+<text x="1075" y="342" class="tiny">Direcciones byte: 0, 2, 4…</text>
+<text x="1075" y="397" class="tiny">D[7:0] · byte bajo</text>
+<text x="1075" y="449" class="tiny">A0 = 0 (selección)</text>
+<rect x="1490" y="188" width="385" height="365" rx="18" fill="#f2e8f6" stroke="#b194c8" stroke-width="3"/>
+<text x="1525" y="248" class="block">Banco IMPAR</text>
+<text x="1525" y="292" class="tiny">32.768 × 8 bits</text>
+<text x="1525" y="342" class="tiny">Direcciones byte: 1, 3, 5…</text>
+<text x="1525" y="397" class="tiny">D[15:8] · byte alto</text>
+<text x="1525" y="449" class="tiny">A0 = 1 (selección)</text>
+<polyline points="865,253.0 951,253.0 951,307.0 1040,307.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="865,256.0 951,256.0 951,310.0 1040,310.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="865,259.0 951,259.0 951,313.0 1040,313.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="865,262.0 951,262.0 951,316.0 1040,316.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="865,265.0 951,265.0 951,319.0 1040,319.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="865,268.0 951,268.0 951,322.0 1040,322.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="865,271.0 951,271.0 951,325.0 1040,325.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="865,274.0 951,274.0 951,328.0 1040,328.0" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<polyline points="865,277.0 951,277.0 951,331.0 1040,331.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="865,280.0 951,280.0 951,334.0 1040,334.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="865,283.0 951,283.0 951,337.0 1040,337.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="865,286.0 951,286.0 951,340.0 1040,340.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="865,289.0 951,289.0 951,343.0 1040,343.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="865,292.0 951,292.0 951,346.0 1040,346.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="865,295.0 951,295.0 951,349.0 1040,349.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<path d="M1030,322 L1040,328 L1030,334" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="865,253.0 989,253.0 989,144.0 1680,144.0 1680,167.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="865,256.0 989,256.0 989,147.0 1680,147.0 1680,170.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="865,259.0 989,259.0 989,150.0 1680,150.0 1680,173.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="865,262.0 989,262.0 989,153.0 1680,153.0 1680,176.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="865,265.0 989,265.0 989,156.0 1680,156.0 1680,179.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="865,268.0 989,268.0 989,159.0 1680,159.0 1680,182.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="865,271.0 989,271.0 989,162.0 1680,162.0 1680,185.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="865,274.0 989,274.0 989,165.0 1680,165.0 1680,188.0" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<polyline points="865,277.0 989,277.0 989,168.0 1680,168.0 1680,191.0" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="865,280.0 989,280.0 989,171.0 1680,171.0 1680,194.0" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="865,283.0 989,283.0 989,174.0 1680,174.0 1680,197.0" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="865,286.0 989,286.0 989,177.0 1680,177.0 1680,200.0" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="865,289.0 989,289.0 989,180.0 1680,180.0 1680,203.0" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="865,292.0 989,292.0 989,183.0 1680,183.0 1680,206.0" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="865,295.0 989,295.0 989,186.0 1680,186.0 1680,209.0" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<path d="M1670,182 L1680,188 L1670,194" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="1180" y="130" class="tiny">A[15:1]: mismas 15 líneas hacia ambos bancos</text>
+<polyline points="865,350 930,350 930,484 1040,484" class="wire" stroke="#ce7d32" stroke-width="3"/>
+<polyline points="930,350 975,350 975,590 1700,590 1700,553" class="wire" stroke="#ce7d32" stroke-width="3"/>
+<polyline points="1040,397.5 978,397.5 978,667.5 470,667.5 470,327.5 385,327.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="1040,402.5 978,402.5 978,672.5 470,672.5 470,332.5 385,332.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="1040,407.5 978,407.5 978,677.5 470,677.5 470,337.5 385,337.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="1040,412.5 978,412.5 978,682.5 470,682.5 470,342.5 385,342.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="1040,417.5 978,417.5 978,687.5 470,687.5 470,347.5 385,347.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="1040,422.5 978,422.5 978,692.5 470,692.5 470,352.5 385,352.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="1040,427.5 978,427.5 978,697.5 470,697.5 470,357.5 385,357.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="1040,432.5 978,432.5 978,702.5 470,702.5 470,362.5 385,362.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M375,339 L385,345 L375,351" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="1490,397.5 1455,397.5 1455,723.5 437,723.5 437,337.5 385,337.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="1490,402.5 1455,402.5 1455,728.5 437,728.5 437,342.5 385,342.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="1490,407.5 1455,407.5 1455,733.5 437,733.5 437,347.5 385,347.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="1490,412.5 1455,412.5 1455,738.5 437,738.5 437,352.5 385,352.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="1490,417.5 1455,417.5 1455,743.5 437,743.5 437,357.5 385,357.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="1490,422.5 1455,422.5 1455,748.5 437,748.5 437,362.5 385,362.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="1490,427.5 1455,427.5 1455,753.5 437,753.5 437,367.5 385,367.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="1490,432.5 1455,432.5 1455,758.5 437,758.5 437,372.5 385,372.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M375,349 L385,355 L375,361" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="492" y="664" class="tiny">D[7:0] · 8 conexiones</text>
+<text x="492" y="723" class="tiny">D[15:8] · 8 conexiones</text>
+<rect x="80" y="838" width="1800" height="235" rx="14" fill="#ffffff" stroke="#aabfd1" stroke-width="2"/>
+<text x="112" y="887" class="block">Ejemplo de memoria little-endian</text>
+<text x="112" y="930" class="tiny">Palabra 0x1234 en dirección par 0x6000:</text>
+<text x="112" y="974" class="tiny">RAM[0x6000] = 0x34 (byte bajo) · RAM[0x6001] = 0x12 (byte alto)</text>
+<text x="112" y="1026" class="tiny">Espacio: 2¹⁶ direcciones × 1 byte = 65.536 bytes (64 KiB). Palabras alineadas: 32.768.</text>
+<text x="86" y="1138" class="sub">Nota: esquema de organización arquitectónica, no una RAM física construida ni una ISA definitiva.</text>
+</svg>

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "release": "R0.12",
+  "status": "propuesta_no_aprobada",
+  "architecture": "Aula-8",
+  "description": "Interfaz MMIO candidata de bloques crudos de 256 B y plan de LOAD, sin controlador ni firmware Aula.",
+  "aula8_external_data_bus_bits": 8,
+  "aula16_external_data_bus_bits": 16,
+  "controller_hardware_implemented": false,
+  "cpu_executed": false,
+  "firmware_implemented": false,
+  "native_loader_implemented": false,
+  "filesystem_implemented": false,
+  "host_reference_model_executed_in_tests": true,
+  "physical_power_loss_safe": false,
+  "mmio": {
+    "start": "C010",
+    "end": "C01F",
+    "register_width_bits": 8,
+    "only_even_addresses": true,
+    "terminal_data_address": "C000",
+    "terminal_status_address": "C002",
+    "registers": [
+      {"name": "COMMAND", "address": "C010", "access": "write"},
+      {"name": "STATUS", "address": "C012", "access": "read"},
+      {"name": "BLOCK_LO", "address": "C014", "access": "read_write"},
+      {"name": "BLOCK_HI", "address": "C016", "access": "read_write"},
+      {"name": "DATA", "address": "C018", "access": "read_write_state_dependent"},
+      {"name": "ERROR", "address": "C01A", "access": "read"},
+      {"name": "COUNT_LO", "address": "C01C", "access": "read"},
+      {"name": "COUNT_HI", "address": "C01E", "access": "read"}
+    ]
+  },
+  "commands": {
+    "NOP": "00",
+    "READ": "01",
+    "WRITE": "02",
+    "RESET": "03"
+  },
+  "status_masks": {
+    "BUSY": "01",
+    "DRQ": "02",
+    "DONE": "04",
+    "ERROR": "08"
+  },
+  "nominal_status": {
+    "idle": "00",
+    "transfer": "03",
+    "done": "04",
+    "error": "08"
+  },
+  "error_codes": {
+    "NONE": "00",
+    "BAD_COMMAND": "01",
+    "BLOCK_OUT_OF_RANGE": "02",
+    "DATA_DIRECTION_OR_STATE": "03",
+    "BUSY_RECONFIGURED": "04",
+    "IMAGE_IO_FAILURE": "05"
+  },
+  "transfer": {
+    "block_bytes": 256,
+    "block_number_endian": "little",
+    "block_number_registers": ["BLOCK_LO", "BLOCK_HI"],
+    "maximum_index_bits": 16,
+    "maximum_addressable_blocks": 65536,
+    "status_is_polled": true,
+    "data_count_reset_on_new_command": true,
+    "done_only_after_exactly_256_bytes": true,
+    "incomplete_write_is_discarded": true,
+    "bad_data_access_aborts_transfer": true,
+    "new_command_during_busy_aborts_transfer": true,
+    "block_register_change_during_busy_aborts_transfer": true,
+    "count_at_completion_hex": "0100",
+    "count_endian": "little"
+  },
+  "image": {
+    "format_candidate": "raw_fixed_size_256B_blocks_no_header",
+    "suggested_demo_block_count": 256,
+    "demonstration_test_block_count": 8,
+    "host_reference_atomic_per_block_replace": true,
+    "host_reference_fsync_temporary_file": true,
+    "real_hardware_power_loss_safety_tested": false,
+    "per_block_crc_defined": false,
+    "directory_defined": false,
+    "executable_header_defined": false
+  },
+  "rom_compatibility": {
+    "public_slots_reserved": 32,
+    "public_slots_defined_in_r011": 4,
+    "block_services_slots_assigned": false,
+    "firmware_rom_bytes": 8192,
+    "mmio_not_part_of_rom": true,
+    "rom_vector": "FFFC"
+  },
+  "future_load": {
+    "implemented": false,
+    "command_name": "LOAD",
+    "proposed_syntax": "LOAD <block_hex4> <destination_hex4> <count_hex2>",
+    "example": "LOAD 0002 1000 02",
+    "numeric_base": 16,
+    "block_count_range": [1, 32],
+    "ram_destination_alignment_bytes": 256,
+    "destination_windows": [
+      {"name": "native_tool_overlay", "start": "1000", "end": "2FFF", "maximum_blocks": 32},
+      {"name": "student_program", "start": "6000", "end": "6FFF", "maximum_blocks": 16}
+    ],
+    "staging_buffer_region": ["0200", "0FFF"],
+    "staging_one_complete_block_before_destination_copy": true,
+    "whole_multi_block_load_atomic": false,
+    "execute_on_partial_error": false,
+    "named_files_supported": false,
+    "cpu_binary_target_identification_supported": false,
+    "existing_r011_run_window": ["6000", "6FFF"],
+    "overlay_requires_future_supervised_entry": true
+  },
+  "acceptance_sample": {
+    "source_block": "0001",
+    "destination": "6000",
+    "count_blocks": 1,
+    "initial_code_hex": "11 00 41 35 00 FF 02",
+    "trailing_bytes": 249,
+    "expected_program_output_if_cpu_and_rom_exist": "A",
+    "executable_tested_on_aula_cpu": false
+  }
+}

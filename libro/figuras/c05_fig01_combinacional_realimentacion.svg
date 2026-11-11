@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Comparación entre función combinacional y realimentación</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="45" y="47" class="label">Del resultado inmediato al estado que persiste</text>
+<text x="45" y="85" class="small">No toda realimentación crea memoria; aquí estudiaremos una pareja estable.</text>
+<rect x="48" y="126" width="429" height="314" rx="17" fill="#f2f7fb" stroke="#aecbd9" stroke-width="2"/>
+<text x="263" y="169" text-anchor="middle" class="label">Red combinacional</text>
+<text x="263" y="201" text-anchor="middle" class="small">Sin estado almacenado</text>
+<rect x="190" y="249" width="176" height="96" rx="15" fill="#e7f3fa" stroke="#283a4b" stroke-width="3"/>
+<text x="278" y="292" text-anchor="middle" class="label">1 compuerta</text>
+<text x="278" y="319" text-anchor="middle" class="small">NAND</text>
+<text x="66" y="281" class="small accent">A</text><text x="66" y="320" class="small accent">B</text>
+<path class="wire" d="M88,273 H190 M88,315 H190 M366,297 H443"/>
+<text x="383" y="279" class="small accent">Y</text>
+<text x="263" y="407" text-anchor="middle" class="tiny">Y depende de A y B actuales</text>
+<rect x="518" y="126" width="433" height="314" rx="17" fill="#f1f7f0" stroke="#8dbb9a" stroke-width="2"/>
+<text x="735" y="169" text-anchor="middle" class="label">Red realimentada</text>
+<text x="735" y="201" text-anchor="middle" class="small">Un estado puede persistir</text>
+<rect x="660" y="247" width="177" height="91" rx="15" fill="#d9efe0" stroke="#336d4c" stroke-width="3"/>
+<text x="748" y="279" text-anchor="middle" class="label">2 NAND</text>
+<text x="748" y="311" text-anchor="middle" class="small">cruzadas</text>
+<path class="wire" d="M552,267 H660 M837,291 H917"/>
+<text x="541" y="251" class="tiny accent">S_n, R_n</text>
+<text x="857" y="274" class="small accent">Q</text>
+<path d="M900,291 V385 H616 V314 H660" fill="none" stroke="#28805a" stroke-width="4"/>
+<path d="M647,307 L658,314 L647,321" fill="none" stroke="#28805a" stroke-width="3"/>
+<text x="745" y="414" text-anchor="middle" class="tiny">La salida influye en entradas internas</text>
+</svg>

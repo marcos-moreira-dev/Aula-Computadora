@@ -1,0 +1,18 @@
+{
+  "estado": "MODELO_PYTHON_APROBADO",
+  "nota": "El HDL todavia requiere ejecucion independiente con Icarus",
+  "vectores_por_alternativa": 12124,
+  "comparaciones_referencia": 24248,
+  "semilla": 12749329,
+  "random": 12000,
+  "politica_pc": [
+    "anticipado C28-F",
+    "diferido C28-G"
+  ],
+  "restricciones": [
+    "READY abstracto",
+    "reset fijo de prueba",
+    "sin timings fisicos",
+    "sin bus de escritura"
+  ]
+}

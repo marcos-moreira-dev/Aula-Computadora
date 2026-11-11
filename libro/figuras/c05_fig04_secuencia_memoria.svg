@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Secuencia de cinco momentos de un latch SR</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="38" y="49" class="label">Guardar 1, conservarlo, borrar y volver a conservar 0</text>
+<text x="38" y="87" class="small">Mismo control 11 en t0, t2 y t4; diferente Q porque cambia la historia.</text>
+<text x="40" y="143" class="small">Paso de estado estable a estado estable, no tiempo de reloj medido</text>
+
+<rect x="39" y="161" width="174" height="251" rx="14" fill="#e5eff8" stroke="#a4b9c8" stroke-width="2"/>
+<text x="126" y="203" text-anchor="middle" class="label">t0</text>
+<text x="126" y="249" text-anchor="middle" class="small">S_n R_n: 11</text>
+<text x="126" y="292" text-anchor="middle" class="small accent">Inicio</text>
+<text x="126" y="368" text-anchor="middle" style="font-size:63px;font-weight:bold;fill:#17384b">0</text>
+
+<path d="M216,282 H228" stroke="#176d92" stroke-width="3" fill="none"/>
+
+<rect x="230" y="161" width="174" height="251" rx="14" fill="#e2f3e7" stroke="#a4b9c8" stroke-width="2"/>
+<text x="317" y="203" text-anchor="middle" class="label">t1</text>
+<text x="317" y="249" text-anchor="middle" class="small">S_n R_n: 01</text>
+<text x="317" y="292" text-anchor="middle" class="small accent">SET</text>
+<text x="317" y="368" text-anchor="middle" style="font-size:63px;font-weight:bold;fill:#17384b">1</text>
+
+<path d="M407,282 H419" stroke="#176d92" stroke-width="3" fill="none"/>
+
+<rect x="421" y="161" width="174" height="251" rx="14" fill="#e2f3e7" stroke="#a4b9c8" stroke-width="2"/>
+<text x="508" y="203" text-anchor="middle" class="label">t2</text>
+<text x="508" y="249" text-anchor="middle" class="small">S_n R_n: 11</text>
+<text x="508" y="292" text-anchor="middle" class="small accent">HOLD</text>
+<text x="508" y="368" text-anchor="middle" style="font-size:63px;font-weight:bold;fill:#17384b">1</text>
+
+<path d="M598,282 H610" stroke="#176d92" stroke-width="3" fill="none"/>
+
+<rect x="612" y="161" width="174" height="251" rx="14" fill="#e5eff8" stroke="#a4b9c8" stroke-width="2"/>
+<text x="699" y="203" text-anchor="middle" class="label">t3</text>
+<text x="699" y="249" text-anchor="middle" class="small">S_n R_n: 10</text>
+<text x="699" y="292" text-anchor="middle" class="small accent">RESET</text>
+<text x="699" y="368" text-anchor="middle" style="font-size:63px;font-weight:bold;fill:#17384b">0</text>
+
+<path d="M789,282 H801" stroke="#176d92" stroke-width="3" fill="none"/>
+
+<rect x="803" y="161" width="174" height="251" rx="14" fill="#e5eff8" stroke="#a4b9c8" stroke-width="2"/>
+<text x="890" y="203" text-anchor="middle" class="label">t4</text>
+<text x="890" y="249" text-anchor="middle" class="small">S_n R_n: 11</text>
+<text x="890" y="292" text-anchor="middle" class="small accent">HOLD</text>
+<text x="890" y="368" text-anchor="middle" style="font-size:63px;font-weight:bold;fill:#17384b">0</text>
+
+<text x="502" y="464" text-anchor="middle" class="tiny">En cada tarjeta, el número grande es Q después de asentarse.</text>
+</svg>

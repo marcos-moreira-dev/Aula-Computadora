@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Distribución de terminales del SN74HCT00N PDIP-14, vista superior</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="48" y="42" class="label">SN74HCT00N: encapsulado PDIP-14</text>
+<text x="48" y="77" class="small">Vista superior, muesca orientada arriba (referencia TI).</text>
+<rect x="400" y="97" width="200" height="347" rx="18" fill="#eaf2f7" stroke="#283c50" stroke-width="4"/>
+<path d="M465,97 A35,35 0 0 0 535,97" stroke="#283c50" stroke-width="4" fill="white"/>
+<text x="500" y="255" text-anchor="middle" class="label">74HCT00</text>
+<text x="500" y="283" text-anchor="middle" class="small">4 compuertas</text>
+<text x="500" y="309" text-anchor="middle" class="small">NAND de 2</text>
+<text x="500" y="336" text-anchor="middle" class="small">entradas</text>
+<path class="wire" d="M400,142 H215"/>
+<text x="373" y="133" text-anchor="end" class="tiny">1</text>
+<text x="205" y="148" text-anchor="end" class="small">1A</text>
+<path class="wire" d="M400,186 H215"/>
+<text x="373" y="177" text-anchor="end" class="tiny">2</text>
+<text x="205" y="192" text-anchor="end" class="small">1B</text>
+<path class="wire" d="M400,230 H215"/>
+<text x="373" y="221" text-anchor="end" class="tiny">3</text>
+<text x="205" y="236" text-anchor="end" class="small">1Y</text>
+<path class="wire" d="M400,274 H215"/>
+<text x="373" y="265" text-anchor="end" class="tiny">4</text>
+<text x="205" y="280" text-anchor="end" class="small">2A</text>
+<path class="wire" d="M400,318 H215"/>
+<text x="373" y="309" text-anchor="end" class="tiny">5</text>
+<text x="205" y="324" text-anchor="end" class="small">2B</text>
+<path class="wire" d="M400,362 H215"/>
+<text x="373" y="353" text-anchor="end" class="tiny">6</text>
+<text x="205" y="368" text-anchor="end" class="small">2Y</text>
+<path class="wire" d="M400,406 H215"/>
+<text x="373" y="397" text-anchor="end" class="tiny">7</text>
+<text x="205" y="412" text-anchor="end" class="small">GND</text>
+<path class="wire" d="M600,142 H785"/>
+<text x="627" y="133" text-anchor="start" class="tiny">14</text>
+<text x="795" y="148" text-anchor="start" class="small">VCC</text>
+<path class="wire" d="M600,186 H785"/>
+<text x="627" y="177" text-anchor="start" class="tiny">13</text>
+<text x="795" y="192" text-anchor="start" class="small">4B</text>
+<path class="wire" d="M600,230 H785"/>
+<text x="627" y="221" text-anchor="start" class="tiny">12</text>
+<text x="795" y="236" text-anchor="start" class="small">4A</text>
+<path class="wire" d="M600,274 H785"/>
+<text x="627" y="265" text-anchor="start" class="tiny">11</text>
+<text x="795" y="280" text-anchor="start" class="small">4Y</text>
+<path class="wire" d="M600,318 H785"/>
+<text x="627" y="309" text-anchor="start" class="tiny">10</text>
+<text x="795" y="324" text-anchor="start" class="small">3B</text>
+<path class="wire" d="M600,362 H785"/>
+<text x="627" y="353" text-anchor="start" class="tiny">9</text>
+<text x="795" y="368" text-anchor="start" class="small">3A</text>
+<path class="wire" d="M600,406 H785"/>
+<text x="627" y="397" text-anchor="start" class="tiny">8</text>
+<text x="795" y="412" text-anchor="start" class="small">3Y</text>
+<rect x="82" y="452" width="837" height="36" rx="9" fill="#fff1dc"/>
+<text x="500" y="476" class="tiny" text-anchor="middle">Primera NAND: 1A = pin 1, 1B = pin 2, 1Y = pin 3. VCC = 14. GND = 7.</text>
+</svg>

@@ -1,0 +1,33 @@
+AULA-COMPUTADORA — PARCHE INCREMENTAL C28-E
+===========================================
+
+Orden: C27 GLOBAL + C28-B + C28-C + C28-D + C28-E.
+El piloto C28-A se distribuye aparte. No elimina ningún maestro anterior.
+
+En PowerShell, con los ZIP en Descargas:
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath .\Aula_C28E_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath .\Aula_C28E_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_C_PARCHE.zip -DestinationPath .\Aula_C28E_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_D_PARCHE.zip -DestinationPath .\Aula_C28E_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_E_PARCHE.zip -DestinationPath .\Aula_C28E_COMPLETO -Force
+  Expand-Archive .\Aula_Computadora_C28_A_PILOTO_Y_AUDITORIA.zip -DestinationPath .\Aula_C28E_COMPLETO\Aula-Computadora -Force
+  Set-Location .\Aula_C28E_COMPLETO\Aula-Computadora
+  py -m pip install python-docx
+  py .\scripts\c28d_salto_y_selector_pc.py
+  py .\scripts\c28e_pc16_prueba.py
+  py .\scripts\c28_verificar_piloto.py
+  py .\scripts\generar_libro_maestro_c28e.py --pages-json .\libro\ediciones\C28_E\INDICE_C28_E.json
+
+Si el ZIP C28-A no está, omite esa línea y también la prueba del registro8.
+Los PNG nuevos ya vienen incluidos: Inkscape solo hace falta para regenerarlos.
+Para exportar PDF, abre el Word C28-E en LibreOffice y usa Exportar como PDF.
+
+Prueba HDL OPCIONAL (solo si ya tienes Icarus Verilog instalado):
+
+  iverilog -g2012 -o .\c28_e\piloto_pc16\pc16_tb .\c28_e\piloto_pc16\pc16_c28e.v .\c28_e\piloto_pc16\tb_pc16_c28e.v
+  vvp .\c28_e\piloto_pc16\pc16_tb
+
+La prueba HDL no ha sido ejecutada por el autor de este parche. Tampoco se ha
+construido una CPU, montaje eléctrico ni esquema con tiempos físicos.

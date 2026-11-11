@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Cadena terminada en cero</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Cadena terminada en cero</text><text x="35" y="76" class="small">Cinco posiciones de memoria para cuatro caracteres ASCII.</text><rect x="23" y="170" width="168" height="166" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="107" y="210" class="small" text-anchor="middle">6100</text><text x="107" y="264" class="label" text-anchor="middle">48</text><text x="107" y="310" class="small" text-anchor="middle">H</text><rect x="220" y="170" width="168" height="166" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="304" y="210" class="small" text-anchor="middle">6101</text><text x="304" y="264" class="label" text-anchor="middle">4F</text><text x="304" y="310" class="small" text-anchor="middle">O</text><rect x="417" y="170" width="168" height="166" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="501" y="210" class="small" text-anchor="middle">6102</text><text x="501" y="264" class="label" text-anchor="middle">4C</text><text x="501" y="310" class="small" text-anchor="middle">L</text><rect x="614" y="170" width="168" height="166" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="698" y="210" class="small" text-anchor="middle">6103</text><text x="698" y="264" class="label" text-anchor="middle">41</text><text x="698" y="310" class="small" text-anchor="middle">A</text><rect x="811" y="170" width="168" height="166" rx="14" fill="#e9f5e9" stroke="#36556b" stroke-width="2.5"/><text x="895" y="210" class="small" text-anchor="middle">6104</text><text x="895" y="264" class="label" text-anchor="middle">00</text><text x="895" y="310" class="small" text-anchor="middle">FIN</text><text x="500" y="390" class="small" text-anchor="middle">X = 6100  |  FW_PUTS recorre hasta el byte 00 (sin imprimirlo).</text><text x="500" y="432" class="label" text-anchor="middle">Pantalla esperada: HOLA</text></svg>

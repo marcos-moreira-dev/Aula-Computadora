@@ -1,0 +1,81 @@
+AULA COMPUTADORA — FUENTES CONSULTADAS
+Edición editorial C27-0.1 · 8 de noviembre de 2026
+
+Este archivo reúne las fuentes externas empleadas para construir y revisar el
+contenido didáctico. La bibliografía abreviada se presenta una sola vez al
+final del libro. Para la relación detallada entre fuente y afirmación,
+consultar REFERENCIAS.md en la raíz del repositorio.
+
+UNIDADES Y MONTAJES INTRODUCTORIOS
+- NIST. Guide for the Use of the International System of Units (SP 811).
+  https://physics.nist.gov/cuu/pdf/sp811.pdf
+- SparkFun. Resistors; LED Current Limiting.
+  https://learn.sparkfun.com/tutorials/resistors
+- Fluke. 87 True RMS Multimeter — Users Manual.
+  https://media.fluke.com/e76c91b6-f364-48ea-9c09-b10800bed531_original%20file.pdf
+- onsemi. 2N3904 NPN General-Purpose Amplifier.
+  https://www.onsemi.com/pdf/datasheet/2n3904-d.pdf
+- ROHM. NPN Transistor: Low-Side Switch Fundamentals.
+  https://techweb.rohm.com/product/transistors-diodes/transistors/27354/
+
+LÓGICA, REGISTROS Y MEMORIA
+- Texas Instruments. SN74HCT00, cuatro puertas NAND.
+  https://www.ti.com/lit/ds/symlink/sn74hct00.pdf
+- Texas Instruments. SN74HC74, flip-flops D.
+  https://www.ti.com/lit/ds/symlink/sn74hc74.pdf
+- Texas Instruments. SN74HC373, latches octales.
+  https://www.ti.com/lit/ds/symlink/sn74hc373.pdf
+- Texas Instruments. SN74HC377, registros con habilitación.
+  https://www.ti.com/lit/ds/symlink/sn74hc377.pdf
+- Texas Instruments. SN74HC245, transceptor de bus triestado.
+  https://www.ti.com/lit/ds/symlink/sn74hc245.pdf
+- Texas Instruments. SN74HC138, decodificador 3 a 8.
+  https://www.ti.com/lit/ds/symlink/sn74hc138.pdf
+- Texas Instruments. CD74HC283, sumador de cuatro bits.
+  https://www.ti.com/lit/ds/symlink/cd74hc283.pdf
+- Texas Instruments. SN74HC86, puertas XOR.
+  https://www.ti.com/lit/ds/symlink/sn74hc86.pdf
+- Texas Instruments. SN74HC157, multiplexores 2 a 1.
+  https://www.ti.com/lit/ds/symlink/sn74hc157.pdf
+- Alliance Memory. AS6C62256, SRAM asíncrona 32 K × 8.
+  https://www.alliancememory.com/as6c62256/
+- Microchip. AT28C64B, EEPROM 8 K × 8.
+  https://www.microchip.com/en-us/product/AT28C64B
+
+COMPUTADORAS HISTÓRICAS Y HERRAMIENTAS
+- MITS. Altair 8800 Operators Manual.
+  https://vtda.org/docs/computing/MITS/MITS_Altari8800OperatorsManual_1975.pdf
+- Apple Computer. Apple-1 Operation Manual.
+  https://device.report/m/52627e26d76bf7b0639394eca3b3471d97580b7e6f2e743a079ccd4fede03833
+- MOS Technology. KIM-1 User Manual.
+  https://www.kim-1.com/docs/usrman.htm
+- Intel. The 8086 Family User's Manual (1979).
+  https://bitsavers.org/components/intel/8086/9800722-03_The_8086_Family_Users_Manual_Oct79.pdf
+- GNU Binutils. GNU assembler manual.
+  https://sourceware.org/binutils/docs/as/
+
+CARACTERES, VÍDEO Y REPRESENTACIÓN GRÁFICA
+- IETF. RFC 3629, UTF-8.
+  https://www.rfc-editor.org/rfc/rfc3629.html
+- Unicode Consortium. Unicode Character Encoding Model (UTR 17).
+  https://www.unicode.org/reports/tr17/
+- Commodore. C64 Programmer's Reference Guide, gráficos.
+  https://www.commodore.ca/manuals/c64_programmers_reference/c64-programmers_reference_guide-03-programming_graphics.pdf
+- Texas Instruments. TMS9918A Video Display Processors Data Manual.
+  https://computers.baffa.tec.br/pages/datasheet/TMS9918A_TMS9928A_TMS9929A_Video_Display_Processors_Data_Manual_Nov82.pdf
+- W3C. SVG 2, Paths.
+  https://www.w3.org/TR/SVG/paths.html
+- Microsoft. Introducción a DirectWrite.
+  https://learn.microsoft.com/en-us/windows/win32/directwrite/introducing-directwrite
+- Microsoft. Desktop Window Manager, Overview.
+  https://learn.microsoft.com/en-us/windows/win32/dwm/dwm-overview
+
+MATERIAL DE CONTEXTO
+- J. Clark Scott. But How Do It Know? The Basic Principles of Computers
+  for Everyone. Libro de consulta, no reproducido.
+- F. Sandoval Galárraga y M. A. Moreira Merino. Una Historia en 8 Bits.
+  Antecedente de los autores, sin transferencia automática de imágenes o texto.
+
+NOTA: Las especificaciones de componentes concretos solo se aplican a esos
+modelos. Los diseños propios Aula-8, Aula-16, sus mapas y el controlador de
+vídeo V1 siguen definidos en DECISIONES.md y los contratos técnicos del repo.

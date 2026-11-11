@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Los operandos deciden la dirección</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Los operandos deciden la dirección</text><text x="35" y="76" class="small">Tres codificaciones de LD; todos los valores son provisionales.</text><rect x="32" y="144" width="293" height="247" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="352" y="144" width="293" height="247" rx="14" fill="#eaf4e9" stroke="#36556b" stroke-width="2.5"/><rect x="672" y="144" width="293" height="247" rx="14" fill="#f9f0d8" stroke="#36556b" stroke-width="2.5"/><text x="179" y="180" class="label" text-anchor="middle">ABSOLUTO</text><text x="179" y="221" class="small" text-anchor="middle">LD R0,[6F00]</text><text x="179" y="269" class="label" text-anchor="middle">12 00 00 6F</text><text x="179" y="319" class="small" text-anchor="middle">00 6F → 6F00</text><text x="179" y="360" class="small" text-anchor="middle">4 bytes</text><text x="498" y="180" class="label" text-anchor="middle">POR X</text><text x="498" y="221" class="small" text-anchor="middle">LD R1,[X-1]</text><text x="498" y="269" class="label" text-anchor="middle">12 05 FF</text><text x="498" y="319" class="small" text-anchor="middle">05 = modo 1, R1</text><text x="498" y="360" class="small" text-anchor="middle">FF = -1</text><text x="818" y="180" class="label" text-anchor="middle">POR SP</text><text x="818" y="221" class="small" text-anchor="middle">LD R2,[SP+6]</text><text x="818" y="269" class="label" text-anchor="middle">12 0A 06</text><text x="818" y="319" class="small" text-anchor="middle">0A = modo 2, R2</text><text x="818" y="360" class="small" text-anchor="middle">06 = +6</text><text x="500" y="467" class="small" text-anchor="middle">Los desplazamientos requieren cálculo; no implican ALU16.</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Estados y conteo de una transferencia de bloques</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Estados y conteo de una transferencia de bloques</text><text x="35" y="76" class="small">La transición representa acceso lógico, no tiempo de reloj.</text><rect x="29" y="153" width="220" height="160" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="139.0" y="201" class="label" text-anchor="middle">REPOSO  00</text><text x="139.0" y="247" class="small" text-anchor="middle">COUNT 0000</text><rect x="375" y="153" width="250" height="160" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="500.0" y="201" class="label" text-anchor="middle">ACTIVO  03</text><text x="500.0" y="247" class="small" text-anchor="middle">BUSY + DRQ</text><rect x="751" y="153" width="220" height="160" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="861.0" y="201" class="label" text-anchor="middle">DONE  04</text><text x="861.0" y="247" class="small" text-anchor="middle">COUNT 0100</text><path d="M249,226 L375,226" fill="none" stroke="#244d68" stroke-width="4"/><path d="M375,226 L358.0,235.0 L358.0,217.0 Z" fill="#244d68"/><path d="M625,226 L751,226" fill="none" stroke="#244d68" stroke-width="4"/><path d="M751,226 L734.0,235.0 L734.0,217.0 Z" fill="#244d68"/><text x="310" y="204" class="tiny" text-anchor="middle">READ/WRITE</text><text x="693" y="205" class="tiny" text-anchor="middle">256 B</text><rect x="377" y="356" width="245" height="91" rx="14" fill="#fae5e1" stroke="#36556b" stroke-width="2.5"/><text x="500" y="394" class="label" text-anchor="middle">ERROR  08</text><text x="500" y="426" class="tiny" text-anchor="middle">bloque/comando inválido</text><path d="M500,313 L500,356" fill="none" stroke="#af4d39" stroke-width="4"/><path d="M500,356 L491.0,339.0 L509.0,339.0 Z" fill="#af4d39"/><text x="500" y="477" class="tiny" text-anchor="middle">RESET cancela y vuelve a REPOSO</text></svg>

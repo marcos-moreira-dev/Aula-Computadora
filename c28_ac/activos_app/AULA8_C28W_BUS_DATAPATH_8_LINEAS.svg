@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1260" viewBox="0 0 2000 1260">
+<rect width="2000" height="1260" fill="#f8fbfd"/>
+<style>text{font-family:DejaVu Sans,sans-serif;fill:#17334b}.title{font-size:38px;font-weight:750}.sub{font-size:20px;fill:#537086}.block{font-size:26px;font-weight:700}.tiny{font-size:18px}.micro{font-size:15px}.wire{fill:none;stroke-linejoin:round;stroke-linecap:round}.mono{font-family:DejaVu Sans Mono,monospace}</style>
+<text x="80" y="74" class="title">AULA-8 · circuito de datos controlado, 8 conexiones por bus</text>
+<text x="80" y="113" class="sub">Equivalente de señales de C28-W; los registros y el mux siguen a nivel RTL, la ALU sí tiene red NAND desplegada.</text>
+<rect x="75" y="175" width="260" height="150" rx="16" fill="#e6f4fa" stroke="#8dbad0" stroke-width="2"/>
+<text x="104" y="218" class="block">A_IN[7:0]</text>
+<text x="104" y="265" class="tiny">8 señales binarias</text>
+<rect x="75" y="550" width="260" height="150" rx="16" fill="#e6f4fa" stroke="#8dbad0" stroke-width="2"/>
+<text x="104" y="596" class="block">B_IN[7:0]</text>
+<text x="104" y="642" class="tiny">8 señales binarias</text>
+<rect x="460" y="355" width="246" height="184" rx="16" fill="#dcefe9" stroke="#7eb7a7" stroke-width="2"/>
+<text x="490" y="399" class="block">MUX 2 a 1 × 8</text>
+<text x="490" y="435" class="tiny">selección LOAD_B</text>
+<text x="490" y="474" class="tiny">BUS_DATA[7:0]</text>
+<polyline points="335,227.5 395,227.5 395,395.5 460,395.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="335,232.5 395,232.5 395,400.5 460,400.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="335,237.5 395,237.5 395,405.5 460,405.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="335,242.5 395,242.5 395,410.5 460,410.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="335,247.5 395,247.5 395,415.5 460,415.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="335,252.5 395,252.5 395,420.5 460,420.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="335,257.5 395,257.5 395,425.5 460,425.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="335,262.5 395,262.5 395,430.5 460,430.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M450,407 L460,413 L450,419" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="335,607.5 415,607.5 415,463.5 460,463.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="335,612.5 415,612.5 415,468.5 460,468.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="335,617.5 415,617.5 415,473.5 460,473.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="335,622.5 415,622.5 415,478.5 460,478.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="335,627.5 415,627.5 415,483.5 460,483.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="335,632.5 415,632.5 415,488.5 460,488.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="335,637.5 415,637.5 415,493.5 460,493.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="335,642.5 415,642.5 415,498.5 460,498.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M450,475 L460,481 L450,487" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="706,427.5 765,427.5 765,285.5 870,285.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="706,432.5 765,432.5 765,290.5 870,290.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="706,437.5 765,437.5 765,295.5 870,295.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="706,442.5 765,442.5 765,300.5 870,300.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="706,447.5 765,447.5 765,305.5 870,305.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="706,452.5 765,452.5 765,310.5 870,310.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="706,457.5 765,457.5 765,315.5 870,315.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="706,462.5 765,462.5 765,320.5 870,320.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M860,297 L870,303 L860,309" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="765,427.5 787,427.5 787,655.5 870,655.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="765,432.5 787,432.5 787,660.5 870,660.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="765,437.5 787,437.5 787,665.5 870,665.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="765,442.5 787,442.5 787,670.5 870,670.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="765,447.5 787,447.5 787,675.5 870,675.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="765,452.5 787,452.5 787,680.5 870,680.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="765,457.5 787,457.5 787,685.5 870,685.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="765,462.5 787,462.5 787,690.5 870,690.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M860,667 L870,673 L860,679" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="716" y="428" class="tiny">BUS_DATA[7:0]</text>
+<rect x="870" y="229" width="252" height="160" rx="16" fill="#e8e8fa" stroke="#a4a7d8" stroke-width="2"/>
+<text x="902" y="273" class="block">REGISTRO A</text>
+<text x="902" y="315" class="tiny">A_Q[7:0] · 8 FF</text>
+<text x="902" y="347" class="tiny">LOAD_A</text>
+<rect x="870" y="600" width="252" height="160" rx="16" fill="#e8e8fa" stroke="#a4a7d8" stroke-width="2"/>
+<text x="902" y="644" class="block">REGISTRO B</text>
+<text x="902" y="687" class="tiny">B_Q[7:0] · 8 FF</text>
+<text x="902" y="719" class="tiny">LOAD_B</text>
+<polyline points="1122,285.5 1205,285.5 1205,415.5 1310,415.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="1122,290.5 1205,290.5 1205,420.5 1310,420.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="1122,295.5 1205,295.5 1205,425.5 1310,425.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="1122,300.5 1205,300.5 1205,430.5 1310,430.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="1122,305.5 1205,305.5 1205,435.5 1310,435.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="1122,310.5 1205,310.5 1205,440.5 1310,440.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="1122,315.5 1205,315.5 1205,445.5 1310,445.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="1122,320.5 1205,320.5 1205,450.5 1310,450.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M1300,427 L1310,433 L1300,439" class="wire" stroke="#396682" stroke-width="2.5"/>
+<polyline points="1122,655.5 1224,655.5 1224,530.5 1310,530.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="1122,660.5 1224,660.5 1224,535.5 1310,535.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="1122,665.5 1224,665.5 1224,540.5 1310,540.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="1122,670.5 1224,670.5 1224,545.5 1310,545.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="1122,675.5 1224,675.5 1224,550.5 1310,550.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="1122,680.5 1224,680.5 1224,555.5 1310,555.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="1122,685.5 1224,685.5 1224,560.5 1310,560.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="1122,690.5 1224,690.5 1224,565.5 1310,565.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M1300,542 L1310,548 L1300,554" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="1145" y="283" class="tiny">A_Q[7:0]</text>
+<text x="1145" y="704" class="tiny">B_Q[7:0]</text>
+<rect x="1310" y="332" width="303" height="330" rx="18" fill="#fff4df" stroke="#d3a65b" stroke-width="3"/>
+<text x="1356" y="392" class="block">ALU Aula-8</text>
+<text x="1352" y="433" class="tiny">359 puertas NAND2</text>
+<text x="1350" y="473" class="tiny">ADD  SUB</text>
+<text x="1350" y="510" class="tiny">AND  OR</text>
+<text x="1350" y="547" class="tiny">XOR  NOT A</text>
+<text x="1350" y="618" class="micro">Red completa → plano NAND</text>
+<polyline points="1613,470.5 1705,470.5 1705,457.5 1747,457.5" class="wire" stroke="#147cb4" stroke-width="2.1"/>
+<polyline points="1613,475.5 1705,475.5 1705,462.5 1747,462.5" class="wire" stroke="#078c8c" stroke-width="2.1"/>
+<polyline points="1613,480.5 1705,480.5 1705,467.5 1747,467.5" class="wire" stroke="#428a37" stroke-width="2.1"/>
+<polyline points="1613,485.5 1705,485.5 1705,472.5 1747,472.5" class="wire" stroke="#a27a1b" stroke-width="2.1"/>
+<polyline points="1613,490.5 1705,490.5 1705,477.5 1747,477.5" class="wire" stroke="#b65e26" stroke-width="2.1"/>
+<polyline points="1613,495.5 1705,495.5 1705,482.5 1747,482.5" class="wire" stroke="#9b4b8e" stroke-width="2.1"/>
+<polyline points="1613,500.5 1705,500.5 1705,487.5 1747,487.5" class="wire" stroke="#5e5ca6" stroke-width="2.1"/>
+<polyline points="1613,505.5 1705,505.5 1705,492.5 1747,492.5" class="wire" stroke="#c04352" stroke-width="2.1"/>
+<path d="M1737,469 L1747,475 L1737,481" class="wire" stroke="#396682" stroke-width="2.5"/>
+<rect x="1747" y="396" width="215" height="181" rx="16" fill="#e8e8fa" stroke="#a4a7d8" stroke-width="2"/>
+<text x="1765" y="438" class="block">RESULT_Q</text>
+<text x="1765" y="478" class="tiny">8 flip-flops</text>
+<text x="1765" y="524" class="tiny">EXECUTE</text>
+<polyline points="1564,662 1564,735 1765,735" class="wire" stroke="#a64b84" stroke-width="3"/>
+<path d="M1755,729 L1765,735 L1755,741" class="wire" stroke="#a64b84" stroke-width="2.5"/>
+<text x="1505" y="715" class="tiny">N Z C V CV_valid · 5 FF</text>
+<rect x="1765" y="749" width="200" height="88" rx="16" fill="#f6e8f6" stroke="#b998bb" stroke-width="2"/>
+<text x="1792" y="785" class="block">Banderas</text>
+<text x="1792" y="812" class="tiny">5 bits</text>
+<polyline points="1471,777 1471,662" class="wire" stroke="#b17324" stroke-width="3"/>
+<path d="M1461,656 L1471,662 L1461,668" class="wire" stroke="#b17324" stroke-width="2.5"/>
+<text x="1350" y="809" class="tiny">SEL[5:0]: ONE-HOT</text>
+<rect x="620" y="855" width="803" height="159" rx="16" fill="#e9f3fb" stroke="#84b1d0" stroke-width="2"/>
+<text x="659" y="902" class="block">CONTROL C28-W · cinco estados</text>
+<text x="659" y="941" class="tiny">IDLE → CAPTURA_A → CAPTURA_B → CALCULA → TERMINO</text>
+<text x="659" y="973" class="micro">CLK, RESET síncrono solo para control, START. No borra los registros.</text>
+<polyline points="935,855 935,790 996,790 996,760" class="wire" stroke="#a54f77" stroke-width="3" stroke-dasharray="10 7"/>
+<polyline points="1111,855 1111,803 1195,803 1195,521 1310,521" class="wire" stroke="#a54f77" stroke-width="3" stroke-dasharray="10 7"/>
+<polyline points="745,855 745,820 816,820 816,349 870,349" class="wire" stroke="#a54f77" stroke-width="3" stroke-dasharray="10 7"/>
+<text x="738" y="817" class="micro">LOAD_A</text>
+<rect x="74" y="1052" width="1878" height="151" rx="16" fill="#ffffff" stroke="#b7d0e1" stroke-width="2"/>
+<text x="107" y="1092" class="block">Flancos de reloj del ejemplo · START aceptado con controlador listo</text>
+<text x="108" y="1143" class="block">t₀</text>
+<text x="175" y="1143" class="tiny">START → CAPTURA_A</text>
+<path d="M488,1129 L498,1135 L488,1141" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="556" y="1143" class="block">t₁</text>
+<text x="623" y="1143" class="tiny">carga A_Q</text>
+<path d="M936,1129 L946,1135 L936,1141" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="1004" y="1143" class="block">t₂</text>
+<text x="1071" y="1143" class="tiny">carga B_Q</text>
+<path d="M1384,1129 L1394,1135 L1384,1141" class="wire" stroke="#396682" stroke-width="2.5"/>
+<text x="1452" y="1143" class="block">t₃</text>
+<text x="1519" y="1143" class="tiny">captura resultado → DONE</text>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "etapa": "C28-L / contraste matemático de circuitos iniciales",
+  "total_comparaciones": 131144,
+  "casos_individuales": [
+    {
+      "circuito": "NAND y XOR con 4 NAND",
+      "casos": 8
+    },
+    {
+      "circuito": "NOT, AND y OR construidas con NAND (C03)",
+      "casos": 15
+    },
+    {
+      "circuito": "Fórmulas y referencia gráfica C04",
+      "casos": 5
+    },
+    {
+      "circuito": "Latch SR NAND: SET, RESET, HOLD, inválido",
+      "casos": 13
+    },
+    {
+      "circuito": "Latch D y flip-flop D: nivel contra flanco",
+      "casos": 31
+    },
+    {
+      "circuito": "Registro8 con LOAD: 2 × 256²",
+      "casos": 131072
+    }
+  ],
+  "limitaciones": [
+    "La función XOR se modeló desde fórmulas del texto; el circuito real no se montó",
+    "El estado inválido 00 del latch no se resuelve al liberarlo simultáneamente",
+    "Las capturas D y LOAD son modelos de flanco ideal y no miden setup/hold",
+    "No certifica cada ruta de un dibujo SVG ni retardos eléctricos"
+  ]
+}

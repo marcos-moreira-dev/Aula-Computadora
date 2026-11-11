@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Decodificador de dos bits a cuatro posiciones</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="36" y="45" class="label">Una dirección selecciona una posición; el dato vive dentro</text>
+<text x="39" y="81" class="small">Dirección 10₂ = posición 2. Su contenido actual: 0x3C.</text>
+<rect x="248" y="157" width="260" height="220" rx="13" fill="#e6f3fa" stroke="#28465b" stroke-width="3"/>
+<text x="378" y="222" class="label" text-anchor="middle">Decodificador</text>
+<text x="378" y="252" class="small" text-anchor="middle">2 entradas → 4 salidas</text>
+<text x="379" y="305" class="small" text-anchor="middle">A1 A0 = 10</text>
+<path class="wire" d="M69,229 H248 M69,303 H248"/>
+<text x="89" y="210" class="label accent">A1 = 1</text>
+<text x="89" y="284" class="label accent">A0 = 0</text>
+<rect x="647" y="112" width="277" height="59" rx="9" fill="#f2f6f9" stroke="#28465b" stroke-width="3"/><text x="665" y="149" class="small">[00]</text><text x="826" y="149" class="label" text-anchor="middle">0x12</text><path class="wire" d="M515,141 H647" stroke="#0b865a"/><text x="543" y="131" class="tiny">SEL0</text><rect x="647" y="186" width="277" height="59" rx="9" fill="#f2f6f9" stroke="#28465b" stroke-width="3"/><text x="665" y="223" class="small">[01]</text><text x="826" y="223" class="label" text-anchor="middle">0xA5</text><path class="wire" d="M515,215 H647" stroke="#0b865a"/><text x="543" y="205" class="tiny">SEL1</text><rect x="647" y="260" width="277" height="59" rx="9" fill="#d9f4df" stroke="#28465b" stroke-width="3"/><text x="665" y="297" class="small">[10]</text><text x="826" y="297" class="label" text-anchor="middle">0x3C</text><path class="wire" d="M515,289 H647" stroke="#0b865a"/><text x="543" y="279" class="tiny">SEL2</text><circle cx="641" cy="289" r="8" fill="#20935a"/><rect x="647" y="334" width="277" height="59" rx="9" fill="#f2f6f9" stroke="#28465b" stroke-width="3"/><text x="665" y="371" class="small">[11]</text><text x="826" y="371" class="label" text-anchor="middle">0xFF</text><path class="wire" d="M515,363 H647" stroke="#0b865a"/><text x="543" y="353" class="tiny">SEL3</text>
+<text x="501" y="470" class="tiny" text-anchor="middle">SEL activas en alto en este modelo; el chip SN74HC138 real usa salidas activas en bajo.</text>
+</svg>

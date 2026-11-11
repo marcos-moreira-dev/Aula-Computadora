@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>ST conserva la dirección mientras lee bytes</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">ST conserva la dirección mientras lee bytes</text><text x="35" y="76" class="small">MDR cambia con cada lectura; ADDR_LO y ADDR_HI recuerdan el destino.</text><rect x="26" y="148" width="301" height="249" rx="14" fill="#e8f2fc" stroke="#36556b" stroke-width="2.5"/><rect x="349" y="148" width="301" height="249" rx="14" fill="#edf4e8" stroke="#36556b" stroke-width="2.5"/><rect x="672" y="148" width="301" height="249" rx="14" fill="#fcf0db" stroke="#36556b" stroke-width="2.5"/><text x="176" y="184" class="label" text-anchor="middle">LEER BAJO</text><text x="176" y="230" class="small" text-anchor="middle">RAM[6005] = 00</text><text x="176" y="272" class="label" text-anchor="middle">ADDR_LO = 00</text><text x="176" y="328" class="small" text-anchor="middle">PC pasa a 6006</text><text x="500" y="184" class="label" text-anchor="middle">LEER ALTO</text><text x="500" y="230" class="small" text-anchor="middle">RAM[6006] = 6F</text><text x="500" y="272" class="label" text-anchor="middle">ADDR_HI = 6F</text><text x="500" y="328" class="small" text-anchor="middle">PC pasa a 6007</text><text x="822" y="184" class="label" text-anchor="middle">RECOMPONER</text><text x="822" y="230" class="small" text-anchor="middle">alto : bajo</text><text x="822" y="273" class="label" text-anchor="middle">MAR = 6F00</text><text x="822" y="330" class="small" text-anchor="middle">dirección de datos</text><text x="500" y="459" class="small" text-anchor="middle">Si el byte bajo solo viviera en MDR, se perdería al leer 6F.</text></svg>

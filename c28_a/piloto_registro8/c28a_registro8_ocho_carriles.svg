@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 765" width="1200" height="765">
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#276486"/></marker></defs>
+<style>text{font-family:DejaVu Sans, sans-serif;fill:#203444} .cable{fill:none;stroke:#203444;stroke-width:3;stroke-linejoin:round;stroke-linecap:round} .señal{fill:none;stroke:#276486;stroke-width:3;stroke-linecap:round} .fin{font-size:14px;fill:#576a78} .base{font-size:19px;font-weight:600} .cab{font-size:30px;font-weight:700} .sub{font-size:17px;fill:#506777}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42" y="55" text-anchor="start" font-size="30" font-weight="bold" fill="#203444">Registro R0 de Aula-8: ocho caminos de un bit</text>
+<text x="42" y="87" text-anchor="start" font-size="18" font-weight="normal" fill="#506777">Cada camino ejecuta la misma lógica; el conjunto forma un byte.</text>
+<rect x="45" y="108" width="1110" height="51" rx="9" fill="#f3f7f8" stroke="#d2dfe5" stroke-width="1"/>
+<text x="66" y="140" text-anchor="start" font-size="17" font-weight="bold" fill="#203444">Señales compartidas:</text>
+<text x="464" y="140" text-anchor="middle" font-size="16" font-weight="normal" fill="#a76c1a">LOAD (selección)</text>
+<text x="729" y="140" text-anchor="middle" font-size="16" font-weight="normal" fill="#237c59">CLK ↑ (captura)</text>
+<text x="1005" y="140" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">OE_n (triestado)</text>
+<text x="64" y="206" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b7</text>
+<text x="126" y="206" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN7</text>
+<polyline points="159,199 248,199" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,180 349,187 349,212 248,219" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,199 434,199" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="177" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="205" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,199 718,199" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,178 718,220 768,199" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="204" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,199 1000,199" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="206" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS7</text>
+<rect x="43" y="235" width="1104" height="48" rx="2" fill="#f8fafb" stroke="#f8fafb" stroke-width="0"/>
+<text x="64" y="265" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b6</text>
+<text x="126" y="265" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN6</text>
+<polyline points="159,258 248,258" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,239 349,246 349,271 248,278" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="264" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,258 434,258" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="236" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="264" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,258 718,258" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,237 718,279 768,258" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="263" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,258 1000,258" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="265" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS6</text>
+<text x="64" y="324" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b5</text>
+<text x="126" y="324" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN5</text>
+<polyline points="159,317 248,317" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,298 349,305 349,330 248,337" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="323" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,317 434,317" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="295" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="323" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,317 718,317" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,296 718,338 768,317" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,317 1000,317" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="324" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS5</text>
+<rect x="43" y="353" width="1104" height="48" rx="2" fill="#f8fafb" stroke="#f8fafb" stroke-width="0"/>
+<text x="64" y="383" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b4</text>
+<text x="126" y="383" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN4</text>
+<polyline points="159,376 248,376" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,357 349,364 349,389 248,396" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="382" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,376 434,376" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="354" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="382" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,376 718,376" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,355 718,397 768,376" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="381" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,376 1000,376" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="383" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS4</text>
+<text x="64" y="442" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b3</text>
+<text x="126" y="442" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN3</text>
+<polyline points="159,435 248,435" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,416 349,423 349,448 248,455" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="441" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,435 434,435" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="413" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="441" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,435 718,435" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,414 718,456 768,435" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,435 1000,435" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="442" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS3</text>
+<rect x="43" y="471" width="1104" height="48" rx="2" fill="#f8fafb" stroke="#f8fafb" stroke-width="0"/>
+<text x="64" y="501" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b2</text>
+<text x="126" y="501" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN2</text>
+<polyline points="159,494 248,494" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,475 349,482 349,507 248,514" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="500" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,494 434,494" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="472" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,494 718,494" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,473 718,515 768,494" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="499" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,494 1000,494" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="501" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS2</text>
+<text x="64" y="560" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b1</text>
+<text x="126" y="560" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN1</text>
+<polyline points="159,553 248,553" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,534 349,541 349,566 248,573" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="559" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,553 434,553" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="531" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="559" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,553 718,553" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,532 718,574 768,553" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="558" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,553 1000,553" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="560" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS1</text>
+<rect x="43" y="589" width="1104" height="48" rx="2" fill="#f8fafb" stroke="#f8fafb" stroke-width="0"/>
+<text x="64" y="619" text-anchor="start" font-size="18" font-weight="bold" fill="#203444">b0</text>
+<text x="126" y="619" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">IN0</text>
+<polyline points="159,612 248,612" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="248,593 349,600 349,625 248,632" fill="#faedd9" stroke="#a76c1a" stroke-width="3" stroke-linejoin="round"/>
+<text x="299" y="618" text-anchor="middle" font-size="14" font-weight="bold" fill="#a76c1a">MUX</text>
+<polyline points="349,612 434,612" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="434" y="590" width="122" height="44" rx="6" fill="#e5f3ea" stroke="#237c59" stroke-width="2"/>
+<text x="495" y="618" text-anchor="middle" font-size="16" font-weight="bold" fill="#237c59">DFF ↑</text>
+<polyline points="556,612 718,612" fill="none" stroke="#203444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="718,591 718,633 768,612" fill="#e6eff8" stroke="#276486" stroke-width="3" stroke-linejoin="round"/>
+<text x="736" y="617" text-anchor="middle" font-size="12" font-weight="bold" fill="#276486">3E</text>
+<polyline points="768,612 1000,612" fill="none" stroke="#276486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1032" y="619" text-anchor="middle" font-size="16" font-weight="normal" fill="#276486">BUS0</text>
+<polyline points="1098,177 1118,177 1118,642 1098,642" fill="none" stroke="#276486" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1124" y="661" text-anchor="end" font-size="17" font-weight="bold" fill="#276486">8 líneas</text>
+<rect x="48" y="678" width="1096" height="58" rx="8" fill="#f3f7f9" stroke="#d3e0e8" stroke-width="1"/>
+<text x="68" y="704" text-anchor="start" font-size="16" font-weight="normal" fill="#203444">MUX recibe IN_i y el retorno Q_i; CLK, LOAD y OE_n se distribuyen a las ocho celdas.</text>
+<text x="68" y="725" text-anchor="start" font-size="13" font-weight="normal" fill="#506777">Los nombres representan conexiones eléctricas lógicas: aún faltan circuitos de interfaz y arbitraje de bus.</text>
+</svg>

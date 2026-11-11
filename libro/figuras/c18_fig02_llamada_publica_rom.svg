@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Dirección pública de un servicio de ROM</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Dirección pública de un servicio de ROM</text><text x="35" y="76" class="small">FF00: ranura de cuatro bytes; E100 todavía no contiene firmware.</text><rect x="25" y="154" width="245" height="164" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="147.5" y="202" class="label" text-anchor="middle">PROGRAMA</text><text x="147.5" y="248" class="small" text-anchor="middle">6003: CALL FF00</text><rect x="373" y="154" width="255" height="164" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="500.5" y="202" class="label" text-anchor="middle">RANURA FF00</text><text x="500.5" y="248" class="small" text-anchor="middle">30 00 E1 00</text><rect x="730" y="154" width="245" height="164" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="852.5" y="202" class="label" text-anchor="middle">DESTINO FICTICIO</text><text x="852.5" y="248" class="small" text-anchor="middle">E100: rutina PUTC</text><path d="M270,230 L373,230" fill="none" stroke="#244d68" stroke-width="4"/><path d="M373,230 L356.0,239.0 L356.0,221.0 Z" fill="#244d68"/><path d="M628,230 L730,230" fill="none" stroke="#244d68" stroke-width="4"/><path d="M730,230 L713.0,239.0 L713.0,221.0 Z" fill="#244d68"/><text x="320" y="209" class="tiny" text-anchor="middle">CALL</text><text x="677" y="209" class="tiny" text-anchor="middle">JMP</text><path d="M842,318 L842,393" fill="none" stroke="#244d68" stroke-width="4"/><path d="M842,393 L833.0,376.0 L851.0,376.0 Z" fill="#244d68"/><path d="M842,393 L157,393" fill="none" stroke="#244d68" stroke-width="4"/><path d="M157,393 L174.0,384.0 L174.0,402.0 Z" fill="#244d68"/><text x="500" y="378" class="small" text-anchor="middle">RET usa la dirección 6006 guardada por CALL</text><text x="500" y="448" class="tiny" text-anchor="middle">El NOP final de la ranura no se ejecuta en la ruta normal.</text></svg>

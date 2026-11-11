@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<title>Símbolo XOR y tabla de verdad que destaca las diferencias</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+
+<text x="46" y="44" class="label">XOR solo vale 1 cuando A y B son diferentes</text>
+<text x="46" y="82" class="small">La disyunción exclusiva no se activa en la fila 11.</text>
+<path d="M153,174 C201,178 228,201 258,230
+ C228,260 200,283 153,286
+ C179,256 179,204 153,174 Z" fill="#e7f3fa" stroke="#273746" stroke-width="4"/>
+<path class="wire" d="M100,210 H166 M100,254 H166 M260,230 H304"/>
+<path d="M137,171 C164,207 164,256 137,291" fill="none" stroke="#096b91" stroke-width="4"/>
+<text x="65" y="210" class="label accent">A</text><text x="65" y="256" class="label accent">B</text>
+<text x="322" y="236" class="label accent">D = A ⊕ B</text>
+<rect x="493" y="124" width="455" height="330" rx="15" fill="#f4f8fb"/>
+<text x="721" y="160" text-anchor="middle" class="label">Tabla de discrepancia</text>
+<path class="wire" d="M519,176 H927 M519,223 H927 M519,274 H927 M519,325 H927 M519,376 H927"/>
+<text x="570" y="209" class="label">A</text><text x="695" y="209" class="label">B</text>
+<text x="830" y="209" class="label accent">D</text>
+<text x="570" y="260" class="small">0</text><text x="695" y="260" class="small">0</text><text x="836" y="260" class="small">0</text>
+<rect x="529" y="279" width="389" height="40" rx="5" fill="#e5f4e8"/>
+<text x="570" y="310" class="small">0</text><text x="695" y="310" class="small">1</text><text x="836" y="310" class="label accent">1</text>
+<rect x="529" y="330" width="389" height="40" rx="5" fill="#e5f4e8"/>
+<text x="570" y="361" class="small">1</text><text x="695" y="361" class="small">0</text><text x="836" y="361" class="label accent">1</text>
+<text x="570" y="411" class="small">1</text><text x="695" y="411" class="small">1</text><text x="836" y="411" class="small">0</text>
+<text x="721" y="442" class="tiny" text-anchor="middle">Filas activas: 01 y 10.</text>
+</svg>

@@ -1,0 +1,45 @@
+AULA-COMPUTADORA — PARCHE INCREMENTAL C28-F
+===========================================
+
+Este parche añade el incremento del PC, el control de saltos y el
+selector de dirección de MAR; NO reemplaza las ediciones anteriores.
+
+Orden de fusión: C27 GLOBAL + C28-B + C28-C + C28-D + C28-E + C28-F.
+El piloto C28-A se distribuye por separado.
+
+PowerShell en Descargas (con todos los ZIP descargados):
+
+  Set-Location "$env:USERPROFILE\Downloads"
+  $destino = Join-Path (Get-Location) "Aula_C28F_COMPLETO"
+  Expand-Archive .\Aula_Computadora_C27_GLOBAL.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_B_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_C_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_D_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_E_PARCHE.zip -DestinationPath $destino -Force
+  Expand-Archive .\Aula_Computadora_C28_F_PARCHE.zip -DestinationPath $destino -Force
+  Set-Location (Join-Path $destino "Aula-Computadora")
+  py .\scripts\c28d_salto_y_selector_pc.py
+  py .\scripts\c28e_pc16_prueba.py
+  py .\scripts\c28f_incremento_mary_saltos.py
+
+Resultado esperado del ultimo comando:
+  C28-F: 161,537 comparaciones de redes NAND correctas
+
+La edición completa en Word y PDF se entrega por separado. El ZIP del
+parche conserva el codigo fuente, las laminas y el indice, pero no duplica
+un Word de casi 20 MB. Para regenerar Word:
+
+  py -m pip install python-docx
+  py .\scripts\generar_libro_maestro_c28f.py --pages-json .\libro\ediciones\C28_F\INDICE_C28_F.json
+
+Para exportar el Word a PDF, utiliza LibreOffice o un editor compatible.
+Si no dispones del ZIP C28-A, el piloto del registro de 8 bits es opcional.
+Los PNG ya vienen generados; Inkscape solo se necesita al regenerarlos.
+
+Prueba HDL OPCIONAL (si Icarus Verilog ya esta instalado):
+
+  iverilog -g2012 -o .\c28_f\piloto_pc_mar\pc_mar_tb .\c28_f\piloto_pc_mar\pc_mar_c28f.v .\c28_f\piloto_pc_mar\tb_pc_mar_c28f.v
+  vvp .\c28_f\piloto_pc_mar\pc_mar_tb
+
+La ejecucion HDL no esta certificada. Se ha validado un modelo NAND
+combinacional en Python; no hay CPU ejecutada, placa ni medicion fisica.

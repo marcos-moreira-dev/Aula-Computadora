@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Cuatro responsabilidades que no son intercambiables</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Cuatro responsabilidades que no son intercambiables</text><text x="35" y="76" class="small">La rutina PLOT sería software; la presentación del píxel corresponde al controlador.</text><rect x="20" y="151" width="214" height="164" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="127.0" y="199" class="label" text-anchor="middle">CPU</text><text x="127.0" y="245" class="small" text-anchor="middle">LD/ST · dirección</text><rect x="272" y="151" width="214" height="164" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="379.0" y="199" class="label" text-anchor="middle">FIRMWARE ROM</text><text x="379.0" y="245" class="small" text-anchor="middle">rutina en software</text><rect x="524" y="151" width="214" height="164" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="631.0" y="199" class="label" text-anchor="middle">CONTROLADOR</text><text x="631.0" y="245" class="small" text-anchor="middle">búfer y escaneo</text><rect x="775" y="151" width="205" height="164" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="877.5" y="199" class="label" text-anchor="middle">PANTALLA</text><text x="877.5" y="245" class="small" text-anchor="middle">caracteres o píxeles</text><path d="M234,228 L272,228" fill="none" stroke="#244d68" stroke-width="4"/><path d="M272,228 L255.0,237.0 L255.0,219.0 Z" fill="#244d68"/><path d="M486,228 L524,228" fill="none" stroke="#244d68" stroke-width="4"/><path d="M524,228 L507.0,237.0 L507.0,219.0 Z" fill="#244d68"/><path d="M738,228 L775,228" fill="none" stroke="#244d68" stroke-width="4"/><path d="M775,228 L758.0,237.0 L758.0,219.0 Z" fill="#244d68"/><text x="500" y="385" class="small" text-anchor="middle">ROM de glifos (2 KiB) → consultada por el controlador de texto.</text><text x="500" y="425" class="small" text-anchor="middle">Micro-ROM de control (si la hubiera) ≠ firmware ≠ ROM de caracteres.</text><text x="500" y="468" class="tiny" text-anchor="middle">El modelo lógico NO especifica reloj, conector ni placa física.</text></svg>

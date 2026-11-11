@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Del voltaje al significado de una señal</title><rect width="1000" height="500" fill="#ffffff"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style>
+<text x="40" y="43" class="label">El circuito reconoce estados, no voltajes universales</text>
+<text x="40" y="72" class="small">Los umbrales dependen de la tecnología y de su hoja de datos.</text>
+<rect x="45" y="116" width="333" height="207" rx="15" fill="#f6f9fc" stroke="#aabccb" stroke-width="2"/>
+<text x="67" y="146" class="small">Tensión de entrada</text>
+<rect x="80" y="167" width="265" height="45" fill="#d8ecff"/>
+<text x="212" y="196" class="small" text-anchor="middle">Región reconocida ALTA</text>
+<rect x="80" y="212" width="265" height="41" fill="#fff0d6"/>
+<text x="212" y="238" class="tiny" text-anchor="middle">Región NO GARANTIZADA</text>
+<rect x="80" y="253" width="265" height="45" fill="#e2f2e5"/>
+<text x="212" y="281" class="small" text-anchor="middle">Región reconocida BAJA</text>
+<path class="wire" d="M379,218 H456"/>
+<path class="wire" d="M444,209 l12,9 -12,9"/>
+<rect x="460" y="169" width="202" height="103" rx="14" fill="#e8f2ff" stroke="#28465b" stroke-width="2"/><text x="561.0" y="227.5" class="label" text-anchor="middle">Lógica 0 o 1</text>
+<path class="wire" d="M663,218 H732"/>
+<path class="wire" d="M720,209 l12,9 -12,9"/>
+<rect x="738" y="169" width="213" height="103" rx="14" fill="#e2f3e8" stroke="#28465b" stroke-width="2"/><text x="844.5" y="227.5" class="small" text-anchor="middle">Función de señal</text>
+<rect x="55" y="362" width="892" height="87" rx="15" fill="#f0f6fb"/>
+<text x="78" y="395" class="small">Ejemplo: RESET_n = 0 solicita reset (señal activa en bajo).</text>
+<text x="78" y="423" class="small">RESET_n = 1 deja de solicitarlo. El nombre/polaridad forman parte del contrato.</text>
+</svg>

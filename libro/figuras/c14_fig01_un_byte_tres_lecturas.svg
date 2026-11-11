@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Un byte: la forma no dicta su significado</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Un byte: la forma no dicta su significado</text><text x="35" y="76" class="small">Los mismos ocho bits se pueden representar en tres bases.</text><rect x="115" y="143" width="355" height="112" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><rect x="530" y="143" width="355" height="112" rx="14" fill="#e7f3fa" stroke="#36556b" stroke-width="2.5"/><text x="290" y="182" class="label" text-anchor="middle">0010</text><text x="707" y="182" class="label" text-anchor="middle">1010</text><text x="290" y="225" class="small" text-anchor="middle">nibble alto = 2</text><text x="707" y="225" class="small" text-anchor="middle">nibble bajo = A</text><path class="wire" d="M290,255 V293 H492 V312 M707,255 V293 H492"/><rect x="350" y="312" width="295" height="84" rx="14" fill="#eaf4e9" stroke="#36556b" stroke-width="2.5"/><text x="492" y="347" class="label" text-anchor="middle">0x2A</text><text x="492" y="377" class="small" text-anchor="middle">2 × 16 + 10 = 42</text><text x="500" y="459" class="small" text-anchor="middle">Patrón guardado ≠ significado automático de opcode.</text></svg>

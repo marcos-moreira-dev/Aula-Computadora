@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "project_release": "R0.5",
+  "status": "propuesta_no_aprobada",
+  "granularity": "acciones_logicas_no_ciclos_de_reloj",
+  "isa_reference": "ISA_AULA8_CANDIDATA.json",
+  "trace_reference": "MICROTRAZA_AULA8_BORRADOR.json",
+  "micro_rom_control_word_bits": null,
+  "micro_rom_capacity_bytes": null,
+  "exact_clock_cycles": null,
+  "cpu_executed": false,
+  "electrical_validation": false,
+  "macro_note": "READ_PC_TO_* requiere preparar MAR, RD, captura MDR/destino, liberar bus e incrementar PC; no es una instruccion de un ciclo garantizado",
+  "extra_candidate_latches": ["ADDR_LO", "ADDR_HI"],
+  "common_fetch": [
+    {"id": "FETCH_OPCODE", "action": "READ_PC_TO_IR", "bus": "read", "pc_advance": true, "flags_write": false, "next": "DECODE"},
+    {"id": "DECODE", "action": "DISPATCH_OPCODE", "bus": "none", "pc_advance": false, "flags_write": false, "next": "DISPATCH"}
+  ],
+  "dispatch": {"0x11": "LDI_SELECTOR", "0x13": "ST_SELECTOR", "0x01": "HALT_ENTER", "known_but_unmodeled": "PENDING_ROUTE", "unknown": "FAULT"},
+  "instructions": {
+    "LDI": [
+      {"id": "LDI_SELECTOR", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "LDI_CHECK"},
+      {"id": "LDI_CHECK", "action": "VALIDATE_REGISTER_SEL", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LDI_IMMEDIATE", "on_invalid": "FAULT"},
+      {"id": "LDI_IMMEDIATE", "action": "READ_PC_TO_TMP", "bus": "read", "pc_advance": true, "flags_write": false, "next": "LDI_COMMIT"},
+      {"id": "LDI_COMMIT", "action": "WRITE_SELECTED_REG_FROM_TMP", "bus": "none", "pc_advance": false, "flags_write": false, "next": "LDI_END"},
+      {"id": "LDI_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+    ],
+    "ST_ABS": [
+      {"id": "ST_SELECTOR", "action": "READ_PC_TO_SEL", "bus": "read", "pc_advance": true, "flags_write": false, "next": "ST_CHECK"},
+      {"id": "ST_CHECK", "action": "VALIDATE_ABSOLUTE_REGISTER_SEL", "bus": "none", "pc_advance": false, "flags_write": false, "next": "ST_ADDR_LOW", "on_invalid": "FAULT"},
+      {"id": "ST_ADDR_LOW", "action": "READ_PC_TO_ADDR_LOW", "bus": "read", "pc_advance": true, "flags_write": false, "next": "ST_ADDR_HIGH"},
+      {"id": "ST_ADDR_HIGH", "action": "READ_PC_TO_ADDR_HIGH", "bus": "read", "pc_advance": true, "flags_write": false, "next": "ST_BUILD_MAR"},
+      {"id": "ST_BUILD_MAR", "action": "BUILD_MAR_FROM_STAGING", "bus": "none", "pc_advance": false, "flags_write": false, "next": "ST_STAGE_DATA"},
+      {"id": "ST_STAGE_DATA", "action": "STAGE_SELECTED_REG_TO_MDR", "bus": "none", "pc_advance": false, "flags_write": false, "next": "ST_WRITE"},
+      {"id": "ST_WRITE", "action": "WRITE_MDR_AT_MAR", "bus": "write", "pc_advance": false, "flags_write": false, "next": "ST_END"},
+      {"id": "ST_END", "action": "END_TO_FETCH", "bus": "none", "pc_advance": false, "flags_write": false, "next": "FETCH_OPCODE"}
+    ],
+    "HALT": [
+      {"id": "HALT_ENTER", "action": "ENTER_HALT", "bus": "none", "pc_advance": false, "flags_write": false, "next": "HALTED"}
+    ]
+  },
+  "terminal_states": ["HALTED", "FAULT"],
+  "expected_example_external_transactions": {"read": 8, "write": 1}
+}

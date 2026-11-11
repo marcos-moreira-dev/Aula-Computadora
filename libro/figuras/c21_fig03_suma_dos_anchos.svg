@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Una misma suma, dos anchos naturales</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Una misma suma, dos anchos naturales</text><text x="35" y="76" class="small">La comparación es de operaciones aritméticas, no de tiempo de ejecución.</text><rect x="24" y="154" width="443" height="208" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="245.5" y="202" class="label" text-anchor="middle">AULA-8</text><text x="245.5" y="248" class="small" text-anchor="middle">FF+01 → 00 y C=1</text><text x="245" y="322" class="label" text-anchor="middle">01+00+C → 02</text><rect x="533" y="154" width="443" height="208" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="754.5" y="202" class="label" text-anchor="middle">AULA-16</text><text x="754.5" y="248" class="small" text-anchor="middle">01FF + 0001</text><text x="755" y="322" class="label" text-anchor="middle">resultado 0200</text><text x="500" y="415" class="small" text-anchor="middle">Dos operaciones de byte frente a una operación de palabra.</text><text x="500" y="455" class="tiny" text-anchor="middle">No es una estimación de ciclos, frecuencia o rendimiento real.</text></svg>

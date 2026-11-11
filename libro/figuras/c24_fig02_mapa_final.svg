@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500"><title>Mapa de 65536 direcciones de byte</title><rect width="1000" height="500" fill="white"/>
+<style>
+  text {font-family: 'DejaVu Sans', Arial, sans-serif; fill:#1b2a38}
+  .wire {stroke:#273746;stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .node {fill:#273746}
+  .block {fill:#f0f6fb;stroke:#273746;stroke-width:3}
+  .label {font-size:22px;font-weight:bold}
+  .small {font-size:17px}
+  .tiny {font-size:15px}
+  .accent {fill:#096b91}
+  .light {fill:#fbe2aa;stroke:#ad7200;stroke-width:3}
+  .red {stroke:#b64a30;fill:none;stroke-width:3}
+</style><text x="35" y="43" class="label">Mapa de 65536 direcciones de byte</text><text x="35" y="76" class="small">Contrato lógico; un rango reservado no se convierte mágicamente en memoria.</text><rect x="48" y="113" width="905" height="55" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="169" y="150" class="label" text-anchor="middle">0000–7FFF</text><text x="640" y="150" class="small" text-anchor="middle">RAM CPU · 32 KiB</text><rect x="48" y="179" width="905" height="55" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="169" y="216" class="label" text-anchor="middle">8000–BFFF</text><text x="640" y="216" class="small" text-anchor="middle">Expansión reservada</text><rect x="48" y="245" width="905" height="55" rx="14" fill="#e7f1fb" stroke="#36556b" stroke-width="2.5"/><text x="169" y="282" class="label" text-anchor="middle">C000–C0FF</text><text x="640" y="282" class="small" text-anchor="middle">MMIO · terminal y controladores</text><rect x="48" y="311" width="905" height="55" rx="14" fill="#f9eedc" stroke="#36556b" stroke-width="2.5"/><text x="169" y="348" class="label" text-anchor="middle">C100–DFFF</text><text x="640" y="348" class="small" text-anchor="middle">Reservado</text><rect x="48" y="377" width="905" height="55" rx="14" fill="#e9f4e6" stroke="#36556b" stroke-width="2.5"/><text x="169" y="414" class="label" text-anchor="middle">E000–FFFF</text><text x="640" y="414" class="small" text-anchor="middle">ROM firmware CPU · 8 KiB</text><text x="500" y="484" class="small" text-anchor="middle">Vídeo: C020–C02F es MMIO; sus 8704 B de VRAM son internos.</text></svg>
